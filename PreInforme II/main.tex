@@ -5,6 +5,7 @@
 \usepackage{graphicx} 
 \usepackage{enumitem} 
 \usepackage{chngcntr}
+\usepackage{setspace}
 \counterwithin{figure}{section}
 \renewcommand{\thesection}{\arabic{section}} 
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
@@ -12,6 +13,7 @@
 \usepackage{float}
 \bibliographystyle{apalike}
 \setlength\belowcaptionskip{10pt}
+\linespread{1.5}
 
 \begin{document}
 
@@ -24,9 +26,10 @@
 	{\scshape\Large FÍSICA ELÉCTRICA \par}
 	\vspace{.2cm}
 
-	{\scshape\Large Grupo y Subgrupo \par}
+	% chktex-file 8
+	{\scshape\Large H1 - C \par}
 	\vspace{1cm}
-
+	% chktex-file 8
 	\slshape {\Large \bfseries{} LAB 2 - MEDICIÓN DE DIFERENCIA DE POTENCIAL, CORRIENTE Y RESISTENCIA \\}
 	\vspace{1cm}
 
@@ -37,20 +40,34 @@
 	\slshape {\itshape{} Juan Eduardo barón, T00065901 \\}
 	\vfill
 	Revisado Por \\
-	Prof. Nombre y Apellido 	\\
+	Gabriel Hoyos Gomez Casseres\\
 	{\large \today\par}
 \end{titlepage}
 
 % ----------------------------------------------------------------------|>
 \section{Introducción}
 
+En esta segunda practica de laboratorio se usaran herramientas como la 
+fuente de corriente directa, resistencias y multímetros para medir ciertos 
+elementos y su flujo de corriente eléctrica con su respectiva diferencia 
+de potencial. 
+
+\vspace{.5cm}
+
+Esta sesión tiene como objetivo enseñar el debido procedimiento
+para usar diversos instrumentos, la familiarización de ciertos conceptos 
+e incluso de unidades de medida.
+
 \newpage
 
 % ----------------------------------------------------------------------|>
 \section{Objetivos}
 
-% ----------------------------------------------------------------------|>
 \subsection{Objetivo General}
+
+Aprender a utilizar todos los elementos con que cuenta el panel de las 
+fuentes, asi como medir diferencia de potencial,corriente y resistencia 
+tanto de un multímetro digital como analógico.
 
 % ----------------------------------------------------------------------|>
 \section{Preparación de la practica}
@@ -126,23 +143,24 @@ dos cifras, el exponente o factor potencia de 10, y la tolerancia.
 \vspace{.5cm}
 
 \begin{figure}[H]
-	\centering
-
-	\includegraphics[scale = .8]{./Images/BandasResistores.svg}
-	\caption{Diagrama de una resistencia}
+	\begin{center}
+		\includegraphics[scale = .8]{./Images/BandasResistores.svg}
+		\caption{Diagrama de una resistencia}
+	\end{center}
 \end{figure}
 
 \begin{figure}[H]
-	\centering
-
-	\includegraphics[scale = .8]{./Images/RepresentacionBandasResistores.svg}
-	\caption{Diagrama de código de colores}
+	\begin{center}
+		\includegraphics[scale = .8]{./Images/RepresentacionBandasResistores.svg}
+		\caption{Diagrama de código de colores}
+	\end{center}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 
 	\includegraphics[scale = .65]{./Images/TablaDeColoresResistencias}
+
 	\caption{Tabla de colores de las resistencias}
 	\label{Tabla de colores de las resistencias}
 \end{figure}
@@ -240,11 +258,18 @@ corriente por la resistencia.~\cite{LeyDeOhm}
 \vspace{.7cm}
 
 La ley de Ohm recibió su nombre en honor al físico alemán Georg Ohm
-(1789 a 1854) y aborda las cantidades clave en funcionamiento en 
+(1789 a 1854) y aborda las cantidades clave en funcionamiento en
 los circuitos.~\cite{LeyDeOhm}
 
 % ----------------------------------------------------------------------|>
 \section{Resumen del procedimiento}
+
+En este experimento vamos a utilizar multímetro digital y un multímetro 
+análogo conectado mediante cables a un panel de fuentes. Después procedemos 
+a medir la resistencia, voltaje y corriente eléctrica. Y anotarlos los 
+resultados que nos muestra los multímetros, Y por último repetimos las 
+mediciones  cambiando los valores para poder comparar los datos entre los 
+dos tipos de multímetros.
 
 \newpage
 \bibliography{./Bibliography/bibliography.bib}

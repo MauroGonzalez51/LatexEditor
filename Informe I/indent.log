@@ -1,0 +1,31 @@
+INFO:  latexindent.pl version 3.20.2, 2023-02-04, a script to indent .tex files
+       latexindent.pl lives here: D:/PROGRAMAS-APPS/MikTex/scripts/latexindent/
+       Tue Feb 14 14:00:13 2023
+       Filename: c:\Users\Mauro Gonzalez\Documents\College Things\LatexEditor\Informe I\main.tex
+INFO:  Processing switches:
+INFO:  Directory for backup files and indent.log:
+       c:\Users\Mauro Gonzalez\Documents\College Things\LatexEditor\Informe I
+INFO:  Perl modules are being loaded from the following directories:
+       D:/PROGRAMAS-APPS/StrawberryPerl/perl/lib/FindBin.pm
+       D:/PROGRAMAS-APPS/StrawberryPerl/perl/vendor/lib/YAML/Tiny.pm
+       D:/PROGRAMAS-APPS/StrawberryPerl/perl/lib/File/Copy.pm
+       D:/PROGRAMAS-APPS/StrawberryPerl/perl/lib/File/Basename.pm
+       D:/PROGRAMAS-APPS/StrawberryPerl/perl/lib/Getopt/Long.pm
+       D:/PROGRAMAS-APPS/StrawberryPerl/perl/vendor/lib/File/HomeDir.pm
+INFO:  LatexIndent perl modules are being loaded from, for example:
+       D:/PROGRAMAS-APPS/MikTex/scripts/latexindent/LatexIndent/Document.pm
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from D:/PROGRAMAS-APPS/MikTex/scripts/latexindent/defaultSettings.yaml
+INFO:  YAML reading settings
+       Home directory is C:\Users\Mauro Gonzalez
+       latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
+       see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
+INFO:  Phase 1: searching for objects
+INFO:  Phase 2: finding surrounding indentation
+INFO:  Phase 3: indenting objects
+INFO:  Phase 4: final indentation check
+INFO:  Output routine:
+       Not outputting to file; see -w and -o switches for more options.
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl
