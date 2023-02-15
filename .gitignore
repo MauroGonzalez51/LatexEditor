@@ -2,3 +2,4 @@
 **/*.aux
 **/*.bbl
 **/*.fdb_latexmk
+**/*.synctex.gz
