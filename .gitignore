@@ -1,0 +1,4 @@
+**/*.log
+**/*.aux
+**/*.bbl
+**/*.fdb_latexmk
