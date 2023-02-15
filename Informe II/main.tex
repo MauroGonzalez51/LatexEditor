@@ -5,7 +5,6 @@
 \usepackage{graphicx} 
 \usepackage{enumitem} 
 \usepackage{chngcntr}
-\usepackage{setspace}
 \counterwithin{figure}{section}
 \renewcommand{\thesection}{\arabic{section}} 
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
@@ -15,6 +14,7 @@
 \setlength\belowcaptionskip{10pt}
 \linespread{1.5}
 
+\raggedbottom{}
 
 \begin{document}
 
@@ -48,6 +48,8 @@
 % ----------------------------------------------------------------------|>
 \section{Introducción}
 
+\newpage
+
 % ----------------------------------------------------------------------|>
 \section{Objetivos}
 
@@ -66,24 +68,107 @@
 % ----------------------------------------------------------------------|>
 \section{Datos Experimentales}
 
+\begin{table}[h]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|c|}
+			\multicolumn{3}{c}{Resistencias}              \\ \hline
+			Medición & Código        & Multímetro digital \\ \hline
+			1        & 220 $\pm$ 5\% & 217,9 $\Omega$     \\ \hline
+			2        & 150 $\pm$ 5\% & 149,1 $\Omega$     \\ \hline
+			3        & 470 $\pm$ 5\% & 465,0 $\Omega$     \\ \hline
+			4        & 330 $\pm$ 5\% & 324,3 $\Omega$     \\ \hline
+		\end{tabular}
+		\caption{Tabla de resistencias}
+		% chktex-file 24
+		\label{tab:resistencias}
+	\end{center}
+\end{table}
 
+% ---------- TABLAS DE VOLTAJE EN AC ---------- |>
 
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|}
+			\multicolumn{2}{c}{Voltaje en AC}                     \\ \hline
+			Multímetro digital & Multímetro analógico (1/Persona) \\ \hline
+			5,44 V             & 6,80 V                           \\
+			                   & 6,70 V                           \\
+			                   & 6,70 V                           \\
+			                   & 6,80 V                           \\
+			                   & 6,60 V                           \\ \hline
+			Promedio           & 6,72 V                           \\ \hline
+		\end{tabular}
+		\caption{Voltaje en AC [Primera Medición]}
+		% chktex-file 24
+		\label{tab:voltajeAC_1}
+	\end{center}
+\end{table}
 
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|}
+			\multicolumn{2}{c}{Voltaje en AC}                     \\ \hline
+			Multímetro digital & Multímetro analógico (1/Persona) \\ \hline
+			17,17 V            & 21,08 V                          \\
+			                   & 20,75 V                          \\
+			                   & 21,75 V                          \\
+			                   & 20,05 V                          \\
+			                   & 21,10 V                          \\ \hline
+			Promedio           & 20,95 V                          \\ \hline
+		\end{tabular}
+		\caption{Voltaje en AC [Segunda Medición]}
+		% chktex-file 24
+		\label{tab:voltajeAC_2}
+	\end{center}
+\end{table}
 
+% ---------- TABLAS DE VOLTAJE EN DC ---------- |>
 
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|}
+			\multicolumn{2}{c}{Voltaje en DC}                     \\ \hline
+			Multímetro digital & Multímetro analógico (1/Persona) \\ \hline
+			6,88 V             & 8,20 V                           \\
+			                   & 8,20 V                           \\
+			                   & 8,20 V                           \\
+			                   & 8,20 V                           \\
+			                   & 8,15 V                           \\ \hline
+			Promedio           & 8.19 V                           \\ \hline
+		\end{tabular}
+		\caption{Voltaje en DC [Primera Medición]}
+		% chktex-file 24
+		\label{tab:voltajeDC_1}
+	\end{center}
+\end{table}
 
-
-
-
-
-
-
-
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|}
+			\multicolumn{2}{c}{Voltaje en DC}                     \\ \hline
+			Multímetro digital & Multímetro analógico (1/Persona) \\ \hline
+			17,47 V            & 18,85 V                          \\
+			                   & 18,50 V                          \\
+			                   & 18,50 V                          \\
+			                   & 19,00 V                          \\
+			                   & 18,50 V                          \\ \hline
+			Promedio           & 18,67 V                          \\ \hline
+		\end{tabular}
+		\caption{Voltaje en DC [Segunda Medición]}
+		% chktex-file 24
+		\label{tab:voltajeDC_2}
+	\end{center}
+\end{table}
 
 % ----------------------------------------------------------------------|>
 \section{Análisis de datos}
 
-\subsection*{Respuesta a preguntas de la guía de laboratorio}
+\subsection{Respuesta a preguntas de la guía de laboratorio}
 
 % ----------------------------------------------------------------------|>
 \section{Conclusiones}
