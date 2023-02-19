@@ -3,3 +3,5 @@
 **/*.bbl
 **/*.fdb_latexmk
 **/*.synctex.gz
+**/*.blg
+**/*.fls
