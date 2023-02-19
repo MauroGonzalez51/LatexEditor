@@ -5,6 +5,7 @@
 \usepackage{graphicx} 
 \usepackage{enumitem} 
 \usepackage{chngcntr}
+\usepackage{multirow}
 \counterwithin{figure}{section}
 \renewcommand{\thesection}{\arabic{section}} 
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
@@ -61,6 +62,14 @@
 
 % ----------------------------------------------------------------------|>
 \section{Marco Teórico}
+
+% ------------------------------------------------ |>
+\subsection{Fórmula de la desviación  estándar}
+
+\includegraphics[scale = .6]{./Images/FormulaDesviacionEstandar.png} \hfill \break{}~\cite{ImagenDesviacionEstandar}
+% chktex-file 24
+\label{img:desviacionEstandar}
+
 
 % ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
@@ -168,7 +177,242 @@
 % ----------------------------------------------------------------------|>
 \section{Análisis de datos}
 
+\subsection{Error en las mediciones de voltaje AC y DC}
+
+Usando la formula de la desviación estándar,~\ref{img:desviacionEstandar},
+se obtiene:
+
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|}
+			\multicolumn{2}{c}{Voltaje en AC}               \\ \hline
+			Promedio                  & 6,72                \\ \hline
+			Desviación estándar       & 0,083666            \\ \hline
+			Valor $\pm$ Incertidumbre & 6,72 $\pm$ 0,083666 \\ \hline
+		\end{tabular}
+		\caption{Desviación estándar - Voltaje en AC [ Primera Medición ]}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|}
+			\multicolumn{2}{c}{Voltaje en AC}                 \\ \hline
+			Promedio                  & 20,95                 \\ \hline
+			Desviación estándar       & 0,618328              \\ \hline
+			Valor $\pm$ Incertidumbre & 20,95  $\pm$ 0,618328 \\ \hline
+		\end{tabular}
+		\caption{Desviación estándar - Voltaje en AC [ Segunda Medición ]}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|}
+			\multicolumn{2}{c}{Voltaje en DC}               \\ \hline
+			Promedio                  & 8,19                \\ \hline
+			Desviación estándar       & 0,022361            \\ \hline
+			Valor $\pm$ Incertidumbre & 8,19 $\pm$ 0,022361 \\ \hline
+		\end{tabular}
+		\caption{Desviación estándar - Voltaje en DC [ Primera Medición ]}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|}
+			\multicolumn{2}{c}{Voltaje en DC}                \\ \hline
+			Promedio                  & 18,67                \\ \hline
+			Desviación estándar       & 0,238747             \\ \hline
+			Valor $\pm$ Incertidumbre & 18,67 $\pm$ 0,238747 \\ \hline
+		\end{tabular}
+		\caption{Desviación estándar - Voltaje en DC [ Segunda Medición ]}
+	\end{center}
+\end{table}
+
+% ------------------------------------------------ |>
+\subsection{Error en las mediciones de resistencias}
+
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|c|}
+			\multicolumn{3}{c}{Resistencias}                         \\ \hline
+			Código        & Multímetro digital & Porcentaje de Error \\ \hline
+			220 $\pm$ 5\% & 217,9 $\Omega$     & 0.9664 \%           \\ \hline
+			150 $\pm$ 5\% & 149,1 $\Omega$     & 0.604  \%           \\ \hline
+			470 $\pm$ 5\% & 465,0 $\Omega$     & 1.075  \%           \\ \hline
+			330 $\pm$ 5\% & 324,3 $\Omega$     & 1.757  \%           \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\subsection{Cálculos con la Ley de Ohm}
+
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+			% Table Header
+			\hline
+			\multicolumn{3}{c}{Datos [Multimetro]}                 &
+			\multicolumn{2}{c}{Valor [Voltios]}                    &
+			\multicolumn{4}{c}{Resistencias [ Multimetro ]}          \\ \hline
+
+			% 1ra fila
+			\multicolumn{3}{c}{Voltaje en AC [ Primera Medicion ]} &
+			\multicolumn{2}{c}{5,44}                               &
+			217,90                                                 &
+			149,10                                                 &
+			465,00                                                 &
+			324,30                                                   \\
+
+			% 2da fila
+			\multicolumn{3}{c}{Voltaje en AC [ Segunda Medición ]} &
+			\multicolumn{2}{c}{17,17}                              &
+			                                                       &
+			                                                       &
+			                                                       &
+			\\
+
+			% 3ra fila
+			\multicolumn{3}{c}{Voltaje en DC [ Primera Medicion ]} &
+			\multicolumn{2}{c}{6,88}                               &
+			                                                       &
+			                                                       &
+			                                                       &
+			\\
+
+			% 4ta fila
+			\multicolumn{3}{c}{Voltaje en DC [ Segunda Medicion ]} &
+			\multicolumn{2}{c}{17,47}                              &
+			                                                       &
+			                                                       &
+			                                                       &
+			\\ \hline
+		\end{tabular}
+		\caption{Calculo de la corriente con la Ley de Ohm - Primera Parte}
+		\label{tab:LeyDeOhmPrimeraParte}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		% chktex-file 44
+		\begin{tabular}{| p{2cm} | p{2cm} | p{2cm} | p{2cm} |}
+			% Table Header
+			\hline
+			\multicolumn{4}{c}{Resultados [ I ]}      \\ \hline
+
+
+			% 1ra fila
+			1        & 2        & 3        & 4        \\ \hline
+
+			% 2da fila
+			0,024966 & 0,036486 & 0,011699 & 0,016775 \\ \hline
+
+			% 3ra fila
+			0,078798 & 0,115158 & 0,036925 & 0,052945 \\ \hline
+
+			% 4ta fila
+			0,031574 & 0,046144 & 0,014796 & 0,021215 \\ \hline
+
+			% 5ta fila
+			0,080174 & 0,117170 & 0,037570 & 0,053870 \\ \hline
+		\end{tabular}
+		\caption{Calculo de la corriente con la Ley de Ohm - Segunda Parte}
+		\label{tab:LeyDeOhmSegundaParte}
+	\end{center}
+\end{table}
+
+% ------------------------------------------------ |>
 \subsection{Respuesta a preguntas de la guía de laboratorio}
+
+% -----------------------|>
+\subsubsection{¿Cuáles son los pasos que debo hacer para realizar una medida
+	con un multímetro?}
+
+A pesar de ser el instrumento básico que cualquier persona relacionada con
+la electrónica o la electricidad utiliza, la forma de utilizarlo cambia un poco
+dependiendo de lo que queramos medir. Por ejemplo, para medir \textit{Voltaje},
+la medición se realiza en paralelo, mientras que para medir \textit{Corriente},
+la medición es en serie.
+
+% -----------------------|>
+\subsubsection{¿Cómo se conecta un multímetro para medir voltaje, corriente
+	y resistencia?}
+
+\begin{itemize}
+	\item Voltaje: La medición de voltaje se realiza en paralelo, así que
+	      sólo es necesario colocar la punta positiva del multímetro (roja) con
+	      el punto positivo a medir, también hay que colocar la punta negativa
+	      (negro) con el punto negativo a medir.~\cite{AcMaxMexico}
+
+	\item Corriente: Lo primero a tener en cuenta es que la corriente no se
+	      mide de la misma manera que el voltaje. La corriente se mide en serie.
+	      Para hacer la medición en serie, hay que abrir nuestro circuito y
+	      conectar el multímetro como si fuera un resistor más. La resistencia
+	      del multímetro es muy pequeña y rara vez altera la exactitud de
+	      nuestras mediciones.~\cite{AcMaxMexico}
+
+	\item Resistencia: Para medir con un multímetro, sólo se colocan las puntas
+	      en cada terminal de nuestra resistencia que queremos medir, sin importar
+	      el color. Las puntas se colocan en el multímetro en el mismo lugar que
+	      para medir voltaje y se selecciona la función con la letra griega omega
+	      mayúscula $\Omega$.~\cite{AcMaxMexico}
+\end{itemize}
+
+% -----------------------|>
+\subsubsection{¿Qué precauciones debo tener en cuenta con los instrumentos a
+	la hora de realizar una medición?}
+
+Según, (\cite{flukeCorporation}, Guía de Seguridad para Multímetros Digitales),
+Antes de realizar una medida con el multímetro se debe someter a una inspección
+visual. Compruebe que el multímetro, las sondas de prueba y los accesorios no
+presentan daños físicos. Asegúrese de que todas las conexiones encajan
+firmemente y de que no se aprecie metal al descubierto ni grietas en la carcasa.
+No utilice nunca un multímetro ni sondas de prueba que presenten daños.
+
+\vspace{.5cm}
+
+Una vez finalizada la inspección visual, compruebe que el multímetro
+funciona correctamente. Nunca se debe de dar por hecho.
+
+% -----------------------|>
+\subsubsection{¿Cuáles son las ventajas y desventajas del multímetro digital
+	respecto al analógico?}
+
+\begin{center}
+	Ventajas
+\end{center}
+
+\begin{itemize}
+	\item No muestra errores de lectura en la pantalla.
+	\item En la mayoría de los multímetros, detección automática de
+	      la polaridad.
+	\item Detección automática del rango de medición.
+	\item Mayor precisión del valor medido mostrado en la pantalla.
+	\item Menos sensible a interferencias, ruidoso flujos magnéticos.
+	\item Más económico de producir porque tiene menos componentes mecánicos.
+\end{itemize}
+
+\vspace{.5cm}
+
+\begin{center}
+	Desventajas
+\end{center}
+
+\begin{itemize}
+	\item Con frecuencias altas existen mediciones incorrectas en corriente
+	      alterna.
+	\item Los picos de tensión pueden dañar el multímetro.
+\end{itemize}
+
+~\cite{CesarCinjordiz}
 
 % ----------------------------------------------------------------------|>
 \section{Conclusiones}
