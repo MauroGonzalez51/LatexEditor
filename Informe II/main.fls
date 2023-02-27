@@ -225,13 +225,6 @@ INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmr17.tfm
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmbx12.tfm
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmr12.tfm
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\Images\FormulaDesviacionEstandar.png
-INPUT .\Images\FormulaDesviacionEstandar.png
-INPUT Images\FormulaDesviacionEstandar.png
-INPUT .\Images\FormulaDesviacionEstandar.png
-INPUT .\Images\FormulaDesviacionEstandar.png
-INPUT .\Images\FormulaDesviacionEstandar.png
-INPUT .\Images\FormulaDesviacionEstandar.png
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmr8.tfm
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmr6.tfm
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmmi12.tfm
@@ -240,6 +233,13 @@ INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmmi6.tfm
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmsy10.tfm
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmsy8.tfm
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmsy6.tfm
+INPUT .\Images\FormulaDesviacionEstandar.png
+INPUT .\Images\FormulaDesviacionEstandar.png
+INPUT Images\FormulaDesviacionEstandar.png
+INPUT .\Images\FormulaDesviacionEstandar.png
+INPUT .\Images\FormulaDesviacionEstandar.png
+INPUT .\Images\FormulaDesviacionEstandar.png
+INPUT .\Images\FormulaDesviacionEstandar.png
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\main.bbl
 INPUT main.bbl

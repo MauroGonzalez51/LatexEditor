@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apalike.bst
 Reallocating 'name_of_file' (item size: 1) to 32 items.
 Database file #1: ./Bibliography/bibliography.bib
-You've used 4 entries,
+You've used 5 entries,
             1935 wiz_defined-function locations,
-            494 strings with 4205 characters,
-and the built_in function-call counts, 1000 in all, are:
-= -- 97
-> -- 28
-< -- 4
-+ -- 8
-- -- 8
-* -- 62
-:= -- 199
-add.period$ -- 9
-call.type$ -- 4
-change.case$ -- 23
+            498 strings with 4341 characters,
+and the built_in function-call counts, 1236 in all, are:
+= -- 121
+> -- 35
+< -- 5
++ -- 11
+- -- 10
+* -- 77
+:= -- 246
+add.period$ -- 11
+call.type$ -- 5
+change.case$ -- 29
 chr.to.int$ -- 4
-cite$ -- 4
-duplicate$ -- 44
-empty$ -- 69
-format.name$ -- 12
-if$ -- 184
-int.to.chr$ -- 1
+cite$ -- 5
+duplicate$ -- 54
+empty$ -- 84
+format.name$ -- 15
+if$ -- 227
+int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 2
-newline$ -- 20
-num.names$ -- 12
-pop$ -- 20
+newline$ -- 24
+num.names$ -- 15
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 30
 quote$ -- 0
-skip$ -- 38
+skip$ -- 46
 stack$ -- 0
-substring$ -- 48
+substring$ -- 60
 swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 22
+type$ -- 28
 warning$ -- 0
-while$ -- 8
+while$ -- 10
 width$ -- 0
-write$ -- 44
+write$ -- 54
