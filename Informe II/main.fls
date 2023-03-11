@@ -170,6 +170,17 @@ INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\float\float.sty
 INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\float\float.sty
 INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\float\float.sty
 INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\float\float.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\apacite.sty
 INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\l3backend\l3backend-pdftex.def
 INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\l3backend\l3backend-pdftex.def
 INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\l3backend\l3backend-pdftex.def
@@ -204,6 +215,10 @@ INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\spanish.apc
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\spanish.apc
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\spanish.apc
+INPUT D:\PROGRAMAS-APPS\MikTex\tex\latex\apacite\spanish.apc
 INPUT .\Images\logo_utb.png
 INPUT .\Images\logo_utb.png
 INPUT Images\logo_utb.png
@@ -247,6 +262,7 @@ INPUT .\main.bbl
 INPUT main.bbl
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmr17.tfm
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmbx12.tfm
+INPUT D:\PROGRAMAS-APPS\MikTex\fonts\tfm\public\cm\cmtt12.tfm
 INPUT main.aux
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\type1\public\amsfonts\cm\cmbx12.pfb
@@ -262,3 +278,5 @@ INPUT D:\PROGRAMAS-APPS\MikTex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT D:\PROGRAMAS-APPS\MikTex\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT D:\PROGRAMAS-APPS\MikTex\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT D:\PROGRAMAS-APPS\MikTex\fonts\type1\public\amsfonts\cm\cmtt12.pfb
