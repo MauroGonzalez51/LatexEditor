@@ -1,5 +1,7 @@
-\documentclass[letterpaper, 12pt]{article}
+\documentclass[10pt]{article}
+\raggedbottom{}
 \usepackage[utf8]{inputenc}
+\usepackage[papersize={216mm,330mm},tmargin=15mm,bmargin=15mm,lmargin=15mm,rmargin=15mm]{geometry}
 \usepackage[english, spanish]{babel}
 \usepackage{fullpage} % changes the margin
 \usepackage{graphicx}
@@ -26,17 +28,17 @@
 	\centering
 	\includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
 	{\scshape\LARGE Universidad Tecnológica de Bolívar \par}
-	\vspace{1cm}
+	\vspace{4cm}
 
 	{\scshape\Large FÍSICA ELÉCTRICA \par}
-	\vspace{.2cm}
+	\vspace{.8cm}
 
 	% chktex-file 8
 	{\scshape\Large H1 - C \par}
-	\vspace{1cm}
+	\vspace{2.5cm}
 	% chktex-file 8
 	\slshape {\Large \bfseries{}Informe de Laboratorio No.  \\}
-	\vspace{1cm}
+	\vspace{2.5cm}
 
 	\slshape {\itshape{} Mauro González, T00067622 \\}
 	\slshape {\itshape{} German De Armas Castaño, T00068765 \\}
@@ -50,6 +52,8 @@
 \end{titlepage}
 
 % ----------------------------------------------------------------------|>
+\begin{multicols}{2}
+
 \section{Introducción}
 
 % \newpage
@@ -62,50 +66,53 @@
 % \newpage
 
 % ----------------------------------------------------------------------|>
-\section{Marco Teórico}
 
-% ---------------------------------------------------|>
-\subsection*{Ley de Ohm}
+	\section{Marco Teórico}
 
-La Ley de Ohm establece que la corriente eléctrica que fluye a través de un
-circuito es proporcional a la diferencia de potencial eléctrico entre los
-extremos del mismo, y es inversamente proporcional a la resistencia del
-circuito.~\cite{LeyDeOhm}
+	% ---------------------------------------------------|>
+	\subsection*{Ley de Ohm}
 
-% ---------------------------------------------------|>
-\subsection*{Material tipo Ohm}
+	La Ley de Ohm establece que la corriente eléctrica que fluye a través de un
+	circuito es proporcional a la diferencia de potencial eléctrico entre los
+	extremos del mismo, y es inversamente proporcional a la resistencia del
+	circuito.~\cite{LeyDeOhm}
 
-Los materiales óhmicos tienen una relación lineal de corriente-diferencia de
-potencial en un largo intervalo de diferencias de potencial aplicadas.
-La pendiente de la curva I v/s $\triangle$V en la región lineal produce un
-valor para 1/R.~\cite{MaterialesOhmicos}
+	% ---------------------------------------------------|>
+	\subsection*{Material tipo Ohm}
 
-% ---------------------------------------------------|>
-\subsection*{Deducción a partir de la ley de Ohm}
+	Los materiales óhmicos tienen una relación lineal de corriente-diferencia de
+	potencial en un largo intervalo de diferencias de potencial aplicadas.
+	La pendiente de la curva I v/s $\triangle$V en la región lineal produce un
+	valor para 1/R.~\cite{MaterialesOhmicos}
 
-La resistencia de un conductor cilíndrico está determinada por su longitud $l$,
-la sección transversal $a$ y la resistividad del material a una temperatura dada.
-La resistencia es directamente proporcional a la longitud $l$ y a la
-resistividad $\rho$, pero inversamente proporcional a su sección transversal.
+	% ---------------------------------------------------|>
+	\subsection*{Deducción a partir de la ley de Ohm}
 
-$R = p \cdot \frac{l}{a}$
+	La resistencia de un conductor cilíndrico está determinada por su longitud $l$,
+	la sección transversal $a$ y la resistividad del material a una temperatura dada.
+	La resistencia es directamente proporcional a la longitud $l$ y a la
+	resistividad $\rho$, pero inversamente proporcional a su sección transversal.
 
-% ---------------------------------------------------|>
-\subsection*{Factores de los cuales depende la resistencia y resistividad}
+	$R = p \cdot \frac{l}{a}$
 
-La resistividad de un material óhmico es una propiedad característica que
-depende de su composición y temperatura. Los materiales con resistividad
-cero son considerados conductores ideales, mientras que aquellos con
-resistividad infinita son considerados aislantes ideales. En otras
-palabras, la resistividad de un material es un factor clave en la
-determinación de su capacidad para conducir electricidad.
+	% ---------------------------------------------------|>
+	\subsection*{Factores de los cuales depende la resistencia y resistividad}
 
-% ---------------------------------------------------|>
-\subsection*{Temperatura, resistencia y resistividad}
+	La resistividad de un material óhmico es una propiedad característica que
+	depende de su composición y temperatura. Los materiales con resistividad
+	cero son considerados conductores ideales, mientras que aquellos con
+	resistividad infinita son considerados aislantes ideales. En otras
+	palabras, la resistividad de un material es un factor clave en la
+	determinación de su capacidad para conducir electricidad.
 
-La resistividad $\rho$ de un material depende de la estructura molecular y
-atómica, y es dependiente de la temperatura. Para la mayoría de los conductores,
-la resistividad aumenta con el aumento de temperatura.~\cite{KhanAcademy}
+	% ---------------------------------------------------|>
+	\subsection*{Temperatura, resistencia y resistividad}
+
+	La resistividad $\rho$ de un material depende de la estructura molecular y
+	atómica, y es dependiente de la temperatura. Para la mayoría de los conductores,
+	la resistividad aumenta con el aumento de temperatura.~\cite{KhanAcademy}
+
+\end{multicols}
 
 % ---------------------------------------------------|>
 \subsection*{Gráfica de Voltaje vs Corriente}
@@ -119,6 +126,10 @@ la resistividad aumenta con el aumento de temperatura.~\cite{KhanAcademy}
 
 % ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
+
+\begin{multicols}{2}
+
+\end{multicols}
 
 % ----------------------------------------------------------------------|>
 \section{Datos Experimentales}
@@ -135,7 +146,7 @@ la resistividad aumenta con el aumento de temperatura.~\cite{KhanAcademy}
 		R ($\Omega$)              & 0.6    & 1.6                                  & 1.8                   & 2        & 2.4    & 2.8   & 3.3   \\
 		L/A ($m^{-1}$)            & 0.07   & 0.14                                 & 0.21                  & 0.28     & 0.35   & 0.42  & 0.49  \\
 		$\rho$ ($\Omega \cdot m$) & 0.042  & 0.224                                & 0.378                 & 0.56     & 0.84   & 1.176 & 1.617 \\
-		Promedio: $\rho$          & 0.5367 & \multicolumn{2}{c}{Área Transversal} & $4.71 \times 10^{-4}$ & Material & Blanck                 \\
+		Promedio: $\rho$          & 0.5367 & \multicolumn{2}{c}{Área Transversal} & $4.71 \times 10^{-4}$ & Material & Blank                 \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -152,7 +163,7 @@ la resistividad aumenta con el aumento de temperatura.~\cite{KhanAcademy}
 		R ($\Omega$)              & 1.5    & 2                                    & 2.8                   & 3.7      & 4.4    & 5.2   & 6    \\
 		L/A ($m^{-1}$)            & 0.07   & 0.14                                 & 0.21                  & 0.28     & 0.35   & 0.42  & 0.49 \\
 		$\rho$ ($\Omega \cdot m$) & 0.105  & 0.28                                 & 0.588                 & 1.036    & 1.54   & 2.184 & 2.94 \\
-		Promedio: $\rho$          & 0.9555 & \multicolumn{2}{c}{Área Transversal} & $6.28 \times 10^{-4}$ & Material & Blanck                \\
+		Promedio: $\rho$          & 0.9555 & \multicolumn{2}{c}{Área Transversal} & $6.28 \times 10^{-4}$ & Material & Blank                \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -212,7 +223,6 @@ la resistividad aumenta con el aumento de temperatura.~\cite{KhanAcademy}
 % 	\end{tabular}
 % \end{table}
 
-\newpage
 
 \begin{multicols}{2}
 
@@ -221,72 +231,73 @@ la resistividad aumenta con el aumento de temperatura.~\cite{KhanAcademy}
 	\end{figure}
 
 	\begin{figure}[H]
-		\includegraphics[scale = .64]{./Images/Table2.png}
+		\includegraphics[scale = .58]{./Images/Table2.png}
 	\end{figure}
 
 \end{multicols}
 
 % ----------------------------------------------------------------------|>
-\section{Análisis de datos}
+\begin{multicols}{2}
 
-% --------------------------------------------|>
-\subsection*{Calcule el área transversal A (en m2)
-	de uno de los alambres utilizados}
+	\section{Análisis de datos}
 
-$A = \pi \cdot R$
+	% ---------------------------------------------------------------------------------------------------------------------------|>
+	\subsection{Primera Parte}
 
-Usando esta formula, hallamos el area transversal
-$A = \pi \cdot (\frac{0.3}{2000}) => 6.28 \times 10^{-4}$
+	% --------------------------------------------|>
+	\subsubsection*{Calcule el área transversal A (en m2)
+		de uno de los alambres utilizados}
 
-% --------------------------------------------|>
-\subsection*{Compare el valor de resistividad encontrado de los diferentes materiales
-	registrados en la tabla 4.}
+	% $A = \pi \cdot (\frac{0.3}{2000}) => 6.28 \times 10^{-4}$
 
-% --------------------------------------------|>
-\subsection*{Compare el valor de resistividad encontrado de los diferentes materiales
-	registrados en la tabla 4.}
+	% --------------------------------------------|>
+	\subsubsection*{Compare el valor de resistividad encontrado de los diferentes materiales
+		registrados en la tabla 4.}
 
-% --------------------------------------------|>
-\subsection*{¿A qué se debe la diferencia entre el valor de resistividad encontrado y registrado
-	en las tablas?}
+	% --------------------------------------------|>
+	\subsubsection*{Compare el valor de resistividad encontrado de los diferentes materiales
+		registrados en la tabla 4.}
+
+	% --------------------------------------------|>
+	\subsubsection*{¿A qué se debe la diferencia entre el valor de resistividad encontrado y registrado
+		en las tablas?}
+
+	% --------------------------------------------|>
+	\subsubsection*{¿Depende la resistividad de la longitud del alambre?}
+
+	% --------------------------------------------|>
+	\subsubsection*{¿De qué características del alambre depende la resistividad?}
+
+	% --------------------------------------------|>
+	\subsubsection*{¿Depende la resistencia de la longitud del alambre? Explique}
+
+	% --------------------------------------------|>
+	\subsubsection*{¿Depende la resistencia del área de la sección transversal del alambre?
+		Explique}
+
+	% ---------------------------------------------------------------------------------------------------------------------------|>
+	\subsection{Segunda parte}
+
+	% --------------------------------------------|>
+	\subsubsection*{Grafique los datos de V vs. I registrados en la tabla 3}
+
+	% --------------------------------------------|>
+	\subsubsection*{Obtenga la ecuación de la curva que mejor se ajusta a los datos mediante el MMC}
+
+	% --------------------------------------------|>
+	\subsubsection*{Determine a partir de la gráfica el valor experimental de la resistencia del bombillo antes y
+		después de conectarlo. Compárelo con el valor medido y explique las posibles causas de error. }
+
+	% --------------------------------------------|>
+	\subsubsection*{¿Se comporta el resistor como un dispositivo tipo óhmico? Justifique su respuesta. }
+
 	
-% --------------------------------------------|>
-\subsection*{¿Depende la resistividad de la longitud del alambre?}
-
-% --------------------------------------------|>
-\subsection*{¿Depende la resistividad de la longitud del alambre?}
-
-% --------------------------------------------|>
-\subsection*{¿Depende la resistividad del área transversal del alambre?}
-
-% --------------------------------------------|>
-\subsection*{¿Depende la resistividad del área transversal del alambre?}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\end{multicols}
 
 % ----------------------------------------------------------------------|>
 \section{Conclusiones}
