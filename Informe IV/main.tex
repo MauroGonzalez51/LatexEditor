@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[papersize={216mm,330mm},tmargin=15mm,bmargin=15mm,lmargin=15mm,rmargin=15mm]{geometry}
 \usepackage[english, spanish]{babel}
-\usepackage{fullpage} % changes the margin
+% \usepackage{fullpage} % changes the margin
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{chngcntr}
@@ -54,18 +54,41 @@
 % ----------------------------------------------------------------------|>
 \begin{multicols}{2}
 
-\section{Introducción}
+	\section{Introducción}
 
-% \newpage
+	La ley de Ohm es una ley fundamental de la electricidad que establece una
+	relación entre la corriente eléctrica que fluye a través de un conductor,
+	la tensión eléctrica aplicada, el voltaje y la resistencia eléctrica del
+	propio conductor.
 
-% ----------------------------------------------------------------------|>
-\section{Objetivos}
+	En el desarrollo de esta practica se busca comprobar si el voltaje es
+	proporcional a la corriente que circula por un circuito, en donde se
+	considera como única constante a la resistencia que tenga el circuito en sí.
 
-\subsection{Objetivos General}
+	En esta practica se comprueban algunas de las hipótesis que hay sobre la
+	ley de Ohm como lo puede ser el hecho de que sin importar el tipo de
+	circuito  con el que se trabaje, este  no tiene ningún tipo de influencia
+	sobre la ley de ohm, debido a que en cualquier circuito eléctrico, esta ley
+	se aplica a cada componente individual, como resistencias, diodos,
+	transistores, entre otros.  De ahí proviene su utilidad en el diseño y
+	análisis de circuitos eléctricos
 
-% \newpage
+	Durante esta práctica se demuestra la importancia de la ley de Ohm en la
+	teoría eléctrica, Para ello mediante la toma de medidas y la realización
+	de cálculos, se busca realizar un análisis crítico del comportamiento de
+	esta ley, en qué condiciones variaría y como afecta el hecho que hagamos
+	el experimento con un material óhmico o no.
 
-% ----------------------------------------------------------------------|>
+	% \newpage
+
+	% ----------------------------------------------------------------------|>
+	\section{Objetivos}
+
+	\subsection{Objetivos General}
+
+	% \newpage
+
+	% ----------------------------------------------------------------------|>
 
 	\section{Marco Teórico}
 
@@ -119,7 +142,7 @@
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale = 0.5]{./Images/VoltajeVsResistencia.jpg}
+		\includegraphics[scale = 0.31]{./Images/VoltajeVsResistencia.jpg}
 	\end{center}
 \end{figure}
 
@@ -141,12 +164,12 @@
 	\label{tabla-resistencia 1ra Medicion}
 	\begin{tabular}{cccccccc}
 		\toprule
-		                          & 1      & 2                                    & 3                     & 4        & 5      & 6     & 7     \\
+		                          & 1                    & 2                                    & 3                  & 4               & 5                  & 6                     & 7                     \\
 		\midrule
-		R ($\Omega$)              & 0.6    & 1.6                                  & 1.8                   & 2        & 2.4    & 2.8   & 3.3   \\
-		L/A ($m^{-1}$)            & 0.07   & 0.14                                 & 0.21                  & 0.28     & 0.35   & 0.42  & 0.49  \\
-		$\rho$ ($\Omega \cdot m$) & 0.042  & 0.224                                & 0.378                 & 0.56     & 0.84   & 1.176 & 1.617 \\
-		Promedio: $\rho$          & 0.5367 & \multicolumn{2}{c}{Área Transversal} & $4.71 \times 10^{-4}$ & Material & Blank                 \\
+		R ($\Omega$)              & 0.6                  & 1.6                                  & 1.8                & 2               & 2.4                & 2.8                   & 3.3                   \\
+		L/A ($m^{-1}$)            & 0.07                 & 0.14                                 & 0.21               & 0.28            & 0.35               & 0.42                  & 0.49                  \\
+		$\rho$ ($\Omega \cdot m$) & $6 \times 10^{-7}$   & $ \times 10^{-7}$                    & $6 \times 10^{-7}$ & $5 \times 10-7$ & $4.8 \times 10^{}$ & $4.67 \times 10^{-7}$ & $4.71 \times 10^{-7}$ \\
+		Promedio: $\rho$          & $5.6 \times 10^{-7}$ & \multicolumn{2}{c}{Área Transversal} & $7 \times 10^{-8}$ & Material        & Constantán                                                         \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -158,12 +181,12 @@
 	\label{tabla-resistencia 2da Medicion}
 	\begin{tabular}{cccccccc}
 		\toprule
-		                          & 1      & 2                                    & 3                     & 4        & 5      & 6     & 7    \\
+		                          & 1                     & 2                                    & 3                    & 4                    & 5                    & 6                    & 7                    \\
 		\midrule
-		R ($\Omega$)              & 1.5    & 2                                    & 2.8                   & 3.7      & 4.4    & 5.2   & 6    \\
-		L/A ($m^{-1}$)            & 0.07   & 0.14                                 & 0.21                  & 0.28     & 0.35   & 0.42  & 0.49 \\
-		$\rho$ ($\Omega \cdot m$) & 0.105  & 0.28                                 & 0.588                 & 1.036    & 1.54   & 2.184 & 2.94 \\
-		Promedio: $\rho$          & 0.9555 & \multicolumn{2}{c}{Área Transversal} & $6.28 \times 10^{-4}$ & Material & Blank                \\
+		R ($\Omega$)              & 1.5                   & 2                                    & 2.8                  & 3.7                  & 4.4                  & 5.2                  & 6                    \\
+		L/A ($m^{-1}$)            & 0.07                  & 0.14                                 & 0.21                 & 0.28                 & 0.35                 & 0.42                 & 0.49                 \\
+		$\rho$ ($\Omega \cdot m$) & $2.6 \times 10^{-6}$  & $1.7 \times 10^{-6}$                 & $1.6 \times 10^{-6}$ & $1.6 \times 10^{-6}$ & $1.5 \times 10^{-6}$ & $1.5 \times 10^{-6}$ & $1.5 \times 10^{-6}$ \\
+		Promedio: $\rho$          & $1.71 \times 10^{-6}$ & \multicolumn{2}{c}{Área Transversal} & $1.2 \times 10^{-7}$ & Material             & Aleación de Fe y Ni                                                \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -252,28 +275,64 @@
 
 	% --------------------------------------------|>
 	\subsubsection*{Compare el valor de resistividad encontrado de los diferentes materiales
-		registrados en la tabla 4.}
-
-	% --------------------------------------------|>
-	\subsubsection*{Compare el valor de resistividad encontrado de los diferentes materiales
-		registrados en la tabla 4.}
+		registrados en la tabla 4}
 
 	% --------------------------------------------|>
 	\subsubsection*{¿A qué se debe la diferencia entre el valor de resistividad encontrado y registrado
 		en las tablas?}
 
+	La principal distinción se encuentra en la manera en que se debe considerar
+	el valor de la resistencia de un material, debido a que en la práctica
+	existen variaciones en los intervalos de los valores que se establecen
+	para calcularla.
+
 	% --------------------------------------------|>
 	\subsubsection*{¿Depende la resistividad de la longitud del alambre?}
+
+	La resistividad es una propiedad intrínseca de los materiales que permite
+	comparar su resistencia eléctrica sin considerar la longitud o el área
+	transversal del material. Esto se debe a que la resistividad depende de
+	factores como la temperatura, la pureza del material y su estructura
+	cristalina.~\cite{KhanAcademy}
+
+	% --------------------------------------------|>
+	\subsubsection*{¿Depende la resistividad del área transversal del alambre?}
+
+	Basándose en la respuesta anterior, la resistividad no depende
+	del area transversal del alambre, ya que esta es una propiedad intrínseca
+	de los materiales.~\cite{KhanAcademy}
+
 
 	% --------------------------------------------|>
 	\subsubsection*{¿De qué características del alambre depende la resistividad?}
 
+	La resistividad de un alambre \textit{(y cualquier otro material en general)},
+	dependerá del tipo de material del que este hecho, la temperatura,
+	la pureza, y la estructura cristalina del material \textit{(Los metales
+		que tienen una estructura cristalina mas ordenada suelen tener
+		resistividad mas baja)}.~\cite{KhanAcademy}
+
 	% --------------------------------------------|>
 	\subsubsection*{¿Depende la resistencia de la longitud del alambre? Explique}
 
+	La resistencia de un alambre depende directamente de su longitud. Esto se
+	debe a que la resistencia eléctrica de un conductor está relacionada con
+	la distancia que debe recorrer la corriente eléctrica a través del
+	conductor. Cuanto más largo sea el alambre, mayor será la distancia que
+	debe recorrer la corriente eléctrica y, por lo tanto, mayor será la
+	resistencia eléctrica.~\cite{KhanAcademy}
+
 	% --------------------------------------------|>
 	\subsubsection*{¿Depende la resistencia del área de la sección transversal del alambre?
-		Explique}
+		Explique.}
+
+	La resistencia de un alambre depende inversamente de su área de sección
+	transversal. Esto se debe a que la sección transversal del alambre está
+	directamente relacionada con la cantidad de espacio disponible para que
+	los electrones se muevan libremente. Cuanto mayor sea el área de la sección
+	transversal del alambre, menor será la resistencia eléctrica que ofrecerá
+	al paso de la corriente eléctrica, ya que los electrones tendrán más
+	espacio para moverse.%~\cite{KhanAcademy}
 
 	% ---------------------------------------------------------------------------------------------------------------------------|>
 	\subsection{Segunda parte}
@@ -291,13 +350,15 @@
 	% --------------------------------------------|>
 	\subsubsection*{¿Se comporta el resistor como un dispositivo tipo óhmico? Justifique su respuesta. }
 
-	
+
 
 
 
 
 
 \end{multicols}
+
+\newpage
 
 % ----------------------------------------------------------------------|>
 \section{Conclusiones}
