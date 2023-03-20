@@ -84,7 +84,19 @@
 	% ----------------------------------------------------------------------|>
 	\section{Objetivos}
 
+	\begin{itemize}
+		\item Explicar y describir la ley de Ohm y su relación con la
+		      corriente, el voltaje y la resistencia además de discutir sus
+		      limitaciones y sus propiedades.
+	\end{itemize}
+
 	\subsection{Objetivos General}
+
+	\begin{itemize}
+		\item Reconocer las diferencias entre materiales óhmicos y no óhmicos.
+		\item Identificar los valores de resistencia y resistividad.
+		\item Comprender la diferencia entre resistencia y resistividad.
+	\end{itemize}
 
 	% \newpage
 
@@ -151,6 +163,25 @@
 \section{Montaje Experimental}
 
 \begin{multicols}{2}
+	\begin{itemize}
+		\item Alambres resistivos de forma cilíndrica
+		\item Calibrador pie de rey
+		\item Termómetro
+		\item Multímetro digital y multímetro analógico
+		\item Fuente de D.C.
+		\item Resistor de 500Ω/90mA
+		\item Bombillo de 12W/110V
+		\item Reóstato de 33Ω/3.1A
+	\end{itemize}
+
+	\begin{figure}[H]
+		\includegraphics[scale = .1]{./Images/ME1.jpeg}
+	\end{figure}
+
+	\begin{figure}[H]
+		\includegraphics[scale = .2]{./Images/ME2.jpeg}
+	\end{figure}
+
 
 \end{multicols}
 
@@ -250,17 +281,17 @@
 \begin{multicols}{2}
 
 	\begin{figure}[H]
-		\includegraphics[scale = .6]{./Images/Table1.png}
+		\includegraphics[scale = .50]{./Images/Table1.png}
+		\includegraphics[scale = .55]{./Images/Table2.png}
 	\end{figure}
 
-	\begin{figure}[H]
-		\includegraphics[scale = .58]{./Images/Table2.png}
-	\end{figure}
+	% \begin{figure}[H]
+	% \end{figure}
 
-\end{multicols}
+	% \end{multicols}
 
-% ----------------------------------------------------------------------|>
-\begin{multicols}{2}
+	% ----------------------------------------------------------------------|>
+	% \begin{multicols}{2}
 
 	\section{Análisis de datos}
 
@@ -340,8 +371,33 @@
 	% --------------------------------------------|>
 	\subsubsection*{Grafique los datos de V vs. I registrados en la tabla 3}
 
+	\begin{figure}[H]
+		\includegraphics[scale = .55]{./Images/Grafica.png}
+	\end{figure}
+
 	% --------------------------------------------|>
 	\subsubsection*{Obtenga la ecuación de la curva que mejor se ajusta a los datos mediante el MMC}
+
+	$X = Corriente o Intensidad$	\hfill \break{}
+	$Y = Volts$
+
+	\begin{figure}[H]
+		\includegraphics[scale = .5]{./Images/TablaMMC.PNG}
+	\end{figure}
+
+	Ecuación de la recta: $y = mx + b$, donde m es la pendiente y b es el punto
+	de corte.
+
+	\begin{figure}[H]
+		\includegraphics[scale = .5]{./Images/MMC.png}
+	\end{figure}
+
+	$m = \frac{20 \cdot (133.56) - (21.65)(105)}{20 \cdot (25.0475) - (468.7225)} = 12.35$
+
+	$b = \frac{105 \cdot 25.0475 - 21.65 \cdot 133.56}{20 \cdot (25.0475) - (468.7225)} = -8.12$
+
+	$y = 12.35x - 8.12$
+
 
 	% --------------------------------------------|>
 	\subsubsection*{Determine a partir de la gráfica el valor experimental de la resistencia del bombillo antes y
