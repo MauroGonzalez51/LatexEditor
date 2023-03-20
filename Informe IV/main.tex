@@ -277,9 +277,14 @@
 \begin{multicols}{2}
 
 	\begin{figure}[H]
-		\includegraphics[scale = .50]{./Images/Table1.png}
-		\includegraphics[scale = .55]{./Images/Table2.png}
+		\includegraphics[width = 0.78\linewidth]{./Images/Table1.png}
+		\includegraphics[width = 0.78\linewidth]{./Images/Table2.png}
 	\end{figure}
+
+	% \begin{figure}[H]
+	% 	\includegraphics[scale = .50]{./Images/Table1.png}
+	% 	\includegraphics[scale = .55]{./Images/Table2.png}
+	% \end{figure}
 
 	% \begin{figure}[H]
 	% \end{figure}
@@ -298,11 +303,17 @@
 	\subsubsection*{Calcule el área transversal A (en m2)
 		de uno de los alambres utilizados}
 
-	% $A = \pi \cdot (\frac{0.3}{2000}) => 6.28 \times 10^{-4}$
+	\begin{itemize}
+		\item Area transversal 1er alambre: $7 \times 10^{-8}$
+		\item Area transversal 2do alambre: $1.2 \times 10^{-7}$
+	\end{itemize}
 
 	% --------------------------------------------|>
 	\subsubsection*{Compare el valor de resistividad encontrado de los diferentes materiales
 		registrados en la tabla 4}
+
+	Basado en los resultados, el primer material es Constantán y el segundo es
+	una aleación de Fe y Ni.
 
 	% --------------------------------------------|>
 	\subsubsection*{¿A qué se debe la diferencia entre el valor de resistividad encontrado y registrado
@@ -394,28 +405,73 @@
 
 	$y = 12.35x - 8.12$
 
-
 	% --------------------------------------------|>
 	\subsubsection*{Determine a partir de la gráfica el valor experimental de la resistencia del bombillo antes y
 		después de conectarlo. Compárelo con el valor medido y explique las posibles causas de error. }
 
+	\begin{figure}[H]
+		\includegraphics[width = 0.5\linewidth]{./Images/Resistencias.PNG}
+	\end{figure}
+
+	Error relativo en la resistencia: $R = \frac{V}{I}$ \hfill \break{}
+
+	$R = 4337.19184 \pm 0,0003$
+
+	Cómo es posible evidenciar teniendo en cuenta los datos y la gráfica, el
+	error existente es bajo y se observa en la curva de la gráfica la cuál es
+	visualmente una recta que crece linealmente con los datos de voltaje y
+	corriente, esto se complementa con la ecuación obtenida con los mínimos
+	cuadrados.
+
 	% --------------------------------------------|>
 	\subsubsection*{¿Se comporta el resistor como un dispositivo tipo óhmico? Justifique su respuesta. }
 
+	Sí se comparta como un material Óhmico, ya que la curva de la gráfica es
+	linealmente creciente y nos demuestra que la relación entre el voltaje y
+	la corriente es constante, es decir, son directamente proporcionales.
 
-
-
-
-
+	Además, en la práctica se observó como la bombilla aumentaba su luminosidad
+	a medida que se aumentaba la corriente y el voltaje. Por lo tanto, el bajo
+	error relativo en los datos simplemente demuestra la resistencia de la
+	bombilla.
 
 \end{multicols}
-
-\newpage
 
 % ----------------------------------------------------------------------|>
 \section{Conclusiones}
 
-\newpage
+% ---------------------------------------|>
+\subsection*{Experiencia 1}
+
+En la siguiente experiencia se determinaron aquellos factores que influyen
+directamente en la resistividad de un material (Ya sea o no Óhmico) como lo
+es la temperatura, la pureza del material, estructura cristalina, entre otras
+cosas; esto quiere decir que aquellos factores como el área transversal no
+interfieren en esta; sin embargo, existen otros que, aunque no interfieren
+con la resistividad y lo hacen con la resistencia como lo es la longitud,
+con la cual tiene una relación directa debido a la distancia que recorre
+la corriente eléctrica en el material.
+
+% ---------------------------------------|>
+\subsection*{Experiencia 2}
+
+Se pudo hacer uso de método muy eficientes como el de los mínimos cuadrados
+a la hora de realizar comparaciones en las gráficas entre los valores
+obtenidos y los esperados, de esta forma se estimaba la resistividad 
+del material principalmente visto al momento de obtener el calculo 
+de la pendiente.
+
+% ---------------------------------------|>
+\subsection*{Experiencia 3}
+
+En esta experiencia se pudo determinar el comportamiento que tienen los 
+materiales óhmicos en comparación de los no óhmicos, se evidenció como 
+se mantenía una resistencia lineal entre el voltaje y la corriente para 
+brindarle un flujo estable a la bombilla, la cuál aumentaba su 
+luminosidad progresivamente a medida que aumentaban los factores 
+influyentes (voltaje y corriente). Gracias al método de mínimos 
+cuadrados fue posible realizar comparaciones entre los gráficos 
+y realizar las respectivas observaciones. 
 
 \bibliography{./Bibliography/bibliography.bib}
 
