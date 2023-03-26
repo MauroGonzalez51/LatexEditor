@@ -25,8 +25,8 @@
 
 \begin{document}
 
-% PRACTICA 5
-%  GUÍA No. 7
+% 									|		PRACTICA 5                 |
+%  									|		GUÍA No. 7                 |
 
 \begin{titlepage}
 	\centering
@@ -59,72 +59,132 @@
 % ----------------------------------------------------------------------|>
 \begin{multicols}{2}
 
-\section{Introducción}
+	\section{Introducción}
 
+	La fuerza magnética es una fuerza que actúa sobre objetos que se encuentran
+	en presencia de un campo magnético, es decir, que es una consecuencia de la
+	fuerza electromagnética, una de las cuatro fuerzas fundamentales de la
+	naturaleza, y es causada por el movimiento de las cargas atómicas~\cite{FuerzaMagnetica}.
 
-% ----------------------------------------------------------------------|>
-\section{Objetivos}
+	La fuerza magnética se puede calcular utilizando la ley de Lorentz,
+	que describe la fuerza que actúa sobre una carga eléctrica en movimiento
+	en un campo magnético.
 
-\subsection{Objetivos Generales}
+	{\large $F = q (v \cdot B)$}
 
+	donde: \hfill \break{}
+	\textbf{\textit{F}} es la fuerza magnética que actúa sobre la carga eléctrica,
+	medida en newtons (N),
+	\textbf{\textit{q}} es la carga eléctrica, medida en coulombs (C),
+	\textbf{\textit{v}} es la velocidad de la carga eléctrica, medida en metros por segundo
+	($\frac{m}{s}$),
+	\textbf{\textit{B}} es la densidad de flujo o inducción magnética, medida en teslas (T).
 
-% ----------------------------------------------------------------------|>
-\section{Preparación de la practica}
+	La dirección de la fuerza magnética se determina mediante la regla de la
+	mano derecha: si se coloca el dedo índice en la dirección de la velocidad
+	de la carga eléctrica $(v)$ y el dedo medio en la dirección del campo
+	magnético $(B)$, entonces el dedo pulgar apuntará en la dirección de la
+	fuerza magnética $(F)$.
 
-% -----------------------------------------------------------|>
-\subsection*{Calcula el campo magnético sobre el eje de un solenoide y llega a la expresión (1).}
+	Es importante tener en cuenta que la fuerza magnética puede ser
+	influenciada por la distancia entre los objetos, la intensidad y
+	la orientación relativa de los campos magnéticos. Además, la fuerza
+	magnética puede ser controlada y manipulada mediante la utilización de
+	materiales y diseños adecuados en los objetos que interactúan magnéticamente.
 
-El objetivo es calcular el campo eléctrico de un solenoide en un punto P situado
-en el eje del solenoide sumando el campo producido por las N espiras.
+	Una bobina es un componente eléctrico que está formado por un conductor
+	enrollado en forma de espiral. Cuando una corriente eléctrica circula por
+	la bobina, se crea un campo magnético alrededor de ella.
 
-\begin{figure}[H]
-	\includegraphics[width = \linewidth]{./Images/solenoide.png}
-\end{figure}
+	Este campo magnético es perpendicular al plano de la bobina y es
+	proporcional a la corriente que circula y al número de vueltas de la misma,
+	además, se puede calcular su campo magnético utilizando la ley de Ampère.
 
-En la figura, tenemos un corte longitudinal de un solenoide de longitud L,
-formado por N espiras iguales de radio a.
+	Esta quinta experiencia se enfocará en analizar cómo es el comportamiento
+	de un campo magnético uniforme en el interior de un solenoide.
 
-De~\cite{CampoElectricoPorEspira} se obtuvo la expresión para calcular el campo
-magnético producido por una espira de radio $a$ en un punto $P$ de su eje
-distante $X$.
+	% ----------------------------------------------------------------------|>
+	\section{Objetivos}
 
-	% chktex-file 3
-	{\large $B = \displaystyle\frac{\mu_0 i a^2}{2 \left(\sqrt{a^2 + x^2}\right)^3}$}
+	% \subsection{Objetivos Generales}
 
-Todas las espiras del solenoide producen sobre P un campo que tiene la misma
-dirección y sentido, pero distinto módulo, dependiendo de la distancia $X$ al
-punto P.
+	\begin{itemize}
+		\item Identificar el funcionamiento de un circuito para comprobar las leyes
+		      de Kirchhoff
+		\item Comprobar en qué circunstancias se cumple la ley de malla.
+		\item Precisar los voltajes correspondientes para evitar
+		      recalentamientos y/o fundición de los resistores.
+		\item Verificar  los factores influyentes en la ley de nodos.
+	\end{itemize}
 
-El número de espiras que hay en el intervalo comprendido entre
-$x$ y $x+dx$ es $dn = N \cdot \frac{dx}{L}$
+	% ----------------------------------------------------------------------|>
+	\section{Preparación de la practica}
 
-Estas espiras producen en P un capo que es el producto del campo producido por
-una espira por el numero de espiras.
+	% -----------------------------------------------------------|>
+	\subsection*{Calcula el campo magnético sobre el eje de un solenoide y llega a la expresión (1).}
 
-	{\large $dB = \frac{\mu_0 i a^2}{2 \left(\sqrt{a^2 + x^2}\right)^3} \cdot \frac{N}{L} dX$}
+	El objetivo es calcular el campo eléctrico de un solenoide en un punto P situado
+	en el eje del solenoide sumando el campo producido por las N espiras.
 
-Para integrar, tenemos que hacer el cambio de variable $a = \tan\theta$ y
-teniendo en cuenta que, {\large $1 + \tan^{2}\theta = \frac{1}{\cos^{2}\theta}$},
-simplificamos la integral
+	\begin{figure}[H]
+		\includegraphics[width = \linewidth]{./Images/solenoide.png}
+	\end{figure}
 
-	{\large $B = \frac{\mu_0 i N}{2L} \int_{\theta_1}^{\theta_2} -\sin\theta \cdot \,d\theta$}
+	En la figura, tenemos un corte longitudinal de un solenoide de longitud L,
+	formado por N espiras iguales de radio a.
 
-	{\large $ = \frac{\mu_0 i N}{2L} \left(\cos\theta_2 - \cos\theta_1\right)$}
+	De~\cite{CampoElectricoPorEspira} se obtuvo la expresión para calcular el campo
+	magnético producido por una espira de radio $a$ en un punto $P$ de su eje
+	distante $X$.
 
-Si el solenoide es muy largo comparado con su radio $a$ y si el punto $P$ esta
-situado en el centro, tendremos que $\theta_1 \rightarrow \pi$ y
-$\theta_2 \rightarrow 0$. El campo $B$ vale entonces:
+		% chktex-file 3
+		{\large $B = \displaystyle\frac{\mu_0 i a^2}{2 \left(\sqrt{a^2 + x^2}\right)^3}$}
 
-{\large $B = \frac{\mu_0 i N}{L}$}
+	Todas las espiras del solenoide producen sobre P un campo que tiene la misma
+	dirección y sentido, pero distinto módulo, dependiendo de la distancia $X$ al
+	punto P.
 
-Fuente:~\cite{CampoElectricoSolenoide}
+	El número de espiras que hay en el intervalo comprendido entre
+	$x$ y $x+dx$ es $dn = N \cdot \frac{dx}{L}$
 
-% -----------------------------------------------------------|>
-\subsection*{Demuestra la expresión (3) y (4) realizando los esquemas necesarios para las corrientes, el
-	campo y la fuerza resultante}
+	Estas espiras producen en P un capo que es el producto del campo producido por
+	una espira por el numero de espiras.
 
-% ----------------------------------------------------------------------|>
-\section{Resumen del procedimiento}
+		{\large $dB = \frac{\mu_0 i a^2}{2 \left(\sqrt{a^2 + x^2}\right)^3} \cdot \frac{N}{L} dX$}
+
+	Para integrar, tenemos que hacer el cambio de variable $a = \tan\theta$ y
+	teniendo en cuenta que, {\large $1 + \tan^{2}\theta = \frac{1}{\cos^{2}\theta}$},
+	simplificamos la integral
+
+		{\large $B = \frac{\mu_0 i N}{2L} \int_{\theta_1}^{\theta_2} -\sin\theta \cdot \,d\theta$}
+
+		{\large $ = \frac{\mu_0 i N}{2L} \left(\cos\theta_2 - \cos\theta_1\right)$}
+
+	Si el solenoide es muy largo comparado con su radio $a$ y si el punto $P$ esta
+	situado en el centro, tendremos que $\theta_1 \rightarrow \pi$ y
+	$\theta_2 \rightarrow 0$. El campo $B$ vale entonces:
+
+	{\large $B = \frac{\mu_0 i N}{L}$}
+
+	Fuente:~\cite{CampoElectricoSolenoide}
+
+	% -----------------------------------------------------------|>
+	\subsection*{Demuestra la expresión (3) y (4) realizando los esquemas necesarios para las corrientes, el
+		campo y la fuerza resultante}
+
+	% ----------------------------------------------------------------------|>
+	\section{Resumen del procedimiento}
+
+	El primer paso del experimento es armar el montaje que se muestra en la
+	figura 1 con la ayuda del simulador, este consta de 2 baterías, 4
+	resistencias, los amperímetros y los cables que unen todo el circuito,
+	tener en cuenta el voltaje suministrado para no fundir las resistencias.
+	Después anotar los valores de la resistencia en la tabla número 1.
+	Seguido medir la diferencia de potencia que nos indica la tabla número 2
+	y registrar los datos, del mismo modo medimos las corrientes que nos
+	indica la tabla número 3 y registramos los datos. Por último, cambiamos
+	los polos de las baterías, y volvemos a medir los datos de la tabla
+	número 3.
 
 \end{multicols}
 
