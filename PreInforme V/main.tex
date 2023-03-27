@@ -106,11 +106,21 @@
 	% ----------------------------------------------------------------------|>
 	\section{Objetivos}
 
-	% \subsection{Objetivos Generales}
+	% -----------------------------------|>
+	\subsection{Objetivo General}
 
 	\begin{itemize}
-		\item Identificar el funcionamiento de un circuito para comprobar las leyes
-		      de Kirchhoff
+		\item Identificar el funcionamiento de los circuitos para comprobar
+		      la diferentes leyes que pueden intervenir en estos
+		      (Leyes de Kirchhoff, Ley de malla, ley de nodos).
+	\end{itemize}
+
+	% -----------------------------------|>
+	\subsection{Objetivos específicos}
+
+	\begin{itemize}
+		% \item Identificar el funcionamiento de un circuito para comprobar las leyes
+		%       de Kirchhoff
 		\item Comprobar en qué circunstancias se cumple la ley de malla.
 		\item Precisar los voltajes correspondientes para evitar
 		      recalentamientos y/o fundición de los resistores.
@@ -156,7 +166,9 @@
 	teniendo en cuenta que, {\large $1 + \tan^{2}\theta = \frac{1}{\cos^{2}\theta}$},
 	simplificamos la integral
 
-		{\large $B = \frac{\mu_0 i N}{2L} \int_{\theta_1}^{\theta_2} -\sin\theta \cdot \,d\theta$}
+		% {\large $B = \frac{\mu_0 i N}{2L} \int_{\theta_1}^{\theta_2} -\sin\theta \cdot \,d\theta$}
+
+		{\large $B = \frac{\mu_0 i N}{2L} \Bigg[ \displaystyle\int_{\theta_1}^{\theta_2} -\sin\theta \cdot \,d\theta \Bigg]$}
 
 		{\large $ = \frac{\mu_0 i N}{2L} \left(\cos\theta_2 - \cos\theta_1\right)$}
 
@@ -172,19 +184,43 @@
 	\subsection*{Demuestra la expresión (3) y (4) realizando los esquemas necesarios para las corrientes, el
 		campo y la fuerza resultante}
 
+	{\large $Fm = IL \times B$}
+
+	$Fm = I_e L B \sin(180) = 0$
+
+	$Fm = I_e L B \sin(0) = 0$
+
+	$Fm = I_e L \times B = I_e L B \sin(90) = I_e L $
+
+	$L = d$
+
+	$Fm = I_e d B$
+
+	$Fx = Wx \rightarrow F = W$
+
+	$Fm = I_e d B \rightarrow W = I_e d B$
+
+	$B = \frac{W}{I_e d}$
+
 	% ----------------------------------------------------------------------|>
 	\section{Resumen del procedimiento}
 
-	El primer paso del experimento es armar el montaje que se muestra en la
-	figura 1 con la ayuda del simulador, este consta de 2 baterías, 4
-	resistencias, los amperímetros y los cables que unen todo el circuito,
-	tener en cuenta el voltaje suministrado para no fundir las resistencias.
-	Después anotar los valores de la resistencia en la tabla número 1.
-	Seguido medir la diferencia de potencia que nos indica la tabla número 2
-	y registrar los datos, del mismo modo medimos las corrientes que nos
-	indica la tabla número 3 y registramos los datos. Por último, cambiamos
-	los polos de las baterías, y volvemos a medir los datos de la tabla
-	número 3.
+	Se armara el circuito con el fin de establecer una corriente directa en
+	la bobina, se encenderá y se ajustara a una corriente de 4A, para saber
+	en que dirección se encuentra el campo magnético se colocara una brújula
+	cerca del núcleo del solenoide, tal como se muestra coloque la espira
+	dentro del solenoide  y se armara el circuito para alimentarla.
+
+	Se encenderán las dos fuentes que alimentan la espira y la bomba y se
+	aumentara gradualmente el voltaje en la fuente de la espira hasta que se
+	obtenga una corriente de 1A.
+
+	Luego se desviara la espira y se colocara en la balanza hilos de densidad
+	y masa lineal y se ajustara la corriente haga que la balanza llegue al
+	equilibrio, se registrara la masa del hilo, la corriente tanto de la
+	espira como de la bobina y se hará el mismo procedimiento para otros
+	valores de la masa del hilo. Sin olvidar de registrar los datos de la
+	bobina y la espiral.
 
 \end{multicols}
 
