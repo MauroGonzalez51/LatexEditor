@@ -1,0 +1,40 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx} 
+\usepackage{amsmath}
+\usepackage{enumitem} 
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}} 
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\begin{document}
+
+\section*{Eu ut ullamco ad Lorem voluptate cupidatat labore.}
+
+\nocite{Arrieta2020}
+\nocite{CifrasCartagena}
+\nocite{Garcia2017}
+\nocite{CubaSancho2022}
+
+\newpage
+
+% \bibliography{./Bibliography/bibliography.bib}
+\printbibliography
+
+\end{document}
