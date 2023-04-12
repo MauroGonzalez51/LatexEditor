@@ -6,3 +6,4 @@
 **/*.blg
 **/*.fls
 **/*.synctex(busy)
+**/*.run.xml
