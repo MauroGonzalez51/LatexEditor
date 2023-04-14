@@ -1,0 +1,162 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx} 
+\usepackage{amsmath}
+\usepackage{enumitem} 
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}} 
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\raggedbottom{}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+	{\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+	\vspace{1cm}
+
+	{\scshape\Large FÍSICA ELÉCTRICA \par}
+	\vspace{.2cm}
+
+	% chktex-file 8
+	{\scshape\Large H1 - C \par}
+	\vspace{1cm}
+	% chktex-file 8
+	\slshape {\Large \bfseries{}Informe de Laboratorio No.  \\}
+	\vspace{1cm}
+
+	\slshape {\itshape{} Mauro González, T00067622 \\}
+	\slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+	\slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+	\slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+	\slshape {\itshape{} Juan Eduardo barón, T00065901 \\}
+	\vfill
+	Revisado Por \\
+	Gabriel Hoyos Gomez Casseres\\
+	{\large \today\par}
+\end{titlepage}
+
+% ----------------------------------------------------------------------|>
+\section{Introducción}
+
+% \newpage
+
+% ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+\subsection{Objetivo especifico}
+
+% \newpage
+
+% ----------------------------------------------------------------------|>
+\section{Marco Teórico}
+
+% -------------------------------------------------|>
+\subsection*{Formula para calcular el campo magnético dentro de un solenoide}
+
+% chktex-file 24
+\begin{equation}
+	B = {\frac{\mu_0 N I_b}{L}} \label{eq:FormulaCampoMagneticoSolenoide}
+\end{equation}
+
+\nocite{SolenoideGarcia2016}
+
+Donde: \hfill \break{} \textit{{\large $\mu_o$}}, es la permeabilidad del
+espacio libre, \textit{{\large $N$}}, es la cantidad de vueltas del alambre,
+\textit{{\large $I_b$}}, es la corriente suministrada, \textit{{\large $L$}},
+la longitud del solenoide.
+
+Dando como resultado (\textit{{\large $B$}}), siendo el campo magnético
+del solenoide.
+
+% -------------------------------------------------|>
+\subsection*{Formula de fuerza magnética}
+
+\begin{itemize}[label=$\triangleright$]
+	\item {\large $Fm = B I_e d$}
+	\item {\large $Fm = K I_e$}
+\end{itemize}
+
+% ----------------------------------------------------------------------|>
+\section{Montaje Experimental}
+
+% ----------------------------------------------------------------------|>
+\section{Datos Experimentales}
+
+% --------------------------------------------------|>
+% ! Tabla de la toma de datos (1)
+
+% chktex-file 44
+\begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+	\hline
+	$Fm$ \textit{(mN)} & $I_e$ \textit{(A)} \\ \hline
+	0.04               & 0.98               \\ \hline
+	0.13               & 1.95               \\ \hline
+	0.17               & 3.00               \\ \hline
+	0.23               & 3.90               \\ \hline
+	0.30               & 5.16               \\ \hline
+\end{tabularx}
+
+\subsection*{Constantes}
+
+\begin{itemize}[label=$\triangleright$]
+	\item {\large $N$}: $120$ \textit{(Vueltas)} $\Rightarrow$ {\large $1.20 \times 10^{2}$}
+	\item {\large $d$}: $0.04$ \textit{(M)} $\Rightarrow$ {\large $4 \times 10^{-2}$}
+	\item {\large $L$}: $0.4$ \textit{(M)} $\Rightarrow$ {\large $4 \times 10^{-1}$}
+	\item {\large $\mu_0$}: $4 \pi \times 10^{-7}$ \textit{($T \cdot m/A$)} $\Rightarrow$ {\large $1.26 \times 10^{-6}$}
+\end{itemize}
+
+% ----------------------------------------------------------------------|>
+\section{Análisis de datos}
+
+% ----------------------------------------------------|>
+\subsection*{Calcule el campo magnético en la bobina con la ecuación~(\ref{eq:FormulaCampoMagneticoSolenoide})}
+
+% ! Tabla para el calculo de B Teorico
+
+% chktex-file 44
+\begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+	\hline
+	$I_e$ \textit{(A)} & $B$ Teorico \textit{(T)} \\ \hline
+	0.98               & $3.69 \times 10^{-4}$    \\ \hline
+	1.95               & $7.35 \times 10^{-4}$    \\ \hline
+	3.00               & $1.13 \times 10^{-3}$    \\ \hline
+	3.90               & $1.47 \times 10^{-3}$    \\ \hline
+	5.16               & $1.95 \times 10^{-3}$    \\ \hline
+\end{tabularx}
+
+% ----------------------------------------------------------------------|>
+\section{Conclusiones}
+
+\newpage
+
+% \bibliography{./Bibliography/bibliography.bib}
+\printbibliography
+
+\end{document}
