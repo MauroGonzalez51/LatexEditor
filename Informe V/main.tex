@@ -3,9 +3,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english, spanish]{babel}
 \usepackage{fullpage} % changes the margin
-\usepackage{graphicx} 
+\usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{enumitem} 
+\usepackage{enumitem}
 \usepackage{chngcntr}
 \usepackage{setspace}
 \usepackage{url}
@@ -16,13 +16,13 @@
 \usepackage{amsmath}
 
 \counterwithin{figure}{section}
-\renewcommand{\thesection}{\arabic{section}} 
+\renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\baselinestretch}{1.5}
 
 \usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
 \DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
-    andothers = {\em et\addabbrvspace al\adddot}
+	andothers = {\em et\addabbrvspace al\adddot}
 }
 \addbibresource{./Bibliography/bibliography.bib}
 
@@ -63,6 +63,21 @@
 % ----------------------------------------------------------------------|>
 \section{Introducción}
 
+Una bobina es un dispositivo compuesto por un conductor
+eléctrico enrollado en forma de espiral o solenoide, que
+permite la generación de un campo magnético cuando se le
+aplica una corriente eléctrica. El estudio del campo
+magnético en una bobina es fundamental en la comprensión de
+numerosos fenómenos, tales como la inducción
+electromagnética, el funcionamiento de los motores
+eléctricos y la generación de energía eléctrica. En este
+trabajo, se abordará el análisis del campo magnético en una
+bobina desde diferentes perspectivas, incluyendo su origen
+y características, la relación entre el campo magnético y
+la corriente eléctrica, la influencia de las propiedades
+físicas de la bobina en el campo magnético generado y las
+aplicaciones prácticas de este fenómeno.
+
 % \newpage
 
 % ----------------------------------------------------------------------|>
@@ -78,6 +93,72 @@
 \section{Marco Teórico}
 
 % -------------------------------------------------|>
+\subsection*{Campo Magnético}
+
+Es un campo vectorial que describe la interacción magnética
+que ocurre entre cargas eléctricas en movimiento. Se
+manifiesta como una fuerza que actúa sobre una carga en
+movimiento, que se desvía de su trayectoria original en
+presencia del campo magnético.
+
+El campo magnético se representa mediante líneas de fuerza
+que indican la dirección y la intensidad del campo en cada
+punto del espacio. Estas líneas de fuerza forman un patrón
+que depende de la distribución de cargas eléctricas en
+movimiento y su velocidad. El campo magnético se mide en
+unidades de Tesla
+\textit{\textbf{(T)}}~(\cite{magnetic-fields-khanacademy}).
+
+% -------------------------------------------------|>
+\subsection*{Inducción electromagnética}
+
+La inducción electromagnética se basa en la ley de
+Faraday-Neumann-Lenz, que establece que la fuerza
+electromotriz (FEM) inducida en un circuito cerrado es
+igual al cambio temporal del flujo magnético que atraviesa
+el circuito. El flujo magnético es el producto del campo
+magnético por la superficie que atraviesa.
+
+% -------------------------------------------------|>
+\subsection*{Inducción electromagnética}
+
+La inducción electromagnética se basa en la ley de
+Faraday-Neumann-Lenz, que establece que la fuerza
+electromotriz (FEM) inducida en un circuito cerrado es
+igual al cambio temporal del flujo magnético que atraviesa
+el circuito. El flujo magnético es el producto del campo
+magnético por la superficie que atraviesa.
+
+% -------------------------------------------------|>
+\subsection*{Ley de Biot-Savart}
+
+Esta ley establece que el campo magnético creado por un
+conductor eléctrico es directamente proporcional a la
+intensidad de la corriente que circula por él y al número
+de vueltas de la espira o solenoide. Relaciona los campos
+magnéticos con las corrientes que los crean. De una manera
+similar a como la ley de Coulomb relaciona los campos
+eléctricos con las cargas puntuales que las crean. La
+obtención del campo magnético resultante de una
+distribución de corrientes implica un producto vectorial, y
+cuando la distancia desde la corriente al punto del campo
+está variando continuamente, se convierte inherentemente en
+un problema de cálculo diferencial~(\textcite{biot-savart-law}).
+
+% -------------------------------------------------|>
+\subsection*{La Regla de la Mano Derecha}
+
+Siempre que circula una corriente eléctrica en un hilo
+conductor aparece un campo magnético, cuyas líneas son
+circunferencias situadas en planos perpendiculares al
+conductor y con sus centros en él. Situamos mentalmente un
+sacacorchos de manera que avance en la dirección del polo
+positivo al negativo de la pila, los extremos del mango
+siguen la dirección de las líneas del campo. A veces la Ley
+de Ampère se enuncia empleando el sentido de las agujas del
+reloj. Trata de describir el enunciado.
+
+% -------------------------------------------------|>
 \subsection*{Formula para calcular el campo magnético dentro de un solenoide}
 
 % chktex-file 24
@@ -87,21 +168,21 @@
 
 \nocite{Garcia2016}
 
-Donde: \hfill \break{} \textit{{\large $\mu_o$}}, es la permeabilidad del
-espacio libre, \textit{{\large $N$}}, es la cantidad de vueltas del alambre,
-\textit{{\large $I_b$}}, es la corriente suministrada, \textit{{\large $L$}},
-la longitud del solenoide.
+Donde: \hfill \break{} \textit{{\large $\mu_o$}}, es la
+permeabilidad del espacio libre, \textit{{\large $N$}}, es
+la cantidad de vueltas del alambre, \textit{{\large
+			$I_b$}}, es la corriente suministrada, \textit{{\large
+			$L$}}, la longitud del solenoide.
 
-Dando como resultado (\textit{{\large $B$}}), siendo el campo magnético
-del solenoide.
+Dando como resultado (\textit{{\large $B$}}), siendo el
+campo magnético del solenoide.
 
 % -------------------------------------------------|>
 \subsection*{Formula de fuerza magnética}
 
-\begin{itemize}[label=$\triangleright$]
-	\item {\large $Fm = B I_e d$}
-	\item {\large $Fm = K I_e$}
-\end{itemize}
+\begin{equation}
+	Fm = B I_e d \label{eq:FormulaFuerzaMagnetica}
+\end{equation}
 
 % ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
