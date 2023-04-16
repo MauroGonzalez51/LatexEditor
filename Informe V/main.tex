@@ -85,9 +85,21 @@ aplicaciones prácticas de este fenómeno.
 
 \subsection{Objetivo general}
 
+Calcule el campo magnético producido por el solenoide de CC
+debido a la fuerza magnética que actúa sobre la espira
+conductora.
+
 \subsection{Objetivo especifico}
 
-% \newpage
+\begin{itemize}[label=$\triangleright$]
+	\item Comprender la importancia de la estructura del solenoide.
+	\item Determinar la importancia de un interruptor para mantener
+	      equilibrio en el sistema.
+	\item Medir la fuerza magnética ejercida sobre el espiral para
+	      mantenerlo en equilibrio.
+	\item Comparar la fuerza experimental teórica con la fuerza
+	      calculada de forma experimental
+\end{itemize}
 
 % ----------------------------------------------------------------------|>
 \section{Marco Teórico}
@@ -143,7 +155,8 @@ obtención del campo magnético resultante de una
 distribución de corrientes implica un producto vectorial, y
 cuando la distancia desde la corriente al punto del campo
 está variando continuamente, se convierte inherentemente en
-un problema de cálculo diferencial~(\textcite{biot-savart-law}).
+un problema de cálculo
+diferencial~(\textcite{biot-savart-law}).
 
 % -------------------------------------------------|>
 \subsection*{La Regla de la Mano Derecha}
@@ -194,15 +207,18 @@ campo magnético del solenoide.
 % ! Tabla de la toma de datos (1)
 
 % chktex-file 44
-\begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
-	\hline
-	$Fm$ \textit{(mN)} & $I_e$ \textit{(A)} \\ \hline
-	0.04               & 0.98               \\ \hline
-	0.13               & 1.95               \\ \hline
-	0.17               & 3.00               \\ \hline
-	0.23               & 3.90               \\ \hline
-	0.30               & 5.16               \\ \hline
-\end{tabularx}
+
+\begin{center}
+	\begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+		\hline
+		$Fm$ \textit{(mN)} & $I_e$ \textit{(A)} \\ \hline
+		0.04               & 0.98               \\ \hline
+		0.13               & 1.95               \\ \hline
+		0.17               & 3.00               \\ \hline
+		0.23               & 3.90               \\ \hline
+		0.30               & 5.16               \\ \hline
+	\end{tabularx}
+\end{center}
 
 \subsection*{Constantes}
 
@@ -224,19 +240,62 @@ campo magnético del solenoide.
 % chktex-file 44
 \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
 	\hline
-	$I_e$ \textit{(A)} & $B$ Teorico \textit{(T)} \\ \hline
-	0.98               & $3.69 \times 10^{-4}$    \\ \hline
-	1.95               & $7.35 \times 10^{-4}$    \\ \hline
-	3.00               & $1.13 \times 10^{-3}$    \\ \hline
-	3.90               & $1.47 \times 10^{-3}$    \\ \hline
-	5.16               & $1.95 \times 10^{-3}$    \\ \hline
+	$I_e$ \textit{(A)} & $B$ Teorico \textit{(T)} \textbf{[1]} \\ \hline
+	0.98               & $3.69 \times 10^{-4}$                 \\ \hline
+	1.95               & $7.35 \times 10^{-4}$                 \\ \hline
+	3.00               & $1.13 \times 10^{-3}$                 \\ \hline
+	3.90               & $1.47 \times 10^{-3}$                 \\ \hline
+	5.16               & $1.95 \times 10^{-3}$                 \\ \hline
+\end{tabularx}
+
+% ----------------------------------------------------|>
+\subsection*{Calcular el campo magnético de la ecuación~(\ref{eq:FormulaFuerzaMagnetica})}
+
+\textit{Despejando {\large $B$} de la ecuación~(\ref{eq:FormulaFuerzaMagnetica})}
+
+\begin{equation}
+	B = \frac{Fm}{I_e d} \label{eq:CampoMagneticoDespejado}
+\end{equation}
+
+\textit{Tomando la tabla de datos experimentales}
+
+\vspace{.5cm}
+
+% chktex-file 44
+\begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|}
+	\hline
+	$B$ Teorico \textit{(T)} \textbf{[2]} \\ \hline
+	1.02                                  \\ \hline
+	1.67                                  \\ \hline
+	1.42                                  \\\hline
+	1.47                                  \\ \hline
+	1.45                                  \\ \hline
+\end{tabularx}
+
+\vspace{.5cm}
+
+\begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+	\hline
+	Promedio & 1.41 \\ \hline
 \end{tabularx}
 
 % ----------------------------------------------------------------------|>
 \section{Conclusiones}
 
-\newpage
-
+Durante la realización de la experiencia \#7 ``Campo
+magnético en una bobina. Fuerza magnética'', se pudo
+observar que todo flujo de corriente que pasa a través de
+un conductor genera un campo magnético. También se pudo
+observar que dos corrientes anti-paralelas, es decir, que
+van en direcciones opuestas pero paralelas, experimentan
+una fuerza de repulsión magnética entre sí. Por último, se
+evidencio que todo campo magnético genera una fuerza con
+respecto a un flujo eléctrico o a otra carga. En resumen,
+la experiencia permitió comprender la relación entre
+corriente y campo magnético, la intensidad eléctrica que
+circula por el mismo y la dependencia evidente que existe
+entre el campo magnético y la corriente a través de la
+bobina.
 % \bibliography{./Bibliography/bibliography.bib}
 \printbibliography
 
