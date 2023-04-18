@@ -1,0 +1,60 @@
+\documentclass[letterpaper, 12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx} 
+\usepackage{enumitem} 
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}} 
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{float}
+\bibliographystyle{apacite}
+
+
+\begin{document}
+
+% Hoja de presentación ----------------------------------------------------------------------|>
+
+% \begin{titlepage}
+% 	\centering
+% 	\includegraphics[width=0.3\textwidth]{./Images/logo_utb.png}\par\vspace{1cm}
+% 	{\scshape\LARGE Universidad Tecnológica de Bolívar \\}
+
+% 	\vspace{3cm}
+% 	{\scshape\Large Taller de escritura académica \\}
+
+% 	\vspace{2.5cm}
+% 	\slshape {\itshape{} Mauro González, T00067622 \\}
+
+% 	{\large \today\par}
+% \end{titlepage}
+
+% Contenido ---------------------------------------------------------------------------------|>
+
+\chapter*{Importancia de la coherencia en los textos escritos}
+
+La coherencia por definición es una propiedad semántica y pragmática del texto
+que establece relaciones entre cada oración con las demás que conforman una
+secuencia y a su vez con los conceptos que aparecen en cada oración, es decir,
+nos permite adherir ideas para que juntas cobren un sentido global.
+
+\vspace{.5cm}
+
+Por lo anterior, su importancia reside en que es necesaria para poder
+comunicarnos bien y mas importante aún, dar a entender lo que queremos
+expresar (ya sea oral o de manera escrita).
+
+\vspace{.5cm}
+
+Asimismo, también es importante para la escritura académica, ya que la anterior
+depende de un flujo de ideas suave y lógico, para así no
+fatigar al lector, y a su vez mejorar la legibilidad de nuestro trabajo.
+~\cite{ImportanciaCoherencia}
+
+\newpage
+
+\bibliography{./Bibliography/bibliography.bib}
+
+\end{document}
