@@ -1,0 +1,255 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+	andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{breqn}
+
+\raggedbottom{}
+
+\begin{document}
+
+% 									|		PRACTICA 6                 |
+%  									|		GUÍA No. 8                 |
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+	{\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+	\vspace{1cm}
+
+	{\scshape\Large FÍSICA ELÉCTRICA \par}
+	\vspace{.2cm}
+
+	% chktex-file 8
+	{\scshape\Large H1 - C \par}
+	\vspace{1cm}
+	% chktex-file 8 chktex-file 13
+	\slshape {\Large \bfseries{} LAB 6 - FENÓMENOS ELECTROMAGNÉTICOS \\}
+	\slshape {\small \bfseries{} Guía de laboratorio No. 8}
+	\vspace{1cm}
+
+	\slshape {\itshape{} Mauro González, T00067622 \\}
+	\slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+	\slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+	\slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+	\slshape {\itshape{} Juan Eduardo barón, T00065901 \\}
+	\vfill
+	Revisado Por \\
+	Gabriel Hoyos Gomez Casseres\\
+	{\large \today\par}
+\end{titlepage}
+
+% ----------------------------------------------------------------------|>
+
+\section{Introducción}
+
+Los fenómenos electromagnéticos surgen como resultado de la
+interacción entre campos eléctricos y magnéticos, los
+cuales se relacionan con la presencia de cargas eléctricas
+en movimiento. Cuando una carga eléctrica se desplaza,
+genera un campo eléctrico y magnético en su entorno.
+
+La comprensión de la relación entre el campo eléctrico y el
+campo magnético se ha desarrollado gracias a las leyes de
+Faraday y la ley de Lenz. Estas leyes permiten conocer cómo
+se pueden modificar los campos eléctrico y magnético y qué
+factores influyen en ellos, como la tensión inducida en un
+circuito cerrado o la polaridad de la fuerza electromotriz.
+
+En este contexto, el transformador surge como un
+dispositivo que representa esta dualidad, y que se utiliza
+para transferir energía eléctrica de un circuito a otro
+mediante el principio de inducción electromagnética. El
+transformador está compuesto por dos o más bobinas de
+alambre enrolladas alrededor de un núcleo de hierro, las
+cuales pueden acoplarse magnéticamente para transferir
+energía entre ellas.
+
+En cuanto a la descripción del campo electromagnético, las
+ecuaciones de Maxwell son las expresiones fundamentales que
+permiten describirlo. Dichas ecuaciones pueden expresarse
+en forma integral y constituyen la base de la teoría
+electromagnética.
+
+{\normalsize
+\begin{equation}
+	\begin{gathered}
+		\oint_r \vec{E} \cdot d \vec{l} = - \frac{d}{dt} \int_{A}^{} \vec{B} \cdot \,d\vec{A} \\
+		\oint_r \vec{H} \cdot d \vec{l} = \frac{d}{dt} \int_{A}^{} \vec{D} \cdot d \,d\vec{A} + \int_{A}^{} \vec{J} \cdot \,d\vec{A} \\
+		\oint_S \vec{D} \cdot d \vec{S} = \int_{V}^{} q \,d{v} \\
+		\oint_S \vec{B} \cdot d \vec{S} = 0
+	\end{gathered}
+\end{equation}
+}
+
+En este pre-informe vamos a analizar fenómenos
+electromagnéticos, el funcionamiento de un trasformador
+teniendo en cuenta diferentes leyes, cálculos y conceptos
+que serán tratados.
+
+% ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+% -----------------------------------|>
+\subsection*{Objetivos Generales}
+
+% \begin{itemize}
+
+% \end{itemize}
+
+% ----------------------------------------------------------------------|>
+\section{Preparación de la practica}
+
+% -----------------------------------------------------------|>
+\subsection*{Ley de Faraday}
+
+Establece que un cambio en el flujo magnético a través de
+una superficie cerrada induce una fuerza electromotriz
+\textit{(FEM)} en un circuito eléctrico que rodea esa
+superficie. De ahí que se conozca que la tensión inducida
+en un circuito cerrado es directamente proporcional a la
+rapidez del cambio de flujo magnético que pasa a través de
+una espira (o lazo). Matemáticamente, la ley de Faraday se
+expresa como:
+
+{\Large
+\begin{equation}
+	\varepsilon = - \frac{d\phi_B}{dt} \centering
+\end{equation}
+}
+
+El signo menos es una indicación del sentido de la fem
+inducida. Si la bobina tiene N vueltas, aparece una fem en
+cada vuelta que se pueden sumar, es el caso de los tiroides
+y solenoides, en estos casos la fem inducida será:
+
+{\Large
+\begin{equation}
+	\varepsilon = - N \frac{d\phi_B}{dt} = - \frac{d(N\phi_B)}{dt}
+\end{equation}
+}
+
+Tomado de:\hfill \break{}
+(\cite{LeyFaraday}),~(\cite{FaradayLawKhanAcademy})
+
+% -----------------------------------------------------------|>
+\subsection*{Ley de Lenz}
+
+Es una consecuencia del principio de conservación de la
+energía aplicado a la inducción electromagnética la cual
+nos dice en qué dirección fluye la corriente, y establece
+la dirección de la corriente inducida debe ser tal que su
+propio campo magnético se dirija de una manera que se
+oponga al flujo cambiante que causa el campo del imán que
+se aproxima, es decir, la dirección siempre es tal que se
+opone al cambio de flujo que la produce. Esto significa que
+cada campo magnético generado por una corriente inducida va
+en la dirección opuesta al cambio en el campo original. Por
+lo tanto, la corriente inducida circula de manera que sus
+líneas de campo magnético a través del bucle se dirigen
+desde la parte trasera a la delantera del bucle.
+
+	{\Large
+		\begin{equation}
+			\varepsilon = - \frac{d\phi_m}{dt}
+		\end{equation}
+	}
+
+Tomado de:~(\cite{FaradayLawKhanAcademy})
+
+% ----------------------------------------------------------------------|>
+\subsection*{Let de Ampere y Ley de Ampere-Maxwell}
+
+La ley de Ampere establece que un campo magnético que pasa
+por una trayectoria cerrada por el que fluye la corriente,
+provoca que este campo magnético sea igual a la
+permeabilidad constante del espacio, multiplicada por la
+fuerza total de la corriente. En otras palabras, la ley
+establece que la corriente que fluye en un conductor
+produce un campo magnético. La ley de los amperios de
+Maxwell establece que un campo magnético que pasa por un
+camino cerrado que contiene una corriente hace que este
+campo magnético sea igual a la permeabilidad constante del
+espacio igual a la suma de los dos tipos de corrientes;
+corriente total y corriente de desplazamiento. En otras
+palabras, la ley establece que los campos magnéticos son
+producidos tanto por corrientes de conducción como de
+desplazamiento.
+
+Esta ley determina que la circulación del campo magnético a
+lo largo de una línea cerrada es equivalente a la suma
+algebraica de las intensidades de las corrientes que
+atraviesan la superficie delimitada por la línea cerrada,
+multiplicada por la permitividad del medio. En concreto
+para el vacío:
+
+{\Large
+\begin{equation}
+	\oint \vec{B} d \vec{l} = \mu_{\scriptscriptstyle 0} I_{\scriptscriptstyle T}
+\end{equation}
+}
+
+\begin{itemize}[label=$\triangleright$]
+	\item {\Large $\mu_0$}: Permeabilidad del espacio
+	\item {\Large $I_T$}: Intensidad de la corriente neta
+\end{itemize}
+
+\nocite{FenomenosElectromagneticos}
+
+% ----------------------------------------------------------------------|>
+\subsection*{Corrientes parásitas}
+
+Ocurren cuando el conductor pasa a través de un campo
+magnético alterno o viceversa. El movimiento relativo causa
+circulación electrónica o corriente de inducción dentro de
+los conductores. Estas líneas circulares producen campos
+magnéticos, que son resistentes a los efectos del campo
+magnético montado. El campo magnético se usa o mayor que la
+conductividad del conductor, o la velocidad de tráfico
+relativamente mayor, se generan más parásitos y los campos
+opuestos~(\cite{FenomenosElectromagneticos}).
+
+% ----------------------------------------------------------------------|>
+\subsection*{¿Qué es un transformador y cuál es su uso?}
+
+Un transformador de potencia es una máquina de CA estática
+que le permite cambiar ciertas funciones actuales, como el
+voltaje o la corriente, mientras mantiene la frecuencia y
+la potencia.
+
+Estas máquinas ayudan a mejorar la seguridad y eficiencia
+de los sistemas de energía durante la distribución y
+regulación a través de las largas
+distancias~(\cite{FenomenosElectromagneticos})
+
+\newpage
+
+\printbibliography
+
+\end{document}
