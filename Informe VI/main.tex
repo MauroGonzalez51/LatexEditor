@@ -28,6 +28,7 @@
 
 \usepackage{array}
 \usepackage{enumitem}
+\usepackage{floatrow}
 
 \raggedbottom{}
 
@@ -73,8 +74,8 @@ profundidad distintos fenómenos electromagnéticos
 justificados con distintos postulados dados a partir de
 famosas leyes como la ley de Faraday, Lenz y maxwell.
 
-Además de establecer relaciones lógicas entre los conceptos de campo eléctrico 
-y magnético analizando sus interacciones
+Además de establecer relaciones lógicas entre los conceptos
+de campo eléctrico y magnético analizando sus interacciones
 y comportamientos tanto de forma individual como en
 conjunto, todo apoyado de apreciaciones experimentales que
 serán divulgadas a lo largo del informe.
@@ -232,10 +233,125 @@ primaria y secundaria determina la relación de voltaje
 entre las dos bobinas~(\cite{rodriguez_2014})
 
 % ----------------------------------------------------------------------|>
-\section{Montaje Experimental}
+\section{Montaje experimental y análisis de datos}
 
-% ----------------------------------------------------------------------|>
-\section{Análisis de datos}
+% ---------------------------------------------------|>
+\subsection*{Experimento 1 - Inducción electromagnética}
+
+Para este primer experimento se cuenta con una bobina
+conectada a un galvanómetro, un imán y una brújula. Cuando
+se introduce el imán a la bobina, se crea una corriente
+eléctrica que alimenta a la misma, y como hay corriente
+eléctrica, se crea un campo magnético. Este ultimo influye
+en el movimiento de la aguja del galvanómetro que oscila en
+los extremos de forma continua debido al tipo de corriente
+inducida. Si fuera con corriente continua (DC), la aguja
+del galvanómetro se desviaría hacia un lado o hacia el otro
+en función de la dirección de la corriente que lo
+atraviesa. En cambio, en corriente alterna (AC), la
+corriente cambia de dirección constantemente, generando
+esta oscilación en la aguja. Este experimento busca
+demostrar la Ley de inducción electromagnética de Faraday y
+la Ley de Lenz.
+
+\begin{figure}[H]
+	\includegraphics[width=0.9\linewidth]{./Images/BrujulaImagen1.jpeg}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=0.9\linewidth]{./Images/BrujulaImagen2.jpeg}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=0.9\linewidth]{./Images/Galvanometro1.jpeg}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=0.9\linewidth]{./Images/Galvanometro2.jpeg}
+\end{figure}
+
+% ---------------------------------------------------|>
+\subsection*{Experimento 2 - Transformador con corriente directa}
+
+En este experimento se utiliza un electroimán (de núcleo de
+hierro), una fuente de corriente directa, una bobina y un
+galvanómetro. El electroimán se conecta a una fuente de
+poder y se enciende y apaga intermitentemente para crear un
+flujo de corriente eléctrica en la bobina, y se conectan
+las terminales de la bobina al galvanómetro. Cuando a la
+bobina se le induce corriente se crea un flujo de campo
+magnético alrededor, que atrae a los materiales metálicos
+cercanos. Otras observaciones destacables sobre la
+estructura del experimento son: la fuente de poder no tiene
+contacto con la bobina; solo se genera corriente eléctrica
+al encender y apagar de forma intermitentemente la fuente
+de poder.
+
+\begin{figure}[H]
+	\includegraphics*[width=0.9\linewidth]{./Images/Electroiman.jpeg}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics*[width=0.9\linewidth]{./Images/Electroiman2.jpeg}
+\end{figure}
+
+% ---------------------------------------------------|>
+\subsection*{Experimento 3 - Transformador con corriente alterna}
+
+Para este experimento de física, necesita hacer un
+transformador experimental con dos bobinas (una primaria y
+una secundaria unidas a un núcleo de hierro en forma de u),
+un toma corriente, un interruptor y dos voltímetros. Cuando
+se aplica corriente alterna a la bobina primaria, se crea
+un flujo magnético alrededor de las bobinas. Cuando se
+colocan ambas bobinas sobre el núcleo de hierro en u y se
+pasa corriente, se crea un flujo magnético alrededor del
+núcleo y dentro de la bobina secundaria se crea una tensión
+alterna. Durante el experimento, se observa cómo hay una
+pérdida de voltaje debido a unos orificios en la parte
+superior del núcleo. Esta pérdida se debe a que el flujo
+magnético se pierde al no estar completamente cerrado en el
+circuito, por lo que se prueban distintos materiales de
+diferente área y masa para completar el circuito. La
+pérdida de voltaje se debe a varios factores: el número de
+vueltas de la bobina secundaria en el núcleo, debido a que
+la corriente es directamente proporcional a dicho número;
+que el circuito no esté completamente cerrado en el núcleo,
+puesto que se da una fuga, y no se puede aprovechar al
+máximo la corriente inducida.
+
+\begin{figure}[H]
+	\includegraphics[width=0.9\linewidth]{./Images/DIFPotencial.jpeg}
+\end{figure}
+
+% ---------------------------------------------------|>
+\subsection*{Experimento 4 - Inducción electromagnética y corrientes parasitas}
+
+Para este experimento se utilizan dos anillos de aluminio
+(uno con una ranura), una bobina conectada a varios
+bombillos, un núcleo de hierro y una resistencia eléctrica
+o reóstato. Se conecta la resistencia a la bobina y se
+coloca una barra de hierro encima. A medida que se acerca
+más la bobina con los bombillos al núcleo, la bombilla
+alumbra con mayor intensidad. Ahora bien, cuando se
+introduce el anillo de aluminio, éste sale disparado en
+dirección contraria debido a que cuando ingresa la
+corriente alterna a la bobina se generan polos y flujo
+magnético en la bobina y en el tubo de hierro, lo cual
+induce en el anillo una intensidad de corriente y polos
+magnéticos, por lo tanto, cuando llega la corriente, los
+polos son iguales y por esto sale disparado el anillo.
+Ahora bien, cuando se aumenta la resistencia, el anillo
+levita porque los flujos magnéticos no son suficientes para
+vencer el peso del anillo. Si el anillo presenta fisuras,
+éste no experimentará ningún fenómeno de magnetismo, aunque
+en esencia todos los anillos sean iguales debido a que las
+fisuras interrumpen la continuidad de la conductividad
+eléctrica y magnética.
+
+\begin{figure}[H]
+	\includegraphics[width=0.9\linewidth]{./Images/Foquito.jpeg}
+\end{figure}
 
 % ----------------------------------------------------------------------|>
 \section{Conclusiones}
