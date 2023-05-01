@@ -11,3 +11,5 @@
 6 > Análisis de "Las flores de la guerra" (2011)
 
 7 > Ensayo sobre "Educación sexual el Cartagena"
+
+8 > Análisis de "Talentos ocultos" (2016)
