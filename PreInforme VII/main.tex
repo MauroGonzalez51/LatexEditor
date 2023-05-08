@@ -1,0 +1,266 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+	andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{breqn}
+
+\raggedbottom{}
+
+\begin{document}
+
+% 									|		PRACTICA 6                 |
+%  									|		GUÍA No. 8                 |
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+	{\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+	\vspace{1cm}
+
+	{\scshape\Large FÍSICA ELÉCTRICA \par}
+	\vspace{.2cm}
+
+	% chktex-file 8
+	{\scshape\Large H1 - C \par}
+	\vspace{1cm}
+	% chktex-file 8 chktex-file 13
+	\slshape {\Large \bfseries{} LAB 7 - CIRCUITOS DE CORRIENTE DIRECTA. LEYES DE KIRCHHOFF  \\}
+	\slshape {\small \bfseries{} Guía de laboratorio No. 5}
+	\vspace{1cm}
+
+	\slshape {\itshape{} Mauro González, T00067622 \\}
+	\slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+	\slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+	\slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+	\slshape {\itshape{} Juan Eduardo barón, T00065901 \\}
+	\vfill
+	Revisado Por \\
+	Gabriel Hoyos Gomez Casseres\\
+	{\large \today\par}
+\end{titlepage}
+
+% ----------------------------------------------------------------------|>
+\section{Introducción}
+
+Los circuitos de corriente directa (DC) son aquellos en los
+que la corriente eléctrica fluye en una dirección constante
+y continua. Esto significa que la polaridad de la fuente de
+energía ya sea una batería o un generador, no cambia con el
+tiempo. En un circuito de corriente directa, los electrones
+fluyen desde el polo negativo de la fuente de energía hacia
+el polo positivo a través de los conductores del circuito.
+
+Los circuitos de corriente directa son relativamente
+simples de diseñar y construir, ya que la corriente fluye
+en una sola dirección y no hay preocupaciones sobre la fase
+de la corriente. Además, los circuitos de corriente directa
+son eficientes en la transmisión de energía, lo que los
+hace útiles en aplicaciones que requieren una alta
+eficiencia energética.
+
+Ahora bien, las leyes de Kirchhoff \textit{(ley de nodos)}
+son un conjunto de reglas fundamentales en la teoría de
+circuitos eléctricos que describen cómo se comporta la
+corriente eléctrica en un circuito cerrado a partir de los
+siguientes postulados:
+
+\begin{enumerate}
+	\item En cualquier punto de un circuito cerrado, la suma de las
+	      corrientes que entran en ese punto debe ser igual a la suma
+	      de las corrientes que salen de ese punto. En otras
+	      palabras, la corriente que entra en un nodo o punto de
+	      conexión debe ser igual a la corriente que sale de ese
+	      nodo.
+
+	\item Ley de voltajes de Kirchhoff (también conocida como la ley
+	      de mallas): Esta ley establece que, en cualquier circuito
+	      cerrado, la suma algebraica de las caídas de voltaje en
+	      todas las resistencias alrededor de cualquier trayectoria
+	      cerrada (o malla) debe ser igual a la suma algebraica de
+	      las fuerzas electromotrices (fuentes de voltaje) alrededor
+	      de la misma trayectoria cerrada.
+\end{enumerate}
+
+Durante la experiencia se presentará una explicación
+detallada de las leyes de Kirchhoff, la electricidad y el
+análisis de circuitos, todo acompañado de sus respectivas
+ecuaciones y definiciones.
+
+% ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+% -----------------------------------|>
+\subsection*{Objetivo General}
+
+\begin{itemize}[label=$\triangleright$]
+	\item Identificar el funcionamiento de los circuitos y comprobar
+	      las diferentes leyes que pueden intervenir en estos (Leyes
+	      de Kirchhoff, Ley de malla, ley de nodos).
+\end{itemize}
+
+% -----------------------------------|>
+\subsection*{Objetivos específicos}
+
+\begin{itemize}[label=$\triangleright$]
+	\item Comprobar en qué circunstancias se cumple la ley de malla.
+	\item Precisar los voltajes correspondientes para evitar
+	      recalentamientos y/o fundición de los resistores.
+	\item Verificar los factores influyentes en la ley de nodos.
+\end{itemize}
+
+% ----------------------------------------------------------------------|>
+\section{Preparación de la practica}
+
+% --------------------------------------------------|>
+\subsection*{¿Cuáles son las Leyes de Kirchhoff?}
+
+\nocite{KhanAcademy}
+
+Las leyes de Kirchhoff del voltaje y la corriente están en
+el corazón del análisis de circuitos. Con estas dos leyes,
+más las ecuaciones para cada componente individual
+\textit{(resistor, capacitor, inductor)}, tenemos el
+conjunto de herramientas básicas que necesitamos para
+comenzar a analizar circuitos.
+
+% --------------------|>
+\subsubsection*{La ley de corriente de Kirchhoff}
+
+La ley de la corriente de Kirchhoff dice que la suma de
+todas las corrientes que fluyen hacia un nodo es igual a la
+suma de las corrientes que salen del nodo. Se puede
+escribir como:
+
+{\Large
+\begin{equation}
+	\sum i_{adentro} = \sum i_{afuera}
+\end{equation}
+
+}
+
+% --------------------|>
+\subsubsection*{Ley de voltaje de Kirchhoff}
+
+La suma de los voltajes alrededor de una malla es igual a
+cero. Podemos escribir la ley de voltaje de Kirchhoff como:
+
+{\Large
+\begin{equation}
+	\sum v_n = 0
+\end{equation}
+}
+
+donde \textit{n} es el número de voltajes de los
+componentes en la malla. También puedes enunciar la ley de
+voltaje de Kirchhoff de otra manera: alrededor de una
+malla, la suma de subidas de voltaje es igual a la suma de
+bajadas de voltaje.
+
+	{\Large
+		\begin{equation}
+			\sum v_{subida} = \sum v_{bajada}
+		\end{equation}
+	}
+
+La ley de voltaje de Kirchhoff presenta algunas propiedades
+que son de gran utilidad en el análisis de circuitos
+eléctricos.
+
+\begin{itemize}
+	\item En primer lugar, es posible trazar una trayectoria cerrada
+	      en el circuito eléctrico que inicie en cualquier nodo y
+	      regrese al mismo, lo que se conoce como una malla.
+	\item Al caminar alrededor de esta malla y sumar los voltajes de
+	      los componentes que se encuentran en ella, se obtiene como
+	      resultado cero. Cabe destacar que la dirección en la que se
+	      recorre la malla no altera la validez de la ley de voltaje
+	      de Kirchhoff.
+	\item Si el circuito eléctrico cuenta con múltiples mallas, cada
+	      una de ellas puede ser tratada por separado aplicando la
+	      ley de voltaje de Kirchhoff de manera individual.
+\end{itemize}
+
+% --------------------------------------------------|>
+\subsection*{Resuelva el punto 9 del análisis (solución del circuito a estudiar para las corrientes).
+	Indique el procedimiento donde utiliza las leyes de Kirchhoff.}
+
+Para aplicar las leyes de Kirchhoff y obtener una expresión
+para calcular las corrientes en el circuito, es necesario
+seguir los siguientes pasos:
+
+\begin{enumerate}
+	\item Identificar los nodos del circuito y etiquetarlos con un
+	      número.
+	\item Identificar las mallas del circuito y etiquetarlas con una
+	      letra.
+	\item Aplicar la ley de nodos de Kirchhoff a cada nodo del
+	      circuito, estableciendo que la suma de las corrientes que
+	      entran en un nodo es igual a la suma de las corrientes que
+	      salen del mismo.
+	\item Aplicar la ley de voltajes de Kirchhoff a cada malla del
+	      circuito, estableciendo que la suma de las caídas de
+	      voltaje en una malla es igual a la suma de las fuentes de
+	      voltaje en la misma malla.
+	\item Resolver el sistema de ecuaciones obtenido a partir de las
+	      leyes de Kirchhoff para encontrar las corrientes en el
+	      circuito en términos de las resistencias y la fuerza
+	      electromotriz (fem).
+\end{enumerate}
+
+Una vez que se tiene el sistema de ecuaciones, se pueden
+utilizar técnicas de álgebra lineal para resolver las
+ecuaciones y encontrar las corrientes en el circuito. La
+expresión final para calcular las corrientes dependerá de
+la configuración específica del circuito y las fuentes de
+energía utilizadas.
+
+% ----------------------------------------------------------------------|>
+\section{Resumen del procedimiento}
+
+El primer paso del experimento es armar el montaje que se
+muestra en la figura 1 de la guía con la ayuda del
+simulador, el montaje consta de 2 baterías, 4 resistencias
+y los cables que unen todo el circuito. Y conectamos un
+medidor de amperímetros entre las secciones del circuito.
+Tener en cuenta el voltaje suministrado para no fundir las
+resistencias. En este caso presencial armamos el mismo
+montaje con la ayuda de una placa protoboard. Después
+anotar los valores de la resistencia en la tabla número 1.
+Seguido medir la diferencia de potencia en las secciones
+que nos indica la tabla número 2 y se registran los datos,
+del mismo modo medimos las corrientes que nos indica la
+tabla número 3 y registramos los datos. Por último,
+cambiamos los polos de las baterías, y volvemos a medir los
+datos de la tabla número 3.
+
+\newpage
+
+\printbibliography
+
+\end{document}

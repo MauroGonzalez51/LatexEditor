@@ -1,4 +1,4 @@
-\documentclass[letterpaper, 12pt]{report}
+\documentclass[letterpaper, 12pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english, spanish]{babel}
@@ -20,27 +20,22 @@
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\baselinestretch}{1.5}
 
-\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\usepackage[maxbibnames=3,style=authoryear,backend=biber]{biblatex}
+\DeclareNameAlias{sortname}{family-given}
+\DeclareNameAlias{default}{family-given}
+\renewcommand*{\multinamedelim}{\addcomma\space}
+\renewcommand*{\finalnamedelim}{\addspace\&\space}
 \DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
-    andothers = {\em et\addabbrvspace al\adddot}
+    andothers = {et\addspace al\adddot}
 }
+
 \addbibresource{./Bibliography/bibliography.bib}
 
-% \DeclareFieldFormat{labelnumberwidth}{[#1]\hfill}
-% \defbibenvironment{bibliography}
-% {\list
-%     {\printtext[labelnumberwidth]{%
-%             \printfield{prefixnumber}%
-%             \printfield{labelnumber}}}
-%     {\setlength{\labelwidth}{\labelnumberwidth}%
-%         \setlength{\leftmargin}{\labelwidth}%
-%         \setlength{\labelsep}{\biblabelsep}%
-%         \addtolength{\leftmargin}{\labelsep}%
-%         \setlength{\itemsep}{\bibitemsep}%
-%         \setlength{\parsep}{\bibparsep}}\renewcommand*{\makelabel}[1]{\hss##1}}
-% {\endlist} {\item}%
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{breqn}
 
-% \usepackage[style=apa]{biblatex}
+\raggedbottom{}
 
 \usepackage{array}
 \usepackage{enumitem}
@@ -50,7 +45,7 @@
 
 \begin{document}
 
-\chapter*{Ensayo: Educación sexual en Cartagena}
+\section*{Ensayo: Educación sexual en Cartagena}
 
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 
@@ -58,47 +53,38 @@ Por: Mauro Gonzalez T00067622
 
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 
-NOTA:\@ Párrafos al azar, luego los acomodare, notas con
-``//''
-
 \bigskip
-
-{\small // Tesis, lo mas probable es que la deje en un párrafo sola, y la inserte
-    al principio del escrito.}
 
 La deficiente educación sexual en Cartagena es el resultado
 de la falta de compromiso tanto del sistema educativo como
-de los padres en la formación integral de los adolescentes
-y niños. Ambos actores tienen la responsabilidad de brindar
-información y herramientas adecuadas para una planificación
-de vida en temas de sexualidad, lo que ayudaría a frenar
-los altos índices de embarazo en adolescentes y promover
-una vida sexual saludable y responsable. Cabe mencionar que
-no se trata de blancos y negros, sino realmente una escala
-de grises, en el que influyen muchas mas variables
-externas.
+de los padres~\footnote{Núcleo familiar en general} en la formación integral de los
+adolescentes y niños. Ambos actores tienen la
+responsabilidad de brindar información y herramientas
+adecuadas para una planificación de vida en temas de
+sexualidad, lo que ayudaría a frenar los altos índices de
+embarazo en adolescentes y promover una vida sexual
+saludable y responsable. Cabe mencionar que no se trata de
+blancos y negros, sino realmente una escala de grises, en
+el que influyen muchas más variables externas.
 
 Y esto no se trata de ``querer echarle la culpa a alguien''
 por no hacer lo que ``se debería hacer''. No, ese no es el
 punto del ensayo. La idea es describir los causantes
 --principales-- del estado actual de la educación sexual en
-Cartagena.
+Cartagena.~\footnote{Durante el desarrollo del ensayo se
+    utilizará mucho la frase ``los hijos'' ya que por motivos
+    prácticos es muy útil para referirse tanto a hijos como
+    hijas en general.}
 
-Como ya fue mencionado anteriormente, la temática a tratar
-tiene bastante matices por lo que se irán estudiando a
-medida que avanza el escrito.
+% Como ya fue mencionado anteriormente, la temática a tratar
+% tiene bastante matices por lo que se irán estudiando a
+% medida que avanza el escrito.
 
 Uno de los principales actores en la problemática, es todo
 este tema de `los padres'', ellos son los que dedican --o
 al menos deberían-- su tiempo a enseñarle cosas a su hijo,
 y en cierto modo cae en elección de los padres decidir que
 aprenden sus hijos o no.
-
-    {\small // Aquí, quisiera introducir la cita o al menos hablar de como es visto
-        el tema de educación sexual por parte de los padres, y de como incluso puede
-        llegar a ser tratado como tabú}
-
-    {\small // Párrafo explorando la temática desde el lado de los padres}
 
 En ese sentido, de los padres depende la educación sexual
 del hijo a temprana edad. Pero, ¿que pasa si los padres ven
@@ -111,8 +97,6 @@ hogar, o incluso que los mismos hijos no quieren hablar con
 sus padres, etc \dots. Son unas de las posibles causas por
 las que no se les da el acompañamiento necesario.
 
-    {\small // Párrafo explorando la temática desde el lado de los hijos}
-
 A medida que va a creciendo y se convierte en adolescente,
 para sorpresa, empieza a obviar del tema, es decir, ``ya yo
 se eso, no me lo tienes que decir'', luego cuando los
@@ -124,8 +108,40 @@ alrededor del mundo. Debido a esto no seria extraño pensar
 que puede que ya tenga conocimientos de la temática, pero
 ¿y si no?
 
-{\small // Intentando dar una vuelta completa, ahora empezando a hablar
-de como se desarrolla en los colegios}
+\begin{displayquote}
+    Sin lugar a duda, los factores del contexto sociocultural ocupan una relevante posición en
+    torno al fenómeno del embarazo adolescente, Pantelides (2004), (como se citó en García y Barragán y
+    Espinoza Romo, 2012) menciona que los factores sociales que influyen en tal fenómeno abarcan
+    desde un nivel macrosocial (valores, normas, creencias sociales, estructura y roles socioeconómicos,
+    distinciones étnicas, políticas públicas dirigidas a la salud reproductiva adolescente, etc.) hasta
+    factores más próximos al individuo (como actitudes, creencias, zona de residencia, la estructura
+    familiar y de los grupos de socialización compuestos por los docentes y sus grupos de pares,
+    existencia de servicios de salud sexual y reproductiva, disponibilidad de recursos anticonceptivos,
+    etc.).
+
+    \textcite{Garcia2017}
+
+\end{displayquote}
+
+\begin{displayquote}
+    Otro de los factores familiares que influyen en el embarazo del adolescente es la educación
+    sexual y reproductiva, definida por Espejo et al. (28) como “la información
+    sobre conceptos teóricos, herramientas que ayuden a desarrollar las actitudes, la comunicación
+    y valores en los adolescentes para la toma de decisiones sobre su sexualidad”. Al respecto, en
+    el estudio de Sánchez-Valencia et al. (29), en Colombia, determinaron
+    que el no recibir educación por parte de la madre representa 2,6 veces más
+    la probabilidad de un embarazo precoz. Asimismo, Menacho-Barrera (18), en
+    el Perú, encontró que la educación sexual y reproductiva inadecuada por
+    parte de los padres tiene un $p = 0,042$ de significancia en asociación
+    con el embarazo adolescente.
+
+    \textcite{CubaSancho2022}
+\end{displayquote}
+
+% TODO
+% * Agregar otro párrafo de transición (Resumen) para que no sea tan raro el cambio
+% * Tipo, el "Por otro lado" del siguiente párrafo queda bastante mal D:
+% *
 
 Por otro lado, no solo es hablar de las situaciones dentro
 del hogar, hay que pensar también en las escuelas, ¿como es
@@ -140,9 +156,10 @@ que tampoco tiene constancia para hablar de la temática.
 Se supone que la idea de entrar a un colegio y pasar varios
 años ahí, es para formarse de una manera básica en todas
 las areas del conocimiento. Pero ¿en donde queda el conocer
-la sexualidad?, conocer el cuerpo humano, conocer los impulsos que tenemos 
-como especie, comportamientos, actitudes, etc \dots\@, que se supone
-que deberían ser enseñadas en el colegio.
+la sexualidad?, conocer el cuerpo humano, conocer los
+impulsos que tenemos como especie, comportamientos,
+actitudes, etc \dots\@, que se supone que deberían ser
+enseñadas en el colegio.
 
 \newpage
 
