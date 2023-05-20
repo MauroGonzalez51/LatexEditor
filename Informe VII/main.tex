@@ -135,8 +135,8 @@ voltaje. Esto se expresa como:
     \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \multicolumn{4}{c}{Valor de resistencias $(K\Omega)$} \\ \hline
 
-        $R1$ & $R2$   & $R3$   & $R4$                         \\ \hline
-        $10$ & $0.47$ & $0.33$ & $2.2$                        \\ \hline
+        $R_1$ & $R_2$  & $R_3$  & $R_4$                       \\ \hline
+        $10$  & $0.47$ & $0.33$ & $2.2$                       \\ \hline
     \end{tabularx}
 
     \caption{Resistencia}
@@ -154,7 +154,7 @@ voltaje. Esto se expresa como:
     \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \multicolumn{5}{c}{Valor de corrientes $(mA)$} \\ \hline
 
-        $I1$  & $I2$  & $I3$  & $I4$  & $I5$           \\ \hline
+        $I_1$ & $I_2$ & $I_3$ & $I_4$ & $I_5$          \\ \hline
         $9.9$ & $3.6$ & $6.1$ & $0.5$ & $5.3$          \\ \hline
     \end{tabularx}
 
@@ -195,7 +195,7 @@ voltaje. Esto se expresa como:
     \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \multicolumn{5}{c}{Valor de corrientes $(mA)$} \\ \hline
 
-        $I1$   & $I2$   & $I3$  & $I4$  & $I5$         \\ \hline
+        $I_1$  & $I_2$  & $I_3$ & $I_4$ & $I_5$        \\ \hline
         $9.98$ & $3.49$ & $5.9$ & $0.5$ & $5.6$        \\ \hline
 
     \end{tabularx}
@@ -207,6 +207,122 @@ voltaje. Esto se expresa como:
 
 % ----------------------------------------------------------------------|>
 \section{Análisis de datos}
+
+% -----------------------------------------------------|>
+\subsection{Sume las diferencias de potencial en cada uno de los elementos del circuito para cada
+    malla. Registre sus cálculos en la tabla 5.}
+
+\begin{table}[H]
+    \captionsetup{justification=centering}
+    \centering
+
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+
+        \textbf{Malla} & \textbf{V} \\\hline
+
+        $M_1$          &
+        {\scriptsize $V_{ab} + V_{bc} + V_{cd}$} $= 11.92 - 10.05 - 1.86 = 0.01$ \linebreak
+        $11.92 \simeq 11.91$        \\ \hline
+
+        $M_2$          &
+        {\scriptsize $V_{cd} + V_{ef}$} $= 1.86 - 1.8 = 0.06$ \linebreak
+        $1.86 \simeq 1.8$           \\\hline
+
+        $M_3$          &
+        {\scriptsize $V_{gh} + V_{hf} + V_{ef}$} $= 0.45 - 1.4 + 1.8 = -0.05$ \linebreak
+        $1.8 \simeq 1.85$           \\ \hline
+
+        $A_{bgh}$      &
+        {\scriptsize $V_{ab} + V_{bg} + V_{gh} + V_{ha}$} $= 11.92 - 10.06 + 0.45 - 1.81 = 0.5$ \linebreak
+        $11.92 \simeq 11.87$        \\\hline
+
+        $A_{bef}$      &
+        {\scriptsize $V_{ab} + V_{be} + V_{ef}$} $= 11.92 - 10.06 - 1.8 = -0.48$ \linebreak
+        $11.92 \sim 12.4$           \\\hline
+
+        $A_{ghd}$      &
+        {\scriptsize $V_{cg} + V_{gh} + V_{hd} + V_{dc}$} $= 0 + 0.45 - 1.8 + 1.86 = 0.51$ \linebreak
+        $1.8 \sim 2.31$             \\\hline
+    \end{tabularx}
+
+    \caption{Diferencias de potencial}
+
+    \label{tab:analisisDatos__1}
+\end{table}
+
+% -----------------------------------------------------|>
+\subsection{¿Se cumple la ley de las mallas? ¿por qué?}
+
+Si se verifica la ley de malla en un circuito, se observa
+que los valores prácticos y teóricos concuerdan, aunque
+pueda existir un pequeño error debido a la tolerancia
+inherente de los elementos utilizados o a posibles
+imprecisiones en los dispositivos de medición.
+
+Es importante destacar que en ciertas ocasiones, este error
+puede ser más evidente en ciertas partes del circuito, lo
+cual puede requerir una consideración adicional para
+evaluar con precisión el grado de coincidencia entre los
+valores prácticos y teóricos.
+
+% -----------------------------------------------------|>
+\subsection{¿Si no resulta lo que se espera, a qué se deberá?}
+
+Si los resultados obtenidos no son consistentes con las
+expectativas, esto puede ser atribuido a diversos factores
+de error, tales como mediciones inadecuadas, fallas en los
+dispositivos utilizados o errores en los cálculos
+realizados.
+
+% -----------------------------------------------------|>
+\subsection{¿Si realiza el recorrido en sentido contrario, también se cumple la ley de las mallas?
+    ¿Cuál es la diferencia?}
+
+La ley de la corriente de Kirchhoff establece que si se
+cumple la conservación de carga en un nodo, la suma de las
+corrientes que entran al nodo es igual a la suma de las
+corrientes que salen del nodo. En caso de que no se cumpla
+esta condición, las corrientes resultantes tendrán la misma
+magnitud pero con signos opuestos para indicar la dirección
+opuesta del flujo de corriente.
+
+% -----------------------------------------------------|>
+\subsection{¿Por qué $V_{ce}$ es cero?}
+
+$V_{ce}$ es cero en un cable debido a que los extremos del cable
+están directamente conectados, lo que implica que no hay
+una diferencia de potencial significativa entre ellos. En
+otras palabras, el voltaje en ambos extremos del cable es
+igual pero con signos opuestos, lo cual resulta en un valor
+de cero para Vce.
+
+% -----------------------------------------------------|>
+\subsection{Sume las corrientes que salen en cada nodo. Registre sus datos en la tabla 6}
+
+Según los datos en la tabla~\ref{tab:datosExperimentales__Corriente},
+
+\begin{table}[H]
+    \captionsetup{justification=centering}
+    \centering
+
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \textbf{Nodo} & \textbf{Entra}               & \textbf{Sale}                \\\hline
+
+        \textit{C}    & $I_1 = 9.9$                  & $I_2 + I_3 \linebreak = 9.7$ \\\hline
+
+        \textit{E}    & $I_3 = 6.1$                  & $I_4 + I_5 \linebreak = 5.8$ \\\hline
+
+        \textit{D}    & $I_4 + I_5 \linebreak = 5.8$ & $I_3 = 6.1$                  \\\hline
+
+        \textit{F}    & $I_2 + I_3 \linebreak = 9.7$ & $I_1 = 9.9$                  \\\hline
+
+    \end{tabularx}
+    \caption{}
+
+    \label{tab:analisisDatos__6}
+\end{table}
 
 % ----------------------------------------------------------------------|>
 \section{Conclusiones}
