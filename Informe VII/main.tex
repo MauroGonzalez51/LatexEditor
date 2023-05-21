@@ -136,7 +136,7 @@ voltaje. Esto se expresa como:
         \multicolumn{4}{c}{Valor de resistencias $(K\Omega)$} \\ \hline
 
         $R_1$ & $R_2$  & $R_3$  & $R_4$                       \\ \hline
-        $10$  & $0.47$ & $0.33$ & $2.2$                       \\ \hline
+        $1$   & $0.47$ & $0.33$ & $2.2$                       \\ \hline
     \end{tabularx}
 
     \caption{Resistencia}
@@ -365,23 +365,24 @@ Ver tabla~\ref{tab:analisisDatos__11}
     \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \hline
         Expresión                  & I $(mA)$ Valor Teorico & I $(mA)$ Valor Medido \\\hline
-        $I_1 = \frac{V_{bc}}{R_1}$ & \dots                  & \dots                 \\ \hline
-        $I_2 = \frac{V_{cd}}{R_2}$ & \dots                  & \dots                 \\ \hline
-        $I_3 = I_4 + I_5$          & \dots                  & \dots                 \\ \hline
-        $I_4 = I_3 - I_5$          & \dots                  & \dots                 \\ \hline
-        $I_5 = \frac{V_{ef}}{R_3}$ & \dots                  & \dots                 \\ \hline
+        $I_1 = \frac{V_{bc}}{R_1}$ & $10.6$                 & $9.9$                 \\ \hline
+        $I_2 = \frac{V_{cd}}{R_2}$ & $3.957$                & $3.6$                 \\ \hline
+        $I_3 = I_4 + I_5$          & $5.8$                  & $6.1$                 \\ \hline
+        $I_4 = I_3 - I_5$          & $0.8$                  & $0.5$                 \\ \hline
+        $I_5 = \frac{V_{ef}}{R_3}$ & $5.4$                  & $5.3$                 \\ \hline
     \end{tabularx}
 
     \vspace{.2cm}
 
-    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|}
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \hline
-        Exactitud \\\hline
-        \dots     \\\hline
-        \dots     \\\hline
-        \dots     \\\hline
-        \dots     \\\hline
-        \dots     \\\hline
+        \multicolumn{2}{|c|}{Exactitud}                                                                       \\\hline
+        \multicolumn{2}{|c|}{$1 - (\frac{ValorMedido - ValorTeorico}{ValorMedido + ValorTeorico}) \cdot 100$} \\\hline
+        $I_1$ & $96\%$                                                                                        \\\hline
+        $I_2$ & $95\%$                                                                                        \\\hline
+        $I_3$ & $97\%$                                                                                        \\\hline
+        $I_4$ & $76\%$                                                                                        \\\hline
+        $I_5$ & $99\%$                                                                                        \\\hline
     \end{tabularx}
 
     \caption{}
@@ -399,23 +400,24 @@ Ver tabla~\ref{tab:analisisDatos__11}
     \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \hline
         Expresión                  & I $(mA)$ Valor Teorico & I $(mA)$ Valor Medido \\\hline
-        $I_1 = \frac{V_{bc}}{R_1}$ & \dots                  & \dots                 \\ \hline
-        $I_2 = \frac{V_{cd}}{R_2}$ & \dots                  & \dots                 \\ \hline
-        $I_3 = I_4 + I_5$          & \dots                  & \dots                 \\ \hline
-        $I_4 = I_3 - I_5$          & \dots                  & \dots                 \\ \hline
-        $I_5 = \frac{V_{ef}}{R_3}$ & \dots                  & \dots                 \\ \hline
+        $I_1 = \frac{V_{bc}}{R_1}$ & $10.06$                & $9.98$                \\ \hline
+        $I_2 = \frac{V_{cd}}{R_2}$ & $3.957$                & $3.49$                \\ \hline
+        $I_3 = I_4 + I_5$          & $6.1$                  & $5.9$                 \\ \hline
+        $I_4 = I_3 - I_5$          & $0.3$                  & $0.5$                 \\ \hline
+        $I_5 = \frac{V_{ef}}{R_3}$ & $5.45$                 & $5.6$                 \\ \hline
     \end{tabularx}
 
     \vspace{.2cm}
 
-    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|}
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \hline
-        Exactitud \\\hline
-        \dots     \\\hline
-        \dots     \\\hline
-        \dots     \\\hline
-        \dots     \\\hline
-        \dots     \\\hline
+        \multicolumn{2}{|c|}{Exactitud}                                                                       \\\hline
+        \multicolumn{2}{|c|}{$1 - (\frac{ValorMedido - ValorTeorico}{ValorMedido + ValorTeorico}) \cdot 100$} \\\hline
+        $I_1$ & $99\%$                                                                                        \\\hline
+        $I_2$ & $93\%$                                                                                        \\\hline
+        $I_3$ & $98\%$                                                                                        \\\hline
+        $I_4$ & $75\%$                                                                                        \\\hline
+        $I_5$ & $98\%$                                                                                        \\\hline
     \end{tabularx}
 
     \caption{}
