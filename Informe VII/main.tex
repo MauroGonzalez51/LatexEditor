@@ -66,12 +66,60 @@
 % ----------------------------------------------------------------------|>
 \section{Introducción}
 
+Los circuitos eléctricos son sistemas cerrados de
+componentes interconectados que permiten el flujo de
+corriente eléctrica. Se dividen en circuitos de corriente
+continua (CC) y circuitos de corriente alterna (CA),
+dependiendo del flujo constante o periódico de la
+corriente. La teoría de los circuitos eléctricos se ocupa
+de analizar y comprender el comportamiento de estos
+circuitos, basándose en principios fundamentales y leyes,
+como las leyes de Kirchhoff.
+
+Las leyes de Kirchhoff describen la conservación de la
+carga y la energía en los circuitos eléctricos. La primera
+ley establece que la suma de las corrientes que entran y
+salen de un punto en un circuito cerrado es igual. La
+segunda ley, conocida como la ley de mallas, establece que
+la suma algebraica de las caídas de voltaje en las
+resistencias alrededor de una trayectoria cerrada es igual
+a la suma algebraica de las fuentes de voltaje en esa misma
+trayectoria.
+
+En este informe, analizaremos y verificaremos las leyes de
+Kirchhoff utilizando valores experimentales, como
+diferencias de potencial y corrientes. Estos análisis nos
+permitirán comprender circuitos eléctricos más complejos,
+donde múltiples componentes y fuentes de voltaje
+interactúan entre sí.
+
 % ----------------------------------------------------------------------|>
 \section{Objetivos}
 
 \subsection{Objetivo general}
 
+\begin{itemize}[label=$\triangleright$]
+    \item Explicar de manera clara y concisa las Leyes de Kirchhoff y
+          su importancia en el análisis de circuitos eléctricos para
+          así interpretar y sustentar de la mejor manera los cálculos
+          realizados con sus respectivos resultados.
+\end{itemize}
+
 \subsection{Objetivos específicos}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Detallar el fundamento teórico de las Leyes de Kirchhoff,
+          incluyendo los principios de conservación de carga y
+          energía en los circuitos eléctricos.
+    \item Comprender el funcionamiento de un circuito eléctrico y
+          como esto influye en el cálculo del voltaje.
+    \item Discutir los conceptos y términos clave relacionados con
+          las Leyes de Kirchhoff, como nodos, mallas, fuentes de
+          voltaje, resistencias, corrientes y voltajes.
+    \item Presentar los pasos y procedimientos para la resolución de
+          problemas utilizando la ley de mallas y de nodos de
+          Kirchhoff.
+\end{itemize}
 
 % ----------------------------------------------------------------------|>
 \section{Marco Teórico}
@@ -123,6 +171,16 @@ voltaje. Esto se expresa como:
 
 % ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9\linewidth]{./Images/Imagen3.jpeg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9\linewidth]{./Images/Imagen4.jpeg}
+\end{figure}
 
 % ----------------------------------------------------------------------|>
 \section{Datos Experimentales}
@@ -216,34 +274,53 @@ voltaje. Esto se expresa como:
     \captionsetup{justification=centering}
     \centering
 
-    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \hline
 
         \textbf{Malla} & \textbf{V} \\\hline
 
-        $M_1$          &
-        {\scriptsize $V_{ab} + V_{bc} + V_{cd}$} $= 11.92 - 10.05 - 1.86 = 0.01$ \linebreak
-        $11.92 \simeq 11.91$        \\ \hline
+    \end{tabularx}
 
-        $M_2$          &
-        {\scriptsize $V_{cd} + V_{ef}$} $= 1.86 - 1.8 = 0.06$ \linebreak
-        $1.86 \simeq 1.8$           \\\hline
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        $M_1$ \linebreak $[V_{ab} + V_{bc} + V_{cd}]$ &
+        $= 11.92 - 10.05 - 1.86 = 0.01$ \linebreak
+        $11.92 \simeq 11.91$                            \\ \hline
+    \end{tabularx}
 
-        $M_3$          &
-        {\scriptsize $V_{gh} + V_{hf} + V_{ef}$} $= 0.45 - 1.4 + 1.8 = -0.05$ \linebreak
-        $1.8 \simeq 1.85$           \\ \hline
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        $M_2$ \linebreak $[V_{cd} + V_{ef}]$ &
+        $= 1.86 - 1.8 = 0.06$ \linebreak
+        $1.86 \simeq 1.8$                      \\\hline
+    \end{tabularx}
 
-        $A_{bgh}$      &
-        {\scriptsize $V_{ab} + V_{bg} + V_{gh} + V_{ha}$} $= 11.92 - 10.06 + 0.45 - 1.81 = 0.5$ \linebreak
-        $11.92 \simeq 11.87$        \\\hline
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        $M_3$ \linebreak $[V_{gh} + V_{hf} + V_{ef}]$ &
+        $= 0.45 - 1.4 + 1.8 = -0.05$ \linebreak
+        $1.8 \simeq 1.85$                               \\ \hline
+    \end{tabularx}
 
-        $A_{bef}$      &
-        {\scriptsize $V_{ab} + V_{be} + V_{ef}$} $= 11.92 - 10.06 - 1.8 = -0.48$ \linebreak
-        $11.92 \sim 12.4$           \\\hline
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        $A_{bgh}$ \linebreak $[V_{ab} + V_{bg} + V_{gh} + V_{ha}]$ &
+        $= 11.92 - 10.06 + 0.45 - 1.81 = 0.5$ \linebreak
+        $11.92 \simeq 11.87$                                         \\\hline
+    \end{tabularx}
 
-        $A_{ghd}$      &
-        {\scriptsize $V_{cg} + V_{gh} + V_{hd} + V_{dc}$} $= 0 + 0.45 - 1.8 + 1.86 = 0.51$ \linebreak
-        $1.8 \sim 2.31$             \\\hline
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        $A_{bef}$ \linebreak $[V_{ab} + V_{be} + V_{ef}]$ &
+        $= 11.92 - 10.06 - 1.8 = -0.48$ \linebreak
+        $11.92 \sim 12.4$                                   \\\hline
+    \end{tabularx}
+
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        $A_{ghd}$ \linebreak $[V_{cg} + V_{gh} + V_{hd} + V_{dc}]$ &
+        $= 0 + 0.45 - 1.8 + 1.86 = 0.51$ \linebreak
+        $1.8 \sim 2.31$                                              \\\hline
     \end{tabularx}
 
     \caption{Diferencias de potencial}
