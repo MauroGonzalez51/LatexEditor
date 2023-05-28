@@ -381,12 +381,23 @@ $y = -0.0629x -0.0285$
 % ----------------------------------------|>
 \subsection{Using your plot and the result from question 4, what value of $\tau$ do you find? (s)}
 
+Según los datos de la tabla~\ref{tab:datos__Carga}, el
+voltaje de $25.9V$ se encuentra alrededor de los $\sim
+    32.5$ Seg. Considerando que $t = 16$ Seg, $\frac{32.5}{16}
+    = 2.03 \tau$
+
 % ----------------------------------------|>
 \subsection{Again assuming we do not know the capacitance solve for C using your fitted value of $\tau$
     and the known value of R. (F)}
 
+Despejando $C$, de la ecuación~\eqref{eq:Tau},
+
+$C = \frac{\tau}{R} = \frac{32.5}{80} = 0.406 \mathcal{F}$
+
 % ----------------------------------------|>
 \subsection{What is the percent error between the calculated value and the exact value of C?}
+
+$\% = \frac{0.406 - 0.2}{0.406 + 0.2} \cdot 100 = 33.99\%$
 
 % -----------------------------------------------------------|>
 \section{Discharging a Capacitor}
@@ -517,9 +528,11 @@ tabla~\ref{tab:yEqualsMX__Descarga}, $y= -0.0629x -0.0446$
 % ----------------------------------------|>
 \subsection{Using your plot and the result from question 11, what value of $\tau$ do you find? (s)}
 
+
+
 % ----------------------------------------|>
 \subsection{Again assuming we do not know resistance solve for R using your fitted value of $\tau$ and
-the known value of C. ($\Omega$)}
+    the known value of C. ($\Omega$)}
 
 % ----------------------------------------|>
 \subsection{What is the percent error between the calculated value and the exact value of R?}
@@ -527,6 +540,65 @@ the known value of C. ($\Omega$)}
 % -----------------------------------------------------------|>
 \section{Non-Ohmic Materials}
 
+% ----------------------------------------|>
+\subsection{As you turn on a light switch, does the resistance of a light bulb stay constant?}
+
+De acuerdo con los resultados obtenidos mediante el
+simulador utilizado, se observa que la resistencia del
+bombillo se mantiene constante sin importar la variación
+del voltaje. Cabe mencionar que en aplicaciones prácticas,
+como en el caso de las bombillas incandescentes, la
+resistencia puede experimentar cambios debido al efecto de
+calentamiento del filamento.
+
+% ----------------------------------------|>
+\subsection{Do you expect a light bulb to follow the Ohm law?}
+
+\nocite{prezi.com}
+
+En este contexto, la resistencia del bombillo es constante,
+entonces esto quiere decir que a medida que aumente el
+voltaje del circuito también lo hará la intensidad, ya que
+son directamente proporcionales.
+
+% ----------------------------------------|>
+\subsection*{Make a plot of I vs V (Use Excel or LibreOffice Calc or whatever you prefer)}
+
+\begin{table}[H]
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        Voltaje \textit{(V)} & Corriente \textit{(A)} \\\hline
+        $1$                  & $0.10$                 \\\hline
+        $2$                  & $0.20$                 \\\hline
+        $3$                  & $0.30$                 \\\hline
+        $4$                  & $0.40$                 \\\hline
+        \dots                & \dots                  \\\hline
+    \end{tabularx}
+
+    % chktex-file 24
+    \caption{Voltaje vs Corriente}
+    \label{tab:voltaje-corriente}
+\end{table}
+
+% ----------------------------------------|>
+\subsection{It the relation between current and voltage in the table above linear?}
+
+Basado en la tabla~\ref{tab:voltaje-corriente}, la relación
+es notoriamente lineal, ya que a medida que crece el
+voltaje crece la corriente y viceversa.
+
+% ----------------------------------------|>
+\subsection{Is the relation linear when the temperature of the bulb is low (i.e.~the bulb is cold)?}
+
+\nocite{KhanAcademy}
+
+No, la relación entre el voltaje y la corriente no es
+necesariamente lineal cuando la temperatura de la bombilla
+es baja o cuando está fría. Sin ir mas lejos, la
+resistividad del material se ve influenciada por la
+temperatura, haciendo que no sea posible afirmar con
+certeza que el comportamiento del material siga o no siendo
+óhmico.
 
 \printbibliography
 
