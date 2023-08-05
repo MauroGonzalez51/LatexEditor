@@ -1,0 +1,289 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
+
+    {\scshape\Large FÍSICA ELÉCTRICA \par}
+    \vspace{.2cm}
+
+    % chktex-file 8
+    {\scshape\Large INSERTE GRUPO \par}
+    \vspace{1cm}
+    % chktex-file 8
+    \slshape {\Large \bfseries{}LAB 1 - OSCILACIONES MECÁNICAS:\@{}~MOVIMIENTO ARMÓNICO SIMPLE.\\}
+    \vspace{4cm}
+
+    \slshape {\itshape{} Mauro González, T00067622 \\}
+    % \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+    % \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+    % \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+    % \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+    \vfill
+    Revisado Por \\
+    Gabriel Hoyos Gomez Casseres\\
+    {\large \today\par}
+\end{titlepage}
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+\subsection{Objetivos específicos}
+
+% ! ----------------------------------------------------------------------|>
+\section{Preparación de la practica}
+
+% * ----------------------------------------------------|>
+\subsection{¿Que es una oscilación?}
+
+Una oscilación permite representar a los movimientos de
+tipo vaivén a la manera de un péndulo o, dicho de
+determinados d fenómenos, a la intensidad que se acrecienta
+y disminuye de forma alternativa con más o menos
+regularidad.
+
+En diversos campos vinculados a la ciencia, la oscilación
+consiste en la transformación, alteración, perturbación o
+fluctuación de un sistema a lo largo del tiempo.
+
+\nocite{definicion-oscilacion}
+
+% * ----------------------------------------------------|>
+\subsection{¿Qué es una oscilación armónica?}
+
+Decimos que un objeto experimenta oscilación o vibración
+cuando se mueve de manera repetitiva en relación a una
+posición de equilibrio, bajo la influencia de fuerzas que
+tienden a restaurar su posición original.
+
+Cuando estas fuerzas restauradoras son proporcionales a la
+distancia desde el punto de equilibrio, se produce un
+fenómeno llamado movimiento armónico simple
+(\textit{m.a.s}), que también es conocido como movimiento
+vibratorio armónico simple (\textit{m.v.a.s.}). En general,
+estas fuerzas restauradoras obedecen la ley de Hooke:
+
+{\large
+\begin{equation}
+    \vec{F} = -\vec{\textit{k}} \cdot \vec{x}
+    \label{eq:ley-de-hooke}
+\end{equation}
+}
+
+\subsubsection{Caracteristicas del movimiento armonico simple}
+
+\begin{enumerate}
+    \item Vibratorio: El cuerpo oscila en torno a una posición de
+          equilibrio siempre en el mismo plano
+
+    \item Periódico: El movimiento se repite cada cierto tiempo
+          denominado periodo (T). Es decir, el cuerpo vuelve a tener
+          las mismas magnitudes cinemáticas y dinámicas cada T
+          segundos
+
+    \item Se describe mediante una función sinusoidal (seno o coseno
+          indistintamente) {\large
+                  \begin{equation}
+                      \begin{gathered}
+                          x = A \cdot \cos(\omega \cdot t + \phi_0) \\
+                          x = A \cdot \sen(\omega \cdot t + \phi_0) \\
+                      \end{gathered}
+                  \end{equation}
+              }
+\end{enumerate}
+
+A la partícula o sistema que se mueve según un movimiento
+armónico simple se les denomina \textit{oscilador armónico}
+
+\nocite{movimiento-armonico-simple}
+
+% * ----------------------------------------------------|>
+\subsection{¿Cuáles son las características de una oscilación armónica (amplitud, periodo, frecuencia,
+    frecuencia cíclica (o angular), fase inicial (o constante de fase))?}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Amplitud [{\large $A$}]: Elongación máxima. Su unidad de
+          medidas en el Sistema Internacional es el metro
+          \bolditalic{(m)}.
+
+    \item Periodo [{\large $T$}]: El tiempo que tarda en cumplirse
+          una oscilación completa. Es la inversa de la frecuencia T =
+          1/f. Su unidad de medida en el Sistema Internacional es el
+          segundo \bolditalic{(s)}.
+
+    \item Frecuencia [{\large $f$}]: El número de oscilaciones o
+          vibraciones que se producen en un segundo. Su unidad de
+          medida en el Sistema Internacional es el Hercio (Hz). 1 Hz
+          = 1 oscilación / segundo = $1 s^{-1}$.
+
+    \item Frecuencia angular [{\large $\omega$}]: Representa la
+          velocidad de cambio de la fase del movimiento. Se trata del
+          número de periodos comprendidos en $2\pi$ segundos. Su
+          unidad de medida en el sistema internacional es el radián
+          por segundo (\@~rad/s\@~). Su relación con el período y la
+          frecuencia es: {\large
+          \begin{equation}
+              \omega = \frac{2 \cdot \pi}{T} = 2 \cdot \pi f
+          \end{equation}
+          }
+
+    \item Fase [{\large $\phi$}]: Se trata del ángulo que representa
+          el estado inicial de vibración, es decir, la elongación x
+          del cuerpo en el instante t = 0. Su unidad de medida en el
+          Sistema Internacional es el radián (rad).
+\end{itemize}
+
+\nocite{movimiento-armonico-simple}
+
+% * ----------------------------------------------------|>
+\subsection{¿Cómo se calcula el periodo de oscilación de los péndulos simple, de resorte y uno compuesto
+    o físico?}
+
+% + -----------------------------|>
+\subsubsection{Pendulo simple}
+
+El periodo de un péndulo simple depende de su longitud y de
+la aceleración debido a la gravedad. El periodo es
+completamente independiente de otros factores, como masa y
+desplazamiento máximo.
+
+{\large
+\begin{equation}
+    T = 2\pi \cdot \sqrt{\frac{L}{g}}
+\end{equation}
+}
+
+Donde, \bolditalic{L}, es la longitud del péndulo y
+\bolditalic{g}, es la gravedad.
+
+\nocite{tipos-pendulos-1}
+
+% + -----------------------------|>
+\subsubsection{Pendulo de resorte}
+
+El período de un péndulo de resorte se refiere al tiempo
+que le toma a una masa conectada a un resorte completar un
+ciclo completo de oscilación, yendo desde una posición
+extrema a la otra y regresando.
+
+    {\large
+        \begin{equation}
+            T = 2\pi \cdot \sqrt{\frac{m}{k}}
+        \end{equation}
+    }
+
+Donde, \bolditalic{k}, es la constante de elasticidad del
+resorte.
+
+\nocite{tipos-pendulos-2}
+
+% + -----------------------------|>
+\subsubsection{Pendulo compuesto o fisico}
+
+En el caso del péndulo físico, la fuerza de gravedad actúa
+sobre el centro de masa (CM) de un objeto. Cuando un
+péndulo físico está colgado de un punto pero es libre de
+girar, lo hace debido al torque aplicado en el CM,
+producido por el componente del peso del objeto que actúa
+tangente al movimiento del CM\@.
+
+{\large
+\begin{equation}
+    T = 2\pi \cdot \sqrt{\frac{I}{m g L}}
+    \label{eq:T-pendulo-fisico}
+\end{equation}
+}
+
+Donde, \bolditalic{I}, es el momento de inercia.
+
+\nocite{tipos-pendulos-1}
+
+% * ----------------------------------------------------|>
+\subsection{Calcula el periodo de oscilación para una barra de longitud L y masa M, suspendida de uno de
+    sus extremos dentro de un campo gravitacional g.}
+
+El periodo de oscilación para una barra de longitud y masa
+M, suspendida de uno de sus extremos dentro de un campo
+gravitacional g, se puede calcular utilizando la fórmula
+para el periodo de un péndulo físico. Un péndulo físico es
+cualquier objeto que puede oscilar libremente alrededor de
+un eje fijo que no pasa por su centro de masa. La formula
+para calcular el periodo de un péndulo físico fue descrita
+en~\ref{eq:T-pendulo-fisico},
+
+Para una barra delgada y uniforme suspendida a uno de sus
+extremos, el momento de inercia alrededor del eje de
+rotación es
+
+    {\large
+        \begin{equation}
+            I = \frac{1}{3}\cdot M L^{2}
+            \label{eq:momento-inercia-barra-delgada}
+        \end{equation}
+    }
+
+La distancia desde el eje de rotación hasta el centro de
+masa de la barra es de $d = L / 2$. Sustituyendo estos
+valores en~\ref{eq:T-pendulo-fisico}, obtenemos:
+
+{\large
+\begin{equation}
+    \begin{gathered}
+        T = 2\pi \cdot \sqrt{\frac{\frac{1}{3}\cdot M L^{2}}{M g (L / 2) }} \\
+        T = 2\pi \cdot \sqrt{\frac{2L}{3g}}
+    \end{gathered}
+\end{equation}
+}
+
+% ! ----------------------------------------------------------------------|>
+\section{Resumen del procedimiento}
+
+\printbibliography
+
+\end{document}
