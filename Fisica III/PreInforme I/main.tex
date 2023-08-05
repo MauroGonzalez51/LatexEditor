@@ -16,6 +16,7 @@
 \usepackage{amsmath}
 \usepackage{caption}
 \usepackage{bm}
+% \usepackage{hyperref}
 
 \counterwithin{figure}{section}
 \renewcommand{\thesection}{\arabic{section}}
@@ -45,11 +46,11 @@
     {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
     \vspace{1cm}
 
-    {\scshape\Large FÍSICA ELÉCTRICA \par}
+    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
     \vspace{.2cm}
 
     % chktex-file 8
-    {\scshape\Large INSERTE GRUPO \par}
+    {\scshape\Large Grupo 1 \par}
     \vspace{1cm}
     % chktex-file 8
     \slshape {\Large \bfseries{}LAB 1 - OSCILACIONES MECÁNICAS:\@{}~MOVIMIENTO ARMÓNICO SIMPLE.\\}
@@ -69,12 +70,40 @@
 % ! ----------------------------------------------------------------------|>
 \section{Introducción}
 
+Las oscilaciones mecánicas son un fenómeno fundamental en
+la física que se encuentra presente en una amplia variedad
+de sistemas, desde pequeñas partículas hasta estructuras
+más complejas. Un ejemplo destacado de este fenómeno es el
+movimiento armónico simple, el cual describe el vaivén
+rítmico de un sistema alrededor de una posición de
+equilibrio. Esta práctica experimental se centra en la
+exploración y comprobación de los conceptos relacionados
+con este tipo de movimiento, en particular, el cálculo del
+período de oscilación de péndulos simples y compuestos.
+
 % ! ----------------------------------------------------------------------|>
 \section{Objetivos}
 
 \subsection{Objetivo general}
 
+\begin{itemize}[label=$\triangleright$]
+    \item Comprobar experimentalmente la fórmula que permite calcular
+          el período de oscilación de un péndulo simple, de resorte y
+          físico.
+\end{itemize}
+
 \subsection{Objetivos específicos}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Utilizar diversas herramientas de medición, como
+          cronómetros, reglas graduadas, balanzas y péndulos, para
+          recopilar datos precisos sobre las oscilaciones mecánicas.
+
+    \item Analizar las características fundamentales de una
+          oscilación armónica, incluyendo la amplitud, el período, la
+          frecuencia y la fase inicial, y comprender cómo estas
+          propiedades están relacionadas entre sí.
+\end{itemize}
 
 % ! ----------------------------------------------------------------------|>
 \section{Preparación de la practica}
@@ -283,6 +312,60 @@ valores en~\ref{eq:T-pendulo-fisico}, obtenemos:
 
 % ! ----------------------------------------------------------------------|>
 \section{Resumen del procedimiento}
+
+La practica experimental se desarrolla en tres etapas
+distintas, cada una centrada en un tipo específico de
+péndulo. A continuación, se detalla el procedimiento a
+seguir para cada uno de los casos.
+
+% + -----------------------------|>
+\subsection{Péndulo Simple}
+
+\begin{enumerate}
+    \item Utilizar el simulador de péndulo simple disponible
+          en~\cite{simulador-pendulo-simple}.
+
+    \item Seleccionar una longitud base para el péndulo y registrar
+          el tiempo de oscilación correspondiente.
+
+    \item Repetir el paso anterior para al menos dos longitudes
+          adicionales del péndulo.
+
+    \item Calcular el período promedio de oscilación para cada
+          longitud y comparar los resultados con la fórmula teórica.
+\end{enumerate}
+
+% + -----------------------------|>
+\subsection{Péndulo de Resorte}
+
+\begin{enumerate}
+    \item Acceder al simulador de péndulo de resorte disponible
+          en~\cite{simulador-pendulo-resorte}.
+
+    \item Determinar la constante de elasticidad del resorte midiendo
+          el alargamiento producido por una masa conocida, siguiendo
+          la ley de Hooke.
+
+    \item Suspender diferentes masas en el resorte y medir el período
+          de oscilación para cada valor de masa.
+
+    \item Comparar los períodos medidos con los obtenidos
+          teóricamente a partir de la fórmula correspondiente.
+\end{enumerate}
+
+% + -----------------------------|>
+\subsection{Péndulo Compuesto o Físico}
+
+\begin{enumerate}
+    \item Acceder al simulador del péndulo compuesto
+          en~\cite{simulador-pendulo-fisico}
+
+    \item Seleccionar tres puntos de pivote diferentes a lo largo de
+          la barra y medir el período de oscilación para cada punto.
+    \item Calcular el período teórico para los puntos de pivote
+          seleccionados y comparar los resultados obtenidos
+          experimentalmente.
+\end{enumerate}
 
 \printbibliography
 
