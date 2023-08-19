@@ -40,7 +40,6 @@
 \addbibresource{./Bibliography/bibliography.bib}
 
 \usepackage{array}
-\usepackage{enumitem}
 
 \setlength{\parskip}{0pt}
 
@@ -137,6 +136,98 @@ que los rigen.
 
 % ! ----------------------------------------------------------------------|>
 \section{Marco Teórico}
+
+% + ----------------------------------------|>
+\subsection{Oscilaciones armónicas}
+
+Estas son las características Fundamentales de las
+Oscilaciones y Péndulos:
+
+\begin{itemize}[label=$\triangleright$]
+    \item Amplitud [{\large $A$}]: Elongación máxima. Su unidad de
+          medidas en el Sistema Internacional es el metro
+          \bolditalic{(m)}.
+
+    \item Periodo [{\large $T$}]: El tiempo que tarda en cumplirse
+          una oscilación completa. Es la inversa de la frecuencia $T
+              = \frac{1}{f}$. Su unidad de medida en el Sistema
+          Internacional es el segundo \bolditalic{(s)}.
+
+    \item Frecuencia [{\large $f$}]: El número de oscilaciones o
+          vibraciones que se producen en un segundo. Su unidad de
+          medida en el Sistema Internacional es el Hercio (Hz). 1 Hz
+          = 1 oscilación / segundo = $1 s^{-1}$.
+
+    \item Frecuencia angular [{\large $\omega$}]: Representa la
+          velocidad de cambio de la fase del movimiento. Se trata del
+          número de periodos comprendidos en $2\pi$ segundos. Su
+          unidad de medida en el sistema internacional es el radián
+          por segundo (\@~rad/s\@~). Su relación con el período y la
+          frecuencia es: {\large
+          \begin{equation}
+              \omega = \frac{2 \cdot \pi}{T} = 2 \cdot \pi f
+          \end{equation}
+          }
+
+    \item Fase [{\large $\phi$}]: Se trata del ángulo que representa
+          el estado inicial de vibración, es decir, la elongación x
+          del cuerpo en el instante t = 0. Su unidad de medida en el
+          Sistema Internacional es el radián (rad).
+\end{itemize}
+
+\nocite{movimiento-armonico-simple}
+
+% + ----------------------------------------|>
+\subsection{Péndulo simple}
+
+El periodo de un péndulo simple depende de su longitud y de
+la aceleración debido a la gravedad. El periodo es
+completamente independiente de otros factores, como masa y
+desplazamiento máximo.
+
+{\large
+\begin{equation}
+    T = 2\pi \cdot \sqrt{\frac{L}{g}}
+\end{equation}
+}
+
+\nocite{tipos-pendulos-1}
+
+% + ----------------------------------------|>
+\subsection{Péndulo compuesto o físico}
+
+En el caso del péndulo físico, la fuerza gravitatoria
+ejerce influencia sobre el centro de masa (CM) del objeto.
+Cuando un péndulo físico está suspendido de un punto,
+permitiendo su movimiento rotativo, este ocurre debido al
+torque aplicado en el CM\@. Este torque es originado por la
+componente del peso del objeto que actúa tangencialmente a
+la dirección del movimiento del CM\@.
+
+{\large
+\begin{equation}
+    T = 2\pi \cdot \sqrt{\frac{I}{m g L}}
+    \label{eq:T-pendulo-fisico}
+\end{equation}
+}
+
+\nocite{tipos-pendulos-1}
+
+% + ----------------------------------------|>
+\subsection{Péndulo de resorte}
+
+El período de un péndulo de resorte se refiere al tiempo
+que le toma a una masa conectada a un resorte completar un
+ciclo completo de oscilación, yendo desde una posición
+extrema a la otra y regresando.
+
+    {\large
+        \begin{equation}
+            T = 2\pi \cdot \sqrt{\frac{m}{k}}
+        \end{equation}
+    }
+
+\nocite{tipos-pendulos-2}
 
 % ! ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
@@ -324,5 +415,7 @@ que los rigen.
 
 % ! ----------------------------------------------------------------------|>
 \section{Conclusiones}
+
+\printbibliography
 
 \end{document}
