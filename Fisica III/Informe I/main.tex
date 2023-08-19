@@ -1,0 +1,282 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{multirow}
+
+% \usepackage{hyperref}
+
+\definecolor{LigthGray}{rgb}{0.7098, 0.7294, 0.7215}
+\definecolor{LigthGrayPlus}{rgb}{0.6862, 0.7254, 0.7294}
+\definecolor{White}{rgb}{1, 1, 1}
+\definecolor{Red}{rgb}{1, 0, 0}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
+
+    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+    \vspace{.2cm}
+
+    % chktex-file 8
+    {\scshape\Large Grupo 1 \par}
+    \vspace{1cm}
+    % chktex-file 8
+    \slshape {\Large \bfseries{}Informe de Laboratorio No. I\\}
+    \vspace{2cm}
+
+    \slshape {\itshape{} Mauro González, T00067622 \\}
+    \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+    \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+    \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+    \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+    \vfill
+    Revisado Por \\
+    Duban Andres Paternina Verona\\
+    {\large \today\par}
+\end{titlepage}
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+% + ----------------------------------------|>
+\subsection{Objetivo general}
+
+% + ----------------------------------------|>
+\subsection{Objetivos específicos}
+
+% ! ----------------------------------------------------------------------|>
+\section{Marco Teórico}
+
+% ! ----------------------------------------------------------------------|>
+\section{Montaje Experimental}
+
+% ! ----------------------------------------------------------------------|>
+\section{Datos Experimentales}
+
+% + ----------------------------------------|>
+\subsection{Péndulo Simple}
+
+% chktex-file 44
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} No.   & Longitud \bolditalic{(M)} & Angulo \bolditalic{(°)} \\ \hline
+        1                          & 0.3700                    & 15.0000                 \\\hline
+        \rowcolor{LigthGrayPlus} 2 & 0.3050                    & 15.0000                 \\\hline
+        3                          & 0.4450                    & 15.0000                 \\\hline
+    \end{tabularx}
+
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} \multicolumn{3}{|c|}{Tiempo \bolditalic{(s)}} \\ \hline
+        12.4100                          & 12.5100 & 12.1100               \\ \hline
+        \rowcolor{LigthGrayPlus} 11.7000 & 11.1500 & 11.0300               \\\hline
+        13.5000                          & 13.2800 & 13.3800               \\\hline
+    \end{tabularx}
+
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} Promedio \bolditalic{(s)} & Periodo \bolditalic{(Hz)} \\ \hline
+        12.3433                                        & 1.2343                    \\\hline
+        \rowcolor{LigthGrayPlus} 11.2933               & 1.1293                    \\\hline
+        13.3867                                        & 1.3387                    \\\hline
+    \end{tabularx}
+
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGrayPlus} \textbf{Oscilaciones} & 10 \\\hline
+    \end{tabularx}
+\end{table}
+
+% + ----------------------------------------|>
+\subsection{Péndulo Compuesto}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} No. & Masa \bolditalic{(Kg)} & Longitud \bolditalic{(M)} & Distancia \bolditalic{(M)} \\ \hline
+        1                        & 0,0490                 & \multirow{3}{*}{0.2470}   & 0,0500                     \\
+        2                        & 0,0490                 &                           & 0,0840                     \\
+        3                        & 0,0490                 &                           & 0,1020                     \\\hline
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} \multicolumn{3}{|c|}{Tiempo \bolditalic{(s)}} \\ \hline
+        4,0000                          & 3,7100 & 3,7400                  \\\hline
+        \rowcolor{LigthGrayPlus} 3,8400 & 3,7000 & 4,1000                  \\\hline
+        3,9000                          & 3,8100 & 3,9800                  \\\hline
+
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} Promedio \bolditalic{(s)} & Periodo \bolditalic{(Hz)} \\ \hline
+        3,8167                                         & 0,7633                    \\\hline
+        \rowcolor{LigthGrayPlus} 3,8800                & 0,7760                    \\\hline
+        3,8967                                         & 0,7793                    \\\hline
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGrayPlus} \textbf{Oscilaciones} & 5 \\\hline
+    \end{tabularx}
+\end{table}
+
+% + ----------------------------------------|>
+\subsection{Péndulo de Resorte}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} No.   & Masa \bolditalic{(Kg)} \\\hline
+        1                          & 0,0100                 \\\hline
+        \rowcolor{LigthGrayPlus} 2 & 0,0150                 \\\hline
+        3                          & 0,0200                 \\\hline
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} Longitud Inicial \bolditalic{(M)} & Longitud Final \bolditalic{(M)} \\\hline
+        1                                                      & 0,0100                          \\\hline
+        \rowcolor{LigthGrayPlus} 2                             & 0,0150                          \\\hline
+        3                                                      & 0,0200                          \\\hline
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} $\Delta X$ \bolditalic{(M)} & K \bolditalic{(N/m)} & Periodo [Calculado] \bolditalic{(Hz)} \\\hline
+        0,0750                                           & 1,3080               & 0,5494                                \\\hline
+        0,1100                                           & 1,3377               & 0,6653                                \\\hline
+        0,1500                                           & 1,3080               & 0,7769                                \\\hline
+    \end{tabularx}
+\end{table}
+
+\vspace{-.2cm}
+
+\begin{itemize}[label=$\triangleright$]
+    \item K Promedio:~\textcolor{Red}{$1.3179$}
+\end{itemize}
+
+\vspace{-.2cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} \multicolumn{3}{|c|}{Tiempo \bolditalic{(s)}} \\ \hline
+        5,5400                          & 5,5300 & 5,1700                  \\\hline
+        \rowcolor{LigthGrayPlus} 6,1300 & 6,2000 & 6,3600                  \\\hline
+        8,1300                          & 7,2600 & 7,9600                  \\\hline
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} Promedio \bolditalic{(s)} \\ \hline
+        5,4133                                         \\\hline
+        \rowcolor{LigthGrayPlus} 6,2300                \\\hline
+        7,7833                                         \\\hline
+
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGrayPlus} \textbf{Oscilaciones} & 10 \\\hline
+    \end{tabularx}
+\end{table}
+
+% ! ----------------------------------------------------------------------|>
+\section{Análisis de datos}
+
+% ! ----------------------------------------------------------------------|>
+\section{Conclusiones}
+
+\end{document}
