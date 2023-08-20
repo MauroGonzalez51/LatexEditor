@@ -269,10 +269,10 @@ extrema a la otra y regresando.
 \begin{table}[H]
     \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \hline
-        \rowcolor{LigthGray} Promedio \bolditalic{(s)} & Periodo \bolditalic{(Hz)} \\ \hline
-        12.3433                                        & 1.2343                    \\\hline
-        \rowcolor{LigthGrayPlus} 11.2933               & 1.1293                    \\\hline
-        13.3867                                        & 1.3387                    \\\hline
+        \rowcolor{LigthGray} Promedio \bolditalic{(s)} & Periodo \bolditalic{(S)} \\ \hline
+        12.3433                                        & 1.2343                   \\\hline
+        \rowcolor{LigthGrayPlus} 11.2933               & 1.1293                   \\\hline
+        13.3867                                        & 1.3387                   \\\hline
     \end{tabularx}
 
 \end{table}
@@ -317,10 +317,10 @@ extrema a la otra y regresando.
 \begin{table}[H]
     \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \hline
-        \rowcolor{LigthGray} Promedio \bolditalic{(s)} & Periodo \bolditalic{(Hz)} \\ \hline
-        3,8167                                         & 0,7633                    \\\hline
-        \rowcolor{LigthGrayPlus} 3,8800                & 0,7760                    \\\hline
-        3,8967                                         & 0,7793                    \\\hline
+        \rowcolor{LigthGray} Promedio \bolditalic{(s)} & Periodo \bolditalic{(S)} \\ \hline
+        3,8167                                         & 0,7633                   \\\hline
+        \rowcolor{LigthGrayPlus} 3,8800                & 0,7760                   \\\hline
+        3,8967                                         & 0,7793                   \\\hline
     \end{tabularx}
 \end{table}
 
@@ -361,12 +361,12 @@ extrema a la otra y regresando.
 \vspace{-.5cm}
 
 \begin{table}[H]
-    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \hline
-        \rowcolor{LigthGray} $\Delta X$ \bolditalic{(M)} & K \bolditalic{(N/m)} & Periodo [Calculado] \bolditalic{(Hz)} \\\hline
-        0,0750                                           & 1,3080               & 0,5494                                \\\hline
-        0,1100                                           & 1,3377               & 0,6653                                \\\hline
-        0,1500                                           & 1,3080               & 0,7769                                \\\hline
+        \rowcolor{LigthGray} $\Delta X$ \bolditalic{(M)} & K \bolditalic{(N/m)} \\\hline
+        0,0750                                           & 1,3080               \\\hline
+        0,1100                                           & 1,3377               \\\hline
+        0,1500                                           & 1,3080               \\\hline
     \end{tabularx}
 \end{table}
 
@@ -412,6 +412,51 @@ extrema a la otra y regresando.
 
 % ! ----------------------------------------------------------------------|>
 \section{Análisis de datos}
+
+% + ----------------------------------------|>
+\subsection{Comprobación experimental}
+
+Usando la formula,
+
+\begin{equation}
+    \frac{\left\lvert Teorico - Experimental\right\rvert }{Teorico} * 100
+\end{equation}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \multicolumn{4}{c}{Pendulo simple Teorico vs Experimental}               \\\hline
+        \rowcolor{LigthGray} \multicolumn{4}{|c|}{\bolditalic{Periodo}}          \\\hline
+
+                                                      & 1      & 2      & 3      \\ \hline
+        \rowcolor{LigthGrayPlus} \textbf{Teórico}     & 1.2208 & 1.1084 & 1.3389 \\\hline
+        \textbf{Experi-\newline{}mental}              & 1,243  & 1,1293 & 1,3387 \\\hline
+        \rowcolor{LigthGrayPlus} \textbf{\% de error} & 1,8185 & 1,8856 & 0,0149 \\\hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \multicolumn{4}{c}{Pendulo fisico Teorico vs Experimental}               \\\hline
+        \rowcolor{LigthGray} \multicolumn{4}{|c|}{\bolditalic{Periodo}}          \\\hline
+
+                                                      & 1      & 2      & 3      \\ \hline
+        \rowcolor{LigthGrayPlus} \textbf{Teórico}     & 0,7817 & 0,763  & 0,7821 \\\hline
+        \textbf{Experi-\newline{}mental}              & 0,7633 & 0,776  & 0,7793 \\\hline
+        \rowcolor{LigthGrayPlus} \textbf{\% de error} & 2,3538 & 1,7038 & 0,3580 \\\hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \multicolumn{4}{c}{Pendulo resorte Teorico vs Experimental}           \\\hline
+        \rowcolor{LigthGray} \multicolumn{4}{|c|}{\bolditalic{Periodo}}          \\\hline
+
+                                                      & 1      & 2      & 3      \\ \hline
+        \rowcolor{LigthGrayPlus} \textbf{Teórico}     & 0,5494 & 0,6728 & 0,7769 \\\hline
+        \textbf{Experi-\newline{}mental}              & 0,5413 & 0,623  & 0,7783 \\\hline
+        \rowcolor{LigthGrayPlus} \textbf{\% de error} & 1,4743 & 7,4019 & 0,1802 \\\hline
+    \end{tabularx}
+\end{table}
 
 % ! ----------------------------------------------------------------------|>
 \section{Conclusiones}
