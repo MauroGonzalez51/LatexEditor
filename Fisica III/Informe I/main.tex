@@ -188,6 +188,7 @@ desplazamiento máximo.
 {\large
 \begin{equation}
     T = 2\pi \cdot \sqrt{\frac{L}{g}}
+    \label{eq:periodo_pendulo_simple}
 \end{equation}
 }
 
@@ -207,7 +208,7 @@ la dirección del movimiento del CM\@.
 {\large
 \begin{equation}
     T = 2\pi \cdot \sqrt{\frac{I}{m g L}}
-    \label{eq:T-pendulo-fisico}
+    \label{eq:periodo_pendulo_fisico}
 \end{equation}
 }
 
@@ -224,6 +225,7 @@ extrema a la otra y regresando.
     {\large
         \begin{equation}
             T = 2\pi \cdot \sqrt{\frac{m}{k}}
+            \label{eq:periodo_pendulo_resorte}
         \end{equation}
     }
 
@@ -231,6 +233,40 @@ extrema a la otra y regresando.
 
 % ! ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6\linewidth]{./Images/IMAGEN_1.jpeg}
+    \end{center}
+    \caption{Péndulo simple}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6\linewidth]{./Images/IMAGEN_2.jpeg}
+    \end{center}
+    \caption{Péndulo de resorte}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6\linewidth]{./Images/IMAGEN_3.jpeg}
+    \end{center}
+    \caption{Péndulo compuesto}
+\end{figure}
+
+\begin{table}[H]
+    % chktex-file 44
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \rowcolor{LigthGray} Magnitud                     & Símbolo & Unidad                                   \\\hline
+        Periodo                                           & T       & Segundos \bolditalic{(s)}                \\\hline
+        \rowcolor{LigthGrayPlus} Masa                     & m       & Kilogramos (Kg)                          \\\hline
+        Longitud                                          & m       & Metros (m)                               \\\hline
+        \rowcolor{LigthGrayPlus} Constante de elasticidad & K       & Newton / Metro (N/m)                     \\\hline
+        Gravedad                                          & g       & Metros / Segundo al cuadrado $(m/s^{2})$ \\\hline
+    \end{tabularx}
+\end{table}
 
 % ! ----------------------------------------------------------------------|>
 \section{Datos Experimentales}
@@ -419,7 +455,7 @@ extrema a la otra y regresando.
 Usando la formula,
 
 \begin{equation}
-    \frac{\left\lvert Teorico - Experimental\right\rvert }{Teorico} * 100
+    \frac{\left\lvert Teorico - Experimental\right\rvert }{Teorico} \times 100
 \end{equation}
 
 \begin{table}[H]
@@ -432,6 +468,9 @@ Usando la formula,
         \textbf{Experi-\newline{}mental}              & 1,243  & 1,1293 & 1,3387 \\\hline
         \rowcolor{LigthGrayPlus} \textbf{\% de error} & 1,8185 & 1,8856 & 0,0149 \\\hline
     \end{tabularx}
+    % chktex-file 24
+    \caption{}
+    \label{tab:comprobacion_pendulo_simple}
 \end{table}
 
 \begin{table}[H]
@@ -444,11 +483,13 @@ Usando la formula,
         \textbf{Experi-\newline{}mental}              & 0,7633 & 0,776  & 0,7793 \\\hline
         \rowcolor{LigthGrayPlus} \textbf{\% de error} & 2,3538 & 1,7038 & 0,3580 \\\hline
     \end{tabularx}
+    \caption{}
+    \label{tab:comprobacion_pendulo_fisico}
 \end{table}
 
 \begin{table}[H]
     \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
-        \multicolumn{4}{c}{Pendulo resorte Teorico vs Experimental}           \\\hline
+        \multicolumn{4}{c}{Pendulo resorte Teorico vs Experimental}              \\\hline
         \rowcolor{LigthGray} \multicolumn{4}{|c|}{\bolditalic{Periodo}}          \\\hline
 
                                                       & 1      & 2      & 3      \\ \hline
@@ -456,10 +497,125 @@ Usando la formula,
         \textbf{Experi-\newline{}mental}              & 0,5413 & 0,623  & 0,7783 \\\hline
         \rowcolor{LigthGrayPlus} \textbf{\% de error} & 1,4743 & 7,4019 & 0,1802 \\\hline
     \end{tabularx}
+    \caption{}
+    \label{tab:comprobacion_pendulo_resorte}
 \end{table}
+
+% + ----------------------------------------|>
+\subsection{Análisis}
+
+En esta primera práctica, se llevó a cabo la recolección de
+datos relacionados con todas las variables que influyen en
+el periodo de oscilación en diferentes tipos de péndulos.
+Estos datos fueron recopilados con el propósito de comparar
+posteriormente los resultados experimentales con sus
+valores teóricos.
+
+% + ----------------------------------------|>
+\subsubsection{}
+
+Sí, esta situación es claramente demostrada en las tablas
+(\ref{tab:comprobacion_pendulo_simple},~\ref{tab:comprobacion_pendulo_fisico},~\ref{tab:comprobacion_pendulo_resorte}),
+y esto ocurre debido a que estas fórmulas se basan en
+situaciones ideales, considerando las características
+físicas específicas de cada tipo de péndulo. En el caso del
+péndulo simple, su periodo se ve influenciado por la
+longitud de la cuerda. En cuanto al péndulo de resorte, son
+la constante de elasticidad y la masa los factores que
+afectan su periodo, mientras que, en el caso de un péndulo
+físico, los determinantes son el momento de inercia y la
+longitud de la cuerda.
+
+% + ----------------------------------------|>
+\subsubsection{}
+
+Esto se debe al margen de error que se ha presentado al
+registrar los diferentes intervalos de tiempo, influencias
+de medición inexacta y factores derivados de la interacción
+humana, además de elementos del entorno externo como la
+resistencia del aire.
+
+% + ----------------------------------------|>
+\subsubsection{}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Péndulo simple \\ Despejando la
+          ecuación~(\ref{eq:periodo_pendulo_simple}), donde $T = 1s$
+          y $g = 9.8 \frac{m}{s^{2}}$
+
+          \begin{equation*}
+              \begin{gathered}
+                  1s = 2 \pi \sqrt{\frac{L}{9.8 \frac{m}{s^{2}}}} \\
+                  \frac{1s}{2 \pi} =  \sqrt{\frac{L}{9.8 \frac{m}{s^{2}}}} \\
+                  {(\frac{1s}{2 \pi})}^{2} =  \frac{L}{9.8 \frac{m}{s^{2}}} \\
+                  {(0.1591)}^{2} = \frac{L}{9.8 \frac{m}{s^{2}}} \\
+                  (0.025) \cdot (9.8 \frac{m}{s^{2}}) = L \\
+                  L = 0.2482 m
+              \end{gathered}
+          \end{equation*}
+
+    \item Péndulo físico \\ Despejando la
+          ecuación~(\ref{eq:periodo_pendulo_fisico}), donde $T = 1s$
+          y $I = \frac{1}{3} m L^{2}$
+          \begin{equation*}
+              \begin{gathered}
+                  1s = 2 \pi \sqrt{\frac{I}{m g d}} \\
+                  T = 2 \pi \sqrt{\frac{\frac{1}{3} m L^{2}}{m g d}} \\
+                  T = 2 \pi \sqrt{\frac{\frac{1}{3} L^{2}}{g \frac{L}{2}}} \\
+                  T = 2 \pi \sqrt{\frac{2L}{3g}} \\
+                  T^{2} = 4\pi^{2} \cdot \frac{2L}{3g} \\
+                  {(1s)}^{2} = (39.5) \cdot (\frac{2L}{3 (9.81 \frac{m}{s^{2}})})\\
+                  L = \frac{{(1s)}^{2} \cdot (\frac{29.43m}{s^{2}})}{78.4}\\
+                  L = 0.375m
+              \end{gathered}
+          \end{equation*}
+    \item Péndulo de resorte \\ Despejando la
+          ecuación~(\ref{eq:periodo_pendulo_resorte})
+          \begin{equation*}
+              \begin{gathered}
+                  \frac{T}{2\pi} = \sqrt{\frac{m}{K}} \\
+                  \frac{T^2}{4 \pi^2} = \frac{m}{K} \\
+                  K = 4 \pi^2 m \\
+                  \frac{m a}{x} = 4 \pi^2 m \\
+                  \frac{g}{x} = 4 \pi^2 \\
+                  x = \frac{4\pi^2}{g}\\
+                  x = 4.024 cm = 0.04 m
+              \end{gathered}
+          \end{equation*}
+\end{itemize}
 
 % ! ----------------------------------------------------------------------|>
 \section{Conclusiones}
+
+A lo largo del informe titulado ``Oscilaciones mecánicas:
+Movimiento armónico simple'', se llevó a cabo un análisis
+experimental con el objetivo de determinar, comprender y
+explicar las características del periodo de oscilación en
+varios tipos de péndulos.
+
+Durante el desarrollo del informe, se observó la relación
+entre las variables que interactúan en el periodo de
+oscilación. En el caso del péndulo simple, se pudo observar
+que el período de oscilación es independiente de la
+amplitud y la masa del objeto. Esto se alinea con la teoría
+del movimiento armónico simple, la cual establece que el
+período solo depende de la longitud del péndulo y la
+aceleración debida a la gravedad.
+
+Al analizar un péndulo físico (un objeto con dimensiones
+físicas apreciables), se encontró que su período de
+oscilación no depende únicamente de la longitud del hilo,
+sino que también se ve afectado por la distribución de
+masa. Factores como la ubicación del centro de masa y el
+momento de inercia del objeto influyen en su comportamiento
+oscilatorio.
+
+En el caso del péndulo de resorte, se observó que el
+período de oscilación depende de la constante elástica del
+resorte y la masa del objeto suspendido. A través de estos
+experimentos con diferentes tipos de péndulos, se pudo
+observar cómo las características específicas de cada
+sistema influyen en su comportamiento oscilatorio.
 
 \printbibliography
 
