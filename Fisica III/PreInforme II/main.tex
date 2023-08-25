@@ -1,0 +1,445 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{0pt}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
+
+    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+    \vspace{.2cm}
+
+    % chktex-file 8
+    {\scshape\Large Grupo 1 \par}
+    \vspace{1cm}
+    % chktex-file 8
+    \slshape {\Large \bfseries{}LAB 2 - ONDAS ESTACIONARIAS EN UNA CUERDA.~RESONANCIA:\@{}~MOVIMIENTO ARMÓNICO SIMPLE.\\}
+    \vspace{4cm}
+
+    \slshape {\itshape{} Mauro González, T00067622 \\}
+    % \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+    % \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+    % \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+    % \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+    \vfill
+    Revisado Por \\
+    Duban Andres Paternina Verona\\
+    {\large \today\par}
+\end{titlepage}
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+Las ondas, fenómenos omnipresentes en la naturaleza, han
+capturado la atención de científicos y curiosos durante
+siglos. Estas oscilaciones que se propagan a través de un
+medio transportan energía y generan una amplia gama de
+efectos observables, desde el suave susurro del viento
+hasta la música que nos llega a través de los altavoces.
+Una comprensión sólida de las propiedades y el
+comportamiento de las ondas es esencial para desentrañar
+los misterios detrás de su funcionamiento y aplicaciones en
+diferentes campos.
+
+A través de esta actividad, tendremos la oportunidad de
+investigar los conceptos clave relacionados con la
+naturaleza y el comportamiento de las ondas estacionarias,
+y en particular, abordaremos el fenómeno de resonancia.
+Estudiaremos cómo se forman las ondas estacionarias en una
+cuerda y cómo su frecuencia de resonancia está
+intrínsecamente relacionada con sus propiedades físicas,
+como la longitud de la cuerda, la tensión y la densidad
+lineal de masa.
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Estudiar las ondas estacionarias generadas en una cuerda
+          fija en sus extremos y analizar el fenómeno de resonancia
+          en este contexto.
+\end{itemize}
+
+\subsection{Objetivos específicos}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Familiarizarse con los conceptos básicos de las ondas,
+          incluyendo la naturaleza de las ondas sinusoidales, su
+          amplitud, frecuencia, longitud de onda y rapidez de
+          propagación.
+
+    \item Comprender los principios detrás de las ondas estacionarias
+          y cómo se forman en una cuerda fija en ambos extremos, así
+          como identificar los modos normales de vibración.
+
+    \item Calcular y relacionar la longitud de onda, la frecuencia y
+          la rapidez de la onda en función de las propiedades físicas
+          de la cuerda, como su longitud, tensión y densidad lineal
+          de masa.
+
+    \item Explorar el fenómeno de resonancia, entendiendo cómo
+          ciertas frecuencias pueden causar una transferencia de
+          energía más eficiente a través de la cuerda y cómo esto se
+          relaciona con los modos normales de vibración.
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Preparación de la practica}
+
+% * -------------------------------------------------------|>
+\subsection{¿Que es una onda?}
+
+En el ámbito de la física, el término ``onda'' se emplea
+para describir la propagación de energía sin la necesidad
+de un desplazamiento de materia. Esta propagación implica
+una alteración o perturbación que se mueve en un medio
+específico y que, una vez que ha pasado, no produce cambios
+permanentes en dicho medio. Este fenómeno abarca una amplia
+variedad de situaciones, que van desde las ondas en la
+superficie de un líquido hasta la luz, que en sí misma es
+un tipo de onda.~(\cite{ondas-definicion})
+
+% * -------------------------------------------------------|>
+\subsection{¿Qué es una función de onda?}
+
+En mecánica cuántica, una función de onda ($\Psi$) es una
+forma de describir el estado físico de un sistema de
+partículas. Las propiedades mencionadas de la función de
+onda permiten interpretarla como una función de cuadrado
+integrable. La ecuación de Schrödinger proporciona una
+ecuación determinista para explicar la evolución temporal
+de la función de onda y, por tanto, del estado físico del
+sistema en el intervalo comprendido entre dos
+medidas.~(\cite{funcion-ondas})
+
+% * -------------------------------------------------------|>
+\subsection{¿Qué es una onda senoidal y defina sus características: Amplitud, frecuencia, periodo, constante
+    de fase, fase inicial, longitud de onda, numero de onda angular, frecuencia angular, rapidez de
+    propagación?}
+
+% + --------------------------------------|>
+\subsubsection{Onda senoidal}
+
+Una onda senoidal, o sinusoide es la gráfica de una función
+matemática seno de la trigonometría. Consiste en una
+frecuencia única con una amplitud constante. En su forma
+mas simple, una ecuación de voltaje senoidal es:
+
+\begin{equation*}
+    V = V_{\max} \sen q
+\end{equation*}
+
+Tomado de:~\cite{onda-senoidal}
+
+% + --------------------------------------|>
+\subsubsection{Caracteristicas}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Amplitud [A] \bolditalic{(m)}: La amplitud de las funciones
+          seno y coseno es la distancia vertical entre el eje
+          sinusoidal y el valor máximo o mínimo de la función. En
+          relación con las ondas sonoras, la amplitud es una medida
+          de lo fuerte que es algo.~(\cite{onda-amplitud})
+
+    \item Frecuencia [f] \bolditalic{(Hz)}: La frecuencia es el
+          número de ciclos por segundo de una onda sinusoidal.
+          Cuantos más ciclos ocurren por segundo, mayor será la
+          frecuencia.~(\cite{fluke})
+
+    \item Periodo [T] \bolditalic{(s)}: Es el tiempo requerido para
+          producir un ciclo completo de una forma de
+          onda.~(\cite{fluke})
+
+    \item Constante de fase [$\phi$]: la fase indica la situación
+          instantánea en el ciclo, de una magnitud que varía
+          cíclicamente, siendo la fracción del periodo transcurrido
+          desde el instante correspondiente al estado tomado como
+          referencia.~(\cite{fase})
+
+    \item Fase inicial [$\phi$]: Podemos representar un ciclo en un
+          círculo de 360°, diciendo que «fase» es la diferencia en
+          grados entre un punto sobre este círculo y un punto de
+          referencia, una rotación de 360° es equivalente a un ciclo.
+          Gráficamente, el valor que esta fase toma en un instante
+          cero se denomina: fase inicial.~(\cite{fase})
+
+    \item Longitud de onda [$\lambda$] \bolditalic{(m)}: En una onda
+          periódica la longitud de onda es la distancia física entre
+          dos puntos a partir de los cuales la onda se
+          repite.~(\cite{ESERO})
+
+    \item Numero de onda [$\kappa$] \bolditalic{(Hz/m)}: El número de
+          onda es una magnitud que representa el número de ciclos
+          completados por la onda por unidad de
+          distancia.~(\cite{Ingenierizando_2023})
+
+    \item Frecuencia angular [$\omega$] \bolditalic{($Hz \cdot
+                  rad$)}: La frecuencia angular, también llamada pulsación,
+          es la velocidad a la que una onda realiza las oscilaciones.
+          Es decir, la frecuencia angular indica cuánto de rápido
+          oscila un movimiento armónico
+          simple.~(\cite{Ingenierizando_2023b})
+
+    \item Rapidez de propagación [$v$] \bolditalic{(m/s)}: La
+          velocidad de propagación en términos simples, es la
+          velocidad a la que se propaga una onda, es decir, la
+          velocidad de propagación es la velocidad a la que avanza
+          una onda. Así pues, la velocidad de propagación de una onda
+          es la relación entre el espacio que avanza y el tiempo que
+          necesita para recorrerlo.~(\cite{Ingenierizando_2023c})
+\end{itemize}
+
+% * -------------------------------------------------------|>
+\subsection{¿Cuál es la expresión general de una onda senoidal viajera? Identifique cada una de sus
+    características en la expresión.}
+
+La expresión general es
+
+\begin{equation*}
+    x = A \cos (\omega t + \kappa z + \phi)
+\end{equation*}
+
+Tomado de:~\cite{ONDAS}
+
+% * -------------------------------------------------------|>
+\subsection{¿Qué es una onda mecánica?}
+
+Las ondas mecánicas avanzan a través de un medio elástico,
+cuyas partículas oscilan en torno a un punto fijo. El medio
+en cuestión puede ser gaseoso, líquido o sólido.
+
+Para que exista una onda mecánica es necesario que haya una
+fuente que genere la perturbación y un medio por el cual
+dicha perturbación pueda propagarse. Además se necesita un
+medio físico que permita a los elementos influirse entre
+sí.~(\cite{J_Merino_2022})
+
+% * -------------------------------------------------------|>
+\subsection{¿De qué depende la rapidez de una onda mecánica?}
+
+Por ser una onda mecánica, la rapidez de su propagación
+depende del medio de propagación elástico. La velocidad de
+propagación de la perturbación, dependerá de la proximidad
+de las partículas del medio y de sus fuerzas de
+cohesión.~(\cite{Lasondas})
+
+% * -------------------------------------------------------|>
+\subsection{¿De qué depende la rapidez de una onda mecánica?}
+
+La velocidad de un pulso u onda en una cuerda bajo tensión
+se puede calcular con la ecuación:
+
+\begin{equation*}
+    v = \sqrt{\frac{F_T}{\mu}}
+\end{equation*}
+
+donde $F_T$ es la tensión de la cuerda y $\mu$ es la masa
+por longitud de la cuerda.~(\cite{Moebs_2021})
+
+% * -------------------------------------------------------|>
+\subsection{¿Cómo se calcula la rapidez de transferencia de energía (potencia) por ondas sinusoidales en
+    una cuerda?}
+
+La potencia promediada en el tiempo de una onda mecánica
+sinusoidal, que es la tasa media de transferencia de
+energía asociada a una onda cuando pasa por un punto, se
+puede hallar al tomar la energía total asociada a la onda
+dividida entre el tiempo que tarda en transferirse la
+energía.
+
+\begin{equation*}
+    P_{ave} = \frac{1}{2} \mu A^{2} \omega^{2}v
+\end{equation*}
+
+Tomado de:~\cite{Moebs_2021b}
+
+% * -------------------------------------------------------|>
+\subsection{¿En qué consiste el principio de superposición de ondas?}
+
+Cuando varias ondas se combinan en un punto, el
+desplazamiento de cualquier elemento de medio en un tiempo
+dado es la suma vectorial de los desplazamientos que
+produciría cada onda individual que actúe por sí sola, esto
+se denomina Principio de
+Superposición.~(\cite{superposicion})
+
+% * -------------------------------------------------------|>
+\subsection{¿Cuál es la resultante de la superposición de dos ondas senoidales viajeras? ¿En qué casos la
+    interferencia es constructiva y en qué casos destructiva?}
+
+La resultante de la superposición de dos ondas senoidales
+es la suma de las ondas en el mismo sentido con la misma
+frecuencia y amplitud, esto resulta en una nueva onda
+viajera con un desfase que es la media de los desfases
+respectivos y cuya amplitud depende del
+desfase.~(\cite{Superposicióndeondas})
+
+\begin{itemize}[label=$\triangleright$]
+    \item Interferencia constructiva: Decimos que se produce una
+          interferencia constructiva en un punto P cuando la amplitud
+          con la que vibra dicho punto es máxima. Esto ocurren en
+          aquellos puntos del medio en los que las ondas están en
+          fase, que son los mismos en los que la diferencia entre las
+          distancias a los focos de cada onda es un número entero de
+          longitudes de onda.
+
+          \begin{equation*}
+              \Delta x = n \cdot \lambda
+          \end{equation*}
+
+    \item Interferencia destructiva: Decimos que se produce una
+          interferencia destructiva en un punto P cuando la amplitud
+          con la que vibra dicho punto es mínima. Esto ocurren en
+          aquellos puntos del medio en los que las ondas están en
+          oposición de fase, que son los mismos en los que la
+          diferencia entre las distancias a los focos de cada onda es
+          un número impar de semilongitudes de onda. Denominamos a
+          estos puntos nodos.
+
+          \begin{equation*}
+              \Delta x = (2 \cdot n + 1) \cdot \frac{\lambda}{2}
+          \end{equation*}
+\end{itemize}
+
+Tomado de:~\cite{Fernández}
+
+% * -------------------------------------------------------|>
+\subsection{¿Qué es una onda estacionaria y cómo resulta?}
+
+Llamamos onda estacionaria a un caso particular de
+interferencia que se produce cuando se superponen dos ondas
+de la misma dirección, amplitud y frecuencia, pero sentido
+contrario. En una onda estacionaria los distintos puntos
+que la conforman oscilan en torno a su posición de
+equilibrio a medida que transcurre el tiempo pero el patrón
+de la onda no se mueve, de ahí su
+nombre.~(\cite{Fernándezb})
+
+% * -------------------------------------------------------|>
+\subsection{¿Qué son los modos normales de oscilación?}
+
+Un modo normal de un sistema oscilatorio es la frecuencia a
+la cual la estructura deformable oscilará al ser
+perturbada. Los modos normales son también llamados
+frecuencias naturales o frecuencias resonantes. Para cada
+estructura existe un conjunto de estas frecuencias que es
+único.~(\cite{modososcilacion})
+
+% * -------------------------------------------------------|>
+\subsection{Para una onda estacionaria fija en ambos extremos encuentre: (\dots)}
+
+Para una cuerda fija en ambos extremos que forma una onda
+estacionaria, los modos normales de vibración se
+caracterizan por diferentes longitudes de onda y
+frecuencias.
+
+\begin{itemize}[label=$\triangleright$]
+    \item Longitud de onda de modos normales: La longitud de onda
+          para el n-ésimo modo normal de vibración en una cuerda fija
+          en ambos extremos está dada por:
+
+          \begin{equation*}
+              \lambda_{n} = \frac{2 \cdot L}{n}
+          \end{equation*}
+
+    \item Frecuencia de modos normales en función de la rapidez de la
+          onda y longitud de la cuerda: La frecuencia $f_n$ del
+          n-ésimo modo normal está relacionada con la rapidez de la
+          onda $v$ y la longitud de onda ($\lambda_{n}$).
+
+          \begin{equation*}
+              f_n = \frac{v}{\lambda_{n}} = \frac{n v}{2L}
+          \end{equation*}
+
+    \item Frecuencia de modos normales en función de la tensión de la
+          cuerda y la densidad lineal de masa: La frecuencia del
+          n-ésimo modo normal también está relacionada con la tensión
+          en la cuerda Y la densidad lineal de masa ($\mu$).
+
+          \begin{equation*}
+              f = \frac{n}{2 L} \sqrt{\frac{F_T}{\mu}}
+          \end{equation*}
+
+    \item Frecuencia fundamental: La frecuencia fundamental ($f_{1}$)
+          s la frecuencia del primer modo normal (modo fundamental),
+          que es cuando la cuerda vibra en una única mitad de ciclo.
+          Para el modo fundamental $(n=1)$:
+
+          \begin{equation*}
+              f_{1} = \frac{v}{2L} = \frac{v}{2L}
+          \end{equation*}
+
+          Esta es la frecuencia más baja en la cual la cuerda puede
+          vibrar.
+\end{itemize}
+
+Tomado de:~\cite{Fernándezc}
+
+% * -------------------------------------------------------|>
+\subsection{¿En qué consiste el fenómeno de resonancia?}
+
+La Resonancia es un fenómeno que amplifica una vibración.
+Se produce cuando una vibración se transmite a otro objeto
+cuya frecuencia natural es igual o muy cercana a la de la
+fuente.~(\cite{Erbessd_2022})
+
+% * -------------------------------------------------------|>
+\subsection{¿Qué son las frecuencias de resonancia?}
+
+La frecuencia en la que la amplitud alcanza su máximo se
+conoce como frecuencia de resonancia. Todos los objetos y/o
+sistemas tienen una o más frecuencias de resonancia.
+
+La frecuencia de resonancia se denota como ($f_0$) En el
+caso de una onda continua, podemos calcular la frecuencia
+de resonancia utilizando la siguiente fórmula:
+
+\begin{equation*}
+    v = \lambda f
+\end{equation*}
+
+Tomado de:~\cite{Resonancia}
+
+\printbibliography
+
+\end{document}
