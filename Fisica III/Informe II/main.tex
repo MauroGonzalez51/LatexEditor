@@ -1,0 +1,180 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{multirow}
+
+% \usepackage{hyperref}
+
+\definecolor{LigthGray}{rgb}{0.7098, 0.7294, 0.7215}
+\definecolor{LigthGrayPlus}{rgb}{0.6862, 0.7254, 0.7294}
+\definecolor{White}{rgb}{1, 1, 1}
+\definecolor{Red}{rgb}{1, 0, 0}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
+
+    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+    \vspace{.2cm}
+
+    % chktex-file 8
+    {\scshape\Large Grupo 1 \par}
+    \vspace{1cm}
+    % chktex-file 8
+    \slshape {\Large \bfseries{}Informe de Laboratorio No. II\\}
+    \slshape {\small \bfseries{} ONDAS ESTACIONARIAS EN UNA CUERDA.~RESONANCIA:\@{}~MOVIMIENTO ARMÓNICO SIMPLE.}
+    \vspace{2cm}
+
+    \slshape {\itshape{} Mauro González, T00067622 \\}
+    \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+    \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+    \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+    \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+    \vfill
+    Revisado Por \\
+    Duban Andres Paternina Verona\\
+    {\large \today\par}
+\end{titlepage}
+
+% chktex-file 44
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+% + ----------------------------------------|>
+\subsection{Objetivo general}
+
+% \begin{itemize}[label=$\triangleright$]
+% \end{itemize}
+
+% + ----------------------------------------|>
+\subsection{Objetivos específicos}
+
+% \begin{itemize}[label=$\triangleright$]
+
+% \end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Marco Teórico}
+
+% ! ----------------------------------------------------------------------|>
+\section{Montaje Experimental}
+
+% ! ----------------------------------------------------------------------|>
+\section{Datos Experimentales}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            \multicolumn{2}{|c|}{\textbf{Constantes}}            \\\hline
+            $M_{cuerda}$ & $1 \times 10^{-3} Kg$        \\\hline
+            $L_{cuerda}$ & $1,425 m$                    \\\hline
+            $\mu$        & $7,0175 \times 10^{-4} Kg/m$ \\\hline
+            $L$          & $8,6 \times 10^{-1} m$       \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            \multicolumn{2}{|c|}{$M_{1} = 0,0349 Kg$}       \\\hline
+            No. & Frecuencia experimental \bolditalic{(Hz)} \\\hline
+            1   & $15,43$                                   \\\hline
+            2   & $30,39$                                   \\\hline
+            3   & $45,73$                                   \\\hline
+            4   & $60,00$                                   \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            \multicolumn{2}{|c|}{$M_{2} = 0,0399 Kg$}       \\\hline
+            No. & Frecuencia experimental \bolditalic{(Hz)} \\\hline
+            1   & $12,98$                                   \\\hline
+            2   & $26,00$                                   \\\hline
+            3   & $39,24$                                   \\\hline
+            4   & $52,20$                                   \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            \multicolumn{2}{|c|}{$M_{3} = 0,0449 Kg$}       \\\hline
+            No. & Frecuencia experimental \bolditalic{(Hz)} \\\hline
+            1   & $13,56$                                   \\\hline
+            2   & $28,50$                                   \\\hline
+            3   & $43,04$                                   \\\hline
+            4   & $58,38$                                   \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+% ! ----------------------------------------------------------------------|>
+\section{Análisis de datos}
+
+% + ----------------------------------------|>
+\subsection{Análisis}
+
+% ! ----------------------------------------------------------------------|>
+\section{Conclusiones}
+
+\printbibliography
+
+\end{document}
