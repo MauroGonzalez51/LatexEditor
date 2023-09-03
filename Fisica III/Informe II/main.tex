@@ -101,6 +101,96 @@
 % ! ----------------------------------------------------------------------|>
 \section{Marco Teórico}
 
+% * -------------------------------------------------------|>
+\subsection{Onda mecánica}
+
+Las ondas mecánicas avanzan a través de un medio elástico,
+cuyas partículas oscilan en torno a un punto fijo. El medio
+en cuestión puede ser gaseoso, líquido o sólido.
+
+Para que exista una onda mecánica es necesario que haya una
+fuente que genere la perturbación y un medio por el cual
+dicha perturbación pueda propagarse. Además se necesita un
+medio físico que permita a los elementos influirse entre
+sí.~(\cite{J_Merino_2022})
+
+% * -------------------------------------------------------|>
+\subsection{Expresión para calcular la velocidad de una onda en una cuerda}
+
+La velocidad de un pulso u onda en una cuerda bajo tensión
+se puede calcular con la ecuación:
+
+\begin{equation}
+    v = \sqrt{\frac{F_T}{\mu}}
+    \label{eq:velocidad-onda-cuerda}
+\end{equation}
+
+donde $F_T$ es la tensión de la cuerda y $\mu$ es la masa
+por longitud de la cuerda.~(\cite{Moebs_2021})
+
+% * -------------------------------------------------------|>
+\subsection{Formulas para ondas estacionarias en una cuerda}
+
+Para una cuerda fija en ambos extremos que forma una onda
+estacionaria, los modos normales de vibración se
+caracterizan por diferentes longitudes de onda y
+frecuencias.
+
+\begin{itemize}[label=$\triangleright$]
+    \item Longitud de onda de modos normales: La longitud de onda
+          para el n-ésimo modo normal de vibración en una cuerda fija
+          en ambos extremos está dada por:
+
+          \begin{equation}
+              \lambda_{n} = \frac{2 \cdot L}{n}
+              \label{eq:n_lambda}
+          \end{equation}
+
+    \item Frecuencia de modos normales en función de la rapidez de la
+          onda y longitud de la cuerda: La frecuencia $f_n$ del
+          n-ésimo modo normal está relacionada con la rapidez de la
+          onda $v$ y la longitud de onda ($\lambda_{n}$).
+
+          \begin{equation*}
+              f_n = \frac{v}{\lambda_{n}} = \frac{n v}{2L}
+          \end{equation*}
+
+    \item Frecuencia de modos normales en función de la tensión de la
+          cuerda y la densidad lineal de masa: La frecuencia del
+          n-ésimo modo normal también está relacionada con la tensión
+          en la cuerda Y la densidad lineal de masa ($\mu$).
+
+          \begin{equation}
+              f = \frac{n}{2 L} \sqrt{\frac{F_T}{\mu}}
+              \label{eq:n_frecuencia}
+          \end{equation}
+
+    \item Frecuencia fundamental: La frecuencia fundamental ($f_{1}$)
+          s la frecuencia del primer modo normal (modo fundamental),
+          que es cuando la cuerda vibra en una única mitad de ciclo.
+          Para el modo fundamental $(n=1)$:
+
+          \begin{equation*}
+              f_{1} = \frac{v}{2L} = \frac{v}{2L}
+          \end{equation*}
+
+          Esta es la frecuencia más baja en la cual la cuerda puede
+          vibrar.
+\end{itemize}
+
+% * -------------------------------------------------------|>
+\subsection{Calculo de errores}
+
+{\large
+    \begin{equation}
+        \begin{gathered}
+            E_{absoluto} = \left\lvert V_E - V_A\right\rvert \\
+            E_{relativo} = \frac{E_A}{V_E} \\
+        \end{gathered}
+        \label{eq:calculo-errores}
+    \end{equation}
+}
+
 % ! ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
 
@@ -111,7 +201,7 @@
     \begin{center}
         \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
             \hline
-            \multicolumn{2}{|c|}{\textbf{Constantes}}            \\\hline
+            \multicolumn{2}{|c|}{\textbf{Constantes}}   \\\hline
             $M_{cuerda}$ & $1 \times 10^{-3} Kg$        \\\hline
             $L_{cuerda}$ & $1,425 m$                    \\\hline
             $\mu$        & $7,0175 \times 10^{-4} Kg/m$ \\\hline
@@ -171,6 +261,111 @@
 
 % + ----------------------------------------|>
 \subsection{Análisis}
+
+% * -----------------------------|>
+\subsubsection{Calculo de errores}
+
+Usando la formula~(\ref{eq:n_frecuencia})
+y~(\ref{eq:calculo-errores}),
+
+\begin{table}[H]
+    \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \multicolumn{3}{|c|}{$M_{1}$}                                        \\\hline
+        No. & Frecuencia Teórica \bolditalic{(Hz)} & Error \bolditalic{(\%)} \\\hline
+        1   & $12,8418$                            & $20,1544$               \\\hline
+        2   & $25,6836$                            & $18,3245$               \\\hline
+        3   & $38,5254$                            & $18,7008$               \\\hline
+        4   & $51,3672$                            & $16,8060$               \\\hline
+
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \multicolumn{3}{|c|}{$M_{2}$}                                        \\\hline
+        No. & Frecuencia Teórica \bolditalic{(Hz)} & Error \bolditalic{(\%)} \\\hline
+        1   & $13,7309$                            & $5,4689$                \\\hline
+        2   & $27,4619$                            & $5,3232$                \\\hline
+        3   & $41,1928$                            & $4,7406$                \\\hline
+        4   & $54,9237$                            & $4,9591$                \\\hline
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \multicolumn{3}{|c|}{$M_{3}$}                                        \\\hline
+        No. & Frecuencia Teórica \bolditalic{(Hz)} & Error \bolditalic{(\%)} \\\hline
+        1   & $14,5659$                            & $6,9057$                \\\hline
+        2   & $29,1318$                            & $2,1686$                \\\hline
+        3   & $43,6976$                            & $1,5050$                \\\hline
+        4   & $58,2635$                            & $0,1999$                \\\hline
+
+    \end{tabularx}
+\end{table}
+
+% * -----------------------------|>
+\subsubsection{Rapidez de propagacion en funcion de la frecuencia}
+
+Usando la formula~(\ref{eq:n_lambda}) y
+
+\begin{equation*}
+    \lambda = \frac{v}{f}
+\end{equation*}
+
+\begin{table}[H]
+    \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|}
+        \hline
+        $\lambda_{n}$ \bolditalic{(m)} \\\hline
+        $1: 1,7200$                    \\\hline
+        $2: 0,8600$                    \\\hline
+        $3: 0,5733$                    \\\hline
+        $4: 0,4300$                    \\\hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \multicolumn{3}{c}{\large $M_{1}$}                                                                         \\\hline
+        Velocidad Experimental \bolditalic{(m/s)} & Velocidad Teórica \bolditalic{(m/s)} & Error \bolditalic{(\%)} \\\hline
+        $26,5396$                                 & $22,0879$                            & $20,1544$               \\\hline
+        $26,1354$                                 & \dots                                & $18,3245$               \\\hline
+        $26,2185$                                 & \dots                                & $18,7008$               \\\hline
+        $25,8000$                                 & \dots                                & $16,8060$               \\\hline
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \multicolumn{3}{c}{\large $M_{2}$}                                                                         \\\hline
+        Velocidad Experimental \bolditalic{(m/s)} & Velocidad Teórica \bolditalic{(m/s)} & Error \bolditalic{(\%)} \\\hline
+        $22,3256$                                 & $23,6172$                            & $5,4689$                \\\hline
+        $22,3600$                                 & \dots                                & $5,3232$                \\\hline
+        $22,4976$                                 & \dots                                & $4,7406$                \\\hline
+        $22,4460$                                 & \dots                                & $4,9591$                \\\hline
+    \end{tabularx}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+    \begin{tabularx}{0.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \multicolumn{3}{c}{\large $M_{3}$}                                                                         \\\hline
+        Velocidad Experimental \bolditalic{(m/s)} & Velocidad Teórica \bolditalic{(m/s)} & Error \bolditalic{(\%)} \\\hline
+        $23,3232$                                 & $25,0533$                            & $6,9057$                \\\hline
+        $24,5100$                                 & \dots                                & $2,1686$                \\\hline
+        $24,6763$                                 & \dots                                & $1,5050$                \\\hline
+        $25,1034$                                 & \dots                                & $0,1999$                \\\hline
+    \end{tabularx}
+\end{table}
 
 % ! ----------------------------------------------------------------------|>
 \section{Conclusiones}
