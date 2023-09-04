@@ -15,3 +15,7 @@
 8 > Análisis de "Talentos ocultos" (2016)
 
 9 > Literalmente una wea random :D
+
+10 > Historia random de Genero, Igualdad y Cine
+
+11 > Reseña de la economía en Colombia (~1980)
