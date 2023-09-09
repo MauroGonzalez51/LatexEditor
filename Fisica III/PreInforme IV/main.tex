@@ -1,0 +1,245 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{0pt}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
+
+    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+    \vspace{.2cm}
+
+    % chktex-file 8
+    {\scshape\Large Grupo 1 \par}
+    \vspace{1cm}
+    % chktex-file 8
+    \slshape {\Large \bfseries{}LAB 4 - ONDAS MECÁNICAS:~Velocidad del sonido.\\}
+    \vspace{4cm}
+
+    \slshape {\itshape{} Mauro González, T00067622 \\}
+    % \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+    % \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+    % \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+    % \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+    \vfill
+    Revisado Por \\
+    Duban Andres Paternina Verona\\
+    {\large \today\par}
+\end{titlepage}
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+El estudio de las ondas mecánicas, en particular las ondas
+de sonido, es esencial para comprender cómo se propagan y
+se comportan en diferentes condiciones. En esta
+experiencia, nos centraremos en la medición de la velocidad
+del sonido en el aire y cómo esta velocidad varía con la
+temperatura. Para lograr esto, utilizaremos un montaje
+experimental que involucra la generación de pulsos de
+sonido y su registro con un micrófono. Este experimento nos
+permitirá explorar cómo la temperatura influye en la
+velocidad del sonido en el aire y cómo se relaciona con
+otras propiedades del gas.
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+\begin{itemize}[label=$\rightharpoonup$]
+    \item Medir la velocidad del sonido en el aire como función de la
+          temperatura en un tubo confinado y comprender la relación
+          entre la velocidad del sonido, la temperatura y otras
+          propiedades del gas.
+\end{itemize}
+
+\subsection{Objetivos específicos}
+
+\begin{itemize}[label=$\rightharpoonup$]
+    \item Generar pulsos de sonido y registrarlos con un micrófono
+          para determinar la velocidad del sonido en el aire.
+
+    \item Variar la temperatura del aire en el tubo y observar cómo
+          afecta la velocidad del sonido.
+
+    \item Analizar los datos recopilados para comprender la relación
+          entre la velocidad del sonido, la temperatura y las
+          propiedades del gas.
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Preparación de la practica}
+
+% + ----------------------------------------------------------|>
+\subsection{Parámetros del movimiento ondulatorio.~\cite{Entradas_2016}}
+
+Una onda es una perturbación que se propaga a través de un
+determinado medio o en el vacío, con transporte de energía
+pero sin transporte de materia.
+
+La descripción de estos movimientos se realiza mediante una
+ecuación de onda que determina cuál es el estado de
+perturbación de cada uno de los puntos situados en la
+dirección de propagación $(x)$ en un instante cualquiera
+$(t)$. Aunque la onda no propaga materia, es decir, las
+partículas no se desplazan en la dirección de propagación,
+éstas sí efectúan un movimiento vibratorio que las sitúa en
+cada momento a una determinada distancia del punto de
+equilibrio, que se denomina elongación $(y)$. La ecuación
+de onda es una función $y = f(x,t)$ que suele expresarse
+mediante una serie de magnitudes o parámetros
+característicos del movimiento ondulatorio:
+
+\begin{itemize}[label=$\rightharpoonup$]
+    \item Amplitud \textbf{[A]}: es la elongación máxima o, lo que es
+          lo mismo, la máxima distancia de cualquier punto de la onda
+          medida respecto a su posición de equilibrio. Se expresa en
+          unidades de longitud.
+
+    \item Longitud de onda \textbf{[$\lambda$]}: s la distancia que
+          existe entre dos puntos sucesivos que se encuentran en el
+          mismo estado de vibración (misma elongación, velocidad,
+          aceleración…). Se expresa en unidades de longitud.
+
+    \item Periodo \textbf{[T]}: es el tiempo necesario para describir
+          una oscilación completa o, también, el tiempo que emplea la
+          onda en recorrer una longitud de onda. Se expresa en
+          unidades de tiempo.
+
+    \item Frecuencia \textbf{[f]}: es el número de oscilaciones por
+          unidad de tiempo. Se expresa en Hz ($s^{-1}$).
+\end{itemize}
+
+Todo esto nos lleva a las siguientes ecuaciones de
+onda~\cite{Tomé_2018}
+
+\begin{equation*}
+    \begin{gathered}
+        r(t) = A \sen(\omega t + \psi_{0}) \\
+        y(x, t) = A \sen(\omega t + \kappa x + \psi_{0}) \\
+    \end{gathered}
+\end{equation*}
+
+% + ----------------------------------------------------------|>
+\subsection{Velocidad de onda y velocidad de fase}
+
+\subsubsection*{Velocidad de onda~\cite{Velocidaddeonda}}
+
+La velocidad de las ondas es la velocidad de una onda
+progresiva: una perturbación, en forma de oscilación, que
+viaja de un lugar a otro y transporta energía
+
+La velocidad de la onda depende de su frecuencia $f$ y de
+su longitud de onda $\lambda$.
+
+\begin{equation*}
+    \begin{gathered}
+        \lambda = \frac{v}{f}\\
+        v = \lambda f \\
+    \end{gathered}
+\end{equation*}
+
+\subsubsection*{Velocidad de fase~\cite{Velocidaddefase}}
+
+La velocidad de fase de una onda es la tasa a la cual la
+fase de la misma se propaga en el espacio. Esta es la
+velocidad a la cual la fase de cualquier componente en
+frecuencia de una onda se propaga (que puede ser diferente
+para cada frecuencia).
+
+    {\large
+        \begin{equation*}
+            v_{\psi} = \frac{\omega}{\kappa}
+        \end{equation*}
+    }
+
+% + ----------------------------------------------------------|>
+\subsection{Ondas de presión en los gases.}
+
+Las ondas de presión son movimientos de vibración en un
+sistema mecánico que se propagan a través del medio a alta
+velocidad~\cite{ondasdepresion}. En los gases, estas ondas
+se propagan como ondas de presión a distintas velocidades,
+por ejemplo, al mover la mano desplazamos aire a la
+velocidad de la mano, al hablar producimos una onda que se
+mueve aproximadamente a la velocidad del sonido y un pistón
+de coche produce una onda de choque que se mueve a
+velocidad del pistón, por lo general a una velocidad
+superior a la del sonido~\cite{Presiónengases}.
+
+En los gases, el principio de Pascal es válido al igual que
+en los líquidos. La tendencia a expandirse es la que hace
+que los recipientes que los contienen tiendan a tomar
+formas redondeadas, como al inflar pelotas o globos, las
+burbujas. Los contenedores de gases a presión se hacen de
+forma redondeada para soportar mejor la presión
+interior~\cite{Libretexts_2020}.
+
+Además, el comportamiento de las ondas de presión en los
+gases es fundamental para entender fenómenos como la
+propagación del sonido y las explosiones. Por ejemplo,
+cuando un objeto explota, las ondas de presión generadas
+por la explosión se propagan en todas las direcciones y
+pueden causar daños significativos en su
+camino~\cite{ondasdepresion}
+
+% ! ----------------------------------------------------------------------|>
+\section{Resumen del procedimiento}
+
+En esta experiencia, se utilizará un montaje experimental
+que implica generar pulsos de sonido mediante un parlante y
+registrar estos pulsos con un micrófono colocado a
+diferentes distancias. Se realizarán dos mediciones, una
+con el micrófono en una posición inicial y otra en una
+posición ligeramente diferente. La diferencia en el tiempo
+de llegada de los pulsos de sonido al micrófono se
+utilizará para calcular la velocidad del sonido. Además, se
+podrá variar la temperatura del aire en el tubo para
+observar su influencia en la velocidad del sonido y
+analizar los resultados obtenidos. Este experimento nos
+proporcionará una comprensión más profunda de las ondas
+mecánicas y su comportamiento en función de la temperatura.
+
+\printbibliography
+
+\end{document}
