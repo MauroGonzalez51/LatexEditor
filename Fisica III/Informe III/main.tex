@@ -1,0 +1,254 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{multirow}
+
+% \usepackage{hyperref}
+
+\definecolor{LigthGray}{rgb}{0.7098, 0.7294, 0.7215}
+\definecolor{LigthGrayPlus}{rgb}{0.6862, 0.7254, 0.7294}
+\definecolor{White}{rgb}{1, 1, 1}
+\definecolor{Red}{rgb}{1, 0, 0}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+      \centering
+      \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+      \vspace{1cm}
+
+      {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+      \vspace{.2cm}
+
+      % chktex-file 8
+      {\scshape\Large Grupo 1 \par}
+      \vspace{1cm}
+      % chktex-file 8
+      \slshape {\Large \bfseries{}Informe de Laboratorio No. III\\}
+      \slshape {\small \bfseries{}DIFRACCIÓN DE LA LUZ}
+      \vspace{2cm}
+
+      \slshape {\itshape{} Mauro González, T00067622 \\}
+      \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+      \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+      \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+      \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+      \vfill
+      Revisado Por \\
+      Duban Andres Paternina Verona\\
+      {\large \today\par}
+\end{titlepage}
+
+% chktex-file 44
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+La difracción de la luz es un fenómeno fascinante que nos
+permite comprender cómo la luz se comporta cuando pasa a
+través de obstáculos o se dispersa por rendijas estrechas.
+Este fenómeno es esencial en la óptica y nos brinda
+información valiosa sobre las propiedades de la luz. En
+esta experiencia de laboratorio, exploraremos la difracción
+de la luz utilizando una rejilla de difracción y un láser
+de semiconductor. A través de este experimento, podremos
+observar y analizar patrones de interferencia que se forman
+cuando la luz se difracta en una rejilla.
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+% + ----------------------------------------|>
+\subsection{Objetivo general}
+
+\begin{itemize}[label=$\triangleright$]
+      \item El objetivo principal de esta experiencia de laboratorio es
+            observar y comprender el fenómeno de difracción de la luz.
+            A través de la utilización de una rejilla de difracción y
+            un láser de semiconductor, buscaremos analizar y
+            caracterizar los patrones de interferencia resultantes de
+            la difracción de la luz. Además, se pretende determinar la
+            longitud de onda de emisión del láser utilizando los
+            patrones de difracción.
+\end{itemize}
+
+% + ----------------------------------------|>
+\subsection{Objetivos específicos}
+
+\begin{itemize}[label=$\triangleright$]
+      \item Utilizar el patrón de difracción para determinar la
+            longitud de onda de emisión del láser de semiconductor.
+
+      \item Comparar los resultados experimentales obtenidos en el
+            laboratorio con los valores teóricos esperados y verificar
+            la precisión del fenómeno de difracción.
+
+      \item Comprender el principio de Huygens y su relación con la
+            difracción de la luz.
+
+      \item Explorar la influencia del número de líneas por centímetro
+            de la rejilla de difracción en la formación de los patrones
+            de interferencia.
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Marco Teórico}
+
+ %  {\Large
+ %   \begin{equation}
+ %         \lambda_{n} = \frac{d \cdot \sen ( \tan^{-1} (\frac{X_{n}}{D}))}{n}
+ %   \end{equation}
+ %  }
+
+%  {\Large
+%   \begin{equation}
+%       \mathcal{G}_x = \frac{\lambda D}{x} 
+%   \end{equation}
+%  }
+
+% ! ----------------------------------------------------------------------|>
+\section{Montaje Experimental}
+
+% ! ----------------------------------------------------------------------|>
+\section{Datos Experimentales}
+
+\begin{table}[H]
+      \begin{center}
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  \multicolumn{3}{c}{$D_{1} = 0,7111$ \bolditalic{(m)}}                                                                                \\\hline
+                  \multirow{3}{*}{\textbf{n}} & \multirow{3}{*}{$x$ \bolditalic{(m)}} & {\Large $\lambda_{n}$} \bolditalic{(mm)} \break{} Experimental \\\hline
+                  1                           & $4,50 \cdot 10^{-02}$                 & $6,32 \cdot 10^{-04}$                                          \\\hline
+
+                  2                           & $9,00 \cdot 10^{-02}$                 & $6,29 \cdot 10^{-04}$                                          \\\hline
+
+                  3                           & $1,37 \cdot 10^{-01}$                 & $6,34 \cdot 10^{-04}$                                          \\\hline
+
+            \end{tabularx}
+
+            \vspace{-.02cm}
+
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  {\large $\lambda_{Promedio}$} \bolditalic{(mm)} & $6,32 \cdot 10^{-4}$ \\\hline
+            \end{tabularx}
+      \end{center}
+      \caption{}
+\end{table}
+
+\begin{table}[H]
+      \begin{center}
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  \multicolumn{3}{c}{$D_{2} = 0,4500$ \bolditalic{(m)}}                                                                                \\\hline
+                  \multirow{3}{*}{\textbf{n}} & \multirow{3}{*}{$x$ \bolditalic{(m)}} & {\Large $\lambda_{n}$} \bolditalic{(mm)} \break{} Experimental \\\hline
+                  1                           & $2,80 \cdot 10^{-02}$                 & $6,21 \cdot 10^{-04}$                                          \\\hline
+
+                  2                           & $5,70 \cdot 10^{-02}$                 & $6,30 \cdot 10^{-04}$                                          \\\hline
+
+                  3                           & $8,70 \cdot 10^{-02}$                 & $6,36 \cdot 10^{-04}$                                          \\\hline
+
+            \end{tabularx}
+
+            \vspace{-.02cm}
+
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  {\large $\lambda_{Promedio}$} \bolditalic{(mm)} & $6,29 \cdot 10^{-4}$ \\\hline
+            \end{tabularx}
+      \end{center}
+      \caption{}
+\end{table}
+
+% ! ----------------------------------------------------------------------|>
+\section{Análisis de datos}
+
+% + -------------------------------------------------------------|>
+\subsection{Análisis}
+
+% * ------------------------------------------------------|>
+\subsubsection{}
+
+\begin{table}[H]
+      \begin{center}
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  \hline
+                  {\large $\lambda_{Teorico}$} \bolditalic{(nm)} & $632,8$ \\\hline
+            \end{tabularx}
+      \end{center}
+\end{table}
+
+\vspace{-.5cm}
+
+\begin{table}[H]
+      \begin{center}
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  \multicolumn{2}{c}{$D_{1}$}          \\\hline
+                  \textbf{n} & Error \bolditalic{(\%)} \\\hline
+                  1          & $0,20$                  \\\hline
+
+                  2          & $0,59$                  \\\hline
+
+                  3          & $0,19$                  \\\hline
+
+            \end{tabularx}
+      \end{center}
+      \caption{}
+\end{table}
+
+\begin{table}[H]
+      \begin{center}
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  \multicolumn{2}{c}{$D_{1}$}          \\\hline
+                  \textbf{n} & Error \bolditalic{(\%)} \\\hline
+                  1          & $1,86$                  \\\hline
+
+                  2          & $0,51$                  \\\hline
+
+                  3          & $0,53$                  \\\hline
+
+            \end{tabularx}
+      \end{center}
+      \caption{}
+\end{table}
+
+% ! ----------------------------------------------------------------------|>
+\section{Conclusiones}
+
+\printbibliography
+
+\end{document}
