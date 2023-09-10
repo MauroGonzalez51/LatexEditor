@@ -78,6 +78,7 @@
 \end{titlepage}
 
 % chktex-file 44
+% chktex-file 24
 
 % ! ----------------------------------------------------------------------|>
 \section{Introducción}
@@ -132,17 +133,19 @@ cuando la luz se difracta en una rejilla.
 % ! ----------------------------------------------------------------------|>
 \section{Marco Teórico}
 
- %  {\Large
- %   \begin{equation}
- %         \lambda_{n} = \frac{d \cdot \sen ( \tan^{-1} (\frac{X_{n}}{D}))}{n}
- %   \end{equation}
- %  }
+ {\Large
+  \begin{equation}
+        \lambda_{n} = \frac{d \cdot \sen ( \tan^{-1} (\frac{X_{n}}{D}))}{n}
+        \label{eq:lambda-n}
+  \end{equation}
+ }
 
-%  {\Large
-%   \begin{equation}
-%       \mathcal{G}_x = \frac{\lambda D}{x} 
-%   \end{equation}
-%  }
+ {\Large
+  \begin{equation}
+        \mathcal{G}_x = \frac{\lambda D}{x}
+        \label{eq:grosor-cabello}
+  \end{equation}
+ }
 
 % ! ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
@@ -170,6 +173,7 @@ cuando la luz se difracta en una rejilla.
             \end{tabularx}
       \end{center}
       \caption{}
+      \label{tab:d1}
 \end{table}
 
 \begin{table}[H]
@@ -192,6 +196,27 @@ cuando la luz se difracta en una rejilla.
             \end{tabularx}
       \end{center}
       \caption{}
+      \label{tab:d2}
+\end{table}
+
+\begin{table}[H]
+      \begin{center}
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  \multicolumn{2}{c}{Datos (Grosor de un cabello)}                                 \\\hline
+                  \textbf{D} \bolditalic{(m)}                                            & $1,48$  \\\hline
+                  $\lambda$ \bolditalic{(nm)}~\footnote{Proporcionado por el fabricante} & $632,8$ \\\hline
+                  $x$ \bolditalic{(cm)}                                                  & $0,8$   \\\hline
+            \end{tabularx}
+
+            \vspace{-.02cm}
+
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|}
+                  Grosor experimental \bolditalic{(mm)} \\\hline
+                  $0,0750$                              \\\hline
+            \end{tabularx}
+      \end{center}
+      \caption{}
+      \label{tab:g}
 \end{table}
 
 % ! ----------------------------------------------------------------------|>
@@ -244,6 +269,22 @@ cuando la luz se difracta en una rejilla.
             \end{tabularx}
       \end{center}
       \caption{}
+\end{table}
+
+% * ------------------------------------------------------|>
+\subsubsection{}
+
+Usando los datos de la tabla~(\ref{tab:g}) y la
+formula~(\ref{eq:grosor-cabello}),
+
+\begin{table}[H]
+      \begin{center}
+            \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  \hline
+                  Grosor Teorico \bolditalic{(mm)} & \multirow{2}{*}{$0,1171$} \\\hline
+                  Error \bolditalic{(\%)}          & $35,9347$                 \\\hline
+            \end{tabularx}
+      \end{center}
 \end{table}
 
 % ! ----------------------------------------------------------------------|>
