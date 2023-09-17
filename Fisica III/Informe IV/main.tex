@@ -1,0 +1,226 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{multirow}
+
+% \usepackage{hyperref}
+
+\definecolor{LigthGray}{rgb}{0.7098, 0.7294, 0.7215}
+\definecolor{LigthGrayPlus}{rgb}{0.6862, 0.7254, 0.7294}
+\definecolor{White}{rgb}{1, 1, 1}
+\definecolor{Red}{rgb}{1, 0, 0}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
+
+    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+    \vspace{.2cm}
+
+    % chktex-file 8
+    {\scshape\Large Grupo 1 \par}
+    \vspace{1cm}
+    % chktex-file 8
+    \slshape {\Large \bfseries{}Informe de Laboratorio No. IV\\}
+    \slshape {\small \bfseries{}ONDAS MECÁNICAS:~Velocidad del sonido}
+    \vspace{2cm}
+
+    \slshape {\itshape{} Mauro González, T00067622 \\}
+    \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+    \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+    \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+    \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+    \vfill
+    Revisado Por \\
+    Duban Andres Paternina Verona\\
+    {\large \today\par}
+\end{titlepage}
+
+% chktex-file 44
+% chktex-file 24
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+% + ----------------------------------------|>
+\subsection{Objetivo general}
+
+% + ----------------------------------------|>
+\subsection{Objetivos específicos}
+
+% ! ----------------------------------------------------------------------|>
+\section{Marco Teórico}
+
+\begin{equation}
+    \mathcal{V}_{sonido} = 20,06 \cdot\sqrt{\mathcal(K)}
+\end{equation}
+
+% ! ----------------------------------------------------------------------|>
+\section{Montaje Experimental}
+
+% ! ----------------------------------------------------------------------|>
+\section{Datos Experimentales}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            \multicolumn{2}{|c|}{Constantes}                         \\\hline
+            $X_{1}$ \bolditalic{(m)}                     & $0,185$   \\\hline
+            $t_{1}$ \bolditalic{(s)}                     & $0,00056$ \\\hline
+            $T_{ambiente}$ \bolditalic{(°$\mathcal{C}$)} & $24,5$    \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            $X_{2}$ \bolditalic{(m)} & $t_{2}$ \bolditalic{(s)} \\\hline
+            $0,193$                  & $0,00054$                \\\hline
+            $0,218$                  & $0,00065$                \\\hline
+            $0,242$                  & $0,00072$                \\\hline
+            $0,263$                  & $0,00078$                \\\hline
+            $0,287$                  & $0,00086$                \\\hline
+            $0,305$                  & $0,00092$                \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            $\Delta t$ \bolditalic{(s)} & $c$ \bolditalic{(m/s)}  \\\hline
+            $2,50000 \times 10^{-5}$    & $3,20000 \times 10^{2}$ \\\hline
+            $9,00000 \times 10^{-5}$    & $3,66667 \times 10^{2}$ \\\hline
+            $1,60000 \times 10^{-4}$    & $3,56250 \times 10^{2}$ \\\hline
+            $2,20000 \times 10^{-4}$    & $3,54545 \times 10^{2}$ \\\hline
+            $3,00000 \times 10^{-4}$    & $3,40000 \times 10^{2}$ \\\hline
+            $3,60000 \times 10^{-4}$    & $3,33333 \times 10^{2}$ \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            Promedio & $3,45133 \times 10^{2}$ \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\vspace{-1cm}
+
+\noindent\makebox[\linewidth]{\rule{.9\linewidth}{0.4pt}}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            \multicolumn{2}{|c|}{Constantes}                               \\\hline
+            Distancia de viaje \bolditalic{(m)} & \multirow{2}{*}{$0,438$} \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            $T$ \bolditalic{(°$\mathcal{C}$)} & $T$ \bolditalic{(°$\mathcal{K}$)} \\\hline
+            $30$                              & $303,15$                          \\\hline
+            $35$                              & $308,15$                          \\\hline
+            $40$                              & $313,15$                          \\\hline
+            $45$                              & $318,15$                          \\\hline
+            $50$                              & $323,15$                          \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            $t$ \bolditalic{(s)} & $c$ \bolditalic{(m/s)} \\\hline
+            $0,0012507$          & $350,2038858$          \\\hline
+            $0,0012235$          & $357,9893747$          \\\hline
+            $0,0012193$          & $359,2225047$          \\\hline
+            $0,0011972$          & $365,8536585$          \\\hline
+            $0,0011860$          & $369,3086003$          \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+            \hline
+            Teorico \bolditalic{(m/s)} & Error \bolditalic{(\%)} \\\hline
+            $349,268738$               & $0,2677$                \\\hline
+            $352,137288$               & $1,6619$                \\\hline
+            $354,982658$               & $1,1944$                \\\hline
+            $357,805401$               & $2,2493$                \\\hline
+            $360,606050$               & $2,4133$                \\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+% ! ----------------------------------------------------------------------|>
+\section{Análisis de datos}
+
+% + -------------------------------------------------------------|>
+\subsection{Análisis}
+
+% ! ----------------------------------------------------------------------|>
+\section{Conclusiones}
+
+\printbibliography
+
+\end{document}
