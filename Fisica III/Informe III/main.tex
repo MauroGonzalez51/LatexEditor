@@ -33,7 +33,7 @@
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\baselinestretch}{1.5}
 
-\usepackage[style=apa, maxnames=6, minnames=3, backend=biber]{biblatex}
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
 \DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
       andothers = {\em et\addabbrvspace al\adddot}
 }
@@ -133,26 +133,113 @@ cuando la luz se difracta en una rejilla.
 % ! ----------------------------------------------------------------------|>
 \section{Marco Teórico}
 
- {\Large
-  \begin{equation}
-        \lambda_{n} = \frac{d \cdot \sen ( \tan^{-1} (\frac{X_{n}}{D}))}{n}
-        \label{eq:lambda-n}
-  \end{equation}
- }
+% + -------------------------------------------------------------|>
+\subsection{La luz~\cite{luz}}
 
- {\Large
-  \begin{equation}
-        \mathcal{G}_x = \frac{\lambda D}{x}
-        \label{eq:grosor-cabello}
-  \end{equation}
- }
+es un espectro de onda electromagnética la cual es visible
+por el ojo humano, la luz está compuesta por fotones, es
+una forma de energía se desplaza en línea recta a una
+velocidad constante como emisión ondulatoria de fotones,
+tiene longitudes de ondas las cuales son responsables del
+color del espectro visible. [1]
 
- {\Large
-  \begin{equation}
-        x_{n} = D \frac{n \lambda}{G_{c}}
-        \label{eq:x_n}
-  \end{equation}
- }
+% + -------------------------------------------------------------|>
+\subsection{Luz monocromática~\cite{Tamiko_2023}}
+
+esta se caracteriza por ser de un único color, está
+compuesta por una única longitud de onda, esta puede
+experimentar diversos fenómenos como la difracción,
+reflexión y la refracción, en esta experiencia nos
+enfocaremos en la difracción de un láser
+(monocromático).[2]
+
+% + -------------------------------------------------------------|>
+\subsection{Principio de Huygens}
+
+El principio de Huygens nos permite explicar cómo una onda
+luminosa se propaga a través del espacio y cómo se comporta
+cuando encuentra obstáculos o pasa por aperturas. En este
+principio se enuncia que: “Cada punto en un frente de onda
+de una onda luminosa es una fuente secundaria de ondas
+esféricas. La nueva onda se forma a partir de la
+superposición de estas ondas esféricas.”
+
+\begin{quotation}
+      ``Cada punto en un frente de onda de una onda luminosa
+      es una fuente secundaria de ondas esféricas. La nueva
+      onda se forma a partir de la superposición de estas
+      ondas esféricas''.
+\end{quotation}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.9\linewidth]{./Images/5.jpg}
+      \end{center}
+      \caption{}
+\end{figure}
+
+% + -------------------------------------------------------------|>
+\subsection{Difracción}
+
+La difracción es un fenómeno que ocurre cuando una onda (en
+este caso la luz), pasa por una abertura o un obstáculo y
+se curva o se dispersa alrededor de ese obstáculo. Este
+fenómeno es una consecuencia de la naturaleza ondulatoria
+de las ondas y puede observarse en diversas situaciones. En
+el contexto de la luz, la difracción puede ocurrir cuando
+la luz pasa a través de una rendija estrecha, una apertura
+circular, una red de difracción u otros tipos de obstáculos
+o estructuras que interrumpen su trayectoria.
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.9\linewidth]{./Images/6.png}
+      \end{center}
+      \caption{}
+\end{figure}
+
+% + -------------------------------------------------------------|>
+\subsection{Difracción de Fraunhofer}
+
+A una longitud de onda dada, la teoría de Fraunhofer
+predice la ubicación angular de los máximos y mínimos de la
+dispersión en función del tamaño de un
+objeto.~\cite{fraunhofer}Para obtener un patrón de
+difracción de Fraunhofer, se requiere que se cumplan una
+serie de condiciones específicas relacionadas con la
+geometría y la distancia entre la fuente de luz, la
+abertura u obstáculo, y la pantalla o superficie receptora
+donde se observa el patrón de difracción.
+
+\subsubsection*{Difracción de Fraunhofer \hfill{} \break{} para una abertura rectangular}
+
+\begin{equation*}
+      \sen (\theta) = n(\frac{\lambda}{b})
+\end{equation*}
+
+% + -------------------------------------------------------------|>
+\subsection*{Formulas a utilizar}
+
+{\Large
+      \begin{equation}
+            \lambda_{n} = \frac{d \cdot \sen ( \tan^{-1} (\frac{X_{n}}{D}))}{n}
+            \label{eq:lambda-n}
+      \end{equation}
+}
+
+{\Large
+      \begin{equation}
+            \mathcal{G}_x = \frac{\lambda D}{x}
+            \label{eq:grosor-cabello}
+      \end{equation}
+}
+
+{\Large
+      \begin{equation}
+            x_{n} = D \frac{n \lambda}{G_{c}}
+            \label{eq:x_n}
+      \end{equation}
+}
 
 % ! ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
