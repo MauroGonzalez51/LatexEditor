@@ -147,6 +147,13 @@ cuando la luz se difracta en una rejilla.
   \end{equation}
  }
 
+ {\Large
+  \begin{equation}
+        x_{n} = D \frac{n \lambda}{G_{c}}
+        \label{eq:x_n}
+  \end{equation}
+ }
+
 % ! ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
 
@@ -275,14 +282,29 @@ cuando la luz se difracta en una rejilla.
 \subsubsection{}
 
 Usando los datos de la tabla~(\ref{tab:g}) y la
-formula~(\ref{eq:grosor-cabello}),
+formula~(\ref{eq:grosor-cabello}) y~(\ref{eq:x_n}),
+
+\begin{equation*}
+      \begin{gathered}
+            x_{n} = 1480 mm \cdot \frac{6,328 \times 10^{-4}}{0,0750} \\
+            x_{n} = 12,48 mm \approx 12 mm
+      \end{gathered}
+\end{equation*}
+
+\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}
+
+\begin{equation*}
+      \begin{gathered}
+            G_{c} = 1480 mm \cdot \frac{6,328 \times 10^{-4}}{12mm} \\
+            G_{c} = 0,0780 mm
+      \end{gathered}
+\end{equation*}
 
 \begin{table}[H]
       \begin{center}
             \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
                   \hline
-                  Grosor Teorico \bolditalic{(mm)} & \multirow{2}{*}{$0,1171$} \\\hline
-                  Error \bolditalic{(\%)}          & $35,9347$                 \\\hline
+                  Error \bolditalic{(\%)} & $3,85$ \\\hline
             \end{tabularx}
       \end{center}
 \end{table}
