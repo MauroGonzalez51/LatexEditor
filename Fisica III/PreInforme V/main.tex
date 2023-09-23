@@ -1,0 +1,304 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{0pt}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\newcommand{\Celsius}[0]{°$\mathcal{C}$}
+\newcommand{\Kelvin}[0]{°$\mathcal{K}$}
+\newcommand{\Fahrenheit}[0]{°$\mathcal{F}$}
+
+% chktex-file 44
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
+
+    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+    \vspace{.2cm}
+
+    % chktex-file 8
+    {\scshape\Large Grupo 1 \par}
+    \vspace{1cm}
+    % chktex-file 8
+    \slshape {\Large \bfseries{}LAB 5 - CALOR ESPECÍFICO DE LOS SÓLIDOS\\}
+    \slshape {\small \bfseries{} Guía de laboratorio No. 5}
+    \vspace{4cm}
+
+    \slshape {\itshape{} Mauro González, T00067622 \\}
+    % \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+    % \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+    % \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+    % \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+    \vfill
+    Revisado Por \\
+    Duban Andres Paternina Verona\\
+    {\large \today\par}
+\end{titlepage}
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+El estudio de las propiedades térmicas de los sólidos es
+fundamental para comprender su comportamiento ante cambios
+de temperatura y su capacidad para almacenar y transferir
+calor. En esta experiencia, nos enfocaremos en determinar
+el calor específico de diferentes sólidos mediante un
+experimento de transferencia de calor. Para lograr esto,
+aplicaremos principios fundamentales de la termodinámica y
+utilizaremos un calorímetro para medir con precisión los
+cambios de temperatura en el sistema.
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+El objetivo principal de esta experiencia es determinar el
+calor específico de varios sólidos. El calor específico es
+una propiedad fundamental que describe la cantidad de calor
+necesaria para elevar la temperatura de una unidad de masa
+de un material en una unidad de temperatura. Este parámetro
+es crucial para comprender cómo los sólidos responden a la
+transferencia de calor y cómo almacenan energía térmica.
+
+\subsection{Objetivos específicos}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Comprender los conceptos de temperatura, calor y calor
+          específico de una sustancia.
+
+    \item Familiarizarse con las escalas de temperatura y su
+          importancia en las mediciones térmicas.
+
+    \item Investigar los principios de la ley cero de la
+          termodinámica y la primera ley de la termodinámica.
+
+    \item Determinar la masa equivalente del calorímetro utilizado en
+          el experimento.
+
+    \item Calcular el calor específico de diferentes sólidos
+          utilizando un calorímetro adiabático.
+
+    \item Comparar los valores experimentales obtenidos con los
+          valores teóricos conocidos para validar los resultados.
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Preparación de la practica}
+
+% * ----------------------------------------------------------------|>
+\subsection{¿Que es temperatura?~\cite{Significados_2022_temperatura}}
+
+La temperatura es una magnitud física que indica la energía
+interna de un cuerpo, de un objeto o del medio ambiente en
+general, medida por un termómetro.
+
+Dicha energía interna se expresa en términos de calor y
+frío, siendo el primero asociado con una temperatura más
+alta, mientras que el frío se asocia con una temperatura
+más baja.
+
+Las unidades de medida de temperatura son los grados
+Celsius (\Celsius), los grados Fahrenheit (\Fahrenheit) y
+los grados Kelvin (\Kelvin). El cero absoluto (0 \Kelvin)
+corresponde a $-273,15$ \Celsius.
+
+% * ----------------------------------------------------------------|>
+\subsection{¿Qué es calor?~\cite{Fernandes_2022_calor}}
+
+El calor es el proceso de transferencia de energía que
+fluye entre un sistema y su ambiente a causa de la
+diferencia de temperatura entre ellos.
+
+La transferencia de energía o calor se establece entre un
+cuerpo y el ambiente que le rodea cuando existe una
+diferencia de temperatura. Esta transferencia termina
+cuando se llega al equilibrio térmico, esto es, cuando la
+temperatura entre las partes es la misma.
+
+% * ----------------------------------------------------------------|>
+\subsection{¿Qué es el calor especifico de una sustancia?~\cite{Fernandes_2022_calor}~\cite{Significados_2016_calorEspecifico}}
+
+Como calor específico se conoce la magnitud física que
+expresa la cantidad de calor que requiere una sustancia por
+unidad de masa para que su temperatura aumente en una
+unidad, temperatura que es medida, por lo general, en
+grados Celsius.
+
+Como tal, el calor específico es una propiedad intensiva de
+la materia, pues su valor es representativo de cada
+sustancia o materia, cada una de las cuales, a su vez,
+presenta valores diferentes de acuerdo con el estado en que
+se encuentre (líquido, sólido o gaseoso).
+
+La fórmula de calor específico es $c = C / m$, donde $c$
+representa el calor específico la sustancia, $C$ la
+capacidad térmica y m su masa. De modo que para obtener el
+calor específico es necesario dividir la capacidad térmica
+entre la masa.
+
+    {\small
+        \begin{equation*}
+            \begin{gathered}
+                CalorEspecifico (c) = \frac{CapacidadCalorica}{masa} \\
+                CalorEspecifico (c) = \frac{c}{m}
+            \end{gathered}
+        \end{equation*}
+
+    }
+
+% * ----------------------------------------------------------------|>
+\subsection{Las escalas de temperaturas.~\cite{Escalasdetemperatura}}
+
+Las tres escalas de temperatura más comunes son: Celsius,
+Fahrenheit y Kelvin. Una escala de temperatura puede ser
+creada identificando dos temperaturas fácilmente
+reproducibles.
+
+La escala Celsius (\Celsius) toma en cuenta el valor 0 °
+para el punto de fusión del agua, mientras que el punto de
+ebullición del agua corresponde a 100°. En el caso de la
+escala Fahrenheit (\Fahrenheit), la más utilizada en
+Estados Unidos por ejemplo, el punto de fusión del agua
+está a los 32\Fahrenheit y el de ebullición a los
+212\Fahrenheit
+
+\subsubsection{Conversion entre escalas}
+
+\begin{table}[H]
+    \begin{tabularx}{.9\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        Convertir                          & Ecuación                                             \\\hline
+        \Celsius~$\rightarrow$ \Fahrenheit & $\frac{9}{5} \cdot T($\Celsius$) + 32$               \\\hline
+        \Fahrenheit~$\leftarrow$ \Celsius  & $\frac{5}{9} \cdot T($\Fahrenheit$) - 32$            \\\hline
+        \Celsius~$\rightarrow$ \Kelvin     & \Celsius~$+~273,15$                                  \\\hline
+        \Kelvin~$\leftarrow$ \Celsius      & \Kelvin~$-~273,15$                                   \\\hline
+        \Fahrenheit~$\rightarrow$ \Kelvin  & $(\frac{5}{9} \cdot T($\Fahrenheit$) - 32) + 273,15$ \\\hline
+        \Kelvin~$\rightarrow$\Fahrenheit   & $(\frac{9}{5} \cdot T($\Kelvin$) - 273,15) + 32$     \\\hline
+    \end{tabularx}
+\end{table}
+
+% * ----------------------------------------------------------------|>
+\subsection{Investigue sobre la ley cero de la termodinámica~\cite{Fernández_0}}
+
+Se dice que dos cuerpos están en equilibrio térmico cuando,
+al ponerse en contacto, sus variables de estado no cambian.
+En torno a esta simple idea se establece la ley cero.
+
+La ley cero de la termodinámica establece que, cuando dos
+cuerpos están en equilibrio térmico con un tercero, estos
+están a su vez en equilibrio térmico entre sí.
+
+% * ----------------------------------------------------------------|>
+\subsection{Investigue sobre la primera ley de la termodinámica~\cite{Fernández_1}}
+
+La primera ley de la termodinámica relaciona el trabajo y
+el calor transferido intercambiado en un sistema a través
+de una nueva variable termodinámica, la energía interna.
+Dicha energía ni se crea ni se destruye, sólo se
+transforma.
+
+\subsubsection{Energia interna~\cite{Fernández_1}}
+
+La energía interna de un sistema es una caracterización
+macroscópica de la energía microscópica de todas las
+partículas que lo componen. Un sistema está formado por
+gran cantidad de partículas en movimiento. Cada una de
+ellas posee:
+
+\begin{itemize}[label=$\triangleright$]
+    \item Energía cinética, por el hecho de encontrarse a una
+          determinada velocidad.
+
+    \item Energía potencial gravitatoria, por el hecho de encontrarse
+          en determinadas posiciones unas respecto de otras.
+
+    \item Energía potencial elástica, por el hecho vibrar en el
+          interior del sistema.
+\end{itemize}
+
+\subsubsection{Primera ley de la termodinamica~\cite{Fernández_1}}
+
+La primera ley de la termodinámica establece una relación
+entre la energía interna del sistema y la energía que
+intercambia con el entorno en forma de calor o trabajo.
+
+La primera ley de la termodinámica determina que la energía
+interna de un sistema aumenta cuando se le transfiere calor
+o se realiza un trabajo sobre él. Su expresión depende del
+criterio de signos para sistemas termodinámicos elegido:
+
+\begin{itemize}
+    \item Criterio \textbf{IUPAC}: Se considera positivo aquello que
+          aumenta la energía interna del sistema, o lo que es lo
+          mismo, el trabajo recibido o el calor absorbido.
+
+          \begin{equation*}
+              \Delta U = Q + W
+          \end{equation*}
+
+    \item Criterio \textbf{Tradicional}: Se considera positivo el
+          calor absorbido y el trabajo que realiza el sistema sobre
+          el entorno.
+
+          \begin{equation*}
+              \Delta U = Q - W
+          \end{equation*}
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Resumen del procedimiento}
+
+En esta experiencia, primero determinaremos la masa
+equivalente del calorímetro (mk) utilizando agua y un
+bloque sólido caliente. Luego, procederemos a medir el
+calor específico de varios sólidos. Para esto, calentaremos
+los sólidos y los colocaremos en el calorímetro junto con
+agua, registrando las temperaturas iniciales y finales para
+calcular el calor específico de cada sólido. Además,
+compararemos los resultados experimentales con los valores
+teóricos conocidos para validar nuestras mediciones y
+comprender cómo diferentes materiales almacenan y
+transfieren calor.
+
+\printbibliography
+
+\end{document}
