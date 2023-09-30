@@ -19,3 +19,5 @@
 10 > Historia random de Genero, Igualdad y Cine
 
 11 > Reseña de la economía en Colombia (~1980)
+
+12 > Avance del proyecto (FÍSICA II)
