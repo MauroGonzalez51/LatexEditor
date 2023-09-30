@@ -1,0 +1,183 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{multirow}
+
+% \usepackage{hyperref}
+
+\definecolor{LigthGray}{rgb}{0.7098, 0.7294, 0.7215}
+\definecolor{LigthGrayPlus}{rgb}{0.6862, 0.7254, 0.7294}
+\definecolor{White}{rgb}{1, 1, 1}
+\definecolor{Red}{rgb}{1, 0, 0}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\newcommand{\Celsius}[0]{°$\mathcal{C}$}
+\newcommand{\Kelvin}[0]{°$\mathcal{K}$}
+\newcommand{\Fahrenheit}[0]{°$\mathcal{F}$}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
+
+    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+    \vspace{.2cm}
+
+    % chktex-file 8
+    {\scshape\Large Grupo 1 \par}
+    \vspace{1cm}
+    % chktex-file 8
+    \slshape {\Large \bfseries{}Informe de Laboratorio No. V\\}
+    \slshape {\small \bfseries{}ONDAS MECÁNICAS:~Velocidad del sonido}
+    \vspace{2cm}
+
+    \slshape {\itshape{} Mauro González, T00067622 \\}
+    \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+    \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+    \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+    \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+    \vfill
+    Revisado Por \\
+    Duban Andres Paternina Verona\\
+    {\large \today\par}
+\end{titlepage}
+
+% chktex-file 44
+% chktex-file 24
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+La determinación del calor específico de los sólidos es una
+parte fundamental de la termodinámica y juega un papel
+esencial en la comprensión de cómo los materiales almacenan
+y liberan energía térmica. En esta experiencia de
+laboratorio, se lleva a cabo un estudio detallado de la
+transferencia de calor entre sólidos y líquidos para
+determinar el calor específico de varios materiales. Esto
+se logra mediante la medición de cambios de temperatura y
+la aplicación de principios termodinámicos fundamentales.
+La experimentación práctica en esta área es crucial para la
+aplicación de conceptos teóricos en situaciones del mundo
+real y es esencial para una amplia gama de campos, desde la
+física hasta la ingeniería.
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+% + ----------------------------------------|>
+\subsection{Objetivo general}
+
+El objetivo principal de esta práctica de laboratorio es
+determinar el calor específico de sólidos utilizando un
+enfoque experimental basado en la transferencia de calor y
+principios termodinámicos.
+
+% + ----------------------------------------|>
+\subsection{Objetivos específicos}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Medir la temperatura inicial y final de una mezcla de agua
+          y sólidos después de una transferencia de calor controlada.
+
+    \item Determinar la masa equivalente del calorímetro utilizado en
+          el experimento.
+
+    \item Calcular el calor específico de los sólidos utilizando los
+          datos recopilados y las ecuaciones pertinentes.
+
+    \item Comparar y analizar los resultados obtenidos utilizando dos
+          métodos diferentes para calcular el calor específico.
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Marco Teórico}
+
+% + -------------------------------------------------------------|>
+\subsection{Ley cero de la termodinámica~\cite{Fernández}}
+
+Se dice que dos cuerpos están en equilibrio térmico cuando,
+al ponerse en contacto, sus variables de estado no cambian.
+En torno a esta simple idea se establece la ley cero.
+
+La ley cero de la termodinámica establece que, cuando dos
+cuerpos están en equilibrio térmico con un tercero, estos
+están a su vez en equilibrio térmico entre sí.
+
+% ! ----------------------------------------------------------------------|>
+\section{Montaje Experimental}
+
+% ! ----------------------------------------------------------------------|>
+\section{Datos Experimentales}
+
+\noindent\makebox[\linewidth]{\rule{.9\linewidth}{0.4pt}}
+
+% ! ----------------------------------------------------------------------|>
+\section{Análisis de datos}
+
+% + -------------------------------------------------------------|>
+\subsection{Análisis}
+
+% ! ----------------------------------------------------------------------|>
+\section{Conclusiones}
+
+En esta experiencia de laboratorio, se llevaron a cabo
+mediciones precisas de la transferencia de calor entre
+sólidos y agua. Se determinaron los calores específicos de
+los sólidos utilizando dos métodos diferentes, uno que
+considera el calor absorbido por el agua y otro que tiene
+en cuenta la masa equivalente del calorímetro. Se
+encontraron diferencias en los resultados obtenidos por
+estos métodos, lo que demuestra la importancia de
+considerar la contribución del calorímetro en el proceso.
+
+Estos experimentos proporcionaron una comprensión práctica
+de los conceptos fundamentales de la termodinámica y
+demostraron la relación entre la masa, la temperatura y el
+calor específico de los sólidos. Además, destacaron la
+necesidad de la precisión en la medición y la importancia
+de la calibración adecuada de los instrumentos utilizados
+en experimentos de transferencia de calor.
+
+\printbibliography
+
+\end{document}
