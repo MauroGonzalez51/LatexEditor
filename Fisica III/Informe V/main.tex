@@ -23,11 +23,6 @@
 
 % \usepackage{hyperref}
 
-\definecolor{LigthGray}{rgb}{0.7098, 0.7294, 0.7215}
-\definecolor{LigthGrayPlus}{rgb}{0.6862, 0.7254, 0.7294}
-\definecolor{White}{rgb}{1, 1, 1}
-\definecolor{Red}{rgb}{1, 0, 0}
-
 \counterwithin{figure}{section}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
@@ -67,7 +62,7 @@
       \vspace{1cm}
       % chktex-file 8
       \slshape {\Large \bfseries{}Informe de Laboratorio No. V\\}
-      \slshape {\small \bfseries{}ONDAS MECÁNICAS:~Velocidad del sonido}
+      \slshape {\small \bfseries{}CALOR ESPECÍFICO DE LOS SÓLIDOS}
       \vspace{2cm}
 
       \slshape {\itshape{} Mauro González, T00067622 \\}
@@ -237,6 +232,53 @@ Permitiéndonos obtener los siguientes resultados.
 
 % + -------------------------------------------------------------|>
 \subsection{Análisis}
+
+% * --------------------------------------------------------|>
+\subsubsection{}
+
+Ecuación 2:~$Q_1 = C_1 m_1 (T_1 - T_M)$, Ecuación 3:~$Q_2 =
+      C_2 m_2 (T_2 - T_M)$, Ecuación 4:~$Q_1 + Q_2$
+
+Reemplazando (2) y (3) en (4), obtenemos,
+
+$C_1 m_1 (T_1 - T_M) + C_2 m_2 (T_2 - T_M) = 0$
+
+Luego se despeja $C_1$
+
+\begin{equation*}
+      \begin{gathered}
+            C_1 m_1 (T_1 - T_M) = -C_2 m_2 (T_2 - T_M) \\
+            C_1 = \frac{- C_2 m_2 (T_2 - T_M)}{m_1 (T_1 - T_M)} \\
+            C_1 = C_2 \frac{m_2 (T_M - T_2)}{m_1 (T_1 - T_M)}~\surd
+      \end{gathered}
+\end{equation*}
+
+% * --------------------------------------------------------|>
+\subsubsection{}
+
+Ecuación 7:~$Q_2 = C_2 (m_2 + m_k)(T_M - T_2)$, Ecuación
+2:~$Q_1 = C_1 m_1 (T_1 - T_M)$, Ecuación 4:~$Q_1 + Q_2 = 0$
+
+Reemplazando (2) y (7) en (4)
+
+$C_2 (m_2 + m_k)(T_M T_2) + C_1 m_1 (T_1 - T_M) = 0$
+
+Luego se despeja $C_1$ de la ecuación
+
+\begin{equation*}
+      \begin{gathered}
+            C_1 = \frac{- C_2(m_2 + m_k)(T_M - T_2)}{m_1 (T_1 - T_M)} \\
+            C_1 = C_2 \frac{(m_2 + m_k)(T_M - T_2)}{m_1 (T_1 - T_M)}~\surd
+      \end{gathered}
+\end{equation*}
+
+% * --------------------------------------------------------|>
+\subsubsection{}
+
+Ecuación 10:~$m_K = \frac{m (T - T_e)}{T_e - T_o}$
+
+Reemplazando los valores, $m_K = \frac{0.08 (92 - 40)}{40 -
+            28} = 0.097 Kg$
 
 % * --------------------------------------------------------|>
 \subsubsection{}
