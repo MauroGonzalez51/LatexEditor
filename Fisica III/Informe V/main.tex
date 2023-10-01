@@ -1,4 +1,4 @@
-\documentclass[twocolumn, 12pt]{article}
+\documentclass[letterpaper, 12pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english, spanish]{babel}
@@ -35,7 +35,7 @@
 
 \usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
 \DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
-    andothers = {\em et\addabbrvspace al\adddot}
+      andothers = {\em et\addabbrvspace al\adddot}
 }
 \addbibresource{./Bibliography/bibliography.bib}
 
@@ -48,37 +48,37 @@
 \newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
 
 \newcommand{\Celsius}[0]{°$\mathcal{C}$}
-\newcommand{\Kelvin}[0]{°$\mathcal{K}$}
+\newcommand{\Kelvin}[0]{$\mathcal{K}$}
 \newcommand{\Fahrenheit}[0]{°$\mathcal{F}$}
 
 \begin{document}
 
 \begin{titlepage}
-    \centering
-    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
-    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
-    \vspace{1cm}
+      \centering
+      \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+      \vspace{1cm}
 
-    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
-    \vspace{.2cm}
+      {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+      \vspace{.2cm}
 
-    % chktex-file 8
-    {\scshape\Large Grupo 1 \par}
-    \vspace{1cm}
-    % chktex-file 8
-    \slshape {\Large \bfseries{}Informe de Laboratorio No. V\\}
-    \slshape {\small \bfseries{}ONDAS MECÁNICAS:~Velocidad del sonido}
-    \vspace{2cm}
+      % chktex-file 8
+      {\scshape\Large Grupo 1 \par}
+      \vspace{1cm}
+      % chktex-file 8
+      \slshape {\Large \bfseries{}Informe de Laboratorio No. V\\}
+      \slshape {\small \bfseries{}ONDAS MECÁNICAS:~Velocidad del sonido}
+      \vspace{2cm}
 
-    \slshape {\itshape{} Mauro González, T00067622 \\}
-    \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
-    \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
-    \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
-    \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
-    \vfill
-    Revisado Por \\
-    Duban Andres Paternina Verona\\
-    {\large \today\par}
+      \slshape {\itshape{} Mauro González, T00067622 \\}
+      \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+      \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+      \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+      \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+      \vfill
+      Revisado Por \\
+      Duban Andres Paternina Verona\\
+      {\large \today\par}
 \end{titlepage}
 
 % chktex-file 44
@@ -116,17 +116,17 @@ principios termodinámicos.
 \subsection{Objetivos específicos}
 
 \begin{itemize}[label=$\triangleright$]
-    \item Medir la temperatura inicial y final de una mezcla de agua
-          y sólidos después de una transferencia de calor controlada.
+      \item Medir la temperatura inicial y final de una mezcla de agua
+            y sólidos después de una transferencia de calor controlada.
 
-    \item Determinar la masa equivalente del calorímetro utilizado en
-          el experimento.
+      \item Determinar la masa equivalente del calorímetro utilizado en
+            el experimento.
 
-    \item Calcular el calor específico de los sólidos utilizando los
-          datos recopilados y las ecuaciones pertinentes.
+      \item Calcular el calor específico de los sólidos utilizando los
+            datos recopilados y las ecuaciones pertinentes.
 
-    \item Comparar y analizar los resultados obtenidos utilizando dos
-          métodos diferentes para calcular el calor específico.
+      \item Comparar los resultados obtenidos utilizando dos métodos
+            diferentes para calcular el calor específico.
 \end{itemize}
 
 % ! ----------------------------------------------------------------------|>
@@ -156,6 +156,142 @@ están a su vez en equilibrio térmico entre sí.
 
 % + -------------------------------------------------------------|>
 \subsection{Análisis}
+
+% * --------------------------------------------------------|>
+\subsubsection{}
+
+Utilizando la ecuación,
+
+\begin{equation}
+      C_{1} = C_{2} \frac{m_{2} (T_{m} - T_{2})}{m_1 (T_{1} - T_{m})}
+      \label{eq:calor_especifico_1}
+\end{equation}
+
+Donde,
+
+\begin{itemize}[label=$\triangleright$]
+      \item $m_{1}$: masa del sólido,
+      \item $C_{1}$: su calor especifico
+      \item $m_{2}$: masa del agua,
+      \item $C_{2}$: el calor específico de calor del agua,
+      \item $T_{1}$: temperatura de la sustancia,
+      \item $T_{2}$: temperatura del agua,
+      \item $T_{m}$: temperatura común.
+\end{itemize}
+
+El calor específico del agua es de: \hfill{} \break{}
+$C_{2} = 4.19\frac{J}{K\cdot KG}$
+
+\smallskip
+
+Conversiones:
+
+\begin{itemize}[label=$\triangleright$]
+      \item $m_{1}$: $96.4$~g = $0.0964$~kg
+      \item $m_{2}$: $200$~g = $0.20$~kg
+      \item $T_{m}$: $31$\Celsius = $304.15$~\Kelvin
+      \item $T_{1}$: $91$\Celsius = $364.15$~\Kelvin
+      \item $T_{2}$: $28$\Celsius = $301.15$~\Kelvin
+\end{itemize}
+
+\begin{equation*}
+      \begin{gathered}
+            C_{1} = 4.19 \frac{J}{K \cdot Kg} \times \frac{0.20 Kg (304.15~\mathcal{K} - 301.15~\mathcal{K})}{0,0964 Kg(364.15~\mathcal{K} - 304.15~\mathcal{K})} \\
+            C_{1} = 0.435 \frac{J}{K \cdot Kg}
+      \end{gathered}
+\end{equation*}
+
+% * --------------------------------------------------------|>
+\subsubsection{}
+
+\begin{equation}
+      C_{1} = C_{2} \frac{(m_{2} + m_{k})(T_{M} - T_{2})}{m_{1}(T_{1} - T_{M})}
+      \label{eq:calor_especifico_2}
+\end{equation}
+
+Masa del calorímetro:
+
+\begin{equation}
+      m_{k} = \frac{m(T - T_{e})}{T_{e} - T_{0}} - M
+      \label{eq:masa_calorimetro}
+\end{equation}
+
+Donde,
+
+\begin{itemize}[label=$\triangleright$]
+      \item $T_{0}$: temperatura del agua en el calorímetro sin calentar
+      \item $T$: temperatura del agua calentada
+      \item $T_{e}$: temperatura en equilibrio
+      \item $M$: gramos de agua iniciales
+      \item $m$: gramos de agua añadidos
+\end{itemize}
+
+Conversiones:
+
+\begin{itemize}
+      \item $M$: $250$g = $0.25$~Kg
+      \item $m$: $80$g = $0.08$~Kg
+      \item $T_{0}$: $28$\Celsius = $301.15$~\Kelvin
+      \item $T$: $92$\Celsius = $365.15$~\Kelvin
+      \item $T_{e}$: $40$\Celsius = $313.15$~\Kelvin
+\end{itemize}
+
+\begin{equation*}
+      \begin{gathered}
+            m_k = \frac{0,08 Kg(365.15~\mathcal{K} - 313.15~\mathcal{K})}{313.15~\mathcal{K} - 301.15~\mathcal{K}} \\
+            m_k = 0.097 Kg
+      \end{gathered}
+\end{equation*}
+
+\begin{equation*}
+      \begin{gathered}
+            C_{1} = 4.19 \frac{J}{K \cdot Kg} \times \frac{(0.020 Kg + 0.097 Kg)(304.15~\mathcal{K} - 301.15~\mathcal{K})}{0,0964 Kg(364.15~\mathcal{K} - 304.15~\mathcal{K})} \\
+            C_{1} = 0.645 \frac{J}{K \cdot Kg}
+      \end{gathered}
+\end{equation*}
+
+% * --------------------------------------------------------|>
+\subsubsection{}
+
+\begin{itemize}[label=$\triangleright$]
+      \item En el punto 4, se calculó el calor específico ($C_1$)
+            utilizando la ecuación (\ref{eq:calor_especifico_1}).\@{}El
+            valor obtenido fue aproximadamente $0.435 \frac{J}{K \cdot
+                        Kg}$.
+
+      \item En el punto 5, se volvió a calcular el calor específico
+            ($C_1$) utilizando la ecuación
+            (\ref{eq:calor_especifico_2}), teniendo en cuenta la masa
+            del calorímetro. El valor obtenido fue aproximadamente
+            $0.435 \frac{J}{K \cdot Kg}$.
+
+            En el punto 5, se considera la masa del calorímetro, que es
+            de $0.25$ kg. El calorímetro es la parte del sistema que
+            almacena el calor y, por lo tanto, afecta la cantidad de
+            calor que puede absorber o liberar durante un cambio de
+            temperatura. Cuando se calcula el calor específico (C1)
+            utilizando la ecuación HERE, la masa total del sistema
+            ($m_2$ + $m_k$) en el denominador es la suma de la masa del
+            calorímetro ($m_k$) y la masa de agua añadida ($m_2$). Esto
+            significa que el calorímetro en sí mismo contribuye a la
+            capacidad térmica total del sistema. Por lo tanto, el
+            resultado de C1 se ve influenciado por la masa del
+            calorímetro y cómo esta afecta la absorción de calor
+            durante el experimento.
+
+            En resumen, los dos métodos utilizados para determinar el
+            calor específico
+            (\ref{eq:calor_especifico_1})~(\ref{eq:calor_especifico_2})
+            proporcionaron resultados ligeramente diferentes. Esto
+            puede deberse a las diferencias en las ecuaciones y a la
+            consideración de la masa del calorímetro en el punto 5.
+            Considerar la masa del calorímetro es crucial, ya que
+            afecta directamente el resultado final del cálculo del
+            calor específico ($C_1$). La masa del calorímetro se suma a
+            la masa total del sistema y contribuye a su capacidad
+            térmica, lo que hace que el resultado de $C_1$ sea más
+            preciso y realista en condiciones experimentales.
+\end{itemize}
 
 % ! ----------------------------------------------------------------------|>
 \section{Conclusiones}
