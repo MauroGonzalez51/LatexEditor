@@ -1,0 +1,233 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{0pt}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\newcommand{\Celsius}[0]{°$\mathcal{C}$}
+\newcommand{\Kelvin}[0]{°$\mathcal{K}$}
+\newcommand{\Fahrenheit}[0]{°$\mathcal{F}$}
+
+% chktex-file 44
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
+
+    {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+    \vspace{.2cm}
+
+    % chktex-file 8
+    {\scshape\Large Grupo 1 \par}
+    \vspace{1cm}
+    % chktex-file 8
+    \slshape {\Large \bfseries{}LAB 6 - CALOR ESPECÍFICO DE LOS SÓLIDOS\\}
+    \slshape {\small \bfseries{} Guía de laboratorio No. 6}
+    \vspace{4cm}
+
+    \slshape {\itshape{} Mauro González, T00067622 \\}
+    % \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+    % \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+    % \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+    % \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+    \vfill
+    Revisado Por \\
+    Duban Andres Paternina Verona\\
+    {\large \today\par}
+\end{titlepage}
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+La ley de Stefan-Boltzmann para la radiación es uno de los
+pilares fundamentales de la física que describe cómo los
+objetos emiten radiación térmica en función de su
+temperatura. En esta experiencia, exploraremos este
+principio físico crucial al calibrar una termopila para la
+medición de la temperatura absoluta. La termopila es un
+dispositivo que aprovecha el efecto termoeléctrico para
+cuantificar la radiación térmica de un cuerpo negro, que es
+un objeto idealizado que absorbe y emite radiación de
+manera perfecta. Esta práctica nos permitirá comprender
+mejor cómo los cuerpos emiten energía en forma de radiación
+térmica y cómo esta radiación se relaciona con la
+temperatura.
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+El objetivo principal de esta experiencia es calibrar una
+termopila para medir la temperatura absoluta de un objeto
+utilizando la ley de Stefan-Boltzmann. A través de esta
+calibración, podremos cuantificar de manera precisa la
+radiación térmica emitida por el objeto y relacionarla con
+su temperatura.
+
+\subsection{Objetivos específicos}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Comprender el concepto de cuerpo negro y su importancia en
+          la radiación térmica.
+
+    \item Familiarizarse con el funcionamiento de una termopila y el
+          principio físico que la rige.
+
+    \item Definir las cantidades físicas clave relacionadas con la
+          radiación, como la potencia y la intensidad.
+
+    \item Aplicar la ley de Stefan-Boltzmann para relacionar la
+          potencia radiante con la temperatura de un cuerpo negro.
+
+    \item Registrar y analizar los datos experimentales para calibrar
+          la termopila y determinar la temperatura absoluta del
+          objeto.
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Preparación de la practica}
+
+% * ----------------------------------------------------------------|>
+\subsection{El cuerpo negro~\cite{El_cuerpo_negro}}
+
+El término radiación se refiere a la emisión continua de
+energía desde la superficie de cualquier cuerpo, esta
+energía se denomina radiante y es transportada por las
+ondas electromagnéticas que viajan en el vacío a la
+velocidad de $3 \times 10^{8} \frac{m}{s}$. Las ondas de
+radio, las radiaciones infrarrojas, la luz visible, la luz
+ultravioleta, los rayos X y los rayos gamma, constituyen
+las distintas regiones del espectro electromagnético.
+
+La superficie de un cuerpo negro es un caso límite, en el
+que toda la energía incidente desde el exterior es
+absorbida y toda la energía incidente desde el interior es
+emitida.
+
+No existe en la naturaleza un cuerpo negro, incluso el
+negro de humo refleja el 1\% de la energía incidente.
+
+Sin embargo, un cuerpo negro se puede sustituir con gran
+aproximación por una cavidad con una pequeña abertura. La
+energía radiante incidente a través de la abertura, es
+absorbida por las paredes en múltiples reflexiones y
+solamente una mínima proporción escapa (se refleja) a
+través de la abertura.
+
+% * ----------------------------------------------------------------|>
+\subsection{En este experimento ¿qué equipo se usará como aproximación a un cuerpo
+    negro?}
+
+En la experiencia 6, se utilizará el ``Black body
+accessory'' como una aproximación a un cuerpo negro. La ley
+de Stefan-Boltzmann se aplica a la radiación de un cuerpo
+negro ideal, que absorbe y emite toda la radiación que
+incide sobre él. Aunque ningún objeto en la vida real es un
+cuerpo negro perfecto, algunos accesorios o dispositivos se
+diseñan para que sean lo más cercanos posible a un cuerpo
+negro y sigan aproximadamente esta ley para la radiación.
+
+% * ----------------------------------------------------------------|>
+\subsection{¿Qué es una termopila y qué principio físico rige su comportamiento?}
+
+Las termopilas convierten la energía térmica en energía
+eléctrica. Las termopilas utilizan varios termopares
+conectados en serie o en paralelo. Las termopilas se
+utilizan para la detección de temperatura sin contacto. La
+función de una termopila es transferir la radiación de
+calor emitida por el objeto a una salida de tensión. La
+salida está en el rango de decenas o cientos de
+milivoltios~\cite{Termopilas}.
+
+Las termopilas funcionan según el principio físico del
+efecto Seebeck, que es un fenómeno termoeléctrico en el
+cual se genera una diferencia de voltaje eléctrico (una
+fuerza electromotriz o fem) en un circuito eléctrico cuando
+se establece una diferencia de temperatura a lo largo de
+sus extremos. Este efecto es responsable de la generación
+de electricidad a partir de diferencias de temperatura y es
+la base de funcionamiento de las termopilas.
+
+% * ----------------------------------------------------------------|>
+\subsection{Las siguientes cantidades físicas sirven para cuantificar la radiación \dots}
+
+\begin{itemize}[label=$\triangleright$]
+    \item Potencia: La potencia radiante (P) es la cantidad de
+          energía radiante emitida o recibida por un objeto o sistema
+          en una unidad de tiempo determinada. En el contexto de la
+          radiación, esta energía radiante puede manifestarse en
+          forma de radiación térmica, como el calor infrarrojo, y es
+          fundamental para comprender cómo los objetos emiten y
+          absorben energía térmica a través de la radiación
+          electromagnética~\cite{Potencia}.
+
+    \item Intensidad: La intensidad en el ámbito de la física se
+          refiere a la potencia transferida por unidad de área, donde
+          el área se encuentra en un plano perpendicular a la
+          dirección de propagación de la energía. En el Sistema
+          Internacional de Unidades (SI), la intensidad se mide en
+          vatios por metro cuadrado ($\frac{W}{m^2}$). Esta medida se
+          utiliza principalmente en el estudio de las ondas, como la
+          radiación electromagnética, para cuantificar la cantidad de
+          energía transmitida por unidad de área~\cite{Intensidad}.
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Resumen del procedimiento}
+
+En esta experiencia, utilizaremos un cilindro de latón
+bruñido como una aproximación a un cuerpo negro. El
+cilindro se calentará a diferentes temperaturas en un horno
+eléctrico, y se medirá la radiación térmica emitida por
+este cuerpo negro utilizando una termopila de Moll. Para
+calibrar la termopila, registraremos la temperatura
+ambiente y la diferencia de potencial generada por la
+termopila debido a la radiación del cuerpo negro. Luego,
+aplicaremos la ley de Stefan-Boltzmann para determinar la
+temperatura absoluta del cilindro de latón y explorar la
+relación entre la temperatura y la radiación térmica. Esta
+práctica nos permitirá comprender mejor cómo se cuantifica
+la radiación térmica y cómo se aplica la ley de
+Stefan-Boltzmann en situaciones experimentales.
+
+\printbibliography
+
+\end{document}
