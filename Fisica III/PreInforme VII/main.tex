@@ -1,0 +1,269 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{0pt}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\newcommand{\Celsius}[0]{°$\mathcal{C}$}
+\newcommand{\Kelvin}[0]{°$\mathcal{K}$}
+\newcommand{\Fahrenheit}[0]{°$\mathcal{F}$}
+
+% chktex-file 44
+
+\begin{document}
+
+\begin{titlepage}
+      \centering
+      \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+      \vspace{1cm}
+
+      {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+      \vspace{.2cm}
+
+      % chktex-file 8
+      {\scshape\Large Grupo 1 \par}
+      \vspace{2cm}
+      % chktex-file 8
+      \slshape {\Large \bfseries{}LAB 7 - EFECTO FOTOELÉCTRICO\\}
+      \slshape {\small \bfseries{} Guía de laboratorio No. 7}
+      \vspace{4cm}
+
+      \slshape {\itshape{} Mauro González, T00067622 \\}
+      % \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+      % \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+      % \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+      % \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+      \vfill
+      Revisado Por \\
+      Duban Andres Paternina Verona\\
+      {\large \today\par}
+\end{titlepage}
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+El efecto fotoeléctrico, un fenómeno fundamental en la
+física, desempeña un papel crucial en la comprensión de la
+dualidad onda-partícula de la luz. Este experimento tiene
+como objetivo explorar este efecto y verificar la ecuación
+de Einstein para el mismo.
+
+El efecto fotoeléctrico implica la emisión de electrones
+por un material cuando es iluminado con luz de cierta
+longitud de onda, y su energía cinética depende de la
+frecuencia de la luz incidente. Albert Einstein propuso la
+idea de que la luz consiste en partículas llamadas fotones,
+cada uno con energía proporcional a su frecuencia, lo que
+proporciona una explicación cuántica de este efecto. En
+esta práctica, aplicaremos esta teoría para calcular la
+constante de Planck y la función de trabajo de la celda
+fotoeléctrica.
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+Verificar experimentalmente la ecuación de Einstein para el
+efecto fotoeléctrico y determinar la constante de Planck
+($h$) y la función de trabajo ($W_0$) de la celda
+fotoeléctrica.
+
+\subsection{Objetivos específicos}
+
+\begin{itemize}[label=$\triangleright$]
+      \item Establecer la relación entre la tensión límite ($V_0$) y la
+            frecuencia de la luz incidente en la celda fotoeléctrica.
+
+      \item Construir una gráfica que relacione V0 y la frecuencia para
+            verificar la ecuación de Einstein.
+
+      \item Utilizar técnicas de regresión para encontrar una función
+            analítica que se ajuste a los datos experimentales.
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Preparación de la practica}
+
+% + --------------------------------------------------------------|>
+\subsection*{¿En qué consiste el efecto fotoeléctrico?~\cite{cite_3}}
+
+Cuando la luz brilla en un metal, los electrones pueden ser
+expulsados de la superficie del metal en un fenómeno
+conocido como el efecto fotoeléctrico. También, a este
+proceso suele llamársele fotoemisión, y a los electrones
+que son expulsados del metal, fotoelectrones. En términos
+de su comportamiento y sus propiedades, los fotoelectrones
+no son diferentes de otros electrones. El prefijo foto
+simplemente nos indica que los electrones han sido
+expulsados de la superficie de un metal por la luz
+incidente.
+
+% + --------------------------------------------------------------|>
+\subsection*{¿Por qué el efecto fotoeléctrico evidencia la naturaleza corpuscular de la radiación
+      electromagnética?}
+
+El efecto fotoeléctrico es una prueba de la naturaleza
+corpuscular de la luz~\cite{cite_1}. Este fenómeno fue
+descubierto por Heinrich Hertz en 1887 y estudiado
+sistemáticamente por Philipp Lenard, quienes encontraron
+que la teoría ondulatoria de la luz no podía explicar este
+fenómeno~\cite{cite_2}.
+
+La teoría corpuscular de la luz fue propuesta por Isaac
+Newton en 1704, quien sugirió que la luz está formada por
+partículas diminutas que se desplazan a una velocidad
+enorme y en línea recta~\cite{cite_2}. Sin embargo, esta
+teoría no pudo explicar todos los fenómenos asociados con
+la luz.
+
+Albert Einstein, en 1905, rescató el modelo corpuscular
+para explicar el efecto fotoeléctrico. Según Einstein, la
+luz está formada por partículas llamadas fotones cuya
+energía viene dada por la frecuencia de la
+radiación~\cite{cite_2}. Observó que la emisión de
+fotoelectrones era independiente de la intensidad de la luz
+y estaba asociada, para un mismo metal, a cierto tipo de
+radiaciones~\cite{cite_2}. Además, cuanto mayor fuera la
+frecuencia de la radiación, mayor parecía la energía de los
+electrones emitidos~\cite{cite_2}.
+
+Einstein postuló que los fotones de una radiación debían
+tener un valor mínimo de energía para que, al chocar con
+los electrones de la superficie del metal, fuesen capaces
+de transferirles la energía necesaria para hacerlos
+abandonar el metal~\cite{cite_2}. A este valor de energía
+lo llamó energía umbral~\cite{cite_2}.
+
+Estos hallazgos contradecían las predicciones basadas en el
+modelo ondulatorio de la luz, que sugerían que el aumento
+de la amplitud de la luz incrementaría la energía cinética
+de los fotoelectrones emitidos, mientras que el aumento de
+la frecuencia incrementaría la corriente
+medida~\cite{cite_3}. En cambio, los experimentos mostraron
+que el aumento en la frecuencia incrementaba la energía
+cinética de los fotoelectrones, mientras que el aumento en
+la amplitud de la luz incrementaba la
+corriente~\cite{cite_3}.
+
+Por lo tanto, el efecto fotoeléctrico proporciona evidencia
+sólida para apoyar el modelo corpuscular de la luz y
+sugiere que la luz tiene una naturaleza dual: se comporta
+tanto como onda como partícula.
+
+% + --------------------------------------------------------------|>
+\subsection*{Explique por qué la energía cinética de los fotoelectrones menos ligados se puede
+      calcular con la ecuación (3)}
+
+La ecuación $K_{\max}= e V_0$, se utiliza para calcular la
+energía cinética máxima de los fotoelectrones menos ligados
+en un experimento de efecto fotoeléctrico. Aquí, $K_{\max}$
+es la energía cinética máxima de los fotoelectrones, $e$ es
+la carga del electrón y $V_0$ es la tensión de frenado1.
+
+En el efecto fotoeléctrico, cada fotoelectrón es arrancado
+por un fotón y abandona el átomo con una energía cinética
+que depende de la frecuencia de la luz incidente. Los
+electrones menos ligados son aquellos que requieren menos
+energía para ser liberados del metal.
+
+La tensión de frenado ($V_0$) es la tensión mínima
+necesaria para detener los electrones más energéticos
+(menos ligados) y evitar que lleguen al ánodo1. Por lo
+tanto, la energía cinética máxima de los fotoelectrones
+menos ligados se puede calcular como el producto de la
+carga del electrón y la tensión de frenado1.
+
+% + --------------------------------------------------------------|>
+\subsection*{Explique por qué la energía cinética de los fotoelectrones menos ligados se puede
+      calcular con la ecuación (3)}
+
+\begin{enumerate}
+      \item Montaje Óptico:
+            \begin{itemize}[label=$\triangleright$]
+                  \item Conectar la bobina de reactancia a la red eléctrica.
+                  \item Montar y encender la lámpara de mercurio.
+                  \item Asegurar la celda fotoeléctrica hacia la lámpara de
+                        mercurio.
+                  \item Alinear y enfocar la luz en la zona sensible de la celda.
+            \end{itemize}
+
+      \item Montaje Eléctrico:
+            \begin{itemize}[label=$\triangleright$]
+                  \item Conectar un electrómetro amplificador y un multímetro.
+                  \item Conectar la fuente de alimentación de 12V.
+            \end{itemize}
+
+      \item Medición:
+            \begin{itemize}[label=$\triangleright$]
+                  \item Usar un filtro para seleccionar una longitud de onda.
+                  \item Descargar el capacitor y registrar V0.
+                  \item Repetir para diferentes longitudes de onda y ajustar la
+                        intensidad luminosa.
+            \end{itemize}
+
+      \item Análisis de Datos:
+            \begin{itemize}[label=$\triangleright$]
+                  \item Crear una gráfica de V0 en función de la frecuencia ($v$).
+                  \item Realizar un análisis de regresión para obtener la ecuación
+                        lineal.
+                  \item Calcular la constante de Planck ($h$), la función de
+                        trabajo ($W_0$) y la frecuencia de corte.
+            \end{itemize}
+\end{enumerate}
+
+% ! ----------------------------------------------------------------------|>
+\section{Resumen del procedimiento}
+
+En este experimento, haremos uso de una celda fotoeléctrica
+y una lámpara de mercurio de alta presión para investigar
+el efecto fotoeléctrico. Primero, ajustaremos el montaje
+óptico de manera que la luz incida en la celda
+fotoeléctrica de manera precisa. Luego, mediremos la
+tensión límite ($V_0$) en el capacitor que acumula la
+energía de los electrones liberados. Variaremos la longitud
+de onda de la luz incidente utilizando filtros de
+interferencia y controlaremos la intensidad de la luz con
+el diafragma. Al analizar la relación entre V0 y la
+frecuencia de la luz, obtendremos información que nos
+permitirá calcular la constante de Planck y la función de
+trabajo de la celda fotoeléctrica, lo que respaldará la
+teoría cuántica propuesta por Einstein.
+
+\printbibliography
+
+\end{document}
