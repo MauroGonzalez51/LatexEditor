@@ -1,0 +1,80 @@
+\documentclass[twocolumn, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{0pt}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\newcommand{\Celsius}[0]{°$\mathcal{C}$}
+\newcommand{\Kelvin}[0]{°$\mathcal{K}$}
+\newcommand{\Fahrenheit}[0]{°$\mathcal{F}$}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+	{\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+	\vspace{1cm}
+
+	{\scshape\Large FÍSICA CALOR Y ONDAS \par}
+	\vspace{2.5cm}
+
+	% chktex-file 8
+	\slshape {\Large \bfseries{} Avance del proyecto No. II \\}
+	\vspace{2cm}
+
+	\slshape {\itshape{} Mauro González, T00067622 \\}
+	\slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+	\slshape {\itshape{} Valentina Del Rio Jimenez, T00081360 \\}
+	\vfill
+	Revisado Por \\
+	Nelson Zabaleta\\
+	{\large \today\par}
+\end{titlepage}
+
+% ! --------------------------------------------------------------------------------------------------------------------------------|>
+\section*{\textit{Resumen}}
+
+% * Básicamente es un análisis estadístico de la seguridad en Cartagena
+% * La idea es relacionar la presencia de las autoridades en la zona, con la tasa
+% * de delincuencia en si, ademas de relacionarlo también con el como las personas prefieren
+% * velar por su propia seguridad (en este caso las "cívicas")
+% *
+
+
+\printbibliography
+
+\end{document}
