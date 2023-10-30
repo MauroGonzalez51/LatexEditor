@@ -1,0 +1,218 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+\usepackage{multirow}
+
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+      \centering
+      \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+      \vspace{1cm}
+
+      {\scshape\Large FÍSICA CALOR Y ONDAS \par}
+      \vspace{.2cm}
+
+      % chktex-file 8
+      {\scshape\Large Grupo 1 \par}
+      \vspace{1cm}
+      % chktex-file 8
+      \slshape {\Large \bfseries{}Informe de Laboratorio No. VII\\}
+      \slshape {\small \bfseries{}EFECTO FOTOELÉCTRICO}
+      \vspace{2cm}
+
+      \slshape {\itshape{} Mauro González, T00067622 \\}
+      \slshape {\itshape{} German De Armas Castaño, T00068765 \\}
+      \slshape {\itshape{} Angel Vega Rodriguez, T00068186 \\}
+      \slshape {\itshape{} Juan Jose Osorio Ariza, T00067316 \\}
+      \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+      \vfill
+      Revisado Por \\
+      Duban Andres Paternina Verona\\
+      {\large \today\par}
+\end{titlepage}
+
+% chktex-file 44
+% chktex-file 24
+
+% ! ----------------------------------------------------------------------|>
+\section{Introducción}
+
+El efecto fotoeléctrico está estrechamente ligado al
+fenómeno dual de la materia, que se manifiesta tanto como
+onda y partícula. En el marco de la física clásica, esta
+dualidad del comportamiento de la materia, especialmente en
+relación con la luz, no podía ser plenamente comprendida.
+Es esencial tener en cuenta que, gracias a las aplicaciones
+del efecto fotoeléctrico, que marcó el inicio de la
+mecánica cuántica, hemos podido desarrollar dispositivos e
+instrumentos que serían inutilizables o inapreciables sin
+este fenómeno.
+
+En esta experiencia de laboratorio, nos centraremos en la
+exploración y comprobación de los conceptos relacionados
+con los fundamentos del efecto fotoeléctrico la frecuencia
+de la luz incidente, el comportamiento de los electrones y
+el límite de tensión marcado a la hora de extraer
+electrones.
+
+% ! ----------------------------------------------------------------------|>
+\section{Objetivos}
+
+% + -------------------------------------------------------------|>
+\subsection{Objetivo general}
+
+Comprobar de manera experimental la ecuación de Einstein en
+el contexto del efecto foto eléctrico.
+
+% + -------------------------------------------------------------|>
+\subsection{Objetivos específicos}
+
+\begin{itemize}
+      \item Calcular la constante de Planck ($h$) y la función de
+            trabajo ($W_o$) de la celda fotoeléctrica
+      \item Evidenciar cómo el efecto fotoeléctrico puede ser utilizado
+            para comprender la naturaleza de partículas de la radiación
+            electromagnética
+\end{itemize}
+
+% ! ----------------------------------------------------------------------|>
+\section{Marco Teórico}
+
+% + -------------------------------------------------------------|>
+\subsection{Efecto fotoeléctrico~\cite{efecto_fotoelectrico_1}~\cite{efecto_fotoelectrico_2}}
+
+El efecto fotoeléctrico, también denominado fotoemisión, se
+refiere al fenómeno en el cual la superficie de un metal es
+iluminada por luz, lo que resulta en la expulsión de
+electrones. Es importante destacar que, en términos de
+propiedades y comportamiento, los fotoelectrones no
+presentan distinciones significativas respecto a otros
+electrones. El término se emplea exclusivamente para
+señalar que estos electrones han sido liberados de la
+superficie del metal.
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.5\linewidth]{Images/EfectoFotoelectrico.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+% ! ----------------------------------------------------------------------|>
+\section{Montaje Experimental}
+
+Materiales utilizados:
+
+\begin{multicols}{2}
+      \begin{itemize}[label=$\triangleright$]
+            \item Celda fotoeléctrica
+            \item Lámpara de mercurio de alta presión
+            \item Electrómetro amplificador
+            \item Voltímetro de CC
+            \item Filtros de interferencia
+      \end{itemize}
+\end{multicols}
+
+El experimento se llevó a cabo para verificar
+experimentalmente la ecuación de Einstein para el efecto
+fotoeléctrico. Se utilizó el siguiente montaje
+experimental:
+
+\begin{enumerate}
+      \item Encender la lámpara de mercurio de alta presión, que emite
+            luz de varias longitudes de onda.
+      \item Dirigir la luz de la lámpara hacia la celda fotoeléctrica.
+      \item Conectar la celda fotoeléctrica al electrómetro
+            amplificador y al voltímetro de CC\@{}.
+      \item Seleccionar diferentes filtros de interferencia para
+            controlar la longitud de onda de la luz incidente.
+      \item Registrar los valores de tensión límite ($V_0$)
+\end{enumerate}
+
+% ! ----------------------------------------------------------------------|>
+\section{Datos Experimentales}
+
+\begin{table}[H]
+      \begin{center}
+            \begin{tabularx}{.9\linewidth}{|X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+                  \hline
+                  \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Lentes} \textit{(nm)}}} & \multicolumn{3}{c|}{\textbf{V}}                     \\
+                  \cline{2-4}
+                                                                                       & Grande                          & Mediano & Pequeño \\\hline
+                  $365$                                                                & $1.700$                         & $1.600$ & $1.350$ \\\hline
+                  $405$                                                                & $1.050$                         & $1.000$ & $0.850$ \\\hline
+                  $436$                                                                & $0.800$                         & $0.720$ & $0.640$ \\\hline
+                  $546$                                                                & $0.540$                         & $0.540$ & $0.500$ \\\hline
+                  $578$                                                                & $0.440$                         & $0.340$ & $0.300$ \\\hline
+
+            \end{tabularx}
+      \end{center}
+\end{table}
+
+% ! ----------------------------------------------------------------------|>
+\section{Análisis de datos}
+
+% + -------------------------------------------------------------|>
+\subsection{}
+
+En este experimento, la tensión límite disminuyó cuando se
+cambió la intensidad del haz incidente en la celda
+fotoeléctrica. Esto indica que la intensidad del haz
+(número de fotones) influye en la cantidad de energía
+necesaria para liberar electrones y, por lo tanto, en la
+tensión límite. Se logro notar que a medida que se
+disminuyó la intensidad del haz incidente, disminuyó a su
+vez la tensión, por lo que se puede afirmar que son
+directamente proporcionales.
+
+% + -------------------------------------------------------------|>
+\subsection{}
+
+% ! ----------------------------------------------------------------------|>
+\section{Conclusiones}
+
+\printbibliography
+
+\end{document}
