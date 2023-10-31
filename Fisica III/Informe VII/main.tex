@@ -140,6 +140,27 @@ superficie del metal.
       \end{center}
 \end{figure}
 
+% + -------------------------------------------------------------|>
+\subsection{La constante de Planck~\cite{Belmonte_2022}}
+
+La constante de Planck relaciona la energía de una
+partícula a su longitud de onda y, por tanto, constituye la
+magnitud fundamental de la mecánica cuántica que no se
+utilizó solamente para hacer descubrimientos posteriores,
+si no que es muy utilizada hoy en día en la práctica de
+muchas ciencias. En la actualidad, esta constante es muy
+utilizada en física para medir la energía de una radiación,
+no solamente en una unidad de energía, sino también en
+unidades de longitud y de frecuencia. La constante de
+Planck es además, utilizada en el campo de la astronomía ya
+que, al utilizar la ley del cuerpo negro, se puede
+determinar la temperatura de un objeto cuya emisión está
+centrada en cierta frecuencia.
+
+\begin{equation*}
+      E = hf
+\end{equation*}
+
 % ! ----------------------------------------------------------------------|>
 \section{Montaje Experimental}
 
@@ -170,6 +191,13 @@ experimental:
             controlar la longitud de onda de la luz incidente.
       \item Registrar los valores de tensión límite ($V_0$)
 \end{enumerate}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.5\linewidth]{Images/MontajeExperimental.jpeg}
+            \caption{}
+      \end{center}
+\end{figure}
 
 % ! ----------------------------------------------------------------------|>
 \section{Datos Experimentales}
@@ -209,6 +237,149 @@ directamente proporcionales.
 
 % + -------------------------------------------------------------|>
 \subsection{}
+
+Aplicando la formula,
+
+\begin{equation*}
+      f = \frac{c}{\lambda}
+\end{equation*}
+
+podemos obtener la frecuencia para cada $\lambda$, siendo
+$c = 3 \times 10^{8}$ m/s
+
+Basado en esto obtenemos,
+
+\begin{table}[H]
+      \begin{tabularx}{.9\linewidth}{|X|>{\centering\arraybackslash}X|X|>{\centering\arraybackslash}X|X|>{\centering\arraybackslash}X|X|>{\centering\arraybackslash}X|}
+            \hline
+            f                     & Pequeño & Mediano & Grande  \\\hline
+            $8.22 \times 10^{14}$ & $1,350$ & $1,600$ & $1,700$ \\\hline
+            $7.41 \times 10^{14}$ & $850$   & $1,000$ & $1,050$ \\\hline
+            $6.88 \times 10^{14}$ & $640$   & $720$   & $800$   \\\hline
+            $5.49 \times 10^{14}$ & $500$   & $540$   & $540$   \\\hline
+            $5.19 \times 10^{14}$ & $300$   & $340$   & $440$   \\\hline
+      \end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.7\linewidth]{Images/AperturaPequeña.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.7\linewidth]{Images/AperturaMediana.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.7\linewidth]{Images/AperturaGrande.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+% + -------------------------------------------------------------|>
+\subsection{}
+
+Aplicando regresión lineal encontramos
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.7\linewidth]{Images/TendenciaPequeña.png}
+            \caption{$y = 2.95 \times 10^{-12}x - 1233$}
+      \end{center}
+\end{figure}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.7\linewidth]{Images/TendenciaMediana.png}
+            \caption{$y = 3.6 \times 10^{-12}x - 1553$}
+      \end{center}
+\end{figure}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.7\linewidth]{Images/TendenciaGrande.png}
+            \caption{$y = 3.71 \times 10^{-12}x - 1559$}
+      \end{center}
+\end{figure}
+
+% + -------------------------------------------------------------|>
+\subsection{}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.7\linewidth]{Images/SuperposicionPequeña.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.7\linewidth]{Images/SuperposicionMediana.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.7\linewidth]{Images/SuperposicionGrande.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+% + -------------------------------------------------------------|>
+\subsection{}
+
+Primero se debe de encontrar la pendiente promedio entre
+las ecuaciones:
+
+\begin{equation*}
+      \begin{gathered}
+            y_{1} = 2.95 \times 10^{-12} x - 1233 \\
+            y_{2} = 3.6 \times 10^{-12} x - 1533 \\
+            y_3 = 3.71 \times 10^{-12} x - 1559
+      \end{gathered}
+\end{equation*}
+
+\begin{equation*}
+      m_{Promedio} = 3.42 \times 10^{-12}
+\end{equation*}
+
+\begin{enumerate}
+      \item \begin{equation*}
+                  y = mx + b \rightarrow V_{o} = \frac{h}{e}v - \frac{W_{o}}{e}
+            \end{equation*}
+
+            Donde la pendiente m esta relacionada a la ecuación
+            $\frac{h}{e}$, donde $h$ es la constante de Planck
+
+            \begin{equation*}
+                  \begin{gathered}
+                        m = \frac{h}{e} \rightarrow h = m \cdot e \\
+                        h = (3.42 \times 10^{-12}) (1.6 \times 10^{-19}) \\
+                        h = 5.472 \times 10^{-31} J/s
+                  \end{gathered}
+            \end{equation*}
+
+      \item \begin{equation*}
+                  \begin{gathered}
+                        v = 6.638 \times 10^{14} Hz \\
+                        W_{0} = 3,6323 \times 10^{-16} J
+                  \end{gathered}
+            \end{equation*}
+
+      \item \begin{equation*}
+                  \begin{gathered}
+                        v = \frac{b}{m} \rightarrow v = \frac{h}{e \cdot m} \\
+                        v = 0.9987 Hz
+                  \end{gathered}
+            \end{equation*}
+\end{enumerate}
 
 % ! ----------------------------------------------------------------------|>
 \section{Conclusiones}
