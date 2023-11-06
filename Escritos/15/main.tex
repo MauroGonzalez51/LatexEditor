@@ -1,0 +1,55 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{wrapfig}
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{0pt}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\section*{Análisis: Seguridad en Cartagena de Indias}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+\begin{itemize}[label=$\diamond$]
+    \item Mauro González~\textit{(T00067622)}
+    \item Valentina Del Rio~\textit{(T00081360)}
+    \item Germán De Armas~\textit{(T00068765)}
+\end{itemize}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+\end{document}
