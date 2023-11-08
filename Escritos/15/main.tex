@@ -17,7 +17,7 @@
 \usepackage{caption}
 \usepackage{bm}
 \usepackage{wrapfig}
-% \usepackage{hyperref}
+\usepackage{siunitx}
 
 \counterwithin{figure}{section}
 \renewcommand{\thesection}{\arabic{section}}
@@ -37,6 +37,12 @@
 \setlength{\parskip}{\baselineskip}
 
 \newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\DeclareSIUnit{\COP}{COP}
+\newcommand{\cop}[1]{\$\SI{#1}{\COP}}
+
+\DeclareSIUnit{\DOLLAR}{USD}
+\newcommand{\dollar}[1]{\$\SI{#1}{\DOLLAR}}
 
 \begin{document}
 
@@ -89,6 +95,23 @@ través de este análisis, buscamos comprender la complejidad
 de la seguridad en Cartagena y contribuir a la discusión de
 políticas publicas que promuevan un entorno más seguro y
 equitativo para todos los residentes de la ciudad.
+
+% ! ---------------------------------------------------------------------|>
+
+Cartagena presenta serios problemas de seguridad desde
+tiempo atrás, que hasta la fecha, muchos de estos siguen
+sin ser resueltos, o incluso, pueden ser mas graves de lo
+que fueron por ejemplo, hace 10 años.~\textit{Seguridad
+    Económica}, definida como la capacidad de las personas, los
+hogares, o las comunidades de satisfacer sus necesidades
+básicas de manera sostenible y con
+dignidad~\cite{DeLaCruzRoja_2015}, en ese sentido, en
+Cartagena, el cual el ingreso per cápita durante el año
+2020 fue de tan solo \cop{355.004}~\cite{DANE_2021},
+representando la linea de pobreza monetaria. Esto se
+traduce en \dollar{85} aproximadamente, siendo esto en la
+mayoría de casos, mucho menos que suficiente para ``poder
+llegar a fin de mes''.
 
 \printbibliography
 
