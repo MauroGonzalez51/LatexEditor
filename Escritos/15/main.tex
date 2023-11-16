@@ -23,6 +23,7 @@
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\baselinestretch}{2}
+\renewcommand{\thefigure}{\arabic{figure}}
 
 \usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
 \DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
@@ -43,6 +44,8 @@
 
 \DeclareSIUnit{\DOLLAR}{USD}
 \newcommand{\dollar}[1]{\$\SI{#1}{\DOLLAR}}
+
+% chktex-file 24
 
 \begin{document}
 
@@ -65,6 +68,14 @@
 \nocite{villa_moncaris2020}
 \nocite{gomez_bustamante2019}
 \nocite{montoya_ruiz2013}
+
+% * REFERENCIAS BY JESS
+
+\nocite{Comunicaciones_2023}
+\nocite{Observatorio_2023}
+\nocite{MedicinaLegalCienciasForenses_2023}
+
+% * -------------------------------------------------------|>
 
 % ! Introducción
 
@@ -101,6 +112,8 @@ equitativo para todos los residentes de la ciudad.
 % * --------------------------------------------------------------|>
 % * Seguridad Económica 
 
+\subsection*{Seguridad Económica}
+
 Cartagena presenta serios problemas de seguridad desde
 tiempo atrás, que hasta la fecha, muchos de estos siguen
 sin ser resueltos, o incluso, pueden ser mas graves de lo
@@ -118,6 +131,8 @@ llegar a fin de mes''.
 
 % * --------------------------------------------------------------|>
 % * Seguridad Social 
+
+\subsection*{Seguridad Social}
 
 \textsuperscript{1} En una ciudad tan grande y agitada como
 lo es Cartagena de Indias, la seguridad ciudadana puede definirse como una
@@ -178,6 +193,8 @@ vista~\cite{Thoenig}:
 % * --------------------------------------------------------------|>
 % * Seguridad Humana
 
+\subsection*{Seguridad Humana}
+
 La seguridad humana es un enfoque crucial que tiene como
 objetivo garantizar la supervivencia, los medios de
 subsistencia y la dignidad de los ciudadanos en una
@@ -203,6 +220,159 @@ propia seguridad debido a la poca presencia de los agentes
 de control por parte del Estado. Esta situación, a su vez,
 genera una brecha de desigualdad, ya que no todos tienen
 los medios económicos para darse este ``lujo''.
+
+% ! ---------------------------------------------------------------------|>
+
+% * Insertar here párrafo de transición
+
+% ! ---------------------------------------------------------------------|>
+
+% * --------------------------------------------------------------|>
+% * Análisis seguridad en Cartagena
+
+% * --------------------------------------------------------------|>
+% * Violencia Intrafamiliar en Cartagena
+
+\subsection*{Violencia intrafamiliar en Cartagena}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=.8\linewidth]{./Images/Graph.ViolenciaIntrafamiliarCartagena.png}
+        \caption{Gráfico que muestra la incidencia de violencia intrafamiliar en Cartagena.}
+        \label{fig:Graph.ViolenciaIntrafamiliarCartagena}
+    \end{center}
+\end{figure}
+
+Basándose en el
+gráfico~\ref{fig:Graph.ViolenciaIntrafamiliarCartagena},
+existen varios puntos a resaltar, entre ellos, la
+diferencia de género que se genera en todos los años que se
+analizan, siendo los hombres quienes muestran una
+incidencia mucho mas alta que las mujeres en este aspecto.
+
+Teniendo en cuenta el rango de edad, en 2013, hay una
+disminución significativa en la violencia hacia las mujeres
+en el rango de 0 a 4 años. Considerando también los
+diferentes rangos de edad afectados en esta problemática,
+
+\begin{itemize}[label=$\diamond$]
+    \item En el rango de 0 a 4 años: La tasa de violencia
+          intrafamiliar es de $15.67$ por cada 100.000 habitantes.
+          Esto significa que, proporcionalmente, 15 niños o niñas son
+          víctimas de violencia intrafamiliar por cada 100.000
+          habitantes en este grupo de edad.
+
+          % + NOTE: Aquí deberia de haber un poco mas de desarrollo, no solo
+          % +     mencionar que es ligeramente mayor.
+
+    \item En el rango de 5 a 9 años: La tasa de violencia
+          intrafamiliar es ligeramente menor, siendo de 13,85 por
+          cada 100.000 habitantes.
+\end{itemize}
+
+% + NOTE: Tal vez no viene mal aunque sea siquiera mencionar
+% +     ¿Cuales son esos retos?
+
+Es alentador observar una disminución general en los casos
+de violencia intrafamiliar a lo largo de estos años. Sin
+embargo, la persistencia de casos, especialmente en el
+rango de edad de 5 a 9 años, indica que aún hay desafíos
+importantes en la prevención de la violencia intrafamiliar.
+
+La diferencia de género es notable, siendo los hombres
+quienes experimentan una mayor incidencia en todos los
+casos. Esto sugiere la necesidad de programas y políticas
+específicas para abordar las causas subyacentes de la
+violencia en este contexto.
+
+% * --------------------------------------------------------------|>
+% * Muertes violentas en Cartagena
+
+\subsection*{Muertes violentas en Cartagena}
+
+% \begin{figure}[H]
+%     \begin{center}
+%         \includegraphics[options]{name}
+%     \end{center}
+% \end{figure}
+
+Teniendo en cuenta este aspecto, hay varios factores a
+considerar, como por ejemplo, la gran diferencia de género
+que se registró en 2022 con 1.008 homicidios, registrando
+de esta manera 911 hombres y 97 mujeres.
+
+En 2023, aunque la cifra total aumentó a 3.106, la
+proporción de homicidios entre hombres (1.016) y mujeres
+(74) persiste. La alta proporción de homicidios indica la
+necesidad de intervenciones específicas para abordar las
+causas subyacentes y prevenir la violencia interpersonal.
+
+Basándonos en ello, también es relevante tener en cuenta
+los aspectos en los cuales los eventos de transporte
+constituyen una causa significativa de muertes violentas.
+En 2022, hubo 571 casos, mostrando una diferencia notable
+entre hombres (456) y mujeres (115). En 2023, la cifra
+total aumentó a 1.763, y la disparidad de género se mantuvo
+(513 hombres, 108 mujeres). La seguridad vial y la
+educación sobre transporte podrían ser áreas de enfoque
+para reducir estas muertes. % + HERE
+
+% + Dicho a manera de conclusion pero queda en el aire.
+
+La gran brecha de género en las muertes violentas,
+especialmente en homicidios, resalta la necesidad de
+enfoques diferenciados para abordar las causas que nacen de
+ellas. Las altas cifras de eventos de transporte y
+accidentes señalan la importancia de políticas y medidas de
+seguridad vial. El aumento en los casos de suicidio destaca
+la urgencia de mejorar los servicios de salud mental y la
+conciencia pública sobre la importancia del bienestar
+emocional. % + HERE
+
+% + Leyendo el texto, hablando de las muertes violentas, falta una 
+% +     mejor transición para poder hablar del tema de las muertes
+% +     por suicidios
+
+% * --------------------------------------------------------------|>
+% * Hurtos en Cartagena
+
+% chktex-file 8
+\subsection*{Hurtos en Cartagena 2021-2022}
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=.8\linewidth]{./Images/Graph.HurtosCartagena.png}
+        \caption{Hurtos en Cartagena durante el periodo 2021-2022}
+        \label{fig:Graph.HurtosCartagena}
+    \end{center}
+\end{figure}
+
+En este contexto, se destaca que los hurtos de automóviles
+experimentaron el mayor incremento, registrando un aumento
+del 55.41\% de 2021 a 2022. De manera similar, los robos a
+personas se incrementaron en un 28.02\%, y los robos a
+residencias subieron un 25.71\% en el mismo período. A
+pesar de estos aumentos, la tasa de robos a personas en
+Cartagena sigue siendo más baja en comparación con las
+cinco principales capitales del país, según los resultados
+comparativos.
+
+El aumento significativo en los hurtos de automotores
+sugiere la necesidad de medidas específicas para abordar
+este tipo de delito, tales como fortalecer la seguridad en
+estacionamientos o implementar tecnologías antirrobo. El
+incremento en los hurtos a personas y a residencias indica
+la importancia de reforzar la seguridad ciudadana y la
+vigilancia residencial.
+
+% + NOTE: ¿Otras capitales?
+% +     La idea es mencionar cuales, para asi evitar refutaciones
+
+Aunque hay un aumento en los índices, Cartagena aún
+mantiene una tasa más baja de hurtos a personas en
+comparación con otras capitales, lo que puede sugerir
+cierto grado de eficacia en las estrategias de seguridad
+implementadas hasta ahora.
 
 \newpage
 
