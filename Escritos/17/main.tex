@@ -1,0 +1,245 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{2}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\usepackage[style=numeric, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{\baselineskip}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\DeclareSIUnit{\COP}{COP}
+\newcommand{\cop}[1]{\$\SI{#1}{\COP}}
+
+\DeclareSIUnit{\DOLLAR}{USD}
+\newcommand{\dollar}[1]{\$\SI{#1}{\DOLLAR}}
+
+\renewcommand{\comment}[1]{{\small $\ll$#1$\gg$}}
+
+% chktex-file 24
+
+\begin{document}
+
+% ! --------------------------------------------------------|>
+\section{Introducción}
+
+\textsuperscript{1} WhatsApp y Telegram son aplicaciones de mensajería
+instantánea para dispositivos móviles y de escritorio.
+Permiten a los usuarios enviar mensajes de texto, realizar
+llamadas y videollamadas, compartir archivos y fotos, y
+crear grupos de chat. WhatsApp, propiedad de Facebook, es
+conocido por su amplia adopción global y su interfaz
+sencilla. Por otro lado, Telegram se destaca por su enfoque
+en la privacidad, la capacidad de compartir archivos
+grandes y la posibilidad de crear canales públicos. Ambas
+aplicaciones han ganado popularidad por ofrecer formas
+eficientes de comunicarse en línea.
+
+\footnotetext[1]{
+    \begin{itemize}
+        \item Explicar que es cada cosa
+        \item Dar contexto de las aplicaciones, para que se utilizan
+    \end{itemize}
+}
+
+% ! --------------------------------------------------------|>
+\section{Planteamiento del problema}
+
+\textsuperscript{2} A pesar de las funcionalidades esenciales que ofrecen
+aplicaciones como WhatsApp y Telegram para facilitar la
+comunicación, es lamentable que algunas personas opten por
+utilizar estas plataformas con fines maliciosos. Entre las
+amenazas más comunes se encuentran el phishing, el malware
+y el ransomware, que aprovechan la interconexión y la
+popularidad de estas aplicaciones para llevar a cabo
+actividades ilícitas.
+
+\footnotetext[2]{
+    Introducción a: Phishing, Malware y Ransomware
+}
+
+% ! --------------------------------------------------------|>
+\section{Enfoque en el Phishing}
+
+El phishing se basa en tácticas de error humano y presión,
+con el atacante haciéndose pasar por alguien en quien la
+víctima confía. Estos ataques a menudo crean una sensación
+de urgencia que induce a la víctima a actuar rápidamente.
+Dada su simplicidad y menor costo en comparación con el
+ataque directo a sistemas, los hackers prefieren explotar
+la vulnerabilidad humana en lugar de atacar redes o
+sistemas directamente.
+
+% + -----------------------------------------------|>
+\subsection{Prevención de Ataques de Phishing}
+
+DMARC (Domain-based Message Authentication, Reporting, and
+Conformance) se destaca como una forma eficaz de combatir
+el phishing. Puede evitar que los atacantes se apropien de
+su nombre de dominio, lo que les permitiría suplantar su
+sitio o servicio y acceder a los datos de sus clientes. Sin
+embargo, es esencial aplicar una política DMARC de p=reject
+para maximizar la efectividad contra estos ataques.
+
+% + -----------------------------------------------|>
+\subsection{Mitigación de Ataques de Phishing}
+
+Cuando los clientes reciben correos electrónicos de
+phishing aparentemente provenientes de su dominio, es
+crucial rastrear las IP maliciosas. Los informes DMARC
+ofrecen una excelente manera de supervisar las fuentes de
+envío y rastrear estas IP, permitiendo incluirlas
+rápidamente en una lista negra.
+
+% ! --------------------------------------------------------|>
+\section{Enfoque en el Malware}
+
+El malware, o ``software malicioso'', es un término amplio
+que engloba cualquier programa o código perjudicial para
+los sistemas. Este tipo de software intrusivo busca
+invadir, dañar o deshabilitar dispositivos, desde
+ordenadores hasta dispositivos móviles, asumiendo a menudo
+el control parcial de sus operaciones y afectando su
+funcionamiento normal, de manera similar a una enfermedad
+como la gripe.
+
+El malware tiene como objetivo principal obtener dinero de
+manera ilícita. Aunque generalmente no daña el hardware,
+puede robar, cifrar o borrar datos, alterar o secuestrar
+funciones básicas de la computadora y espiar la actividad
+en el ordenador sin conocimiento o permiso del usuario.
+
+% + -----------------------------------------------|>
+\subsection{Prevención de ataques de malware}
+
+\begin{itemize}[label=$\diamond$]
+    \item Instalación de Software Antivirus: El primer paso es
+          instalar software antivirus, capaz de detectar y eliminar
+          virus y otros tipos de software malicioso de la
+          computadora. Es crucial realizar esta instalación tan
+          pronto como sea posible después de la infección para evitar
+          daños significativos.
+
+    \item Mantenimiento del Sistema Operativo: Mantener el sistema
+          operativo actualizado es esencial. Las actualizaciones
+          automáticas proporcionan defensas contra nuevos virus y
+          malware. No instalar nada si no hay actualizaciones
+          disponibles para la versión del sistema operativo.
+
+    \item Contraseñas Seguras: Utilizar contraseñas seguras en lugar
+          de simples (como ``12345'') contribuye significativamente a
+          prevenir ataques de malware.
+\end{itemize}
+
+% + -----------------------------------------------|>
+\subsection{Mitigación de Ataques de Malware}
+
+Si el ordenador está infectado, se deben tomar medidas de
+mitigación de inmediato. Realizar un análisis completo con
+un programa antivirus antes de intentar cualquier otro paso
+es crucial. La propagación rápida del malware puede causar
+problemas graves, por lo que es esencial abordar la
+infección de manera rápida y efectiva.
+
+% ! --------------------------------------------------------|>
+\section{Enfoque en el Ransomware}
+
+El ransomware es una forma insidiosa de malware que
+restringe el acceso a sistemas o archivos personales y
+exige un rescate para restaurar dicho acceso. Originado a
+finales de los años 80, inicialmente se exigía el pago por
+correo postal, pero en la actualidad, los atacantes
+prefieren criptomonedas o tarjetas de crédito.
+
+% + -----------------------------------------------|>
+\subsection{Prevención y medidas de seguridad}
+
+La mejor defensa contra el ransomware incluye prácticas
+sólidas de seguridad:
+
+\begin{itemize}[label=$\diamond$]
+    \item Contraseñas Seguras: Utilizar contraseñas fuertes fortalece
+          la protección del sistema.
+
+    \item Software Antivirus: La instalación de un software antivirus
+          confiable es esencial para detectar y eliminar amenazas.
+
+    \item Protocolos de Autenticación de Correo Electrónico: \\
+          Implementar medidas como DMARC ayuda a asegurar la
+          legitimidad de los correos electrónicos.
+\end{itemize}
+
+% + -----------------------------------------------|>
+\subsection{Respuesta ante un ataque}
+
+En caso de verse afectado por ransomware, tome medidas
+inmediatas:
+
+\begin{itemize}[label=$\diamond$]
+    \item Cautela con Correos Electrónicos: Evite abrir correos
+          electrónicos sospechosos que soliciten dinero y no haga
+          clic en enlaces.
+
+    \item Eliminación de Software Sospechoso: \\ Elimine cualquier
+          software no confiable y absténgase de instalar nuevos
+          programas hasta que la infección se haya erradicado.
+
+    \item Respaldo de Archivos: \\ Asegúrese de que todos los
+          archivos estén respaldados en un lugar seguro.
+\end{itemize}
+
+% ! --------------------------------------------------------|>
+\section{Conclusiones}
+
+En resumen, las aplicaciones de mensajería instantánea,
+como WhatsApp y Telegram, brindan funcionalidades
+esenciales para la comunicación, pero lamentablemente son
+susceptibles a amenazas maliciosas como el phishing, el
+malware y el ransomware. Estas actividades ilícitas
+comprometen la seguridad de los usuarios. Al centrarse en
+medidas preventivas, como la implementación de DMARC para
+combatir el phishing y prácticas sólidas de seguridad para
+prevenir el malware y el ransomware, se puede fortalecer la
+defensa contra estas amenazas. Es imperativo abordar de
+manera inmediata cualquier ataque, respaldar archivos y
+promover la conciencia de seguridad entre los usuarios. En
+última instancia, la seguridad en estas plataformas depende
+de una combinación de tecnologías avanzadas y buenas
+prácticas por parte de los usuarios.
+
+% \newpage
+
+% \printbibliography
+
+\end{document}
