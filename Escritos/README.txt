@@ -27,3 +27,9 @@
 14 > Entrega final del proyecto (FÍSICA III)
 
 15 > Análisis "Seguridad en Cartagena"
+
+16 > Dignidad y libertad en la película "El patron, radiografía de un crimen"
+
+17 > Sketch | WhatsApp y Telegram | Phishing, Malware y Ransomware
+
+18 > Anotaciones foro "¡Sálvese quien pueda!"
