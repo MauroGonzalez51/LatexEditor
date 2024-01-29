@@ -1,0 +1,117 @@
+\documentclass[letterpaper, 12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{xurl}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{2}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\usepackage[style=apa, maxnames=6, minnames=3]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\DeclareCiteCommand{\textcite}
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+      \printnames{labelname}%
+      \setunit{\addcomma\addspace}%
+      \printfield{year}%
+      \setunit{\addcomma\addspace}%
+      \printfield{title}}
+{\multicitedelim}
+{\usebibmacro{postnote}}
+
+\DeclareCiteCommand{\cite}
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+      (\printnames{labelname}%
+      \setunit{\addcomma\addspace}%
+      \printfield{year}%
+      \setunit{\addcomma\addspace}%
+      \printfield{title})}
+{\multicitedelim}
+{\usebibmacro{postnote}}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{\baselineskip}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\renewcommand{\comment}[1]{{\small $\ll$#1$\gg$}}
+
+% chktex-file 24
+
+\begin{document}
+
+\chapter*{Importancia de la Estadística en la Ingeniería de Sistemas}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.2pt}}
+
+\begin{itemize}
+      \item Mauro Gonzalez,~\textit{T00067622}
+\end{itemize}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.2pt}}
+
+La estadística descriptiva es una rama fundamental de la
+estadística que se centra en la recopilación, ordenación,
+representación y síntesis de información numérica con el
+objetivo de poder transmitir de manera clara y eficaz sus
+características fundamentales~\cite{Rodríguez_2023}
+
+Con el concepto en mente, ahora si se puede su importancia
+en el campo en cuestión. Y es que en realidad no están tan
+separadas el uno de la otra, me explico, la Ingeniería de
+sistemas, o mas concretamente la informática, es un medio
+en cuestión para la estadística.
+
+Analizar volúmenes inmensos de datos cada dia seria un
+trabajo complicado incluso para las empresas si no tuvieran
+algún tipo de algoritmo que les permita automatizar todo
+este proceso. ¿Como saben paginas como \textit{YouTube} que
+videos recomendarle? ó ¿Que publicación recomendarle
+mientras navega por \textit{Instagram}? Todo esto hace
+parte de una recolección (recopilación) de sus gustos, para
+luego en base a esto mostrar contenido que potencialmente
+le podría gustar.
+
+Claramente la estadística, no sirve para mostrarte
+solamente que foto ver después, hay muchísimas aplicaciones
+dentro de la ingeniería. Optimizar sistemas, impulsar la
+innovación, o el análisis de datos en tiempo real son solo
+algunas de las cosas que se pueden hacer. Aunque con todo
+este tema, hay algo que no se puede dejar de lado, y es el
+riesgo a la privacidad que todo esto supone, pero eso ya es
+tema para después.
+
+\nocite{Jeanluc_2023}
+\nocite{Cutipa_2023}
+
+\printbibliography
+
+\end{document}
