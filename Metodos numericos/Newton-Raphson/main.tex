@@ -1,0 +1,71 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts{}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Convergencia en el método de Newton-Raphson\\}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Mauro Alonso Gonzalez Figueroa}
+	\IEEEauthorblockA{\textit{Universidad Tecnologica de Bolivar} \\
+		\textit{UTB}\\
+		Cartagena, Colombia \\
+		maugonzalez@utb.edu.co}}
+
+\maketitle
+
+\bibliographystyle{IEEEtran}
+
+\begin{abstract} Este documento se centra en el método de Newton-Raphson, un
+	algoritmo ampliamente utilizado para encontrar aproximaciones numéricas
+	de las raíces de una función real. Aunque este método es conocido por su
+	convergencia cuadrática, existen ciertas condiciones en las que esta
+	convergencia no se mantiene. En particular, la convergencia cuadrática
+	puede fallar cuando la derivada de la función en la raíz es cero o cuando
+	el valor inicial está demasiado cerca de un extremo\cite{convergence}. Este
+	trabajo explora
+	estas situaciones problemáticas y propone soluciones para garantizar
+	la convergencia cuadrática del método de Newton-Raphson. Se discuten
+	estrategias como la elección de un punto de partida adecuado y la
+	modificación del algoritmo para manejar funciones con derivadas nulas
+	en sus raíces. El objetivo es proporcionar una comprensión más profunda
+	del comportamiento del método de Newton-Raphson y mejorar su eficacia
+	en la práctica.
+\end{abstract}
+
+\section{Introducción}
+
+El método de Newton-Raphson, nombrado así por Sir Isaac Newton y Joseph
+Raphson, es un algoritmo para encontrar aproximaciones numéricas a las
+raíces (o ceros) de una función de valor real. Es un método iterativo
+que comienza con una suposición inicial y luego utiliza la derivada de
+la función para aproximar la raíz\cite{metodos_numericos}.
+
+Aunque el método de Newton-Raphson es conocido por su eficiencia y
+convergencia cuadrática, no está exento de limitaciones. En particular,
+el método puede fallar en converger para ciertos tipos de funciones o
+suposiciones iniciales. Por ejemplo, si la derivada de la función en la
+raíz es cero, o si la suposición inicial está demasiado cerca de un extremo,
+el método puede no converger cuadráticamente.
+
+Este trabajo tiene como objetivo explorar estos escenarios en detalle,
+entender por qué el método de Newton-Raphson falla en converger en estos
+casos, y proponer soluciones para asegurar la convergencia cuadrática del
+método. Al mejorar nuestra comprensión del método de Newton-Raphson, podemos
+mejorar su efectividad en la práctica y ampliar su aplicabilidad en diversos
+campos de la ciencia y la ingeniería.
+
+\nocite{bolivar2005metodo}
+
+\section{Desarrollo de Contenidos}
+
+\bibliography{./Bibliography/bibliography.bib}
+
+\end{document}
