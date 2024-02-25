@@ -64,7 +64,51 @@ campos de la ciencia y la ingeniería.
 
 \nocite{bolivar2005metodo}
 
-\section{Desarrollo de Contenidos}
+\nocite{canterometodo}
+
+\section{Teoría del método}
+
+El método de Newton-Raphson posibilita la determinación de una raíz de una
+ecuación no lineal, siempre y cuando se inicie con una estimación
+inicial adecuada. El procedimiento iterativo de Newton se deriva a partir
+del desarrollo de Taylor de la función en torno a la estimación inicial.
+
+De forma generalizada, se obtiene la aproximación:
+
+\begin{equation}
+	x_{n + 1} = x_0 - \frac{f(x)}{f'()}
+\end{equation}
+
+\subsection{Condiciones de convergencia}
+
+Las condiciones de convergencia para el método de Newton-Raphson se pueden
+resumir de la siguiente manera:
+
+\begin{itemize}
+	\item Existencia de la Raíz: Se requiere que dentro de un intervalo
+	      de trabajo dado [a, b], la condición $f(a) * f(b) < 0$ sea satisfecha.
+
+	\item Unicidad de la Raíz:
+	      En el intervalo [a, b], la derivada de $f(x)$ no debe ser igual a cero.
+
+	\item Concavidad: La gráfica de la función $f(x)$ en el intervalo [a, b]
+	      debe ser cóncava, ya sea hacia arriba o hacia abajo. Esto se verifica
+	      asegurando que $f''(x) \leqslant 0$ o $f''(x) \geqslant 0$ para todo x en [a, b].
+
+	\item Intersección de la Tangente a $f(x)$ dentro de [a, b]:
+	      Es crucial garantizar que la tangente a la curva en el extremo del
+	      intervalo [a, b], donde $f'(x)$ es mínima, intersecte el eje $x$
+	      dentro de [a, b]. Esta condición asegura que la sucesión de
+	      valores de $x_i$ permanezca dentro de [a, b].
+
+	      \begin{equation*}
+		      \frac{\left\lvert f(x) \right\rvert }{\left\lvert f'(x) \right\rvert} \leqslant (b - a)
+	      \end{equation*}
+\end{itemize}
+
+\section{Problemas del método}
+
+
 
 \bibliography{./Bibliography/bibliography.bib}
 
