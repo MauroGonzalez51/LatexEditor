@@ -108,7 +108,139 @@ resumir de la siguiente manera:
 
 \section{Problemas del método}
 
+Como fue mencionado anteriormente, el método de Newton-Raphson, presenta
+algunas dificultades en ciertos casos.
 
+\begin{itemize}
+	\item Punto de inflexión [$F''(x) = 0$] en la vecindad de una raíz:
+	      La presencia de un punto de inflexión, donde la segunda derivada,
+	      $F''(x)$, se anula, en la cercanía de una raíz puede influir en
+	      el comportamiento del método de Newton-Raphson.
+
+	\item Tendencia del método a oscilar alrededor de un mínimo o un
+	      máximo local:
+	      El método puede exhibir oscilaciones alrededor de mínimos o
+	      máximos locales, lo cual puede afectar su convergencia,
+	      especialmente si la función presenta características extremas
+	      en la vecindad de la raíz.
+
+	\item Valor inicial cercano a una raíz salta a una posición varias
+	      raíces más lejos:
+	      Existe la posibilidad de que un valor inicial cercano a una raíz
+	      se desplace a una posición considerablemente distante, lo cual
+	      se atribuye a pendientes cercanas a cero, generando una tendencia
+	      a alejarse del área de interés.
+
+	\item Pendiente cero [$f'(x) = 0$] causa una división entre cero
+	      en la fórmula de Newton-Raphson:
+	      Cuando la derivada primera de la función se anula [$f'(x) = 0$], se
+	      produce una división entre cero en la fórmula de Newton-Raphson,
+	      provocando que la solución se desplace horizontalmente y no
+	      intersecte el eje x. Este fenómeno puede resultar en una
+	      divergencia del método.
+\end{itemize}
+
+\section{Soluciones a los problemas del método}
+
+Una vez identificados los problemas asociados al método de Newton-Raphson, es
+imperativo considerar posibles soluciones para mitigar estas dificultades.
+
+\begin{itemize}
+	\item Punto de inflexión [$F''(x) = 0$] en la vecindad de una raíz:
+	      \begin{itemize}
+		      \item Emplear técnicas de análisis gráfico para identificar
+		            la presencia de puntos de inflexión en la vecindad de las
+		            raíces antes de aplicar el método.
+
+		      \item Considerar variantes del método, como el método de la
+		            secante, que pueden ser menos susceptibles a condiciones de
+		            inflexión
+	      \end{itemize}
+
+	\item Tendencia del método a oscilar alrededor de un mínimo o un máximo
+	      local:
+	      \begin{itemize}
+		      \item Ajustar el tamaño del paso en cada iteración para evitar
+		            oscilaciones excesivas.
+
+		      \item Utilizar información adicional sobre la función, \\ como
+		            la segunda derivada, para adaptar la convergencia del método
+		            en presencia de extremos locales.
+	      \end{itemize}
+
+	\item Valor inicial cercano a una raíz salta a una posición varias
+	      raíces más lejos:
+	      \begin{itemize}
+		      \item Refinar la estimación inicial mediante métodos de búsqueda de
+		            raíces previos para obtener una aproximación más precisa.
+
+		      \item Implementar técnicas de control de convergencia, como la
+		            verificación de la distancia entre iteraciones sucesivas.
+	      \end{itemize}
+
+	\item Pendiente cero [$f'(x) = 0$] causa una división entre cero en la
+	      fórmula de Newton-Raphson:
+	      \begin{itemize}
+		      \item Modificar la formulación del método para evitar la división
+		            por cero, por ejemplo, mediante la aplicación de técnicas de
+		            regularización.
+		      \item Explorar métodos alternativos, como el método de la
+		            secante, que no dependen de la derivada primera.
+
+	      \end{itemize}
+\end{itemize}
+
+\section{Raíces multiples}
+
+La presencia de raíces múltiples es otro desafío que puede afectar la
+convergencia del método de Newton-Raphson. Las raíces múltiples se
+caracterizan por tener derivadas iguales a cero en el punto de la raíz, lo que
+conduce a problemas en la fórmula de Newton-Raphson que involucra la
+división por la derivada primera. Aquí hay algunas estrategias para
+abordar este problema:
+
+\begin{itemize}
+	\item Método de la Secante: En lugar de depender de la derivada primera,
+	      el método de la secante utiliza una aproximación numérica de la derivada
+	      basada en dos puntos consecutivos. Este método es menos sensible a las
+	      raíces múltiples y puede ser una alternativa efectiva.
+
+	\item Multiplicidad Conocida:
+	      Si se conoce la multiplicidad de la raíz (es decir, cuántas veces
+	      se repite una raíz), se pueden ajustar las fórmulas de Newton-Raphson
+	      para manejar directamente esta multiplicidad. La fórmula
+	      modificada se obtiene dividiendo la función y su derivada
+	      por la multiplicidad.
+
+	\item Métodos Iterativos Específicos:
+	      Existen métodos iterativos específicos diseñados para tratar
+	      raíces múltiples, como el método de Bairstow para polinomios.
+	      Estos métodos pueden ser más robustos en situaciones donde las
+	      raíces múltiples son frecuentes.
+
+	\item Algoritmos de Optimización:
+	      En casos más complejos, considerar algoritmos de optimización no
+	      basados en derivadas, como el algoritmo de Levenberg-Marquardt, que
+	      se utiliza comúnmente para problemas de ajuste de curvas y puede
+	      manejar raíces múltiples.
+
+	\item Inicialización Cuidadosa:
+	      La elección de una estimación inicial cercana a la raíz múltiple
+	      correcta puede mejorar la convergencia. Métodos adicionales, como
+	      la búsqueda de raíces previa, pueden ayudar a obtener estimaciones
+	      iniciales más precisas.
+
+\end{itemize}
+
+\section{Conclusiones}
+
+En conclusión, el método de Newton-Raphson, aunque potente y eficaz para 
+la aproximación de raíces de ecuaciones no lineales, presenta ciertas 
+limitaciones y desafíos que deben ser abordados con precaución. La 
+identificación de puntos de inflexión, la tendencia a oscilar alrededor 
+de mínimos o máximos locales, la posible divergencia de valores iniciales 
+y la presencia de raíces múltiples son aspectos críticos que pueden afectar 
+la convergencia del método.
 
 \bibliography{./Bibliography/bibliography.bib}
 
