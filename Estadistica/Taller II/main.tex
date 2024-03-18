@@ -8,6 +8,9 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{float}
+\usepackage{amsmath}
+\usepackage{supertabular, booktabs}
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -159,6 +162,15 @@ toma de decisiones estratégicas en el ámbito empresarial.
 	      fórmula).
 \end{enumerate}
 
+\section{Datos}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.8\linewidth]{./Images/Tabla.png}
+	\end{center}
+	\caption{Tabla de datos}
+\end{figure}
+
 \section{Desarrollo}
 
 \begin{enumerate}
@@ -167,7 +179,7 @@ toma de decisiones estratégicas en el ámbito empresarial.
 		      \begin{center}
 			      \includegraphics[width=\linewidth]{./Images/DiagramaDispersion.png}
 		      \end{center}
-			  \caption{Diagrama de dispersion de los datos}
+		      \caption{Diagrama de dispersion de los datos}
 	      \end{figure}
 
 	      \begin{itemize}
@@ -190,22 +202,33 @@ toma de decisiones estratégicas en el ámbito empresarial.
 		      \item $\Sigma y = 1148,00$
 		      \item $\Sigma xy = 4289,60$
 		      \item $\Sigma (x^{2}) = 778,05$
-		      \item $\Sigma (x^{2}) = 24624,00$
+		      \item $\Sigma (y^{2}) = 24624,00$
 		      \item $\overline{x} = 3,46$
 		      \item $\overline{y} = 19,13$
 	      \end{itemize}
 
 	      Por lo tanto, utilizando la formula~(\ref{eq:pearson_coefficient}),
-	      se obtiene un valor de $0,796414177$. Resultando en una correlación
-	      lineal moderada positiva.
+	      se obtiene un valor de
 
-	\item Aplicando las formulas~(\ref{eq:m}) y~(\ref{eq:b}), obtenemos los
-	      valores,
+		      {\scriptsize
+			      \begin{align*}
+				      r_{xy} & = \frac{(60 \cdot 4289,60) - (207,70 \cdot 1148,00)}{\sqrt{(60 \cdot 778,05 - {(207,70)}^{2}) (60 \cdot 24624,00 - {(1148,00)})}} \\
+				             & = 0,796414177
+			      \end{align*}
+		      }
 
-	      \begin{itemize}
-		      \item $m = 5,343665255$
-		      \item $b = 0,635345443$
-	      \end{itemize}
+	      Resultando en una correlación lineal moderada positiva.
+
+	\item Aplicando las formulas~(\ref{eq:m}) y~(\ref{eq:b}),
+	      \begin{align*}
+		      m & = \frac{60 \cdot 4289,60 - (207,70 \cdot 1148,00)}{60 \cdot 778,05 - (207,70^{2})} \\
+		        & = 5,343665255
+	      \end{align*}
+
+	      \begin{align*}
+		      b & = 19,13 - (5,343665255 \cdot 3,46) \\
+		        & = 0,635345443
+	      \end{align*}
 
 	      Resultando en la recta,
 
@@ -217,16 +240,18 @@ toma de decisiones estratégicas en el ámbito empresarial.
 		      \begin{center}
 			      \includegraphics[width=\linewidth]{./Images/Recta.jpg}
 		      \end{center}
-			  \caption{Recta modelo en relación a los datos}
+		      \caption{Recta modelo en relación a los datos}
 	      \end{figure}
 
 	\item Con el valor obtenido del test de Pearson, aplicando la
 	      formula~(\ref{eq:r2}), se obtiene
 
-	      \begin{equation*}
-		      R^2 = 0,634275541 \approx 63\%
-	      \end{equation*}
-	      \
+	      \begin{align*}
+		      R^{2} & = {(0,796414177)}^2 \\
+		            & = (0,634275541)     \\
+		            & \approx 63\%
+	      \end{align*}
+
 	      Lo cual nos dice que los datos tienen un ajuste muy bueno.
 
 \end{enumerate}
