@@ -1,0 +1,85 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts{}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Trazadores Cúbicos\\}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Mauro Alonso Gonzalez Figueroa}
+	\IEEEauthorblockA{\textit{Universidad Tecnologica de Bolivar} \\
+		\textit{UTB}\\
+		Cartagena, Colombia \\
+		maugonzalez@utb.edu.co}}
+
+\maketitle
+
+\bibliographystyle{IEEEtran}
+
+\begin{abstract} This paper focuses on Cubic Splines, a numerical method
+	widely used for interpolating functions. Cubic splines are piecewise
+	polynomials that are used for interpolation of data points. The method
+	involves constructing a series of cubic polynomials that pass through
+	specified points and have continuous first and second derivatives. This
+	paper explores the theoretical foundation of cubic splines, including
+	their construction, properties, and applications. Additionally, it
+	discusses practical considerations such as the choice of boundary
+	conditions and the use of natural, clamped, or periodic splines. The goal
+	is to provide a comprehensive understanding of cubic splines and their
+	utility in numerical analysis and scientific computing.
+\end{abstract}
+
+\begin{IEEEkeywords}
+	Cubic Splines, Interpolation, Polynomials
+\end{IEEEkeywords}
+
+\nocite{Trazadores_cúbicos_2014}
+
+\section{Introducción}
+
+La interpolación numérica, un pilar fundamental en disciplinas científicas y
+técnicas, se emplea para estimar valores intermedios entre datos discretos
+conocidos.
+
+Entre los métodos de interpolación más destacados se encuentra
+el método de trazadores cúbicos. Estos trazadores proveen una forma eficiente
+y precisa de aproximar una función entre puntos discretos mediante polinomios
+cúbicos.
+
+Su utilidad abarca diversas aplicaciones, desde el ajuste de curvas
+en el análisis de datos hasta la simulación numérica en ingeniería y ciencias
+naturales. Los trazadores cúbicos encuentran aplicación en una amplia gama de
+campos, incluyendo ingeniería, ciencias de la computación, matemáticas
+aplicadas y ciencias sociales, destacándose por su versatilidad y eficacia
+en la interpolación y el análisis de datos.
+
+En este documento, exploraremos la teoría, el uso y las aplicaciones 
+prácticas del método de trazadores cúbicos, desde su fundamentación 
+matemática hasta su implementación en diversas áreas del conocimiento.
+
+\section{Teoría del método}
+
+Un trazador cúbico $S$ es una función a trozos que interpola a $f$ en los
+$n + 1$ puntos $(x_0, y_0), (x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)$
+(con $a = x_0 < x_1 < \cdots < x_n = b$). S es definida de la siguiente manera,
+
+\[
+	S(x) =
+	\begin{cases}
+		S_{0}(x)     & \text{si } x \in [x_{0}, x_{1}]     \\
+		S_{1}(x)     & \text{si } x \in [x_{1}, x_{2}]     \\
+		\vdots       & \vdots                              \\
+		S_{n - 1}(x) & \text{si } x \in [x_{n - 1}, x_{n}]
+	\end{cases}
+\]
+
+\bibliography{./Bibliography/bibliography.bib}
+
+\end{document}
