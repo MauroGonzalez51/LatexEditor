@@ -7,6 +7,9 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{float}
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -22,6 +25,9 @@
 \maketitle
 
 \bibliographystyle{IEEEtran}
+
+% chktex-file 44 
+% chktex-file 24
 
 \begin{abstract} This paper focuses on Cubic Splines, a numerical method
 	widely used for interpolating functions. Cubic splines are piecewise
@@ -60,8 +66,8 @@ campos, incluyendo ingeniería, ciencias de la computación, matemáticas
 aplicadas y ciencias sociales, destacándose por su versatilidad y eficacia
 en la interpolación y el análisis de datos.
 
-En este documento, exploraremos la teoría, el uso y las aplicaciones 
-prácticas del método de trazadores cúbicos, desde su fundamentación 
+En este documento, exploraremos la teoría, el uso y las aplicaciones
+prácticas del método de trazadores cúbicos, desde su fundamentación
 matemática hasta su implementación en diversas áreas del conocimiento.
 
 \section{Teoría del método}
@@ -70,15 +76,175 @@ Un trazador cúbico $S$ es una función a trozos que interpola a $f$ en los
 $n + 1$ puntos $(x_0, y_0), (x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)$
 (con $a = x_0 < x_1 < \cdots < x_n = b$). S es definida de la siguiente manera,
 
-\[
-	S(x) =
-	\begin{cases}
-		S_{0}(x)     & \text{si } x \in [x_{0}, x_{1}]     \\
-		S_{1}(x)     & \text{si } x \in [x_{1}, x_{2}]     \\
-		\vdots       & \vdots                              \\
-		S_{n - 1}(x) & \text{si } x \in [x_{n - 1}, x_{n}]
-	\end{cases}
-\]
+\subsection{Trazadores Lineales}
+
+Dos puntos distintos cualquiera determinan un segmento de recta, de esta
+manera los trazadores de primer grado para un grupo de datos ordenados
+pueden definirse como un grupo de funciones lineales
+
+\begin{align*}
+	f(x)   & = f(x_{0}) + m_{0}(x - x_{0})             & x_{0} \leq x \leq x_{1}     \\
+	f(x)   & = f(x_{1}) + m_{1}(x - x_{1}),            & x_{1} \leq x \leq x_{2}     \\
+	\vdots &                                           &                             \\
+	f(x)   & = f(x_{n - 1}) + m_{n - 1}(x - x_{n - 1}) & x_{n - 1} \leq x \leq x_{n}
+\end{align*}
+
+Donde $m$ es la pendiente de la recta,
+
+\begin{align*}
+	m = \frac{f(x_{i + 1}) - f(x_{i})}{x_{i + 1} - x_{i}}
+\end{align*}
+
+Es crucial destacar que los trazadores de primer grado no presentan
+suavidad. Es decir, en los puntos donde convergen dos trazadores
+\textit{(conocidos como nodos)}, la pendiente experimenta un cambio brusco.
+Formalmente, la primera derivada de la función es discontinua en estos
+puntos. Esta limitación se supera mediante el empleo de trazadores
+polinomiales de grado superior, que garantizan suavidad en los nodos al
+igualar las derivadas en esos puntos.
+
+\subsection{Trazadores Cuadráticos}
+
+Para garantizar la continuidad de las derivadas de orden m en los nodos,
+es necesario emplear un trazador de al menos un grado de m + 1. En el
+caso específico de los trazadores cuadráticos, se busca obtener un
+polinomio de segundo grado para cada intervalo entre los datos. De manera
+general, el polinomio en cada intervalo se representa como:
+
+\begin{align}
+	f_{i}(x) = a_{i}{x}^{2} + b_{i}x + c_{i}
+	\label{eq:cuadratic_equation}
+\end{align}
+
+Los trazadores cuadráticos, requieren $3n$ ecuaciones o condiciones
+para evaluar las incógnitas, estas son:
+
+\begin{enumerate}
+	\item \textit{Los valores de la función deben ser los mismos en los puntos
+		      donde se unen dos polinomios consecutivos}
+
+	      Esta condición se representa como,
+
+	      \begin{align}
+		      a_{i - 1}{x_{i - 1}}^{2} + b_{i - 1}x_{i - 1} + c_{i - 1} = f(x_{i - 1})
+		      \label{eq:18.29}
+	      \end{align}
+
+	      \begin{align}
+		      a_{i}{x_{i - 1}}^{2} + b_{i}x_{i - 1} + c_{i} = f(x_{i - 1})
+		      \label{eq:18.30}
+	      \end{align}
+
+	      Para $i = 2$, cada una proporciona $n - 1$, en total $2n - 2$ condiciones
+
+	\item \textit{La primera y la última función deben pasar a través
+		      de los puntos extremos.}
+
+	      \begin{align}
+		      a_{1}{x_{0}}^{2} + b_{1}x_{0} + c_{1} = f(x_{0})
+		      \label{eq:18.31}
+	      \end{align}
+
+	      \begin{align}
+		      a_{n}{x_{n}}^{2} + b_{n}x_{n} + c_{n} = f(x_{n})
+		      \label{eq:18.32}
+	      \end{align}
+
+	      En total tenemos, $2n - 2 + 2 = 2n$ condiciones
+
+	\item \textit{Las primeras derivadas en los nodos interiores deben
+		      ser iguales}
+
+	      La derivada de la ecuación~(\ref{eq:cuadratic_equation}) es,
+
+	      \begin{align*}
+		      f'(x) = 2ax + b
+	      \end{align*}
+
+	      Por lo tanto, la condición se representa como,
+
+	      \begin{align}
+		      2a_{i - 1}x_{i - 1} + b_{i - 1} = 2a_{i}x_{i - 1} + b_{i}
+		      \label{eq:18.33}
+	      \end{align}
+
+	      Para $i = 2$, esto representa otras $n - 1$ condiciones, con
+	      un total de $2n + n - 1 = 3n - 1$
+
+	\item \textit{Supongamos que en el primer punto la segunda derivada es cero.}
+	      Matemáticamente, esto se expresa como la condición de que la segunda
+	      derivada de la ecuación 18.28, que es 2ai, sea igual a cero en este punto.
+	      Esta condición implica que los dos primeros puntos se conectarán
+	      con una línea recta.
+
+	      \begin{align}
+		      a_{1} = 0
+		      \label{eq:18.34}
+	      \end{align}
+
+	      Por ultimo, representando una ultima condición, resultando
+	      en $3n$
+\end{enumerate}
+
+\subsection*{Ejemplo practico}
+
+Suponga los datos,
+
+\begin{table}[H]
+	\begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+		\hline
+		\textbf{X} & \textbf{Y} \\ \hline
+		$2,0$      & $4,0$      \\ \hline
+		$4,5$      & $3,2$      \\ \hline
+		$7,8$      & $5,3$      \\ \hline
+		$12,0$     & $2,4$      \\ \hline
+	\end{tabularx}
+	\label{tab:ejemplo_tabularx}~\caption{Tabla de datos}
+\end{table}
+
+En este problema, se tienen 4 datos y $n = 3$ intervalos, por lo tanto
+se deben determinar $3(3) = 9$ incógnitas
+
+Las ecuaciones~(\ref{eq:18.29}) y~(\ref{eq:18.30}) nos dan $2(3) - 2 = 4$
+condiciones
+
+\begin{align*}
+	20,25a_{1} + 4,5b_{1} + c_{1} = 3,2 \\
+	20,25a_{2} + 4,5b_{2} + c_{2} = 3,2 \\
+	60,84a_{2} + 7b_{2} + c_{2} = 5,3   \\
+	60,84a_{3} + 7b_{3} + c_{3} = 5,3
+\end{align*}
+
+Evaluando a la primera y la última función con los valores inicial y
+final~(\ref{eq:18.31})
+
+\begin{align*}
+	4a_{1} + 2b_{1} + c_{1} = 4
+\end{align*}
+
+Y la ecuación~(\ref{eq:18.32})
+
+\begin{align*}
+	144a_{3} + 12b_{3} + c_{3} = 2,4
+\end{align*}
+
+La continuidad de las derivadas crea adicionalmente $3 - 1 = 2$ condiciones~(\ref{eq:18.33})
+
+\begin{align*}
+	9a_{1} + b_{1} = 9a_{2} + b_{2} \\
+	15,6a_{2} + b_{2} = 15,6a_{3} + b_{3}
+\end{align*}
+
+Por ultimo, la condición~(\ref{eq:18.34}) determina que $a_{1} = 0$, con esto
+el problema se resume en la resolución de un sistema $8 \times 8$.
+
+Resolviendo el sistema obtenemos los valores
+
+\begin{align*}
+	a_{1} & = 0             & b_{1} & = -0,32        & c_{1} & = 4,64         \\
+	a_{2} & \approx  0,16   & b_{2} & \approx -1,76  & c_{2} & \approx 7,88   \\
+	a_{3} & \approx 0,00649 & b_{3} & \approx -0,661 & c_{3} & \approx 9,6325 \\
+\end{align*}
 
 \bibliography{./Bibliography/bibliography.bib}
 
