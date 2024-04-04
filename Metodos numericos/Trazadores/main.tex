@@ -14,7 +14,7 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Trazadores\\}
+\title{Trazadores $-$ Método de interpolación\\}
 
 \author{\IEEEauthorblockN{1\textsuperscript{st} Mauro Alonso Gonzalez Figueroa}
 	\IEEEauthorblockA{\textit{Universidad Tecnologica de Bolivar} \\
@@ -200,7 +200,7 @@ Suponga los datos,
 		$7,8$      & $5,3$      \\ \hline
 		$12,0$     & $2,4$      \\ \hline
 	\end{tabularx}
-	\label{tab:ejemplo_tabularx}~\caption{Tabla de datos}
+	\label{tab:ejemplo_trazadores_cudraticos}~\caption{Tabla de datos}
 \end{table}
 
 En este problema, se tienen 4 datos y $n = 3$ intervalos, por lo tanto
@@ -368,7 +368,89 @@ siguiente ecuación:
 Si se escribe esta ecuación para todos los nodos interiores,
 resultan $n - 1$ ecuaciones simultáneas con $n - 1$ incógnitas.
 
-\subsection*{Ejemplo practico} % Pag. 558
+\subsection*{Ejemplo practico}
+
+\begin{table}[H]
+	\begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+		\hline
+		\textbf{X} & \textbf{Y} \\ \hline
+		$3,0$      & $2,5$      \\ \hline
+		$4,5$      & $1$        \\ \hline
+		$7$        & $2,5$      \\ \hline
+		$9$        & $0,5$      \\ \hline
+	\end{tabularx}
+	\label{tab:ejemplo_trazadores_cubicos}~\caption{Tabla de datos}
+\end{table}
+
+
+El primer paso consiste en utilizar la ecuación~(\ref{eq:18.37})
+para generar el conjunto de ecuaciones simultaneas que se
+utilizaran para determinar las segundas derivadas en los nodos.
+
+Primer nodo interior:
+
+Estos valores se sustituyen en la ecuación~(\ref{eq:18.37}):
+
+\begin{multline*}
+	(4,5 - 3)f''(3) + 2(7 - 3)f''(4,5) + (7 - 4,5)f''(7) \\
+	= \frac{6}{7 - 4,5}(2,5 - 1) + \frac{6}{4,5 - 3}(2,5 - 1)
+\end{multline*}
+
+Debido a la condición, $f''(3) = 0$, la ecuación se reduce a
+
+\begin{align*}
+	8f''(4,5) + 2,5f''(7,8)  = 9,6
+\end{align*}
+
+De la misma manera, obtenemos
+
+\begin{align*}
+	2,5f''(4,5) + 9f''(7,8) = -9,6
+\end{align*}
+
+Estas ecuaciones se resuelven simultáneamente
+
+\begin{align*}
+	f''(4,5) & = 1,67709  \\
+	f''(7)   & = -1,53308
+\end{align*}
+
+Luego se sustituyen estos valores en la ecuación~(\ref{eq:18.36})
+para obtener
+
+\begin{multline*}
+	f_{1} = \frac{1,67709}{6(4,5 - 3)}{(x - 3)}^{3}
+	+ \frac{2,5}{4,5 - 3}(4,5 - x) \\
+	+ [\frac{1}{4,5 - 3} - \frac{1,67709 (4,5 - 3)}{6}](x - 3)
+\end{multline*}
+
+\begin{align*}
+	f_{1} = 0,1865 {(x - 3)}^{3} + 1,6667 (4,5 - x) + 0,0246 (x - 2)
+\end{align*}
+
+De esta manera se hacen sustituciones similares para tener las
+ecuaciones del segundo y tercer intervalo
+
+\begin{multline*}
+	f_{2}(x) = 0,1119 {(7 - x)}^{3} - 0.1022 {(x - 4,5)}^{3} \\
+	- 0,2996 (7 - x) + 1,6338 (x - 4,5) \\
+	f_{3}(x) = -0,1277{(9 - x)}^{3} + 1,7610 (9 - x) \\
+	+ 0,25(x - 7)
+\end{multline*}
+
+\section{Conclusiones}
+
+El método de los trazadores cúbicos es una técnica fundamental en
+la interpolación de datos, proporcionando una aproximación suave y continua
+entre puntos discretos. A través de la construcción de funciones polinomiales
+de tercer grado en cada intervalo de datos, este enfoque asegura la continuidad
+de la función, así como de su primera y segunda derivada. Además, la
+flexibilidad del método permite la imposición de condiciones adicionales,
+como trazadores naturales o suavizados, adaptándose así a las necesidades
+específicas del problema. En conclusión, los trazadores cúbicos son una 
+herramienta esencial para la aproximación de funciones a partir de datos 
+discretos, ofreciendo una solución robusta y versátil para problemas de 
+interpolación.
 
 \bibliography{./Bibliography/bibliography.bib}
 
