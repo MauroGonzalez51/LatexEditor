@@ -254,6 +254,119 @@ Sustituyendo en las ecuaciones, obtenemos
 	f_{3}(x) & = 0,00649x^{2} - 0,661x + 9,6325 & 7,8 \leq x \leq 12,0
 \end{align*}
 
+\subsection{Trazadores Cúbicos}
+
+El objetivo en los trazadores cúbicos es obtener un polinomio de tercer grado
+para cada intervalo entre los nodos:
+
+\begin{align}
+	f_{i}(x) = a_{i}x^{3} + b_{i}x^{2} + c_{i}x + d_{i}
+	\label{eq:18.35}
+\end{align}
+
+Asi, para $n + 1$ datos, existen $n$ intervalos y en consecuencia
+$4n$ incógnitas a evaluar. Se requieren $4n$ condiciones para
+evaluar las incógnitas, estas son:
+
+\begin{enumerate}
+	\item Los valores de la función deben coincidir en los nodos
+	      interiores (2n – 2 condiciones).
+
+	\item La primera y última función deben pasar por los puntos
+	      extremos (2 condiciones).
+
+	\item Las primeras derivadas en los nodos interiores deben ser
+	      iguales (n – 1 condiciones).
+
+	\item Las segundas derivadas en los nodos interiores deben ser
+	      iguales (n – 1 condiciones).
+
+	\item Las segundas derivadas en los nodos extremos
+	      son cero (2 condiciones).
+\end{enumerate}
+
+Las cinco condiciones anteriores suministran las 4n ecuaciones necesarias
+para determinar los $4n$ coeficientes. Sin embargo, presentaremos un enfoque
+alternativo que solo requiere la resolución de $n - 1$ ecuaciones.
+
+El primer paso implica
+observar cómo cada par de nodos está conectado por un trazador cúbico;
+específicamente, se nota que la segunda derivada dentro de cada intervalo
+es una función lineal. Para verificar esta observación, la ecuación~(\ref{eq:18.35})
+se puede diferenciar dos veces.
+
+\begin{align}
+	f_{i}''(x) = f_{i}'' \frac{x - x_{i}}{x_{i - 1} - x_{i}}
+	+ f''_{i}(x) \frac{x - x_{i - 1}}{x_{i} - x_{i - 1}}
+	\label{eq:C.18.3.1}
+\end{align}
+
+Asi, la ecuación~(\ref{eq:C.18.3.1}) se integra dos veces para obtener
+una expresión para $f_{i}(x)$
+
+\begin{multline}
+	f_{i}(x) = \frac{f_{i}''(x_{i - 1})}{6 (x_{i} - x_{i - 1})} {(x_{i} - x)}^{3} \\
+	+ \frac{f_{i}''(x)}{6 (x_{i} - x_{i - 1})} {(x - x_{i - 1})}^{3} \\
+	+ [\frac{f(x_{i - 1})}{x_{i} - x_{i - 1}} - \frac{f''(x_{i - 1}) (x_{i} - x_{i - 1})}{6}] (x_{i} - x) \\
+	+ [\frac{f(x_{i})}{x_{i} - x_{i - 1}} - \frac{f''(x_{i})(x_{i} - x_{i - 1})}{6}](x - x_{i - 1}) \\
+	\label{eq:C.18.3.2}
+\end{multline}
+
+Las segundas derivadas se evalúan tomando la condición de
+que las primeras derivadas deben ser continuas en los nodos:
+
+\begin{align}
+	f_{i - 1}''(x_{i}) = f_{i}'(x_{i})
+	\label{eq:C.18.3.3}
+\end{align}
+
+La ecuación~(\ref{eq:C.18.3.2}) se deriva para ofrecer una expresión
+de la primera derivada. Si se hace esto tanto para el $(i - 1)$-ésimo,
+como para i-ésimo intervalos, y los dos resultados se igualan de
+para llegar a la siguiente relación:
+
+\begin{multline}
+	(x_{i} - x_{i - 1}) f''(x_{i - 1}) + 2(x_{i + 1} - x_{i - 1})f''(x_{i}) \\
+	+ (x_{i + 1} - x_{i}) f''(x_{i + 1}) \\
+	= \frac{6}{x_{i + 1} - x_{i}} [f(x_{i + 1}) - f(x_{i})] \\
+	+ \frac{6}{x_{i} - x_{i - 1}} [f(x_{i - 1}) - f(x_{i})]
+	\label{eq:C.18.3.4}
+\end{multline}
+
+Al escribir la ecuación~(\ref{eq:C.18.3.4}) para todos los nodos interiores, se
+obtienen $n - 1$ ecuaciones simultáneas con $n + 1$ segundas derivadas
+desconocidas. Sin embargo, dado que se trata de un trazador cúbico natural,
+las segundas derivadas en los nodos extremos son cero, lo que reduce el
+problema a $n - 1$ ecuaciones con $n - 1$ incógnitas. Además, es importante
+notar que el sistema de ecuaciones resultante será tridiagonal. Por lo tanto,
+no solo se ha reducido el número de ecuaciones, sino que también se han
+organizado en una forma extremadamente fácil de resolver.
+
+Todo esto resultando en la ecuación cubica para cada intervalo,
+
+\begin{multline}
+	f_{i} = \frac{f_{i}''(x_{i - 1})}{6 (x_{i} - x_{i - 1})}{(x_{i} - x)}^{3}
+	+ \frac{f_{i}''(x_{i})}{6 (x_{i} - x_{i - 1})}{(x - x_{i - 1})}^{3} \\
+	+ [\frac{f(x_{i - 1})}{x_{i} - x_{i - 1}} - \frac{f''(x_{i - 1}) (x_{i} - x_{i - 1})}{6}](x_{i} - x) \\
+	+ [\frac{f(x_{i})}{x_{i} - x_{i - 1}} - \frac{f''(x_{i}) (x_{i} - x_{i - 1})}{6}](x - x_{i - 1}) \\
+	\label{eq:18.36}
+\end{multline}
+
+Esta ecuación contiene sólo dos incógnitas \textit{(las segundas derivadas en
+	los extremos de cada intervalo)}. Las incógnitas se evalúan empleando la
+siguiente ecuación:
+
+\begin{multline}
+	(x_{i} - x_{i - 1})f''(x_{i - 1}) + 2(x_{i + 1} - x_{i - 1})f''(x_{i}) \\
+	+ (x_{i + 1} - x_{i})f''(x_{i + 1}) \\
+	= \frac{6}{x_{i + 1} - x_{i}}[f(x_{i + 1}) - f(x_{i})] + \\
+	\frac{6}{x_{i} - x_{i - 1}}[f(x_{i - 1}) - f(x_{i})]
+	\label{eq:18.37}
+\end{multline}
+
+Si se escribe esta ecuación para todos los nodos interiores,
+resultan $n - 1$ ecuaciones simultáneas con $n - 1$ incógnitas.
+
 \bibliography{./Bibliography/bibliography.bib}
 
 \end{document}
