@@ -93,6 +93,96 @@ específicas que dificultan la aplicación del simplex.
 
 \subsection{Programación lineal}
 
+La programación lineal es una técnica de modelización matemática desarrollada
+a partir de la década de 1930. Desde entonces, se ha aplicado con
+frecuencia en los procesos de toma de decisión de numerosos ámbitos
+económicos y productivos. La técnica de programación lineal proporciona
+soluciones las soluciones abiertas \textit{(no son formulas estrictas ni
+    nada por el estilo)}, que más bien se determinan mediante algoritmos.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=\linewidth]{./Images/ProgramacionLineal.png}
+        \caption{}
+    \end{center}
+\end{figure}
+
+Algunos lineamientos generales para la implementación de la IO en la práctica.
+
+\begin{enumerate}
+    \item Definición del problemas
+    \item Construcción del modelo
+    \item Solución del modelo
+    \item Validación del modelo
+    \item implementación de la solución
+\end{enumerate}
+
+\subsection{Método o algebra simplex}
+
+El Método Simplex es un método analítico de solución de problemas de 
+programación lineal capaz de resolver modelos complejos. Aunque es un 
+procedimiento algebraico, sus conceptos fundamentales son geométricos. 
+El Simplex es un método iterativo que permite ir mejorando la solución en 
+cada paso. El método consiste en caminar de vértice en vértice de manera que 
+aumente o disminuya la función objetivo (según el criterio). Si existe el 
+poliedro factible, el número de vértices que presenta es finito.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=.7\linewidth]{./Images/MetodoSimplex.png}
+        \caption{}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=\linewidth]{./Images/MetodoSimplex2.png}
+        \caption{}
+    \end{center}
+\end{figure}
+
+\subsection{Método de Gauss-Seidel}
+
+Es un algoritmo utilizado para resolver sistemas de ecuaciones lineales. Es 
+una variante del método de relajación y es especialmente útil cuando se 
+trabaja con matrices grandes y densas.
+
+En términos básicos, el método de Gauss-Seidel procede iterativamente, 
+actualizando cada variable de un sistema de ecuaciones en función de las 
+aproximaciones más recientes de las otras variables. En cada iteración, las 
+nuevas estimaciones se utilizan para mejorar las aproximaciones de las 
+variables restantes. Este proceso continúa hasta que las soluciones convergen 
+a un valor aceptable.
+
+El método de Gauss-Seidel puede ser más eficiente computacionalmente que 
+otros métodos para resolver sistemas de ecuaciones lineales, especialmente 
+cuando se trata de sistemas que son diagonales dominantes o simétricos 
+positivos definidos. Sin embargo, su convergencia no está garantizada para 
+todos los sistemas, y puede ser lento o incluso divergente en algunos casos. 
+Por lo tanto, a veces se requieren ajustes o técnicas adicionales para 
+garantizar la convergencia adecuada.
+
+\subsection{Vector gradiente}
+
+También conocido como vector gradiente (denotado $\nabla$f), es un 
+campo vectorial que indica la dirección en la cual el campo f varía más 
+rápidamente y su módulo representa el ritmo de variación de f en la dirección 
+de dicho vector gradiente.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=\linewidth]{./Images/VectorGradiente.png}
+        \caption{}
+    \end{center}
+\end{figure}
+
+\subsection{Precio sombra}
+
+El precio sombra puede representar una disposición a pagar por unidad 
+adicional de recurso. Si el precio del recurso es menor al precio sombra 
+entonces existirá un incentivo a ``comprar'' más debido a que esto tendrá un 
+impacto neto positivo en la función objetivo.
+
 
 
 \bibliography{./Bibliography/bibliography.bib}
