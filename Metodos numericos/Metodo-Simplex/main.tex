@@ -7,9 +7,13 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
-\usepackage{tabularx}
+\usepackage{tabularx, multirow}
 \usepackage{float}
 \usepackage{url}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+% chktex-file 44
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -205,6 +209,37 @@ de dicho vector gradiente.
     \end{center}
 \end{figure}
 
+\subsection{Modelo estándar}
+
+En el método simplex es una forma particular de formular un problema de
+programación lineal que facilita su resolución mediante este método. Para
+aplicar el método simplex, es necesario que el problema esté expresado en
+términos de maximización con todas las restricciones como igualdades y todas
+las variables no negativas.
+
+\subsection{Variables Artificiales}
+
+son variables adicionales introducidas en el problema para convertir
+restricciones complicadas en una forma que permita aplicar el método
+simplex. Estas variables no tienen significado en el contexto del problema
+original, sino que son herramientas auxiliares para encontrar una
+solución inicial.
+
+\subsubsection*{¿Cuándo se utilizan las Variables Artificiales?}
+
+Cuando una restricción es de igualdad (por ejemplo,
+$a_{1}x_{1} + a_{2}x_{2} = b$), necesitamos una
+variable artificial para iniciar el método simplex porque no podemos
+simplemente añadir una variable de holgura (slack variable, esta variable
+representa el espacio libre) como en las
+restricciones $\leq$.
+
+\subsubsection*{Restricciones de Desigualdad (del tipo $\leq$)}
+
+Para una restricción del tipo ($a_{1}x_{1} + a_{2}x_{2} \leq b$), primero restamos una variable de
+exceso (surplus variable) y luego añadimos una variable artificial para
+convertirla en una ecuación de igualdad.
+
 \subsection{Precio sombra}
 
 El precio sombra puede representar una disposición a pagar por unidad
@@ -283,11 +318,118 @@ Estudiar este tipo de problema es valioso por varias razones, tanto desde
 una perspectiva académica como práctica bajo un contexto realista, ya que
 permite analizar la eficiencia Operativa (cómo se pueden cumplir las
 demandas de productos refinados de la manera más eficiente en términos
-de costos), Aspectos Económicos (cómo los precios de los insumos y
-las restricciones de oferta afectan las decisiones de producción) e
-incluso toma de decisiones empresariales (gestión de recursos) y
+de costos), Aspectos Económicos (en cómo los precios de los insumos y
+las restricciones de oferta llegan a afectan las decisiones de producción) e
+incluso la toma de decisiones empresariales (gestión de recursos) y
 análisis de sensibilidad (evaluar cómo cambios en los precios o en las
 disponibilidades afectan las decisiones).
+
+\subsection{\textit{Gutchi Company}}
+
+\subsubsection{Enunciado}
+
+Gutchi Company fabrica bolsos de mano, bolsos para rasuradora y mochilas. Para
+elaborar los productos se necesita como materia prima piel animal. El proceso
+de producción requiere dos tipos de mano de obra calificada: costura y
+acabado. La siguiente tabla da la disponibilidad de los recursos, su
+consumo por los tres productos y las utilidades por unidad.
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{\linewidth}{ccccc}
+            \multicolumn{5}{c}{Requerimientos de recursos por unidad}                                                     \\\hline
+
+            \multirow{2}{*}{Recurso}                                                        &
+            \multirow{2}{*}{\begin{tabular}{@{}c@{}}Bolsas \\ de Mano\end{tabular}}         &
+            \multirow{2}{*}{\begin{tabular}{@{}c@{}}Bolsos para \\ rasuradora\end{tabular}} &
+            \multirow{2}{*}{Mochilas}                                                       &
+            \multirow{2}{*}{\begin{tabular}{@{}c@{}}Disponibilidad \\ diaria\end{tabular}}                                \\\\\hline
+
+            \\
+
+            Piel ($ft^{2}$)                                                                 & 2   & 26 & 3  & 24 $ft^{2}$ \\
+            Costura ($h$)                                                                   & 2   & 1  & 2  & 40 $h$      \\
+            Acabado ($h$)                                                                   & 1   & 5  & 20 & 45 $h$      \\\\\hline
+
+            \\
+
+            Precio de venta (\$)                                                            & 100 & 22 & 66               \\\\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{equation*}
+    \max Z = 100x_{1} + 22x_{2} + 66x_{3}
+\end{equation*}
+
+\subsubsection*{S.A}
+
+\begin{align*}
+    2x_{1} + 26x_{2} + 3x_{3} \leq 24 \\
+    2x_{1} + x_{2} + 20x_{3} \leq 40  \\
+    x_{1} + 0.5x_{2} + x_{3} \leq 45
+\end{align*}
+
+\begin{align*}
+    x_{1}, x_{2}, x_{3} \geq 0
+\end{align*}
+
+\subsection*{Forma estándar}
+
+\begin{equation*}
+    \max Z = 100x_{1} + 22x_{2} + 66x_{3}
+\end{equation*}
+
+\subsubsection*{S.A}
+
+\begin{align*}
+    2x_{1} + 26x_{2} + 3x_{3} + s_{1} \leq 24 \\
+    2x_{1} + x_{2} + 20x_{3}  + s_{2} \leq 40 \\
+    x_{1} + 0.5x_{2} + x_{3}  + s_{3} \leq 45
+\end{align*}
+
+\begin{align*}
+    x_{1}, x_{2}, x_{3}, s_{1}, s_{2}, s_{3} \geq 0
+\end{align*}
+
+\subsubsection*{Procedimiento}
+
+La formulación del problema en primera instancia se resuelve igual
+que con el anterior método, pero para su solución se deben transformar
+las ecuaciones a su forma estándar ya que garantiza la uniformidad,
+simplicidad y optimalidad del método simplex, conservando la función
+objetivo y asegurando que todas las variables sean no negativas.
+
+Debido a las similitudes que tiene el método simplex con el método
+algebraico de Gauss-Seidel (basados en iteraciones), implementamos dicho
+método para dar respuesta a las incógnitas planteadas en el problema.
+
+\begin{itemize}
+    \item $x_{1} = 8.75$
+    \item $x_{2} = 9.67$
+    \item $x_{3} = 8.85$
+    \item $s_{1} = 0.26$
+    \item $s_{2} = 3.00$
+    \item $s_{3} = 21.0$
+\end{itemize}
+
+Dándonos como resultado que para maximizar el costo por unidad vendida y
+fabricada, por \textit{Gutchi Co.} se deben producir $8.75$ bolsos de mano,
+$9.67$ bolsos para rasuradora, y $8.85$ mochilas (los valores decimales
+se asocian a los productos que están en proceso o que directamente
+no están terminados), dando como resultado una ganancia de $\$1006.84$ por
+la venta de los tres productos.
+
+Ademas por la naturaleza del método Gauss-Seidel, el programa nos proporciona
+el valor de las variables de holgura o lo que seria lo mismo, a la cantidad
+que se desplazaría en inventarios, lo cual, los convierte en materia
+prima utilizable para un nuevo ciclo.
+
+\begin{itemize}
+    \item Materiales de inventario de bolsos de mano: $0.26$
+    \item Materiales de inventario de bolsos para rasuradora: $3.00$
+    \item Materiales de inventario para mochilas: $21.0$
+\end{itemize}
 
 \bibliography{./Bibliography/bibliography.bib}
 
