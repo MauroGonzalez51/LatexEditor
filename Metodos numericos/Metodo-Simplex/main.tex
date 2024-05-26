@@ -17,22 +17,22 @@
 \title{Programación lineal ejecutada con el método de Gauss-Seidel\\}
 
 \author{\IEEEauthorblockN{1\textsuperscript{st} Mauro Alonso Gonzalez Figueroa}
-\IEEEauthorblockA{\textit{Universiddad Tecnologica de Bolivar} \\
-    \textit{UBT}\\
-    Cartagena, Colombia \\
-    maugonzalez@utb.edu.co}
-\and
-\IEEEauthorblockN{2\textsuperscript{nd} German De Armas Castaño}
-\IEEEauthorblockA{\textit{Universidad Tecnologica de Bolivar} \\
-    \textit{UTB}\\
-    Cartagena, Colombia \\
-    gdearmas@utb.edu.co}
-\and
-\IEEEauthorblockN{3\textsuperscript{rd} Angel Vega Rodriguez}
-\IEEEauthorblockA{\textit{Universidad Tecnologica de Bolivar} \\
-    \textit{UTB}\\
-    Cartagena, Colombia \\
-    anvega@utb.edu.co}
+    \IEEEauthorblockA{\textit{Universiddad Tecnologica de Bolivar} \\
+        \textit{UBT}\\
+        Cartagena, Colombia \\
+        maugonzalez@utb.edu.co}
+    \and
+    \IEEEauthorblockN{2\textsuperscript{nd} German De Armas Castaño}
+    \IEEEauthorblockA{\textit{Universidad Tecnologica de Bolivar} \\
+        \textit{UTB}\\
+        Cartagena, Colombia \\
+        gdearmas@utb.edu.co}
+    \and
+    \IEEEauthorblockN{3\textsuperscript{rd} Angel Vega Rodriguez}
+    \IEEEauthorblockA{\textit{Universidad Tecnologica de Bolivar} \\
+        \textit{UTB}\\
+        Cartagena, Colombia \\
+        anvega@utb.edu.co}
 }
 
 \maketitle
@@ -40,54 +40,60 @@
 \bibliographystyle{IEEETran}
 
 \begin{abstract}
-In the realm of numerical analysis, the Gauss-Seidel method stands as an 
-iterative technique employed to resolve systems of linear equations. It 
-represents a refined version of the Jacobi method, often exhibiting 
-superior convergence properties. Within the scope of this paper, we delve 
-into the application of the Gauss-Seidel method to address a system of 
-linear equations arising from a financial planning conundrum. Our 
-endeavor demonstrates the efficacy and efficiency of the Gauss-Seidel 
-method in tackling this type of system.
+    In the realm of numerical analysis, the Gauss-Seidel method stands as an
+    iterative technique employed to resolve systems of linear equations. It
+    represents a refined version of the Jacobi method, often exhibiting
+    superior convergence properties. Within the scope of this paper, we delve
+    into the application of the Gauss-Seidel method to address a system of
+    linear equations arising from a financial planning conundrum. Our
+    endeavor demonstrates the efficacy and efficiency of the Gauss-Seidel
+    method in tackling this type of system.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Gauss-Seidel method, linear equations, financial planning
+    Gauss-Seidel method, linear equations, financial planning
 \end{IEEEkeywords}
 
-\nocite{source_code}
+\nocite{*}
 
 \section{Introduction}
-En el ámbito de la gestión empresarial, la Investigación de Operaciones 
-\textit{(IO)} se erige como una herramienta fundamental para la optimización de 
-procesos y la toma de decisiones estratégicas. Esta disciplina, basada 
-en el método científico y el análisis matemático, permite a las 
-organizaciones abordar problemas complejos de manera sistemática y 
+En el ámbito de la gestión empresarial, la Investigación de Operaciones
+\textit{(IO)} se erige como una herramienta fundamental para la optimización de
+procesos y la toma de decisiones estratégicas. Esta disciplina, basada
+en el método científico y el análisis matemático, permite a las
+organizaciones abordar problemas complejos de manera sistemática y
 eficiente, conduciéndolas hacia el logro de sus objetivos.
 
-En esencia, la IO se caracteriza por la aplicación de un enfoque 
-interdisciplinario que integra conocimientos de diversas áreas, como 
-las matemáticas, la estadística, la ingeniería y la economía. Este 
-enfoque colaborativo permite a los equipos de trabajo abordar problemas 
-complejos desde múltiples perspectivas, generando soluciones innovadoras 
+En esencia, la IO se caracteriza por la aplicación de un enfoque
+interdisciplinario que integra conocimientos de diversas áreas, como
+las matemáticas, la estadística, la ingeniería y la economía. Este
+enfoque colaborativo permite a los equipos de trabajo abordar problemas
+complejos desde múltiples perspectivas, generando soluciones innovadoras
 y efectivas.
 
 \section{Gauss-Seidel}
 
-Dentro del amplio arsenal de técnicas empleadas en la IO, el método 
-Gauss-Seidel se destaca como un algoritmo iterativo de gran utilidad para 
-la resolución de sistemas de ecuaciones lineales. Este método, ampliamente 
-reconocido por su simplicidad y eficiencia, se basa en la actualización 
-progresiva de las variables del sistema en función de las aproximaciones 
-más recientes de las demás. A través de un proceso iterativo, las 
-estimaciones se van refinando hasta alcanzar un punto de convergencia, donde 
+Dentro del amplio arsenal de técnicas empleadas en la IO, el método
+Gauss-Seidel se destaca como un algoritmo iterativo de gran utilidad para
+la resolución de sistemas de ecuaciones lineales. Este método, ampliamente
+reconocido por su simplicidad y eficiencia, se basa en la actualización
+progresiva de las variables del sistema en función de las aproximaciones
+más recientes de las demás. A través de un proceso iterativo, las
+estimaciones se van refinando hasta alcanzar un punto de convergencia, donde
 las soluciones satisfacen los criterios establecidos.
 
-En el contexto de la programación lineal, el método Gauss-Seidel cobra 
-especial relevancia como herramienta complementaria al método simplex. Si 
-bien el método simplex se considera el enfoque tradicional para resolver 
-este tipo de problemas, el método Gauss-Seidel ofrece una alternativa viable 
-para abordar problemas de gran escala o aquellos con características 
+En el contexto de la programación lineal, el método Gauss-Seidel cobra
+especial relevancia como herramienta complementaria al método simplex. Si
+bien el método simplex se considera el enfoque tradicional para resolver
+este tipo de problemas, el método Gauss-Seidel ofrece una alternativa viable
+para abordar problemas de gran escala o aquellos con características
 específicas que dificultan la aplicación del simplex.
+
+\section{Marco Teorico}
+
+\subsection{Programación lineal}
+
+
 
 \bibliography{./Bibliography/bibliography.bib}
 
