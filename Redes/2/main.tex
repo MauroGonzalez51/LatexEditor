@@ -1,0 +1,95 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+
+\usepackage{newtxtext}
+
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{xurl}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\usepackage[style=apa, maxnames=6, minnames=3]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{\baselineskip}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\DeclareSIUnit{\COP}{COP}
+\newcommand{\cop}[1]{\$\SI{#1}{\COP}}
+
+\DeclareSIUnit{\DOLLAR}{USD}
+\newcommand{\dollar}[1]{\$\SI{#1}{\DOLLAR}}
+
+\renewcommand{\comment}[1]{{\small $\ll$#1$\gg$}}
+
+% chktex-file 24
+
+\begin{document}
+
+\section*{Who invented the internet?}
+
+\begin{itemize}[label=$\triangleright$]
+      \item Mauro Gonzalez Figueroa \textit{(T00067622)}
+\end{itemize}
+
+\nocite{*}
+
+There's a difference between the Internet and the World Wide Web. The World
+Wide Web is what makes it easy to share information using all the
+interconnected computers on the Internet.
+
+Connecting so many mainframes led to the question: what do you need to do to
+make communications between them easier?
+
+Scientists around the world tried to answer this question, coming up with some
+key concepts:
+
+\begin{itemize}
+      \item Packet switching: The concept of ``cutting'' files into smaller packets when sent
+            and reassembling them upon receiving. This method improves the efficiency and
+            reliability of data transmission.
+      \item TCP/IP:\@{}There were different network infrastructures, but they weren't able
+            to communicate with each other. The TCP/IP protocols solved this problem by
+            creating the basic communication language for the Internet, allowing diverse
+            networks to interconnect and share data seamlessly.
+      \item World Wide Web: An interface created with the introduction of \textit{HTTP}
+            (Hypertext Transfer Protocol), \textit{HTML} (Hypertext Markup Language), and
+            \textit{URL} (Uniform Resource Locator), making web browsers possible and
+            revolutionizing how information is accessed and shared.
+\end{itemize}
+
+The invention of the Internet can't be attributed to just one person; there
+were many different foundational elements that collectively built what we now
+know as ``the Internet''.
+
+\printbibliography
+
+\end{document}
