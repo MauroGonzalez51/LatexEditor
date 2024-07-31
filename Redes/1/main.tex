@@ -1,0 +1,104 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+
+\usepackage{newtxtext}
+
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{xurl}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{2}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\usepackage[style=apa, maxnames=6, minnames=3]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\setlength{\parskip}{\baselineskip}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\DeclareSIUnit{\COP}{COP}
+\newcommand{\cop}[1]{\$\SI{#1}{\COP}}
+
+\DeclareSIUnit{\DOLLAR}{USD}
+\newcommand{\dollar}[1]{\$\SI{#1}{\DOLLAR}}
+
+\renewcommand{\comment}[1]{{\small $\ll$#1$\gg$}}
+
+% chktex-file 24
+
+\begin{document}
+
+\section*{History of the Internet}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+\begin{itemize}[label=$\triangleright$]
+      \item Mauro Gonzalez Figueroa \textit{(T00067622)}
+\end{itemize}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+\nocite{*}
+
+It all begins in \textit{1957}, when computers were only capable of doing one
+thing at a time (this was called batch processing), so the engineers had to put
+them in separate rooms. Everything was done via cable connections, even
+programming.
+
+Later on, a concept began to arise, \textit{Time-Sharing}, which is the ability
+to ``share'' the processing power of one computer among multiple users.
+
+During the Cold War, some networks were created to avoid repetitive data loss
+and ensure communication remained robust.
+
+\begin{itemize}
+      \item ARPANET:\@{} Created to handle communication through the network without
+            exposing the main computer. The idea was to use the \textit{IMP} (Interface
+            Message Processor) connected to a mainframe. This technology also served as an
+            interface that at the same time was connected to other IMPs in a network
+            \textit{(IMP Subnet)}.
+\end{itemize}
+
+As networks continued to develop, it became clear that a decentralized system
+was necessary to maintain the integrity and availability of information. This
+decentralization aimed to prevent single points of failure and ensure that the
+network could continue to function even if parts of it were compromised or
+destroyed. This led to the development of robust, interconnected networks where
+data could travel multiple paths to reach its destination, enhancing both
+security and reliability.
+
+The decentralized approach also facilitated the growth of the internet, as it
+allowed for a more resilient and scalable infrastructure. This innovation paved
+the way for the vast, global network we rely on today, where information is
+continuously exchanged and processed across a multitude of interconnected
+systems.
+
+\printbibliography
+
+\end{document}
