@@ -11,4 +11,5 @@
 **/*.bcf
 **/*.bcf-SAVE-ERROR
 Random/**
-.vscode/
+.vscode
+.venv
