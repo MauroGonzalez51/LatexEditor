@@ -1,0 +1,816 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+% \usepackage{newtxtext}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{multirow}
+
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+      \centering
+      \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+      \vspace{1cm}
+
+      {\scshape\Large Materiales \par}
+      \vspace{1cm}
+
+      \slshape {\Large \bfseries{}Materiales para energias renovables\\}
+      \vspace{4cm}
+
+      \slshape {\itshape{} Sara Bastidas Triana, T00081674 \\}
+      \slshape {\itshape{} Ornella Gómez Meusburger, T00081936 \\}
+      \vfill
+      Revisado Por \\
+      Darling Perea Cabarcas\\
+      {\large \today\par}
+\end{titlepage}
+
+\nocite{*}
+
+% chktex-file 8
+% chktex-file 44
+% chktex-file 24
+
+\section{Resumen}
+
+El estudio sobre materiales para energías renovables destaca su papel en la
+generación, almacenamiento y distribución de energía limpia. Se analizan tipos
+como silicio, perovskitas, fibras compuestas y biocompuestos, junto con sus
+aplicaciones en paneles solares, turbinas eólicas y baterías. Estos materiales
+son esenciales para mejorar la eficiencia y reducir el impacto ambiental en
+tecnologías clave. Se abordan los desafíos de costos, reciclaje y fabricación,
+destacando la necesidad de innovación y colaboración para optimizar su uso y
+asegurar un futuro energético sostenible.
+
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introducción}
+
+El uso de energías renovables se ha convertido en una prioridad global debido a
+la creciente preocupación por los efectos del cambio climático, la
+contaminación ambiental y la limitada disponibilidad de combustibles fósiles.
+Las tecnologías basadas en fuentes limpias como el sol, el viento y la biomasa
+han surgido como alternativas viables para satisfacer la demanda energética sin
+comprometer el equilibrio ambiental. Sin embargo, el desarrollo y la
+implementación de estas tecnologías no serían posibles sin la contribución
+esencial de los materiales avanzados que permiten su funcionamiento.
+
+Los materiales para energías renovables no solo deben ser eficientes en
+términos de rendimiento, sino también duraderos, sostenibles y económicamente
+viables. Ejemplos como el silicio, las perovskitas, las fibras de vidrio y
+carbono, y los nanocompuestos han revolucionado la manera en que se diseñan y
+fabrican tecnologías como paneles solares, turbinas eólicas y sistemas de
+almacenamiento de energía. Por ejemplo, el silicio, ampliamente utilizado en
+paneles solares, ha evolucionado gracias a combinaciones con otros materiales,
+como las perovskitas, que permiten captar un espectro más amplio de luz solar y
+aumentar significativamente la eficiencia de conversión
+energética~(\cite{Henriksson2021}).
+
+En el caso de las turbinas eólicas, el uso de materiales compuestos como la
+fibra de vidrio y la fibra de carbono ha permitido construir aspas más grandes
+y ligeras, lo que incrementa la capacidad de generación energética y reduce el
+desgaste mecánico. Además, los nanomateriales, como el grafeno, están
+transformando las baterías de almacenamiento al mejorar su capacidad, vida útil
+y eficiencia de carga, abriendo nuevas posibilidades en sistemas energéticos
+autónomos~(\cite{Galembeck2019}).
+
+Además, se discutirán las barreras que todavía enfrentan estos materiales, como
+los altos costos de producción, la dificultad de reciclaje en algunos casos y
+los impactos ambientales derivados de su fabricación. Con una base sólida en 17
+estudios recientes, este 4 análisis ofrece una visión completa de su
+importancia en la construcción de un futuro energético sostenible.
+
+\section{Descripción del material}
+
+Los materiales utilizados en tecnologías de energías renovables son
+fundamentales para el desarrollo de sistemas que generen energía limpia de
+manera eficiente y sostenible. Cada uno ha sido seleccionado cuidadosamente
+debido a sus propiedades únicas, las cuales permiten mejorar el rendimiento de
+tecnologías como paneles solares, turbinas eólicas y baterías de
+almacenamiento. Desde materiales convencionales como el acero y el vidrio hasta
+opciones más avanzadas como las perovskitas y los nanomateriales, todos tienen
+un papel clave en esta transición hacia un futuro energético más sostenible.
+
+Los materiales convencionales, como el acero, el aluminio y el vidrio, siguen
+siendo esenciales en las aplicaciones básicas de estas tecnologías. El acero,
+por ejemplo, es utilizado ampliamente en estructuras de soporte, como las
+torres de las turbinas eólicas y los marcos de los paneles solares. Su
+resistencia y durabilidad lo hacen ideal para soportar condiciones climáticas
+extremas y garantizar la estabilidad de las estructuras durante
+años~(\cite{Ebhota_Jen2019}). El vidrio tratado es otro material crucial,
+especialmente en paneles solares, donde su transparencia permite que la luz
+solar pase sin problemas, mientras protege las celdas fotovoltaicas de impactos
+y condiciones climáticas adversas~(\cite{Galembeck2019}). Estos materiales
+convencionales, aunque simples, son la base sobre la cual se construyen
+tecnologías más avanzadas.
+
+Por otro lado, los materiales avanzados han revolucionado la forma en que
+funcionan las energías renovables. El silicio, por ejemplo, es el material más
+común en las celdas fotovoltaicas debido a su capacidad para convertir la luz
+solar en electricidad de manera eficiente. En los últimos años, las mejoras en
+su pureza y diseño han permitido alcanzar eficiencias superiores al 20\%,
+haciéndolo aún más efectivo en aplicaciones solares~(\cite{Henriksson2021}).
+Otro ejemplo destacado son las perovskitas, materiales cristalinos que han
+captado la atención de los investigadores debido a su capacidad para absorber
+un espectro más amplio de luz solar que el silicio convencional. Estas
+estructuras no solo ofrecen una mayor eficiencia, sino que también tienen el
+potencial de reducir significativamente los costos de producción de paneles
+solares, lo que las convierte en una de las áreas de mayor interés en la
+investigación de energías renovables~(\cite{Ebhota_Jen2019}).
+
+En el caso de las turbinas eólicas, los materiales avanzados también han
+marcado una gran diferencia. Las fibras compuestas, como la fibra de vidrio y
+la fibra de carbono, son utilizadas para fabricar las aspas de las turbinas
+debido a su combinación de resistencia, ligereza y durabilidad. Estas
+propiedades permiten construir turbinas más grandes que pueden generar más
+energía, incluso en áreas con vientos moderados. Además, las fibras compuestas
+son capaces de resistir condiciones climáticas extremas, lo que prolonga la
+vida útil de las turbinas y reduce los costos de
+mantenimiento~(\cite{Galembeck2019}).
+
+Por último, los materiales sostenibles están jugando un papel cada vez más
+importante en las tecnologías de energías renovables, ya que ofrecen
+alternativas con menor impacto ambiental. Los biocompuestos, por ejemplo, están
+hechos a partir de biomasa y se utilizan en componentes estructurales como las
+carcasas de las turbinas eólicas. Estos materiales no solo reducen la
+dependencia de plásticos convencionales, sino que también disminuyen la huella
+de carbono asociada con su fabricación~(\cite{Henriksson2021}). Otro ejemplo
+son los polímeros biodegradables, que están siendo explorados para su uso en
+baterías y sistemas de almacenamiento energético. Estos materiales tienen el
+potencial de minimizar los desechos generados al final de la vida útil de estos
+sistemas, lo que los hace ideales para un enfoque más circular y sostenible en
+la gestión de recursos~(\cite{Galembeck2019}).
+
+Desde los materiales convencionales que forman la base estructural de muchas
+tecnologías, hasta los avanzados y sostenibles que ofrecen soluciones
+innovadoras, cada uno cumple un rol esencial. Esta combinación de opciones
+permite desarrollar sistemas de energía limpia más eficientes, duraderos y
+respetuosos con el medio ambiente, impulsando así el cambio hacia un modelo
+energético más sostenible.
+
+\section{Propiedades}
+
+Los materiales utilizados en tecnologías de energías renovables tienen
+características que los hacen únicos y fundamentales para su funcionamiento.
+Estas propiedades permiten que estas tecnologías sean más eficientes, duraderas
+y respetuosas con el medio ambiente. Aquí se describen las más importantes de
+manera detallada, incluyendo referencias a investigaciones relevantes.
+
+\begin{enumerate}
+      \item Resistencia a condiciones extremas \\ Una de las propiedades más importantes es
+            la capacidad de soportar climas extremos.
+            \begin{itemize}
+                  \item Paneles solares: Están diseñados para resistir el sol intenso, lluvias
+                        constantes, fuertes vientos y cambios drásticos de temperatura. Esto es posible
+                        gracias al uso de materiales como el vidrio tratado, que protege las células
+                        solares sin bloquear la luz, y el silicio, que mantiene su eficiencia con el
+                        paso de los años~(\cite{Henriksson2021}).
+                  \item Turbinas eólicas: Las aspas están hechas de fibra de vidrio o carbono,
+                        materiales que no se deforman fácilmente a pesar de estar expuestos a
+                        movimientos constantes y vientos fuertes. Esto asegura que puedan funcionar de
+                        manera óptima durante mucho tiempo sin necesidad de reemplazos
+                        frecuentes~(\cite{Galembeck2019}).
+            \end{itemize}
+
+      \item Ligereza y flexibilidad \\ Otra propiedad clave es que estos materiales son
+            ligeros y, en algunos casos, flexibles, lo cual es esencial en tecnologías como
+            las turbinas eólicas y los paneles solares portátiles.
+            \begin{itemize}
+                  \item Aspas de turbinas: Las aspas deben ser lo suficientemente ligeras para girar
+                        fácilmente con el viento, pero también fuertes para resistir años de uso. La
+                        fibra de vidrio y la fibra de carbono son ideales porque combinan ligereza y
+                        resistencia, permitiendo fabricar aspas más grandes que generan más energía sin
+                        aumentar el desgaste mecánico~(\cite{Ebhota_Jen2019}).
+                  \item Materiales avanzados: Algunos materiales, como las perovskitas, son flexibles,
+                        lo que abre la posibilidad de fabricar paneles solares que se adapten a
+                        superficies curvas o móviles, aumentando su versatilidad~(\cite{Abera2023}).
+            \end{itemize}
+
+      \item Alta conductividad \\ Los materiales utilizados en baterías y paneles solares
+            necesitan conducir electricidad de manera eficiente para reducir pérdidas de
+            energía.
+
+            \begin{itemize}
+                  \item Baterías avanzadas: El grafeno y los nanotubos de carbono son ejemplos de
+                        materiales con excelente conductividad. Se están utilizando en baterías
+                        avanzadas porque permiten almacenar más energía en menos espacio y con tiempos
+                        de carga más cortos~(\cite{Uyor2021}).
+                  \item Paneles solares: La alta conductividad del silicio y las mejoras en materiales
+                        como las perovskitas han permitido aumentar la cantidad de energía que se
+                        genera a partir de la luz solar~(\cite{Henriksson2021}).
+            \end{itemize}
+
+      \item Sostenibilidad y reciclabilidad \\ Una preocupación clave en la transición a
+            energías renovables es que los materiales utilizados también sean amigables con
+            el medio ambiente.
+            \begin{itemize}
+                  \item Biocompuestos: Estos materiales, fabricados a partir de recursos renovables
+                        como plantas o biomasa, son una opción prometedora. Están comenzando a usarse
+                        en componentes estructurales, como las bases de las turbinas eólicas, y pueden
+                        ser reciclados o degradarse al final de su vida útil~(\cite{Galembeck2019}).
+                  \item Paneles solares reciclables: Algunos paneles modernos están diseñados para
+                        facilitar su reciclaje, separando las partes reutilizables y minimizando los
+                        desechos~(\cite{Leader_Gaustad2019a}).
+            \end{itemize}
+
+      \item Durabilidad \\ La capacidad de resistir el paso del tiempo sin perder
+            eficiencia es fundamental en las energías renovables.
+
+            \begin{itemize}
+                  \item Turbinas eólicas: Las aspas están diseñadas para durar décadas, soportando
+                        fuertes vientos y condiciones extremas sin necesidad de reemplazos frecuentes.
+                        Esto es posible gracias a materiales compuestos que resisten la fatiga y el
+                        desgaste~(\cite{ColinLuna_deLeoWinkler_nd}).
+                  \item Paneles solares: Los diseños actuales, que incluyen perovskitas y silicio de
+                        alta calidad, pueden durar más de 25 años sin una pérdida significativa de
+                        rendimiento~(\cite{Ebhota_Jen2019}).
+            \end{itemize}
+
+      \item Adaptabilidad \\ Algunos materiales tienen propiedades que les permiten
+            adaptarse a nuevas aplicaciones y necesidades.
+            \begin{itemize}
+                  \item Perovskitas: Estos materiales no solo son eficientes para captar la luz solar,
+                        sino que también se están explorando para otras aplicaciones como sensores y
+                        almacenamiento de energía~(\cite{Abera2023}).
+                  \item Nanomateriales: Materiales como el grafeno tienen el potencial de ser
+                        utilizados en tecnologías futuras debido a su versatilidad en aplicaciones
+                        electrónicas y energéticas~(\cite{Uyor2021}).
+            \end{itemize}
+\end{enumerate}
+
+\section{Evolución y progreso de los materiales}
+
+El desarrollo de materiales para energías renovables ha transformado la forma
+en que se genera, almacena y distribuye la energía. A lo largo de las décadas,
+estos materiales han evolucionado significativamente, desde las primeras
+aplicaciones hasta las innovaciones más recientes, que han mejorado su
+eficiencia, reducido costos y aumentado su sostenibilidad. A continuación, se
+presenta un recorrido por esta evolución, destacando hitos clave y perspectivas
+futuras.
+
+\begin{enumerate}
+      \item Primera Generación: Inicios de las Tecnologías Renovables \\ Durante las
+            primeras etapas, los materiales utilizados en tecnologías como paneles solares
+            y turbinas eólicas eran simples y presentaban limitaciones significativas:
+
+            \begin{itemize}
+                  \item Paneles solares: En la década de los 50, las primeras celdas solares de silicio
+                        lograron una eficiencia del 6\%. Este nivel era adecuado para aplicaciones
+                        específicas, como satélites, pero insuficiente para el uso masivo debido a su
+                        bajo rendimiento~(\cite{Galembeck2019}).
+                  \item Turbinas eólicas: Las aspas metálicas predominaban en las primeras turbinas,
+                        pero eran pesadas y se dañaban fácilmente, lo que reducía su vida útil y
+                        eficiencia. La falta de materiales compuestos limitaba el diseño de turbinas
+                        más grandes y eficaces~(\cite{Leader_Gaustad2019a}).
+            \end{itemize}
+
+      \item Segunda Generación: Avances en Eficiencia y Materiales \\ Entre los años 90 y
+            2000, los avances en la ciencia de materiales transformaron el panorama de las
+            energías renovables, permitiendo un aumento significativo en la eficiencia de
+            las tecnologías:
+
+            \begin{itemize}
+                  \item Paneles solares: El procesamiento mejorado del silicio permitió elevar la
+                        eficiencia de las celdas fotovoltaicas a más del 15\%. Además, comenzaron las
+                        investigaciones sobre materiales alternativos, como películas delgadas de
+                        cadmio y telurio, que reducían costos sin comprometer significativamente el
+                        rendimiento~(\cite{Henriksson2021}).
+
+                  \item Turbinas eólicas: La introducción de materiales compuestos, como la fibra de
+                        vidrio, permitió la fabricación de aspas más ligeras y duraderas. Esto
+                        incrementó la capacidad de generación de energía y redujo los costos por
+                        kilovatio generado. Las mejoras en el diseño también contribuyeron a la
+                        instalación de turbinas en ubicaciones más diversas~(\cite{Ebhota_Jen2019}).
+            \end{itemize}
+
+      \item Tercera Generación: La Era de los Materiales Avanzados \\ En la última década,
+            la introducción de materiales avanzados ha revolucionado las tecnologías
+            renovables, llevando la eficiencia y sostenibilidad a nuevos niveles:
+
+            \begin{itemize}
+                  \item Perovskitas en paneles solares: Estos materiales híbridos surgieron en los años
+                        2010, alcanzando eficiencias de hasta el 25\% en condiciones de laboratorio.
+                        Las perovskitas no solo son más económicas y versátiles que el silicio, sino
+                        que también pueden fabricarse a bajas temperaturas, lo que facilita su
+                        producción a gran escala~(\cite{Abera2023}).
+
+                  \item Nanomateriales: El grafeno y los nanotubos de carbono han mejorado la capacidad
+                        de almacenamiento en baterías y supercondensadores. Su excelente conductividad
+                        y propiedades mecánicas han permitido tiempos de carga más rápidos y mayor
+                        durabilidad en los sistemas de almacenamiento energético~(\cite{Uyor2021}).
+
+                  \item  Biocompuestos y materiales sostenibles: El uso de biomasa ha reducido la huella
+                        de carbono de tecnologías como las turbinas eólicas, ofreciendo ventajas en
+                        términos de reciclabilidad y costos. Los biocompuestos también están comenzando
+                        a reemplazar a los plásticos convencionales en componentes
+                        estructurales~(\cite{Saleh_Hassan2024}).
+            \end{itemize}
+
+      \item Perspectivas Futuras \\ El futuro de los materiales para energías renovables se
+            enfoca en soluciones más eficientes, accesibles y sostenibles. Los avances
+            tecnológicos y las nuevas investigaciones prometen superar los desafíos
+            actuales:
+
+            \begin{itemize}
+                  \item Tecnologías emergentes: La impresión 3D y 4D está siendo explorada para
+                        fabricar componentes complejos con mayor precisión y menores costos. Estas
+                        tecnologías permitirán reducir los residuos y optimizar el diseño de sistemas
+                        como paneles solares y turbinas.
+
+                  \item Nuevos materiales: Investigaciones en aleaciones avanzadas y compuestos
+                        multifuncionales podrían revolucionar aplicaciones en almacenamiento energético
+                        y generación distribuida. La combinación de estas innovaciones con estrategias
+                        de reciclaje avanzado promete cerrar el ciclo de vida de los
+                        materiales~(\cite{Leader_Gaustad2019a})~(\cite{Kubik2020}).
+            \end{itemize}
+\end{enumerate}
+
+\section{Procesos de Fabricación}
+
+La fabricación de materiales para energías renovables es fundamental para el
+desarrollo de tecnologías eficientes y sostenibles. Este proceso abarca desde
+la extracción de materias primas hasta la creación de componentes complejos
+como paneles solares, turbinas eólicas y baterías avanzadas. Cada paso es
+crucial para garantizar que los materiales cumplan con los estándares de
+calidad, durabilidad y funcionalidad necesarios.
+
+Ejemplo práctico: Un panel solar fabricado con los avances actuales puede durar
+más de 25 años, manteniendo más del 80\% de su capacidad inicial. Esto es
+posible gracias al uso de materiales como el silicio monocristalino y las
+perovskitas, que han mejorado significativamente la eficiencia y durabilidad de
+estos dispositivos~(\cite{Henriksson2021}).
+
+\subsection{Fabricación de Paneles Solares}
+
+\begin{table}[H]
+      \begin{tabularx}{\linewidth}{>{\arraybackslash}X>{\arraybackslash}X}
+            \hline
+            \textbf{Etapa del Proceso}     & \textbf{Descripción}                                         \\\hline
+            \textbf{Extracción y purificación
+            del silicio }                  & Se extrae el silicio de la arena de cuarzo y se purifica
+            mediante reducción carbotérmica                                                               \\\hline
+            \textbf{Corte en obleas finas} & El silicio purificado se corta en láminas delgadas con
+            sierras de precisión                                                                          \\\hline
+            \textbf{Tratamiento químico de
+            las obleas}                    & Se añaden elementos como fósforo y boro para crear una
+            estructura semiconductora.                                                                    \\\hline
+            \textbf{Ensamblaje de módulos
+            solares}                       & Las células solares se encapsulan en vidrio tratado y se
+            ensamblan en módulos                                                                          \\\hline
+            \textbf{Integración de
+            perovskitas}                   & Se aplican capas de perovskitas sobre las células de silicio
+            para mejorar la eficiencia.                                                                   \\\hline
+            \textbf{Pruebas de calidad}    & Se realizan pruebas de resistencia, durabilidad y eficiencia
+            antes de su instalación                                                                       \\\hline
+      \end{tabularx}
+\end{table}
+
+\subsection{Procesos para Turbinas y Baterías}
+
+\begin{table}[H]
+      \begin{tabularx}{\linewidth}{>{\arraybackslash}X>{\arraybackslash}X}
+            \hline
+            \textbf{Etapa del Proceso}      & \textbf{Descripción}                                    \\\hline
+            \textbf{Producción de aspas para
+            turbinas eólicas}               & Incluye diseño del molde, laminado de fibras y resinas,
+            curado térmico, acabado y pruebas.                                                        \\\hline
+            \textbf{Fabricación de baterías
+            avanzadas}                      & Consiste en la producción de electrodos, montaje de
+            celdas, integración en módulos y pruebas de calidad.                                      \\\hline
+            \textbf{Innovaciones recientes en
+            fabricación }                   & Se destacan avances como la impresión 3D, reciclaje
+            avanzado y producción en masa de perovskitas.                                             \\\hline
+            \textbf{Retos y oportunidades } & Principales desafíos: altos costos, impacto ambiental y
+            adaptación a gran escala.                                                                 \\\hline
+      \end{tabularx}
+\end{table}
+
+\subsection{Innovaciones Recientes}
+
+\begin{itemize}
+      \item Impresión 3D: Esta tecnología permite fabricar piezas complejas, como carcasas
+            de baterías y componentes de turbinas, con menor desperdicio de material.
+
+      \item Reciclaje Avanzado: Los métodos modernos de reciclaje están logrando recuperar
+            materiales clave, como el litio y el silicio, reduciendo la necesidad de
+            extracción de nuevas materias primas~(\cite{Galembeck2019}).
+
+      \item Producción en Masa de Perovskitas: Las técnicas actuales están facilitando la
+            fabricación de paneles solares de perovskitas a gran escala, lo que promete
+            reducir los costos de estos dispositivos avanzados~(\cite{Uyor2021}).
+\end{itemize}
+
+\subsection{Retos y Oportunidades}
+
+Aunque la fabricación de materiales para energías renovables ha avanzado
+considerablemente, aún enfrenta desafíos importantes:
+
+\begin{enumerate}
+      \item Altos costos iniciales: Los materiales avanzados, como las perovskitas y los
+            nanotubos de carbono, son costosos y complejos de
+            producir~(\cite{Leader_Gaustad2019a}).
+
+      \item Impacto ambiental: La extracción de materias primas, como el litio, y algunos
+            procesos de producción pueden generar contaminación significativa.
+
+      \item Adaptación a gran escala: La transición hacia una fabricación masiva de
+            tecnologías avanzadas, como paneles de perovskitas, enfrenta retos en términos
+            de consistencia y calidad~(\cite{Howaniec2022}).
+\end{enumerate}
+
+\section{Caracterización del material}
+
+La caracterización de los materiales utilizados en tecnologías de energías
+renovables es un paso esencial para entender su funcionamiento y potencial de
+mejora. Este proceso permite estudiar propiedades físicas, mecánicas y
+químicas, garantizando que los materiales cumplan con los requisitos necesarios
+para paneles solares, turbinas eólicas y baterías avanzadas. Además, ayuda a
+evaluar cómo estos materiales reaccionan ante distintas condiciones, como el
+clima, el uso continuo y el envejecimiento natural.
+
+\subsection{Propiedades Físicas}
+
+Las propiedades físicas de un material definen cómo puede ser utilizado en
+distintas tecnologías.
+
+\begin{itemize}
+      \item Fibra de vidrio y fibra de carbono: En las aspas de turbinas eólicas, estos
+            materiales combinan ligereza y resistencia, permitiendo que las aspas sean más
+            grandes y eficientes sin añadir peso excesivo. Esto resulta en turbinas que
+            generan más energía con menos esfuerzo~(\cite{Galembeck2019}).
+
+      \item Vidrio protector: En los paneles solares, el vidrio transparente y resistente
+            protege las celdas internas de impactos y condiciones climáticas adversas,
+            mientras permite el paso eficiente de la luz solar~(\cite{Henriksson2021}).
+
+      \item Silicio y perovskitas: Estos materiales presentan una estructura cristalina que
+            maximiza la captura de luz solar, transformándola en electricidad de manera
+            altamente eficiente~(\cite{Henriksson2021})~(\cite{Galembeck2019}).
+\end{itemize}
+
+\subsection{Propiedades Mecánicas}
+
+Las propiedades mecánicas aseguran que los materiales puedan resistir fuerzas
+externas como viento, lluvia e impactos físicos.
+
+\begin{itemize}
+      \item Turbinas eólicas: Las aspas fabricadas con fibras compuestas son altamente
+            resistentes a la tracción, lo que les permite soportar fuerzas constantes. Su
+            flexibilidad adicional las protege de fracturas, adaptándose a las
+            fluctuaciones de la velocidad del viento~(\cite{Ebhota_Jen2019}).
+
+      \item Paneles solares: Los materiales protectores deben resistir impactos, como los
+            ocasionados por granizo, garantizando un rendimiento óptimo a lo largo del
+            tiempo. Estas propiedades aseguran que los sistemas renovables puedan operar
+            durante años sin necesidad de mantenimiento constante ni reparaciones costosas.
+\end{itemize}
+
+\subsection{Propiedades Químicas}
+
+Las propiedades químicas determinan cómo un material reacciona ante el ambiente
+y su compatibilidad con otros materiales.
+
+\begin{itemize}
+      \item Perovskitas: Aunque son altamente eficientes, su vulnerabilidad a la humedad
+            representa un desafío. Actualmente, se están desarrollando recubrimientos
+            protectores que prolongen su vida útil~(\cite{Henriksson2021}).
+
+      \item Resistencia a la corrosión: En turbinas eólicas y baterías, los materiales
+            deben resistir la corrosión, especialmente en entornos húmedos o cercanos al
+            mar, para evitar fallos prematuros.
+\end{itemize}
+
+\subsection{Técnicas de Caracterización}
+
+Para analizar estas propiedades, se emplean métodos avanzados que ofrecen
+información detallada sobre los materiales:
+
+\begin{itemize}
+      \item Microscopía electrónica de barrido: Permite observar la superficie del material
+            con gran detalle, detectando defectos como grietas o irregularidades en fibras
+            de carbono.
+
+      \item Espectroscopía de rayos X: Analiza la estructura cristalina de materiales como
+            el silicio y las perovskitas, identificando propiedades clave para su
+            funcionamiento.
+\end{itemize}
+
+\subsection{Desafíos en la Caracterización}
+
+A pesar de su importancia, la caracterización de materiales presenta desafíos
+significativos:
+
+\begin{enumerate}
+      \item Costos elevados: Muchas técnicas requieren equipos especializados que no están
+            disponibles en todos los laboratorios.
+
+      \item Diferencias entre laboratorio y condiciones reales: Algunos materiales, como
+            las perovskitas, presentan comportamientos distintos en pruebas de laboratorio
+            frente a aplicaciones prácticas, lo que complica su evaluación.
+
+      \item Gestión de desechos: Los métodos de caracterización pueden generar residuos
+            químicos, que deben ser manejados adecuadamente para minimizar su impacto
+            ambiental~(\cite{Galembeck2019}).
+\end{enumerate}
+
+\section{Aplicaciones}
+
+Los materiales empleados en energías renovables son esenciales para la
+operación de tecnologías que generan, almacenan y distribuyen energía de manera
+limpia y eficiente. Estas aplicaciones abarcan paneles solares, turbinas
+eólicas, baterías avanzadas y tecnologías emergentes, todas enfocadas en
+sustituir las fuentes tradicionales de energía por alternativas sostenibles.
+
+\subsection*{Paneles Solares}
+
+El silicio es el pilar principal de las celdas fotovoltaicas, permitiendo la
+conversión de la luz solar en electricidad. Este material destaca por su
+capacidad para capturar y transformar la energía solar de manera eficiente.
+Además, los avances en materiales como las perovskitas han mejorado
+significativamente la eficiencia de los paneles solares.
+
+\begin{itemize}
+      \item Silicio: Sigue siendo el material predominante gracias a su capacidad de
+            alcanzar eficiencias superiores al 20\% en condiciones ideales.
+
+      \item Perovskitas: Estas capas, cuando se combinan con silicio, aumentan la captación
+            de luz, permitiendo generar más electricidad con menos superficie. Su inclusión
+            ha impulsado la adopción de paneles solares en hogares, empresas y proyectos de
+            gran escala, como granjas solares~(\cite{Henriksson2021}).
+\end{itemize}
+
+\subsection*{Turbinas Eólicas}
+
+Las turbinas eólicas dependen de materiales avanzados para maximizar su
+rendimiento, especialmente en sus aspas y estructuras.
+
+\begin{itemize}
+      \item Fibras de vidrio y carbono: Son esenciales por ser ligeras y resistentes. Estas
+            propiedades permiten fabricar aspas más largas, capaces de capturar mayores
+            volúmenes de energía incluso en zonas con vientos moderados.
+
+      \item Condiciones marinas: Los avances en materiales han facilitado la instalación de
+            turbinas en el mar, donde las condiciones son más agresivas pero el viento más
+            fuerte, lo que resulta en una mayor generación de
+            energía~(\cite{Ebhota_Jen2019}).
+\end{itemize}
+
+\subsection*{Baterías Avanzadas}
+
+El almacenamiento de energía es un componente crucial para la estabilidad de
+sistemas de energías renovables. Las baterías permiten utilizar la electricidad
+generada por paneles solares o turbinas eólicas incluso cuando estas no están
+en funcionamiento.
+
+\begin{itemize}
+      \item Baterías de litio: Su eficiencia se debe a materiales avanzados como el óxido
+            de litio y el grafeno. Estos componentes mejoran la capacidad de
+            almacenamiento, reducen los tiempos de carga y aumentan la vida útil de las
+            baterías.
+
+      \item Sistemas a gran escala: Estas baterías se utilizan no solo en hogares, sino
+            también en proyectos de almacenamiento a gran escala que suministran
+            electricidad a comunidades enteras~(\cite{Galembeck2019}).
+\end{itemize}
+
+\subsection*{Tecnologías Emergentes}
+
+Además de las aplicaciones tradicionales, los materiales renovables están
+siendo explorados en innovaciones tecnológicas.
+
+\begin{itemize}
+      \item Supercondensadores: Dispositivos capaces de almacenar grandes cantidades de
+            energía en un tiempo corto, ideales para aplicaciones como vehículos
+            eléctricos, donde la carga rápida es esencial.
+
+      \item Nanomateriales como el grafeno: Ofrecen conductividad excepcional, lo que los
+            convierte en una pieza clave para el desarrollo de sistemas compactos y
+            eficientes.
+
+      \item Edificios inteligentes: Paneles solares flexibles, fabricados con perovskitas,
+            se integran en fachadas y ventanas para aprovechar al máximo las superficies
+            disponibles en la generación de energía~(\cite{Henriksson2021}).
+\end{itemize}
+
+\subsection*{Desafíos y Oportunidades}
+
+A pesar de su éxito, las aplicaciones de los materiales renovables enfrentan
+desafíos:
+
+\begin{enumerate}
+      \item Costos elevados: Materiales como el grafeno y el litio representan una
+            inversión significativa, lo que limita su accesibilidad.
+
+      \item Reciclaje: Las aspas de turbinas eólicas y las baterías de litio son difíciles
+            de reciclar debido a su complejidad estructural y composición. Aunque se están
+            desarrollando biocompuestos como alternativa, el proceso aún no está
+            completamente optimizado~(\cite{Ebhota_Jen2019}).
+
+      \item Impacto ambiental: La extracción de ciertos materiales, como el litio, genera
+            preocupaciones ambientales debido al alto consumo de agua y la contaminación en
+            las áreas de extracción.
+\end{enumerate}
+
+\subsection*{Avances Futuristas}
+
+La investigación en materiales renovables continúa abriendo nuevas
+posibilidades:
+
+\begin{itemize}
+      \item Paneles solares transparentes: Diseñados para funcionar como ventanas, estos
+            paneles aprovechan espacios adicionales en edificios para generar energía.
+
+      \item Materiales híbridos: Combinan ligereza y resistencia para mejorar el
+            rendimiento y la durabilidad de turbinas eólicas.
+
+      \item Reciclaje avanzado: Se están explorando métodos más eficientes para recuperar
+            componentes valiosos de dispositivos obsoletos, disminuyendo los desechos y
+            promoviendo una economía circular.
+\end{itemize}
+
+\section{Desafíos y limitaciones}
+
+A pesar A pesar de los grandes avances en el desarrollo y uso de materiales
+para energías renovables, todavía existen desafíos importantes que limitan su
+implementación masiva y sostenible. Estos obstáculos no solo están relacionados
+con los costos y la tecnología, sino también con aspectos como el impacto
+ambiental, la disponibilidad de recursos y la falta de infraestructura adecuada
+para el reciclaje y la producción en masa.
+
+\subsection*{Altos costos}
+
+El costo elevado de materiales avanzados como el grafeno, las perovskitas y
+ciertos compuestos utilizados en baterías de litio es uno de los principales
+impedimentos. Aunque estos materiales ofrecen un rendimiento excepcional, sus
+procesos de fabricación son complejos y demandan alta inversión.
+
+\begin{itemize}
+      \item Baterías de litio: Los costos del litio y el cobalto siguen siendo altos debido
+            a la creciente demanda global, dificultando la producción de sistemas de
+            almacenamiento accesibles para el público
+            general~(\cite{Ebhota_Jen2019})~(\cite{Uyor2021}).
+
+      \item Grafeno y perovskitas: Aunque son materiales prometedores, su manufactura
+            requiere tecnologías especializadas que todavía no están optimizadas para
+            producción masiva~(\cite{Henriksson2021}).
+\end{itemize}
+
+\subsection*{Reciclabilidad limitada}
+
+La dificultad para reciclar algunos materiales es otro desafío importante.
+
+\begin{itemize}
+      \item Aspas de turbinas eólicas: Fabricadas principalmente de fibra de vidrio o
+            carbono, estas estructuras son difíciles de desmantelar y reciclar debido a su
+            tamaño y composición. Muchas terminan en vertederos, aumentando la presión
+            ambiental~(\cite{Henriksson2021}).
+
+      \item Baterías de litio: Aunque existen métodos para recuperar materiales valiosos
+            como el litio, el reciclaje a gran escala sigue siendo caro y poco eficiente.
+            Esto genera desechos peligrosos y desperdicia recursos valiosos, aumentando la
+            huella ambiental de estas tecnologías~(\cite{Galembeck2019}).
+\end{itemize}
+
+\subsection*{Impacto ambiental}
+
+A pesar de ser más limpias que las tecnologías basadas en combustibles fósiles,
+la producción de materiales para energías renovables también tiene
+consecuencias ambientales.
+
+\begin{itemize}
+      \item Extracción de litio: Este proceso consume grandes cantidades de agua y puede
+            causar contaminación local. En regiones como el Salar de Uyuni en Bolivia, se
+            han reportado problemas significativos debido a la actividad
+            minera~(\cite{Leanez2022}).
+
+      \item Producción de paneles solares: La fabricación de celdas solares de silicio
+            requiere altos niveles de energía, lo que puede contradecir parcialmente los
+            objetivos de sostenibilidad. Aunque su uso compensa las emisiones iniciales, el
+            impacto de su producción aún es
+            considerable~(\cite{Saleh_Hassan2024})~(\cite{Yhaya2018}).
+\end{itemize}
+
+\subsection*{Disponibilidad de recursos}
+
+La concentración geográfica de ciertos materiales críticos plantea desafíos
+tanto técnicos como geopolíticos.
+
+\begin{itemize}
+      \item Minerales críticos: Recursos como el litio, el cobalto y las tierras raras
+            están concentrados en unas pocas regiones del mundo, como América del Sur y
+            África. Esto genera dependencia de suministros limitados y crea tensiones
+            políticas y económicas entre los países productores y
+            consumidores~(\cite{Leader_Gaustad2019a})~(\cite{Robinson2023}).
+
+      \item Sostenibilidad a largo plazo: A medida que la demanda aumenta, surgen
+            preocupaciones sobre la disponibilidad futura de estos recursos y los posibles
+            conflictos relacionados con su extracción y
+            distribución~(\cite{Henriksson2021}).
+\end{itemize}
+
+\subsection{Falta de infraestructura}
+
+La ausencia de infraestructura adecuada para fabricar y reciclar materiales
+renovables es una barrera significativa, especialmente en países en desarrollo.
+
+\begin{itemize}
+      \item Fábricas y reciclaje: Aunque tecnologías como los paneles solares y las
+            turbinas eólicas han avanzado, muchas regiones carecen de instalaciones capaces
+            de producir o reciclar estos materiales de manera eficiente~(\cite{Abera2023}).
+
+      \item Desigualdad en la adopción: En países en desarrollo, donde las energías limpias
+            podrían tener un impacto transformador, la falta de tecnología y recursos
+            económicos limita su implementación~(\cite{ColinLuna_deLeoWinkler_nd}).
+\end{itemize}
+
+\subsection*{Avances para mitigar desafíos }
+
+A pesar de estas limitaciones, se están logrando avances significativos para
+abordar los problemas asociados:
+
+\begin{enumerate}
+      \item Reducción del impacto ambiental: Algunas empresas han comenzado a usar energías
+            renovables en la fabricación de paneles solares, disminuyendo
+            significativamente las emisiones asociadas con su
+            producción~(\cite{Kubik2020}).
+
+      \item Extracción de litio más limpia: Se están desarrollando métodos de extracción
+            más eficientes que requieren menos agua y generan menos
+            desechos~(\cite{Leanez2022}).
+
+      \item Tecnologías de reciclaje: Innovaciones en el reciclaje de aspas y baterías
+            prometen reducir el impacto ambiental y maximizar el aprovechamiento de
+            recursos~(\cite{Ebhota_Jen2019}).
+\end{enumerate}
+
+\section{Conclusiones}
+
+Los materiales para energías renovables representan uno de los pilares más
+importantes en la transición hacia un modelo energético sostenible. Desde los
+paneles solares hasta las turbinas eólicas y las baterías avanzadas, estos
+materiales han permitido que las tecnologías limpias sean cada vez más
+eficientes y accesibles. A lo largo del artículo, se ha mostrado cómo
+propiedades como la resistencia, la ligereza, la reciclabilidad y la
+conductividad han sido clave para su desarrollo y éxito en diversas
+aplicaciones.
+
+Los materiales para energías renovables no solo han transformado la forma en
+que generamos y almacenamos energía, sino que también han abierto la puerta a
+nuevas posibilidades para combatir el cambio climático y reducir nuestra
+dependencia de los combustibles fósiles. Resolver los desafíos actuales será
+clave para asegurar que estas tecnologías puedan expandirse de manera
+sostenible, llegando a más personas y regiones en todo el mundo. A medida que
+la investigación continúe avanzando y las tecnologías se vuelvan más
+accesibles, es probable que los materiales renovables desempeñen un papel aún
+más destacado en la construcción de un futuro energético más limpio y
+sostenible.
+
+\newpage
+
+\printbibliography
+
+\end{document}
