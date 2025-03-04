@@ -1,0 +1,347 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+% \usepackage{newtxtext}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{multirow}
+
+% \usepackage{hyperref}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[style=apa, maxnames=6, minnames=3, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+      \centering
+      \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+      \vspace{1cm}
+
+      {\scshape\Large Seminario de Investigación \par}
+      \vspace{1cm}
+
+      \slshape {\Large \bfseries{}Brechas laborales de los jóvenes en Cartagena: Un análisis de las causas y los impactos \\}
+      \vspace{3cm}
+
+      \slshape {\itshape{} Valentina Daniela Del Rio Jimenez \\}
+      \slshape {\itshape{} Maria Celeste Espinoza Lopez \\}
+      \slshape {\itshape{} Alanys Marin Frias \\}
+      \slshape {\itshape{} Daymareth Amaya Cantillo \\}
+      
+      \vfill
+      Revisado Por \\
+      Katty Johanna Gomez Acevedo \\
+      {\large \today\par}
+\end{titlepage}
+
+\nocite{*}
+
+% chktex-file 1 
+% chktex-file 6
+% chktex-file 8
+% chktex-file 24
+% chktex-file 44
+
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Formulación de la idea de investigación}
+
+El desempleo de los jóvenes en la Cartagena-Colombia se viene dando 
+desde hace años debido a problemas estructurales que afectan directamente
+al desarrollo económico de la ciudad. Tomando a la parte de la población 
+con grupo etario entre los 15 y 28 años se evidencian las disparidades de 
+la inserción laboral, dado por factores como la inexperiencia, las diferencias entre la oferta y demanda en el mercado laboral, etc. 
+Adicionalmente, este problema perpetúa los ciclos de pobreza en Cartagena. 
+
+Por tanto, la idea inicial de esta investigación es analizar las brechas
+laborales que perjudican directamente a los jóvenes cartageneros, al 
+comprender las causas del contexto y sus efectos económicos. Con el fin de 
+identificar estrategias que potencialmente ayuden a mitigar estas 
+desigualdades y fomenten la inclusión de los jóvenes en el mercado laboral. 
+
+\section{Planteamiento del problema}
+
+Cartagena es una de las ciudades más desiguales del país socialmente 
+hablando, y esto se ve reflejado en su mercado laboral. Los jóvenes se 
+enfrentan con el desafío de tasas de desocupación significativamente más
+altas en comparación con el resto de la población, que van aumentando 
+incluso cada vez más paulatinamente.  
+
+En el año 2014, la tasa de desempleo juvenil en Cartagena se sitúa 
+en $17,2\%$. En Cartagena en promedio para el 2014, había 754 mil 
+personas en edad de trabajar, de los cuales 417 mil estaban ocupadas 
+($55\%$); a su vez la tasa de informalidad en la ciudad para este periodo 
+era de $54,2\%$, bajó $1.3$ puntos porcentuales; es decir que en 
+Cartagena solo el $29.4\%$ de la población en edad de trabajar se 
+desempeñó en un empleo formal, lo que equivale a 222 mil personas 
+aproximadamente, según datos del DANE.
+
+Según la Gran Encuesta Integrada de Hogares (corresponde al promedio anual)
+del DANE la tasa de desempleo 2014 de jóvenes entre los 14 y 28 años
+Cartagena cuenta con (17,2\%).
+
+2022-2023 la tasa de desempleo en Cartagena solo bajó $0,3$ puntos 
+porcentuales (p.p.), siendo una reducción sustancialmente menor a la del 
+resto de las 13 áreas (13 áreas sin Cartagena), donde la disminución fue de
+$1,3$ p.p. A pesar de lo anterior, la tasa de desempleo de Cartagena fue de
+$11,1\%$ en el primer trimestre del año, ubicándose por debajo de la del
+resto de las 13 áreas ($12,2\%$). 
+
+% TODO: Image1
+
+La disminución en la cantidad de ocupados del último año afectó a los
+informales, (los formales si tuvieron un aumento en el empleo) y fue más 
+notoria entre las mujeres y entre los jóvenes. Lo anterior se da en contravía
+de lo sucedido en el promedio de las otras áreas metropolitanas, donde se 
+observa un aumento en los ocupados, jalonado por las mujeres y donde los 
+jóvenes también muestran recuperación.
+
+% TODO: Image2
+
+% TODO: Image3
+
+En Cartagena, la tasa de desempleo de las personas entre 15 y 28 años subió
+$1,3$ p.p. entre el primer trimestre de 2022 y el primero de 2023, siendo uno 
+de los tres incrementos más altos entre las 13 áreas metropolitanas. Con 
+ello, en el primer trimestre 2023, la tasa de desempleo joven en Cartagena 
+fue de $20,5\%$, ubicándose por encima de la tasa promedio de las otras 
+áreas, para este grupo de edad ($18,9\%$) y muy por encima de la tasa 
+calculada para los mayores de 29 años en esta misma ciudad ($8,4\%$), 
+situación que es común en todas las ciudades, ya que los jóvenes son en 
+general la franja estaría más afectada por el desempleo, mostrando tasas de 
+desempleo persistente y sensiblemente más altas que las de las otras franjas.
+En septiembre del 2023 la tasa de desempleo en Cartagena tuvo un leve 
+crecimiento y se situó en $10,5\%$, $0,1\%$ más alta que en igual mes de 2022
+$(10,4\%)$, pero comparada con igual indicador nacional, que fue del $9,3\%$,
+la diferencia es de $1,2\%$.
+
+El dato más preocupante es que entre los jóvenes (15 a 28 años) de esta 
+capital, la tasa de desempleo creció $1,4\%$, al pasar de $17,3\%$ en 
+septiembre del año pasado a $18,7\%$ en igual mes de este año, según reporte
+del mercado laboral revelado recientemente por el DANE. 
+
+% TODO: Image4
+
+% TODO: Image5
+
+En Cartagena la Tasa General de Participación a septiembre fue del $66,4\%$ 
+y la tasa de ocupación del $59,5\%$. Las personas ocupadas en la ciudad son
+430 mil y las desocupadas 50 mil. 
+
+2023-2024: En el último año, (entre el primer trimestre de 2023 y el primero
+de 2024) la tasa de desempleo de Cartagena subió $2,6$ puntos porcentuales,
+para ubicarse en $13,7\%$. Este aumento, que fue el 2do más fuerte entre las
+áreas metropolitanas, se produjo más por un incremento en la fuerza laboral
+que por una pérdida fuerte de empleos, ya que la misma fue de solo un $1$\%.
+Pese a que la caída no fue grande, la misma se suma a las anteriores y con 
+ello Cartagena se aleja de alcanzar sus niveles de empleo precrisis (primer
+trimestre de 2020), mientras que las otras áreas ya lo hicieron. La 
+disminución en la cantidad de ocupados del último año afectó a los informales 
+y se concentró en los hombres y en la población joven. Por su parte, los 
+formales, las mujeres y los mayores de 29 años presentaron aumentos en sus 
+niveles de empleo. Por otro lado, al comparar con los niveles precrisis, las 
+mujeres y los jóvenes son los que muestran más rezago en la recuperación.
+
+En Cartagena, la tasa de desempleo de las personas entre 15 y 28 años fue de
+$26,5\%$ en el primer trimestre 2024, siendo la segunda tasa más alta entre
+los jóvenes a nivel metropolitano, después de la de Cúcuta. Esta tasa, se 
+ubica muy por encima de la tasa calculada para los mayores de 29 años en esta
+misma ciudad ($10,2\%$), situación que es común en todas las ciudades, ya que
+los jóvenes son en general la franja etaria más afectada por el 
+desempleo, mostrando tasas de desempleo persistente y sensiblemente más altas 
+que las de las otras franjas. (Gráfico 8) Además del alto nivel, se tiene que 
+en el último año (entre el primer trimestre de 2023 y el primero de 2024), la 
+tasa de desempleo de las personas jóvenes de Cartagena subió 6,0 p.p., siendo 
+el incremento más alto entre las 13 áreas metropolitanas. Como referencia, se 
+tiene que la tasa de los jóvenes en el resto de las 13 áreas subió en $1,0$ 
+p.p. (para quedar en $19,9\%$) y que la tasa de los cartageneros mayores 
+de 29 años también aumentó, pero solo en $1,8$ p.p.
+
+El desempleo entre los jóvenes es un problema grave que impacta el desarrollo 
+económico y social de numerosas ciudades. Existen diversos factores 
+interrelacionados que explican su origen, tales como el crecimiento de la 
+población, la escasez de oportunidades laborales y las dificultades en la educación y formación profesional.
+
+Uno de los principales factores del desempleo juvenil es el rápido incremento
+de la población joven. Cuando una ciudad experimenta un crecimiento 
+significativo en poco tiempo, el mercado laboral enfrenta presión, ya 
+que no puede integrar a toda la nueva fuerza laboral. Esto se agrava 
+cuando los sectores productivos carecen del impulso necesario para 
+generar suficientes empleos en relación con el aumento de la población activa.
+
+Otro aspecto importante es la desconexión entre el sistema educativo y las demandas 
+reales del mercado laboral. Muchos jóvenes no pueden encontrar empleo porque su 
+formación y habilidades no se alinean con lo que buscan las empresas. Esto puede 
+ocurrir porque los programas formativos no están actualizados o porque no se han 
+implementado suficientes iniciativas para conectar a los jóvenes con experiencias 
+laborales desde una edad temprana. Como resultado, la falta de experiencia y 
+habilidades específicas se convierte en una barrera para acceder al mercado laboral formal. 
+
+Al cuestionarse las principales causas de las brechas laborales de los jóvenes en 
+Cartagena, algunos de los factores que causan el desempleo juvenil son: 
+
+\begin{enumerate}
+      \item La falta de experiencia laboral previa que suelen exigir las empresas, sin contar a aquellos quienes buscan su primer empleo.
+      
+      \item Las diferentes habilidades que ofertan los jóvenes desde el aspecto profesional hasta el personal, no van alineadas con las demandas del mercado laboral.
+      
+      \item La mayoría de los jóvenes trabajan en condiciones informales. 
+\end{enumerate}
+
+Lo cual demuestra que la situación no solo tiene un gran impacto en los jóvenes, sino 
+que también podría tener repercusiones negativas para distintos ámbitos de la ciudad. 
+
+\subsection{Objetivo general}
+
+Comprender las diferentes y principales variables socioeconómicas que impactan las 
+brechas laborales para los jóvenes cartageneros.
+
+\subsection{Objetivos especificos}
+
+\begin{itemize}
+      \item Identificar las barreras que estructuralmente desafían la inserción 
+      laboral de los jóvenes. 
+      
+      \item Interpretar las fluctuaciones en el comportamiento de la tasa de 
+      desempleo en los jóvenes de Cartagena durante el periodo de los últimos diez años. 
+
+      \item Reconocer la relación que tienen la academia local y las políticas 
+      públicas con el empleo juvenil. 
+
+      \item Brindar potencialmente estrategias efectivas para reducir las brechas 
+      laborales, y por el contrario incentivar la creación de empleo para los jóvenes.  
+\end{itemize}
+
+\section{Justificación del tema}
+
+Conocer los antecedentes y las implicaciones es relevante, teniendo en cuenta 
+que los jóvenes son una parte representativa de la población activa y la 
+exclusión laboral de los mismos solamente agrava más el crecimiento 
+económico de la ciudad, ralentizándolo y perpetuando los ciclos de pobreza 
+intergeneracionales. 
+
+En contextos de pobreza, la situación se agrava aún más. Las familias con menos 
+recursos enfrentan dificultades para costear estudios superiores o cursos de 
+especialización, lo que limita las oportunidades de los jóvenes para acceder 
+a trabajos mejor remunerados. Muchas veces, la necesidad económica lleva a 
+los jóvenes a aceptar empleos informales o de baja calidad, perpetuando 
+un ciclo de precariedad y limitando su desarrollo profesional a largo plazo.
+
+Las repercusiones del desempleo juvenil no solo afectan a quienes 
+lo sufren, sino también a su entorno social y económico. La falta de 
+empleo genera frustración y desmotivación, lo que puede derivar en problemas 
+de salud mental, debilitar las relaciones familiares y disminuir la 
+participación comunitaria. Desde una perspectiva económica, una alta 
+tasa de desempleo juvenil implica menos capacidad de consumo y 
+productividad, lo que impacta negativamente el crecimiento de la región.
+
+Los efectos de este desempleo juvenil son diversas y preocupantes:
+
+\begin{itemize}
+      \item Aumento de la informalidad y el subempleo, frente a la escasez de 
+      oportunidades formales, muchos jóvenes optan por trabajos informales 
+      o subempleos, lo que perpetúa la precariedad laboral.
+
+      \item Exposición a la vulnerabilidad social, la falta de empleo 
+      estable pone a los jóvenes en situaciones de riesgo, como la 
+      delincuencia o la violencia doméstica.
+
+      \item Efecto en la economía local, la inexistencia de participación 
+      de los jóvenes en el mercado laboral limita el crecimiento 
+      económico y la innovación en la ciudad.
+\end{itemize}
+
+Por otro lado, en el último trienio los sectores que más empleo han generado en las 
+13 áreas analizadas son las actividades profesionales y administrativas las cuales 
+generaron 290.000 trabajos, dando como resultado un $31\%$ de crecimiento, la 
+administración pública, educación y salud un aumento de 193.000, $14,8\%$ de 
+empleo y el comercio 180.000, $9,1\%$. En contraste, la industria, la 
+construcción y las actividades inmobiliarias aún no alcanzan niveles 
+prepandemia, con una deuda de 141.000 puestos de trabajo, según los estudios del DANE. 
+
+% TODO: Table1
+
+Por lo cual, se deben diseñar e implementar políticas públicas y programas que no 
+únicamente mejoren la empleabilidad de los jóvenes, sino que también fortalezca 
+la economía de Cartagena.  
+
+De manera que, esta investigación beneficiaria a los jóvenes, tanto como 
+a las entes públicos y privados con intereses en la inserción laboral. Además, 
+quienes busquen generar conciencia sobre la importancia de planes de 
+acción eficientes y equitativos como actores clave para sobrellevar 
+esta problemática.
+
+\subsection{Viabilidad del estudio}
+
+\begin{itemize}
+      \item Recursos disponibles:
+            \begin{itemize}
+                  \item Tiempo disponible para realizar trabajo y compartir 
+                  información bibliográfica o literatura relevante. 
+
+                  \item Base de datos de estadísticas oficiales como Departamento 
+                  Administrativo Nacional de Estadística (DANE) y su Gran Encuesta 
+                  Integrada de Hogares (GEIH). 
+
+                  \item Uso de software como Excel para procesar e interpretar
+                  datos cuantitativos. 
+            \end{itemize}
+
+      \item Accesibilidad a datos:
+            La información necesaria para llevar a cabo esta investigación puede 
+            recolectarse de fuentes como informes o fichas técnicas oficiales. Así 
+            como también, investigaciones anteriormente realizadas con respecto 
+            al tema a abordar.  
+      
+      \item Limitaciones:
+            \begin{itemize}
+                  \item Información limitada con respecto el problema teniendo en 
+                  cuenta el sector empresarial y la calidad de compartirla públicamente. 
+
+                  \item Sesgos sobre los estratos socioeconómicos de los 
+                  jóvenes cartageneros. 
+            \end{itemize}
+\end{itemize}
+
+\newpage
+\printbibliography{}
+
+\end{document}
