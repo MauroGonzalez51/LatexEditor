@@ -1,0 +1,689 @@
+\documentclass[letterpaper, 11pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{xurl}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\usepackage[style=apa, maxnames=6, minnames=3]{biblatex}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+      andothers = {\em et\addabbrvspace al\adddot}
+}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+
+\setlength{\parskip}{\baselineskip}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\renewcommand{\comment}[1]{{\small $\ll$#1$\gg$}}
+
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+% chktex-file 8
+% chktex-file 24
+% chktex-file 44
+
+\begin{document}
+
+\begin{titlepage}
+      \centering
+      \includegraphics[width=0.3\textwidth]{Images/logo_utb.png}\par\vspace{1cm}
+      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+      \vspace{1cm}
+
+      {\scshape\Large Formulación y Evaluación de Proyectos \par}
+      \vspace{1cm}
+
+      \slshape {\Large \bfseries{} Avance Proyecto \\}
+      \vspace{2cm}
+
+      \slshape {\itshape{} Valentina Daniela Del Rio Jimenez, T00081360 \\}
+      \slshape {\itshape{} Mauro Alonso Gonzalez Figueroa, T00067622 \\}
+      \slshape {\itshape{} Juan Jose Jimenez Guardo, T000 \\}
+      \slshape {\itshape{} Jorge Alberto Rueda Salgado, T00068722 \\}
+      \slshape {\itshape{} Joseph Gutiérrez de Piñeres, T00078923  \\}
+      \slshape {\itshape{} Isaac Navarro, T00068237  \\}
+
+      \vfill
+      Revisado Por \\
+      Leinys Melgarejo Causado\\
+      {\large \today\par}
+\end{titlepage}
+
+\nocite{*}
+
+\tableofcontents{}
+\newpage
+
+% !--------------------------------------------------------------------------------------|>
+\section{Introducción}
+
+El acceso a alimentos a precios justos dentro de las instituciones educativas
+es un factor clave para el bienestar y el rendimiento académico de los
+estudiantes. En muchas universidades, los altos costos de los insumos
+alimenticios representan una carga económica significativa para la comunidad
+estudiantil, limitando sus opciones de alimentación y afectando su calidad de
+vida.
+
+Este documento presenta un análisis detallado sobre la problemática del alto
+costo de los insumos alimenticios en la universidad, identificando sus causas,
+actores clave involucrados y posibles estrategias de solución. A través de un
+enfoque estructurado, se evalúan diferentes alternativas para reducir los
+costos de los alimentos dentro del campus, garantizando su accesibilidad sin
+comprometer la calidad ni la sostenibilidad financiera de los proveedores.
+
+% !--------------------------------------------------------------------------------------|>
+\section{Descripción de la empresa}
+
+La presente propuesta se desarrolla en el contexto de la universidad, que
+funciona como el principal espacio de consumo de los insumos alimenticios
+analizados en este estudio. La institución cuenta con un sistema de
+concesionarios encargados de la venta de alimentos dentro del campus, los
+cuales operan bajo contratos de concesión regulados por la administración
+universitaria.
+
+La universidad tiene como misión ofrecer una educación integral, promoviendo el
+bienestar de su comunidad estudiantil a través de servicios complementarios
+como el acceso a alimentación dentro del campus. Su visión es consolidarse como
+una institución de referencia en la formación académica y en la generación de
+condiciones óptimas para el desarrollo de sus estudiantes.
+
+Actualmente, la estructura organizativa de la universidad está compuesta por
+distintos departamentos administrativos, entre los cuales se encuentra el área
+encargada de la regulación de concesionarios y servicios estudiantiles. Los
+proveedores de alimentos dentro del campus forman parte de un modelo de negocio
+basado en la venta directa a la comunidad estudiantil, con precios establecidos
+según acuerdos comerciales y políticas internas.
+
+El mercado objetivo de estos concesionarios está compuesto por estudiantes,
+docentes y personal administrativo, quienes diariamente adquieren productos
+dentro de las instalaciones. Sin embargo, la falta de regulación efectiva en
+los precios ha generado una problemática que impacta directamente en la
+economía de los estudiantes, afectando su acceso a una alimentación adecuada.
+
+Este estudio busca analizar esta situación y proponer estrategias para mejorar
+la accesibilidad de los alimentos en la universidad, sin afectar la
+sostenibilidad de los proveedores y garantizando condiciones justas para toda
+la comunidad universitaria.
+
+% !--------------------------------------------------------------------------------------|>
+\section{Análisis del Entorno}
+
+\subsection{Situaciones Problemáticas Identificadas}
+
+\begin{itemize}
+      \item Falta de iluminación en la vía Transversal 14, Turbaco.
+      \item Mala gestión de los recursos destinados a la salud.
+      \item Deterioro de la vía intermunicipal Turbaco-Cartagena.
+      \item Tarifa excesiva en los precios de los insumos alimenticios vendidos por la
+            Universidad.
+      \item Reacción tardía de los Servicios de Emergencia en Turbaco.
+\end{itemize}
+
+\subsection{Priorización del Problema}
+
+\begin{longtable}{|p{.2\linewidth}|p{.2\linewidth}|p{.2\linewidth}|p{.2\linewidth}|p{.1\linewidth}|}
+      \caption{Análisis de problemáticas en Turbaco}                                                                                                                                                                      \\
+      \hline
+      \textbf{Problemáticas}                                                       & \textbf{Positivo (+)}                                                     & \textbf{Negativo (-)} & \textbf{Interesante (?)} & Total \\
+      \hline
+      \endfirsthead
+
+      \hline
+      \textbf{Problemáticas}                                                       & \textbf{Positivo (+)}                                                     & \textbf{Negativo (-)} & \textbf{Interesante (?)} & Total \\
+      \hline
+      \endhead
+
+      \hline
+      \endfoot
+
+      \hline
+      \endlastfoot
+
+      Falta de iluminación en la vía Transversal 14, Turbaco                       & Mejora la seguridad
+      reduciendo delitos nocturnos. Disminuye la tasa de accidentes de tránsito.
+      Aumenta la calidad de vida de los habitantes.                                & Costos elevados de
+      infraestructura y mantenimiento. Requiere permisos y aprobación de entidades
+      gubernamentales. Posible vandalismo de luminarias recién instaladas.         & La
+      iluminación puede incentivar el comercio nocturno. Puede influir en la
+      plusvalía de las viviendas cercanas.                                         & $3 - 3 + 2 = 2$                                                                                                                      \\ \hline
+
+      Mala gestión de los recursos destinados a la salud                           & Asegura mejor atención
+      médica para la población. Optimiza el uso del presupuesto público. Reduce
+      corrupción y mala administración en salud.                                   & Problema complejo que requiere
+      reformas estructurales. Dificultades para obtener información transparente.
+      Resistencia de actores con intereses en la mala gestión.                     & Puede generar
+      presión social y movilización ciudadana. Comparaciones con otros municipios
+      pueden ayudar a evidenciar el problema.                                      & $3 - 3 + 2 = 2$                                                                                                                      \\ \hline
+
+      Deterioro de la vía intermunicipal Turbaco-Cartagena                         & Mejora la movilidad y
+      reduce tiempos de desplazamiento. Disminuye costos en mantenimiento de
+      vehículos. Beneficia la economía local y el turismo.                         & Costos elevados de
+      reparación y mantenimiento. Requiere planificación de cierres viales, afectando
+      la movilidad. Posibles demoras en ejecución de obras por burocracia o
+      corrupción.                                                                  & Puede atraer inversión privada para su financiamiento. Aumenta el
+      atractivo de Turbaco como zona residencial.                                  & $3 - 3 + 2 = 2$                                                                                                                      \\ \hline
+
+      Tarifa excesiva en los precios de los insumos alimenticios vendidos por la
+      Universidad                                                                  & Alivia la carga económica de los estudiantes. Puede fomentar
+      hábitos alimenticios más saludables. Aumenta la satisfacción estudiantil y el
+      rendimiento académico.                                                       & Resistencia de concesionarios y proveedores a reducir
+      precios. Problema influenciado por la inflación y costos de importación.
+      Difícil intervención directa de la universidad sin afectar contratos vigentes.
+                                                                                   & Las universidades con precios justos tienen mejor percepción estudiantil.
+      Puede promover la competencia con opciones externas más económicas. Posible
+      implementación de subsidios o descuentos para estudiantes de bajos recursos. &
+      $3 - 3 + 3 = 3$                                                                                                                                                                                                     \\ \hline
+
+      Reacción tardía de los Servicios de Emergencia en Turbaco                    & Reduce muertes y
+      complicaciones médicas. Genera confianza en el sistema de salud. Mejora la
+      eficiencia operativa de ambulancias y hospitales.                            & Necesidad de más
+      ambulancias y personal capacitado. Problemas logísticos como vías
+      congestionadas o en mal estado. Posible falta de presupuesto para mejorar los
+      tiempos de respuesta.                                                        & La tecnología (apps de emergencia, GPS) puede optimizar
+      la respuesta. Colaboración con voluntarios o bomberos podría mejorar la
+      cobertura.                                                                   & $3 - 3 + 2 = 2$                                                                                                                      \\
+\end{longtable}
+
+Se ha determinado que la problemática prioritaria es el alto costo de los
+insumos alimenticios dentro de la universidad. Este problema impacta
+directamente la economía de los estudiantes y su acceso a una alimentación
+adecuada, lo que puede repercutir en su bienestar y rendimiento académico.
+
+\subsection{Identificación de Actores Clave}
+
+\begin{itemize}
+      \item  Administración Universitaria: Responsable de la concesión y regulación de los
+            servicios de cafetería y venta de alimentos.
+      \item  Proveedores y concesionarios de alimentos: Encargados de la compra,
+            distribución y comercialización de los insumos alimenticios dentro de la
+            universidad.
+      \item  Estudiantes y comunidad universitaria: Afectados directos por los altos costos
+            de los alimentos.
+      \item  Organismos de control y defensa del consumidor: Entidades que pueden intervenir
+            en la regulación de precios y calidad de los productos.
+      \item  Gobierno y sector privado: Posibles aliados en la implementación de subsidios o
+\end{itemize}
+
+\subsection{Análisis del Problema y Objetivos}
+
+\subsubsection{Árbol del Problema}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.8\linewidth]{./Images/arbol_problema.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+\subsubsection{Árbol de Objetivos}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.8\linewidth]{./Images/arbol_objetivo.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+% !--------------------------------------------------------------------------------------|>
+\section{Evaluación de Alternativas de Solución}
+
+\subsection{Regulación de precios}
+
+\begin{itemize}
+      \item Implementación gradual: Establecer un periodo de ajuste para que los
+            proveedores se adapten al nuevo régimen de precios.
+
+      \item Monitoreo continuo: Implementar un sistema automatizado para verificar los
+            precios regularmente y ajustar según sea necesario.
+
+      \item Incentivos fiscales: Ofrecer incentivos fiscales a los proveedores que cumplan
+            con los precios establecidos.
+\end{itemize}
+
+\subsection{Educación y transparencia}
+
+Crear campañas educativas para estudiantes y proveedores sobre los beneficios
+de precios regulados para la comunidad universitaria.
+
+\subsection{Flexibilidad en condiciones}
+
+Permitir cierta flexibilidad en los precios para productos estacionales o
+sujetos a fluctuaciones de mercado.
+
+\subsection{Fomento de la competencia}
+
+\begin{itemize}
+      \item \textbf{Talleres y capacitaciones}: Ofrecer capacitaciones y talleres para nuevos
+            concesionarios interesados en participar en licitaciones.
+      \item \textbf{Acceso a información}: Publicar detalles sobre las licitaciones de manera
+            accesible y transparente.
+      \item \textbf{Evaluación objetiva}: Establecer criterios claros y objetivos para evaluar
+            propuestas de nuevos concesionarios.
+      \item \textbf{Periodicidad en licitaciones}: Realizar licitaciones periódicas para mantener un
+            mercado dinámico.
+      \item \textbf{Apoyo logístico}: Facilitar el acceso a infraestructura y recursos necesarios
+            para nuevos entrantes.
+
+\end{itemize}
+
+\subsection{Creación de un comedor subsidiado}
+
+\begin{itemize}
+      \item \textbf{Estudios de mercado}: Realizar estudios de mercado para determinar la demanda y
+            preferencias alimentarias de los estudiantes.
+      \item \textbf{Alianzas estratégicas}: Colaborar con entidades gubernamentales y privadas para
+            asegurar financiamiento sostenible.
+      \item \textbf{Programas de becas alimenticias}: Establecer programas de becas para estudiantes
+            en necesidad extrema.
+      \item \textbf{Monitoreo de calidad}: Implementar controles estrictos de calidad en los
+            alimentos ofrecidos.
+      \item \textbf{Sostenibilidad financiera}: Desarrollar modelos financieros que garanticen la
+            viabilidad a largo plazo del comedor subsidiado.
+
+\end{itemize}
+
+\subsection{Convenios con proveedores locales}
+
+\begin{itemize}
+      \item \textbf{Reducción de intermediarios}: Facilitar acuerdos directos entre la universidad y los proveedores locales.
+      \item \textbf{Transporte eficiente}: Optimizar rutas de transporte para minimizar costos logísticos.
+      \item \textbf{Certificación de productos}: Establecer estándares de calidad y certificación para los productos locales.
+      \item \textbf{Promoción de productos locales}: Realizar campañas para promover la compra de productos locales entre la comunidad universitaria.
+      \item \textbf{Flexibilidad en contratos}: Ofrecer contratos flexibles que se ajusten a las necesidades cambiantes de los proveedores locales.
+\end{itemize}
+
+\subsection{Control y auditoría}
+
+\begin{itemize}
+      \item  \textbf{Auditorías independientes}: Contratar firmas de auditoría externas para realizar
+            evaluaciones periódicas.
+      \item  \textbf{Feedback de usuarios}: Implementar sistemas de retroalimentación para
+            estudiantes sobre la calidad y precios de los alimentos.
+      \item  \textbf{Transparencia total}: Publicar resultados de auditorías de manera accesible para
+            la comunidad universitaria.
+      \item  \textbf{Sanciones por incumplimiento}: Establecer medidas correctivas y sanciones claras
+            para proveedores que no cumplan con los estándares establecidos.
+      \item  \textbf{Capacitación en cumplimiento}: Ofrecer capacitaciones regulares a los
+            proveedores sobre las políticas de control y auditoría.
+\end{itemize}
+
+% !--------------------------------------------------------------------------------------|>
+\section{Plan de Implementación}
+
+Para asegurar el éxito de la estrategia elegida, se plantea el siguiente plan
+de acción:
+
+\begin{enumerate}
+      \item \textbf{Diagnóstico inicial} (0$-$3 meses):
+            \begin{itemize}
+                  \item Realización de un estudio de costos y precios actuales en las cafeterías del
+                        campus.
+                  \item Identificación de proveedores y sus márgenes de ganancia.
+                  \item Encuesta a estudiantes sobre su gasto en alimentación y nivel de satisfacción.
+            \end{itemize}
+
+      \item \textbf{Definición de políticas y alianzas} (4$-$6 meses):
+            \begin{itemize}
+                  \item Elaboración de una propuesta de regulación de precios y concesionarios.
+                  \item Búsqueda de socios estratégicos para la implementación del comedor subsidiado.
+                  \item Firma de acuerdos con proveedores locales para reducir costos.
+            \end{itemize}
+
+      \item \textbf{Ejecución de estrategias} (7$-$12 meses):
+            \begin{itemize}
+                  \item Aplicación de la regulación de precios en la universidad.
+                  \item Inicio de operaciones del comedor subsidiado con tarifas diferenciadas.
+                  \item Evaluación del impacto en el bienestar de los estudiantes.
+
+            \end{itemize}
+
+      \item \textbf{Monitoreo y ajustes} (12+ meses):
+
+            \begin{itemize}
+                  \item Revisión periódica de la efectividad de las medidas implementadas.
+                  \item Ajuste de estrategias en función de los resultados obtenidos.
+            \end{itemize}
+\end{enumerate}
+
+\subsection{Matriz Marco Lógico}
+
+\begin{longtable}{|p{.2\linewidth}|p{.2\linewidth}|p{.3\linewidth}|p{.2\linewidth}|}
+      \caption{Matrix Marco Logico}                                                                                                                                                                                   \\
+      \hline
+      \textbf{Elemento}                                                           & \textbf{Indicadores}                                                      & \textbf{Fuentes de Verificación} & \textbf{Supuestos} \\
+      \hline
+      \endfirsthead
+
+      \hline
+      \textbf{Elemento}                                                           & \textbf{Indicadores}                                                      & \textbf{Fuentes de Verificación} & \textbf{Supuestos} \\
+      \hline
+      \endhead
+
+      \hline
+      \endfoot
+
+      \hline
+      \endlastfoot
+
+      Fin                                                                         & Mejora del bienestar estudiantil mediante el acceso a alimentos a precios
+      justos.                                                                     & Encuestas de satisfacción estudiantil, informes académicos.               & Apoyo
+      institucional y gubernamental.                                                                                                                                                                                  \\\hline
+
+      Propósito                                                                   & Reducción del costo de los insumos alimenticios dentro del campus
+      universitario.                                                              & Comparación de precios antes y después de la implementación de
+      Componentesestrategias.                                                     & Disposición de proveedores y concesionarios a
+      negociar precios.                                                                                                                                                                                               \\\hline
+
+      Componentes                                                                 & Regulación de precios. Fomento de la competencia entre
+      concesionarios. Creación de un comedor subsidiado. Establecimiento de convenios
+      con proveedores locales. Implementación de auditorías y control de precios. &
+      Acuerdos firmados con proveedores. Implementación de nuevas políticas de
+      concesión. Creación de un sistema de control y auditoría.                   &                                                                                                                                   \\\hline
+
+      Actividades                                                                 & Diagnóstico inicial sobre costos y precios. Búsqueda de aliados
+      estratégicos. Diseño e implementación de estrategias de reducción de costos.
+      Evaluación y monitoreo de los resultados.                                   & Informes de diagnóstico. Contratos
+      y acuerdos. Reportes de seguimiento.                                        & Cooperación entre la universidad y los
+      concesionarios.                                                                                                                                                                                                 \\\hline
+
+\end{longtable}
+
+\subsection{Conclusión}
+
+La reducción de los precios de los insumos alimenticios en la universidad es un
+problema de alto impacto para la comunidad estudiantil. Mediante estrategias
+como la regulación de precios, el fomento de la competencia y la creación de un
+comedor subsidiado es posible mejorar el acceso a una alimentación de calidad y
+reducir la carga económica sobre los estudiantes. La implementación de estas
+medidas requiere un esfuerzo coordinado entre la administración universitaria,
+proveedores y organismos de control, pero traerá beneficios significativos en
+la calidad de vida y el rendimiento académico de los estudiantes.
+
+\subsection{Matriz De Plan de Estudio}
+
+\begin{longtable}{|p{.2\linewidth}|p{.2\linewidth}|p{.3\linewidth}|p{.2\linewidth}|}
+      \caption{Matriz De Plan de Estudio}                                                                                                                                                                                  \\
+      \hline
+      \textbf{Actividad}                           & \textbf{Descripción}                                                        & \textbf{Encargados}                      & \textbf{Tiempo \hfil{} \break{}Determinado}  \\
+      \hline
+      \endfirsthead
+
+      \hline
+      \textbf{Actividad}                           & \textbf{Descripción}                                                        & \textbf{Encargados}                      & \textbf{Tiempo \hfil{} \break{} Determinado} \\
+      \hline
+      \endhead
+
+      \hline
+      \endfoot
+
+      \hline
+      \endlastfoot
+
+      1. Investigación de la situación alimentaria & Recolección de datos acerca de la
+      población estudiantil y sus necesidades      & Grupo de trabajo/grupo de proyecto                                          &
+      Una semana y media                                                                                                                                                                                                   \\\hline
+
+      2. Análisis de Oferta y Demanda              & Identificar los factores de la oferta alimentaria y cual es la demanda real & Encargados de Investigación              & Una semana                                   \\\hline
+
+      3. Identificar actores clave                 & Reconocimiento de instituciones, proveedores y posibles aliados             & Lider de grupo/líder del proyecto        & Cinco días                                   \\\hline
+
+      4. Diseño de propuesta alimentaria           & Definición de la solución (comedor, convenios, subsidios)                   & Equipo de diseño/grupo de diseño         & Una semana                                   \\\hline
+
+      5. Estudio Financiero Básico                 & Calcular costos, analizar fuentes de financiación y capital inicial         & Responsable financiero/Lider de proyecto & Dos semanas                                  \\hline
+
+      6. Desarrollo del plan operativo             & Planeación de logística, recursos, tiempos. Ubicación y gestión             & Todo el equipo                           & Una semana                                   \\\hline
+
+      7. Evaluación y ajustes                      & Retroalimentación sobre el proyecto y mejoras necesarias                    & Docente y Equipo                         & 3 días                                       \\\hline
+
+      8. Presentación final del proyecto           & Elaboración final del documento y presentación de resultados                & Todo el equipo                           & 3 días                                       \\\hline
+
+\end{longtable}
+
+\section{Datos Demográficos}
+
+Para el desarrollo del proyecto se ha elegido ubicación geográfica la ciudad
+Cartagena Bolívar específicamente en la Universidad Tecnológica de Bolívar, una
+institución de educación superior que acoge a estudiantes de diversos estratos
+socioeconómicos, provenientes principalmente de la región Caribe.
+
+\begin{enumerate}
+      \item Ciudad, Distrito: Cartagena de Indias, Bolívar.
+      \item Barrio: Ternera, Campus Lemaitre
+      \item Localidad: Localidad 3 - Industrial y de la Bahía.
+      \item Unidad Comunera: Unidad Comunera 13.
+      \item Código DANE:\@{} 13001
+      \item Zona: Urbana
+      \item Forma Área: Campus universitario cerrado.
+      \item Forma de Longitud: 10°24´59´´N
+      \item Coordenadas: 10.4165°N,75.5336°W
+\end{enumerate}
+
+\subsection{Información sobre el sector estudiado}
+
+El presente análisis se enfoca en el sector de servicios alimentarios dentro
+del entorno universitario, un ámbito caracterizado por una demanda específica y
+concentrada. La comunidad estudiantil requiere, primordialmente, opciones
+alimenticias de rápida preparación que se ajusten a presupuestos limitados y, a
+su vez, contribuyan a una dieta equilibrada y saludable. Este enfoque
+particular del sector subraya la importancia de la accesibilidad económica y
+nutricional como factores clave para satisfacer las necesidades de los
+usuarios.
+
+No obstante, se ha identificado una problemática significativa en este sector:
+la existencia de barreras que impiden o dificultan el acceso universal a una
+alimentación tanto económica como nutricionalmente adecuada para la comunidad
+universitaria. Esta situación genera un entorno desfavorable que trasciende la
+mera satisfacción de una necesidad básica, impactando directamente en aspectos
+fundamentales de la vida universitaria. La dificultad para acceder a opciones
+alimentarias saludables y asequibles puede deteriorar la calidad de vida de los
+estudiantes, influir negativamente en su rendimiento académico y contribuir a
+aumentar las desigualdades dentro del campus. Por lo tanto, este estudio se
+enmarca en la comprensión de los servicios de consumo esenciales dentro de las
+instituciones de educación superior, buscando analizar y comprender las
+dinámicas de un sector crucial para el bienestar y el desarrollo integral de la
+población universitaria.
+
+\subsection{Demanda}
+
+La comunidad universitaria presenta una alta demanda de servicios de
+alimentación accesibles, saludables y eficientes. Esta necesidad responde a
+condiciones como la carga académica, los horarios extensos y los recursos
+económicos limitados, especialmente en los estudiantes de estratos bajos.
+
+La demanda actual de servicios de alimentación por parte de la comunidad
+universitaria no está siendo satisfecha adecuadamente, lo que se refleja en el
+limitado uso de los servicios disponibles en el campus. Para responder a esta
+necesidad, la propuesta plantea soluciones como subsidios, convenios con
+entidades externas o la creación de un comedor universitario.
+
+\subsection{Oferta}
+
+La oferta actual dentro del campus universitario está compuesta por un conjunto
+de concesionarios privados que operan bajo contratos de concesión con la
+administración de la Universidad Tecnológica de Bolívar. Estos proveedores
+ofrecen servicios de alimentación básica, sin embargo, presentan limitaciones
+en cuanto a variedad de productos, precios competitivos y accesibilidad
+económica para todos los estudiantes.
+
+La oferta alimentaria actual en el campus universitario carece de opciones
+saludables, menús para dietas específicas y precios asequibles. La falta de
+regulación y competencia limita la mejora del servicio, y los estudiantes
+tienen poca influencia. El proyecto busca mejorar y diversificar esta oferta
+mediante un comedor subsidiado, acuerdos locales, incentivos por calidad y
+precio, y programas de alimentación saludable asequible.
+
+\subsection{Tendencia De Mercado}
+
+En el contexto universitario, se observa una tendencia creciente hacia la
+implementación de políticas de bienestar estudiantil enfocadas en garantizar el
+acceso a servicios básicos como la alimentación, la salud mental y el
+transporte. Esta tendencia responde a cambios socioeconómicos que afectan
+directamente la capacidad de los estudiantes para mantenerse en el sistema
+educativo, especialmente en sectores vulnerables.
+
+Los estudiantes, especialmente de estratos bajos y con largas jornadas
+académicas, demandan soluciones que les permitan permanecer en la universidad
+sin tener que abandonar sus estudios por razones económicas. Por eso, las
+instituciones están promoviendo estrategias alimentarias subsidiadas o
+autogestionadas (comedores, vales alimentarios, convenios con restaurantes),
+con un enfoque en la seguridad alimentaria y nutricional.
+
+Además, factores como la inflación, el desempleo juvenil y los desafíos de
+movilidad urbana también han influido en que los campus universitarios se
+conviertan en espacios que ofrecen soluciones integrales al bienestar de los
+estudiantes.
+
+\subsection{Estrategias de Mercado}
+
+La propuesta de valor del proyecto se basa en mejorar el acceso alimentario, a
+través de alternativas más asequibles, saludables y óptimas para los
+estudiantes universitarios. Dicha propuesta se alinea con una estrategia de
+posicionamiento institucional, que refuerza el compromiso de la Universidad
+Tecnológica De Bolívar con el bienestar de sus estudiantes.
+
+Ahora bien, para lograr este objetivo, se implementa una estrategia de mercado,
+la cual esta compuesta por los siguientes puntos clave:
+
+\begin{enumerate}
+      \item Diferenciación del servicio: \begin{itemize}
+                  \item Ofrecer un comedor universitario con menús saludables y variados a precios
+                        accesibles para todos los estudiantes.
+                  \item Establecer colaboraciones con emprendimientos locales que ofrezcan opciones
+                        alimenticias especializadas a precios preferenciales para la comunidad
+                        universitaria
+            \end{itemize}
+
+      \item Segmentación y personalización: \begin{itemize}
+                  \item Identificar las necesidades alimentarias y capacidad económica de los
+                        estudiantes a través de encuestas y datos institucionales.
+                  \item Aplicar precios diferenciadores y posibles subsidios para los estudiantes en
+                        situación de vulnerabilidad.
+            \end{itemize}
+
+      \item Alianzas estratégicas: \begin{itemize}
+                  \item Establecer convenios con proveedores locales para reducir costos de
+                        intermediación.
+                  \item Involucrar organizaciones no gubernamentales, instituciones públicas y
+                        entidades privadas en la financiación o provisión de insumos.
+
+            \end{itemize}
+
+      \item Promoción institucional: \begin{itemize}
+                  \item Realizar campañas de concientización dentro del campus sobre la importancia de
+                        una alimentación saludable.
+                  \item Utilizar canales institucionales (redes sociales, página web, correo
+                        electrónico y eventos académicos) para informar sobre el nuevo servicio y sus
+                        beneficios.
+
+            \end{itemize}
+\end{enumerate}
+
+Con esta estrategia integral, se busca hacer posicionamiento del servicio
+alimentario como una propuesta de alto valor, accesible y alineada con los
+objetivos de desarrollo social y educativo de la universidad.
+
+\subsection{Segmentación}
+
+En este contexto, dicha segmentación nos permite dirigir de manera más
+eficiente los esfuerzos hacia quienes más lo necesitan, priorizando a los
+estudiantes en condición de vulnerabilidad económica y con mayor permanencia
+dentro del campus universitario.
+
+\subsection{Partes de la segmentación}
+
+\begin{enumerate}
+      \item Demográfica: Estudiantes universitarios entre 17 y 30 años, de estratos 1, 2 y
+            3.
+      \item Conducta: Jóvenes que buscan alimentación económica, saludable y nutritiva.
+      \item Geográfica: Comunidad universitaria ubicada en el campus de la Universidad
+            Tecnológica de Bolívar.
+
+      \item Mercado meta: \begin{itemize}
+                  \item  Estudiantes con recursos económicos limitados que permanecen largas jornadas en
+                        la universidad.
+                  \item  Personal administrativo y docente que consume alimentos en el campus
+
+            \end{itemize}
+
+      \item Posicionamiento: \textit{``Una alternativa alimentaria solidaria, saludable y
+                  accesible para toda la comunidad universitaria''}
+\end{enumerate}
+
+\section{Mix de marketing (4P)}
+
+\subsection{Producto}
+
+Servicio de alimentación saludable y asequible (comedor universitario,
+convenios con concesionarios o subsidios).
+
+\subsection{Precio}
+
+\begin{itemize}
+      \item Tarifas subsidiadas o reguladas.
+      \item Opciones variables para todos los estratos socioeconómicos.
+
+\end{itemize}
+
+\subsection{Plaza}
+
+\begin{itemize}
+      \item Campus universitario, con puntos de distribución estratégicos.
+      \item Posibles alianzas con emprendimientos dirigidos a la universidad.
+\end{itemize}
+
+\subsection{Promoción}
+
+\begin{itemize}
+      \item Campañas internas de sensibilización.
+      \item Difusión por redes institucionales, eventos universitarios y carteleras.
+      \item Participación de grupos estudiantiles y bienestar universitario.
+\end{itemize}
+
+\subsection{Matrix FODA}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=\linewidth]{./Images/matrix_foda.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+En este proyecto La matriz FODA, se utiliza para determinar los elementos clave
+que deben potenciarse o gestionarse para lograr una solución sostenible al
+problema de los altos costos de los insumos alimenticios dentro de la
+universidad, analizando las fortalezas, debilidades, oportunidades y amenazas
+dadas.
+
+\newpage
+\printbibliography
+
+\end{document}
