@@ -22,6 +22,13 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{geometry}
+\usepackage{changepage}
+
+
+
+% \usepackage[margin=0.5in]{geometry}
 
 \counterwithin{figure}{section}
 \renewcommand{\thesection}{\arabic{section}}
@@ -682,6 +689,582 @@ que deben potenciarse o gestionarse para lograr una solución sostenible al
 problema de los altos costos de los insumos alimenticios dentro de la
 universidad, analizando las fortalezas, debilidades, oportunidades y amenazas
 dadas.
+
+\section{Estudio Técnico}
+
+\subsection{Función de producción del proyecto}
+
+La función de producción del proyecto consiste en generar un sistema integral
+para monitorear, regular y optimizar los precios de los insumos alimentarios en
+la universidad. Este sistema combina recursos tecnológicos, humanos y
+logísticos para transformar datos dispersos y prácticas de compra no
+estandarizadas en un proceso ordenado, transparente y sostenible.
+
+\begin{itemize}
+      \item Condiciones necesarias: acceso a internet, disponibilidad de datos históricos
+            (compras, facturas, encuestas), cooperación de los concesionarios y del
+            personal administrativo.
+      \item Output esperado: un sistema funcional de regulación de precios que impacte
+            positivamente en la economía estudiantil, garantizando calidad, accesibilidad y
+            sostenibilidad.
+
+\end{itemize}
+
+\subsection{Proceso productivo o la tecnología del proyecto}
+
+\subsubsection{Cadena de Valor}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=.6\linewidth]{./Images/cadena_valor.jpg}
+            \caption{}
+      \end{center}
+\end{figure}
+
+\subsubsection{Cronograma de actividades}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=\linewidth]{./Images/cronograma.jpg}
+            \caption{}
+      \end{center}
+\end{figure}
+
+\subsubsection{Identificación y descripción de las tecnologías disponibles}
+
+\begin{longtable}{|p{.3\linewidth}|p{.3\linewidth}|p{.3\linewidth}|}
+      \caption{Matriz De Plan de Estudio}                                                                                                                                 \\
+      \hline
+      \textbf{Producto}                                                    & \textbf{Insumo}                                                        & \textbf{Tecnología} \\
+      \hline
+      \endfirsthead
+
+      \hline
+      \textbf{Producto}                                                    & \textbf{Insumo}                                                        & \textbf{Tecnología} \\
+      \hline
+      \endhead
+
+      \hline
+      \endfoot
+
+      \hline
+      \endlastfoot
+
+      Estudio del uso de insumos y proveedores                             & Datos de compras, facturas
+      anteriores, información de proveedores, inventario de alimentos      & Hojas de
+      cálculo como Excel, sistemas de administración de compras.                                                                                                          \\\hline
+
+      Creación de mecanismos de monitoreo y regulación de precios          & Listado de
+      precios actuales, histórico de precios de insumos, datos de proveedores,
+      encuestas estudiantiles.                                             & Herramientas de recolección de datos como Google
+      Forms, hojas de cálculo en Excel con funciones de análisis                                                                                                          \\\hline
+
+      Base de datos con proveedores y frecuencia de compra.                & Información recolectada
+      sobre proveedores, fechas de pedidos, frecuencia de compras          & Bases de datos en
+      Excel, SQL y formularios digitales con Google Forms.                                                                                                                \\\hline
+
+      Creación de espacios competitivos para kioscos/concesionarios        & Precios de
+      mercado, historial de compras, encuestas de satisfacción, informes anteriores.
+                                                                           & Programas de informes como Power BI y procesadores de texto como Word.
+      \\\hline
+
+      Equipamiento del comedor (utensilios, mobiliario, electrodomésticos) & Estufas,
+      hornos, licuadoras, mesas, sillas, neveras, utensilios (ollas, platos,
+      cubiertos)                                                           & Equipos industriales o semiindustriales de cocina, tecnología de
+      refrigeración, mobiliario de acero inoxidable.                                                                                                                      \\\hline
+
+      Diseño de menús accesibles, balanceados nutricionalmente y adaptados a
+      necesidades                                                          & Ingredientes locales, recetas nutricionales, requerimientos
+      dietéticos (ej. vegetarianos, diabéticos)                            & Software de planificación
+      nutricional como NutriSoft, hojas de cálculo con fórmulas calóricas.                                                                                                \\\hline
+\end{longtable}
+
+\subsection{Descripción del proceso productivo}
+
+\subsubsection{Etapas}
+
+\begin{enumerate}
+      \item Estudio del Uso de Insumos y Proveedores \begin{itemize}
+                  \item Objetivo: Analizar el consumo actual, identificar y clasificar proveedores
+                        relevantes, evaluar la calidad y costos de insumos y detectar cuellos de
+                        botella en la cadena de suministros.
+            \end{itemize}
+
+      \item Monitoreo y Regulación de Precios \begin{itemize}
+                  \item Objetivo: Implementar un sistema tecnológico que permita la monitorización en
+                        tiempo real de los precios de insumos y facilitar mecanismos para regularlos,
+                        asegurando precios competitivos sin comprometer la calidad.
+            \end{itemize}
+
+      \item Análisis de Competitividad de Kioscos/Concesionarios \begin{itemize}
+                  \item Objetivo: Evaluar la oferta y eficiencia de los concesionarios actuales y
+                        comparar sus prácticas con las de potenciales nuevos actores del mercado.
+            \end{itemize}
+
+      \item Equipamiento del Comedor \begin{itemize}
+                  \item Objetivo: Dotar al comedor de la tecnología y equipamiento necesarios para la
+                        optimización operativa y el control de calidad.
+            \end{itemize}
+
+      \item Diseño de Menús Accesibles y Nutricionales \begin{itemize}
+                  \item Objetivo: Desarrollar menús que respeten estándares nutricionales y sean
+                        económicamente viables para la comunidad universitaria.
+            \end{itemize}
+\end{enumerate}
+
+\subsubsection{Diagramas}
+
+\textbf{CPM (Critical Path Method): Ruta Critica}
+
+\subsection{Asignación de Actividades}
+
+\begin{longtable}{|c|p{.3\linewidth}|p{.3\linewidth}|p{.3\linewidth}|}
+      \hline
+
+      \textbf{Código}                                                           & \textbf{Actividad}                     & \textbf{Tecnología Apoyada} & \textbf{Dependencias} \\
+      \hline
+      \endfirsthead
+
+      \hline
+
+      \textbf{Código}                                                           & \textbf{Actividad}                     & \textbf{Tecnología Apoyada} & \textbf{Dependencias} \\
+      \hline
+      \endhead
+
+      A                                                                         & Recolectar datos de compras y facturas & Excel, sistemas de compras  &
+      Ninguna                                                                                                                                                                  \\ \hline B  & Analizar historial de precios y crear mecanismos de
+      monitoreo                                                                 & Google Forms, Excel                    & A                                                   \\ \hline C                           & Crear base de datos de
+      proveedores y frecuencia de compra                                        & Google Forms, SQL, Excel               & A                                                   \\ \hline D                                                        &
+      Diseñar encuestas de satisfacción y levantar precios de mercado           & Google Forms,
+      Power BI                                                                  & A                                                                                            \\ \hline E                             & Evaluar infraestructura del comedor (equipamiento) &
+      Observación directa, fichas técnicas                                      & Ninguna                                                                                      \\ \hline F                 & Diseñar propuestas
+      de equipamiento adecuado                                                  & Tecnología industrial                  & E                                                   \\ \hline G                         & Planear
+      menús nutricionales y accesibles                                          & NutriSoft, Excel                       & B, C, D                                             \\ \hline H                                                                  &
+      Redactar informe final con propuestas de regulación y nutrición accesible &
+      Word, Power BI                                                            & F, G                                                                                         \\ \hline
+
+      \caption{Actividades, tecnologías utilizadas y dependencias}
+\end{longtable}
+
+\subsection{Duraciones Estimadas por Actividad}
+
+\begin{longtable}{|c|p{.6\linewidth}|c|}
+      \hline
+
+      \textbf{Código}                               & \textbf{Actividad}                     & \textbf{Duración (días)} \\
+      \hline
+      \endfirsthead
+
+      \hline
+
+      \textbf{Código}                               & \textbf{Actividad}                     & \textbf{Duración (días)} \\
+      \hline
+      \endhead
+
+      A                                             & Recolectar datos de compras y facturas & 3                        \\ \hline B                                   & Analizar historial
+      de precios y crear mecanismos de monitoreo    & 2                                                                 \\ \hline C                                    & Crear base de
+      datos de proveedores y frecuencia de compra   & 3                                                                 \\ \hline D                                      & Diseñar encuestas
+      de satisfacción y levantar precios de mercado & 2                                                                 \\ \hline E                                   & Evaluar
+      infraestructura del comedor (equipamiento)    & 1                                                                 \\ \hline F                 & Diseñar propuestas
+      de equipamiento adecuado                      & 2                                                                 \\ \hline G   & Planear menús nutricionales y
+      accesibles                                    & 4                                                                 \\ \hline H                         & Redactar informe final con propuestas de
+      regulación y nutrición accesible              & 3                                                                 \\ \hline
+
+      \caption{Duración estimada de cada actividad}
+\end{longtable}
+
+A continuación, teniendo en cuenta los pasos anteriores, realizamos las
+relaciones de precedencia.
+
+\subsection{Relaciones de Precedencia}
+
+\begin{itemize}[label=$\triangleright$]
+      \item  $A \rightarrow B, C, D$
+      \item  $B, C, D \rightarrow G$
+      \item  $E \rightarrow F$
+      \item  $F, G \rightarrow H$
+
+\end{itemize}
+
+\subsection{Cálculo de la Ruta Crítica}
+
+Procedemos a identificar todos los caminos posibles y calcular sus duraciones
+totales:
+
+\begin{itemize}
+      \item Camino 1: $A \rightarrow B \rightarrow G \rightarrow H$ \\ A (3) + B (2) + G
+            (4) + H (3) = 12 días.
+
+      \item Camino 2: $A \rightarrow C \rightarrow G \rightarrow H$ \\ A (3) + C (3) + G
+            (4) + H (3) = 13 días.
+
+      \item Camino 3: $A \rightarrow D \rightarrow G \rightarrow H$ \\ A (3) + D (2) + G
+            (4) + H (3) = 12 días.
+
+      \item Camino 4: $E \rightarrow F \rightarrow H$ \\ E (1) + F (2) + H (3) = 6 días.
+\end{itemize}
+
+Luego de realizar los cálculos, la ruta crítica seleccionada es el camino 2, el
+cual es el más largo, elegimos este porque es la única secuencia de actividades
+cuya duración completa (13 días) define directamente la duración total del
+proyecto. Si alguna de estas tareas se retrasa, el proyecto entero se retrasa.
+Con esto nos queda que las actividades en la ruta crítica son las siguientes:
+
+\begin{itemize}
+      \item A (Recolectar datos de compras).
+      \item C (Crear base de datos de proveedores).
+      \item G (Planear menús nutricionales).
+      \item H (Redactar informe final).
+\end{itemize}
+
+\subsection{Esquemático del Diagrama del Método de la ruta crítica (CPM)}
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=\linewidth]{./Images/diagrama_idk.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+\subsubsection{Especificaciones técnicas y de modelo}
+
+\begin{longtable}{|p{.5\linewidth}|p{.5\linewidth}|}
+      \hline
+
+      \textbf{Área}                          & \textbf{Especificaciones Técnicas}                        \\
+      \hline
+      \endfirsthead
+
+      \hline
+
+      \textbf{Área}                          & \textbf{Especificaciones Técnicas}                        \\
+      \hline
+      \endhead
+
+      Base de datos de insumos y proveedores & Capacidad para almacenar más de 500
+      registros. Acceso restringido a usuarios autorizados. Actualización semestral
+      de la información. Compatibilidad con Excel y SQL.                                                 \\\hline
+
+      Sistema de monitoreo de precios        & Visualización de precios actualizados
+      semanalmente.- Generación automática de alertas al superar variaciones del 10\%
+      en precios. Interfaz gráfica amigable compatible con Power BI. Respaldo
+      automático de los datos cada 15 días.                                                              \\\hline
+
+      Equipamiento del comedor               & Equipos de cocina industrial de acero inoxidable.
+      Refrigeradores energéticamente eficientes (certificación Energy Star).
+      Cumplimiento de normativas de inocuidad alimentaria (ISO 22000).- Mobiliario de
+      fácil limpieza y alta durabilidad.                                                                 \\\hline
+
+      Menús accesibles y nutricionales       & Desarrollo de menús adaptados a necesidades
+      especiales (vegetarianos, diabéticos). Cálculo de valor nutricional en cada
+      menú (uso de NutriSoft). Inclusión de opciones con precios accesibles para
+      estudiantes.                                                                                       \\\hline
+
+      Proveedores                            & Evaluación anual de calidad y cumplimiento.- Contratos de
+      suministro con cláusulas de precios regulados. Capacidad de abastecimiento
+      continuo en condiciones de alta demanda.                                                           \\\hline
+\end{longtable}
+
+\subsection{Modelo}
+
+Se propone un modelo de flujo de proceso que represente el funcionamiento del
+sistema de regulación de precios de insumos alimentarios:
+
+\begin{enumerate}
+      \item Ingreso de datos \begin{itemize}
+                  \item Recolección de precios de insumos mediante formularios digitales.
+            \end{itemize}
+
+      \item Actualización de base de datos \begin{itemize}
+                  \item Consolidación automática en una plataforma de base de datos (Excel/SQL).
+            \end{itemize}
+
+      \item Análisis de precios \begin{itemize}
+                  \item Comparación de precios actuales vs históricos.
+                  \item Detección de variaciones significativas.
+
+            \end{itemize}
+
+      \item Alertas y reportes \begin{itemize}
+                  \item Emisión de alertas a administradores si se detectan incrementos atípicos.
+                  \item Generación de reportes mensuales de precios y proveedores.
+
+            \end{itemize}
+
+      \item Decisiones y ajustes \begin{itemize}
+                  \item Toma de decisiones para ajustes de proveedores, negociaciones o intervenciones.
+            \end{itemize}
+
+      \item Monitoreo continuo \begin{itemize}
+                  \item Seguimiento permanente de precios, calidad de insumos y satisfacción
+                        estudiantil.
+            \end{itemize}
+\end{enumerate}
+
+Este modelo puede representarse gráficamente mediante un diagrama de bloques de
+flujo, enlazando cada uno de estos pasos.
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=\linewidth]{./Images/diagrama_bloques.jpg}
+            \caption{Diagrama de Bloques - Modelo del Sistema de Regulación de Precios Alimentarios}
+      \end{center}
+\end{figure}
+
+\section{Planificación Financiera}
+
+\subsection{Cronograma de Actividades (20 meses)}
+
+\noindent\textbf{Presupuesto asignado: \$120.000.000 COP}
+
+\vspace{0.5cm}
+
+\begin{longtable}{|c|p{.4\linewidth}|p{.2\linewidth}|p{.2\linewidth}|}
+      \hline
+
+      \textbf{Fase}  & \textbf{Actividades Clave}                      & \textbf{Duración (Meses)} & \textbf{Responsable}    \\
+      \hline
+      \endfirsthead
+
+      \hline
+
+      \textbf{Fase}  & \textbf{Actividades Clave}                      & \textbf{Duración (Meses)} & \textbf{Responsable}    \\
+      \hline
+      \endhead
+
+      1. Diagnóstico & Encuestas digitales, estudio de precios         & 0 -- 3                    & Equipo de investigación \\
+      \hline
+      2. Políticas   & Negociación con proveedores, diseño del comedor & 4 -- 6                    & Administración          \\
+      \hline
+      3. Ejecución   & Regulación de precios, apertura del comedor     & 7 -- 12                   & Operaciones             \\
+      \hline
+      4. Monitoreo   & Evaluaciones trimestrales, ajustes operativos   & 13 -- 20                  & Auditoría               \\
+      \hline
+
+      \caption{Fases del proyecto con duración y responsables}
+\end{longtable}
+
+\subsection{Presupuesto Detallado (COP)}
+
+\subsubsection{Tecnología}
+
+\begin{longtable}{|p{.25\linewidth}|p{.25\linewidth}|p{.25\linewidth}|p{.25\linewidth}|}
+      \hline
+      \textbf{Ítem}             & \textbf{Descripción}                      & \textbf{Costo Unitario} & \textbf{Subtotal}    \\
+      \hline
+      Software de monitoreo     & Licencia anual (Ej: SIESCO)               & \$3.500.000             & \$3.500.000          \\
+      \hline
+      Eliminación de app móvil  & Se utilizarán encuestas en redes sociales & -                       & \$0                  \\
+      \hline
+      \textbf{Total Tecnología} &                                           &                         & \textbf{\$3.500.000} \\
+      \hline
+\end{longtable}
+
+\subsubsection{Costos Operativos}
+
+\begin{longtable}{|p{0.25\linewidth}|p{0.35\linewidth}|p{0.20\linewidth}|p{0.20\linewidth}|}
+      \hline
+      \textbf{Ítem}             & \textbf{Descripción}                    & \textbf{Costo Unitario} & \textbf{Subtotal}    \\
+      \hline
+      Encuestas en redes        & Realizadas por estudiantes              & \$0                     & \$0                  \\
+      \hline
+      Talleres a proveedores    & Capacitación en estándares alimentarios & \$1.200.000             & \$2.400.000          \\
+      \hline
+      \textbf{Total Operativos} &                                         &                         & \textbf{\$2.400.000} \\
+      \hline
+\end{longtable}
+
+\subsubsection{Comedor Subsidiado}
+
+\begin{longtable}{|p{0.25\linewidth}|p{0.35\linewidth}|p{0.20\linewidth}|p{0.20\linewidth}|}
+      \hline
+      \textbf{Ítem}             & \textbf{Descripción}                       & \textbf{Costo Unitario} & \textbf{Subtotal}     \\
+      \hline
+      Mobiliario y equipamiento & Mesas, sillas, cocina industrial           & \$15.000.000            & \$15.000.000          \\
+      \hline
+      Subsidios alimentarios    & 200 estudiantes por 6 meses (\$50.000/mes) &                         & \$60.000.000          \\
+      \hline
+      \textbf{Total Comedor}    &                                            &                         & \textbf{\$75.000.000} \\
+      \hline
+\end{longtable}
+
+\subsubsection{Resumen General}
+\begin{longtable}{|p{0.6\linewidth}|p{0.4\linewidth}|}
+      \hline
+      \textbf{Categoría}      & \textbf{Monto (COP)}  \\
+      \hline
+      Total parcial           & \$80.900.000          \\
+      \hline
+      10\% imprevistos        & \$12.000.000          \\
+      \hline
+      \textbf{Total estimado} & \textbf{\$88.990.000} \\
+      \hline
+\end{longtable}
+
+\subsection{Proveedores Locales}
+
+\subsubsection{Tecnología}
+
+\begin{longtable}{|p{0.2\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
+      \hline
+      \textbf{Empresa} & \textbf{Servicio}  & \textbf{Contacto}      & \textbf{Ventaja Competitiva} \\
+      \hline
+      SIESCO           & Software educativo & contacto@siesco.com.co &
+      Especialización en educación                                                                  \\\hline
+
+\end{longtable}
+
+\subsubsection{Alimentos y Logística - Análisis de Ventajas Competitivas}
+
+\begin{longtable}{|p{0.15\linewidth}|p{0.20\linewidth}|p{0.25\linewidth}|p{0.15\linewidth}|p{0.20\linewidth}|}
+      \hline
+      \textbf{Proveedor}                                                                                                      & \textbf{Producto o Servicio} & \textbf{Contacto}                                                     & \textbf{Ventaja Competitiva} & \textbf{Comparación con Alternativas} \\
+      \hline
+      Alimentos Turbo                                                                                                         & Distribución de insumos      & Tel: 300 555 1234 \hfil \break Correo: ventas@alimentosturbo.co       &
+      Precios 15--20\% más bajos que mayoristas nacionales. \hfil \break Entrega en 24h en Turbaco.                           &
+      Distribuidora Súper: Precios altos por intermediarios. \hfil \break Éxito/Makro: Logística lenta (3--5 días).                                                                                                                                                                                         \\
+      \hline
+      Café Colombia                                                                                                           & Café y snacks orgánicos      & Tel: 318 555 5678 \hfil \break Correo: pedidos@cafecolombia.co        &
+      Certificación Rainforest Alliance. \hfil \break Empaques biodegradables y devoluciones.                                 &
+      Juan Valdez: Más costoso, sin empaques ecológicos. \hfil \break Café Quindío: Sin cobertura en Bolívar.                                                                                                                                                                                               \\
+      \hline
+      Frutas del Caribe                                                                                                       & Frutas/verduras frescas      & Tel: 320 555 9012 \hfil \break Correo: info@frutasdelcaribe.co        &
+      Directo de fincas locales (huella de carbono reducida). \hfil \break 10\% descuento por volumen (\textgreater\$5M COP). &
+      Corabastos: Precios variables + alto costo de transporte desde Bogotá.                                                                                                                                                                                                                                \\
+      \hline
+      Panadería La Especial                                                                                                   & Pan artesanal                & Tel: 315 555 3456 \hfil \break Correo: pedidos@panaderialaespecial.co &
+      Precios 30\% menores que pan industrial. \hfil \break Opciones sin gluten/integral.                                     &
+      Bimbo/Supermercados: Pan precocido, menos fresco y sin personalización.                                                                                                                                                                                                                               \\
+      \hline
+\end{longtable}
+
+\subsection{Análisis Detallado de Ventajas}
+
+\begin{enumerate}
+      \item Costos Logísticos \begin{itemize}
+                  \item Proveedores locales: \begin{itemize}
+                              \item Ahorro del 25% en transporte (ej: Alimentos Turbo opera en Turbaco; no requiere fletes desde Barranquilla/Bogotá).
+                              \item Menos pérdidas por caducidad (distancias cortas = alimentos más frescos).
+
+                        \end{itemize}
+
+                  \item Alternativas externas: \begin{itemize}
+                              \item Costos adicionales por combustible y peajes (ej: envíos desde Medellin).
+                        \end{itemize}
+            \end{itemize}
+
+      \item Calidad y Sostenibilidad \begin{itemize}
+                  \item Café Colombia: \begin{itemize}
+                              \item Certificación Rainforest Alliance (no ofrecida por competidores regionales).
+                              \item Empaques biodegradables (competencia usa plástico).
+                        \end{itemize}
+
+                  \item Frutas del Caribe: \begin{itemize}
+                              \item "Del campo a la universidad": Menos intermediarios = mejor precio y apoyo a agricultores locales.
+                        \end{itemize}
+            \end{itemize}
+
+      \item Flexibilidad y Servicio \begin{itemize}
+                  \item Pedidos personalizados: \begin{itemize}
+                              \item Panadería La Especial ajusta recetas para estudiantes con dietas especiales
+                                    (veganos, celíacos).
+                        \end{itemize}
+
+                  \item  Respuesta rápida: \begin{enumerate}
+                              \item Priorizar convenios con proveedores locales para garantizar sostenibilidad.
+                              \item Formalizar contrato con SIESCO antes del mes 4.
+                              \item Implementar control de gastos mensual con herramientas contables como Siigo.
+                        \end{enumerate}
+            \end{itemize}
+\end{enumerate}
+
+\section{Macro localización y Micro localización del Proyecto}
+
+\subsection{Macro localización}
+
+Zona: Campus principal de la universidad en Turbaco.
+
+Factores clave: \begin{itemize}
+      \item Alta concentración de estudiantes.
+      \item Infraestructura existente (cafeterías, áreas comunes).
+
+\end{itemize}
+
+\subsection{Micro localización}
+
+\begin{longtable}{|p{0.25\linewidth}|p{0.35\linewidth}|p{0.35\linewidth}|}
+      \hline
+      \textbf{Espacio}     & \textbf{Uso en el Proyecto}       & \textbf{Ventajas}             \\
+      \hline
+      \endfirsthead
+
+      \hline
+      \textbf{Espacio}     & \textbf{Uso en el Proyecto}       & \textbf{Ventajas}             \\
+      \hline
+      \endhead
+
+      Comedor central      & Comedor subsidiado                & Capacidad para 200+ personas. \\ \hline
+      Oficina de bienestar & Gestión de políticas y auditorías & Proximidad a la
+      administración.                                                                          \\ \hline Cafetería 1 (entrada) & Pilotaje de regulación de
+      precios              & Mayor flujo de estudiantes.                                       \\ \hline
+
+\end{longtable}
+
+\section{Metodología utilizada}
+
+Dentro del periodo de un semestre universitario, el cual consta normalmente de
+16 semanas, el estudiante debe asumir ciertos gastos, ya sean de transporte,
+comida, recreación, etc.
+
+Con esto en mente, no es raro que se den situaciones en que a mitad de semestre
+el estudiante se encuentre en una posición en que no pueda seguir costeando,
+por ejemplo, los gastos de transporte y en su defecto busque alternativas; o en
+el debido caso en que no pueda seguir comprando los almuerzos que brinda la
+universidad teniendo que preparar el mismo la comida todas las mañanas.
+
+El objetivo es visualizar de una manera gráfica como cambia el balance
+monetario del estudiante a lo largo del semestre. Mediante simulaciones y
+parámetros determinados por \textit{software} se planteó lo siguiente:
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=\linewidth]{./Images/environment_snippet.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+El snippet de arriba nos permite visualizar todos los parámetros de la
+simulación. A continuación, se describen los aspectos más relevantes:
+
+\begin{itemize}
+      \item \texttt{SEMESTER\_WEEKS}, cantidad de semanas en un semestre
+      \item \texttt{MONTHLY\_INCOME}, ganancias mensuales del estudiante, asimismo, \texttt{SAVINGS}, declara los ahorros iniciales del mismo.
+      \item \texttt{EXTRA\_INCOME\_RANGE}, establece el rango para gastos “extra” que se puedan presentar en el semestre. \texttt{EMERGENCY\_RANGE}, cumple con la misma función, apuntando a gastos de “emergencia”.
+      \item Luego ciertas variables del entorno como por ejemplo \texttt{LUNCH\_PRICE}
+            (valor del almuerzo), \texttt{SNACK\_PRICE\_RANGE} (rango de precios de una
+            merienda), \texttt{TRANSPORT\_FARE} (valor del transporte).
+\end{itemize}
+
+Un punto importante para mencionar es que, no se puede esperar que la
+simulación retorne siempre el mismo output, de tal manera que se construye en
+base a probabilidades, una de ellas siendo \texttt{INFLATION\_RATE}.
+
+\begin{figure}[H]
+      \begin{center}
+            \includegraphics[width=\linewidth]{./Images/output_sample.png}
+            \caption{}
+      \end{center}
+\end{figure}
+
+Este es un ejemplo de una simulación, hay varias partes que lo componen:
+
+\begin{itemize}
+      \item Sombreado Verde y Rojo: Encargados de mostrar como se comporta en balance
+            actual del estudiante
+      \item Línea Roja: Representa los gastos del semestre. Como se puede observar, no
+            siempre es una ``línea recta''.
+      \item Línea Verde: Representa los ingresos del estudiante a lo largo del semestre.
+\end{itemize}
 
 \newpage
 \printbibliography
