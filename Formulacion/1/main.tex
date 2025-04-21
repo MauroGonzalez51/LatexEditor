@@ -22,9 +22,6 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{longtable}
-\usepackage{pdflscape}
-\usepackage{geometry}
-\usepackage{changepage}
 
 
 
@@ -246,7 +243,7 @@ adecuada, lo que puede repercutir en su bienestar y rendimiento académico.
 
 \begin{figure}[H]
       \begin{center}
-            \includegraphics[width=.8\linewidth]{./Images/arbol_problema.png}
+            \includegraphics[width=\linewidth]{./Images/arbol_problema.png}
             \caption{}
       \end{center}
 \end{figure}
@@ -255,7 +252,7 @@ adecuada, lo que puede repercutir en su bienestar y rendimiento académico.
 
 \begin{figure}[H]
       \begin{center}
-            \includegraphics[width=.8\linewidth]{./Images/arbol_objetivo.png}
+            \includegraphics[width=\linewidth]{./Images/arbol_objetivo.png}
             \caption{}
       \end{center}
 \end{figure}
@@ -1266,7 +1263,11 @@ Este es un ejemplo de una simulación, hay varias partes que lo componen:
       \item Línea Verde: Representa los ingresos del estudiante a lo largo del semestre.
 \end{itemize}
 
+Los datos usados para generar la simulación son meramente ficticios, con la
+excepción de algunos parámetros relacionados al entorno. De igual manera, la
+herramienta nos permite identificar patrones que serán útiles a futuro.
+
 \newpage
-\printbibliography
+% \printbibliography
 
 \end{document}
