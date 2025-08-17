@@ -39,7 +39,7 @@ if __name__ == "__main__":
     ]
 
     if not images_folders:
-        print("No images were found in proyects")
+        print("No images were found in projects")
         sys.exit(0)
 
     print("Image folder founds:")

@@ -1,7 +1,15 @@
 import os
 import fnmatch
 import shutil
+from pathlib import Path
 
+def project_root(anchor: str = ".git"):
+    path = Path.cwd()
+    for parent in [path] + list(path.parents):
+        if (parent / anchor).exists():
+            return parent
+    raise FileNotFoundError(
+        f"Could not find {anchor} in the parent directories of {path}")
 
 def read_gitignore(filepath='.gitignore'):
     with open(filepath, 'r') as file:
@@ -36,9 +44,11 @@ def delete_files(base_path: str, patterns: list[str], exceptions: list[str]):
 
 
 if __name__ == '__main__':
-    gitignore_path = '.gitignore'  # Path to the .gitignore file
-    base_path = '.'  # Base path to start deleting files from
-    exceptions = ['.vscode', '.venv']  # List of exceptions
+    ROOT = project_root()
+
+    gitignore_path = ROOT / '.gitignore'
+    base_path = '.' 
+    exceptions = ['.vscode', '.venv']
 
     patterns = read_gitignore(gitignore_path)
     delete_files(base_path, patterns, exceptions)
