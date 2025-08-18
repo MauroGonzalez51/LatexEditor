@@ -1,0 +1,129 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage[hyphens]{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[maxbibnames=3,style=authoryear,backend=biber]{biblatex}
+\DeclareNameAlias{sortname}{family-given}
+\DeclareNameAlias{default}{family-given}
+\renewcommand*{\multinamedelim}{\addcomma\space}
+\renewcommand*{\finalnamedelim}{\addspace\&\space}
+\DefineBibliographyStrings{english}{%chktex-file 1 chktex-file 6
+    andothers = {et\addspace al\adddot}
+}
+
+\DeclareFieldFormat{cite}{\mkbibemph{#1}}
+\renewbibmacro*{cite}{%
+    \printtext[bibhyperref]{%
+        \printfield{title}%
+        \setunit{\addcomma\space}%
+        \printdate}}
+
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{breqn}
+
+\raggedbottom{}
+
+\usepackage{array}
+\usepackage{enumitem}
+
+\usepackage{setspace}
+\setlength{\parskip}{\baselineskip}
+
+\begin{document}
+
+\nocite{*}
+
+\section*{International Marketing Task}
+
+Yesid Muñoz~\textit{(T00069159)}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+\bigskip
+
+\section{Do you think that greater world trade implies more risk? Explain the benefits and risks involved.}
+
+I would argue that greater world trade does not necessarily imply more risk,
+since a more interconnected world allows countries to establish routes that
+minimize vulnerabilities and make international commerce faster and more
+efficient. Among the benefits, world trade generates significant economic
+advantages because many countries strengthen their commercial relations, which
+in turn fosters growth, market diversification, and broader opportunities for
+development.
+
+However, the increase in world trade also carries certain risks. One of them is
+dependence on global supply chains, which makes countries and firms more
+vulnerable to disruptions caused by geopolitical conflicts, pandemics, or
+natural disasters. Likewise, excessive openness can affect local industries,
+leading to job losses and social inequality in some sectors. Another important
+risk is the environmental impact, since international transportation increases
+carbon emissions and sometimes encourages the relocation of polluting
+industries to countries with weaker regulations. Finally, persistent trade
+imbalances may result in economic volatility and excessive debt.
+
+\section{What effect do global linkages have on companies and customers?}
+
+Global linkages have a profound impact on both companies and customers. For
+companies, globalization allows them to take advantage of economies of scale,
+improve operational efficiency, and access cheaper resources in different
+countries. In addition, international presence helps diversify risk by
+operating across multiple markets, which increases resilience. However,
+globalization also brings greater complexity, as companies must adapt to
+diverse regulations and face geopolitical tensions, such as economic
+competition between the United States and China, which can disrupt supply
+chains.
+
+For customers, global linkages create clear benefits: greater product variety,
+lower prices, and access to innovative goods that were previously inaccessible.
+On the other hand, consumers can also be affected by global
+disruptions—\textit{such as the shortage of semiconductors or medical
+    supplies}—which highlight the fragility of depending on international markets
+for essential goods.
+
+\section{What challenges does international marketing currently have, considering new trends?}
+
+International marketing faces significant challenges today, many of which are
+linked to technological integration, especially artificial intelligence. AI
+enables companies to process massive amounts of customer data faster and to
+deliver more personalized experiences. However, it also brings challenges
+related to data privacy, potential algorithmic biases, and the need for ethical
+regulation.
+
+Other key trends that pose challenges include the rise of AI-driven
+storytelling, which must balance automation with authenticity to maintain
+credibility; digital disinformation, which can distort market research and
+damage consumer trust; and cultural and linguistic adaptation, since marketing
+
+messages must be tailored to resonate within each regional context. In
+addition, regulatory frameworks such as the GDPR in Europe and other
+data-protection laws worldwide restrict the indiscriminate use of personal
+information in global campaigns.
+
+\newpage
+
+\printbibliography
+
+\end{document}
