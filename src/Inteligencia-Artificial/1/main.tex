@@ -1,0 +1,295 @@
+\documentclass[letterpaper, 12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+
+\usepackage{fullpage}
+\usepackage{setspace}
+\setlength{\parskip}{\baselineskip}
+\renewcommand{\baselinestretch}{1.5}
+\raggedbottom{}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{siunitx}
+
+\usepackage{amsmath}
+\usepackage{bm}
+
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{verbatim}
+\usepackage{csquotes}
+
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+% ===== Bibliografía =====
+\usepackage[style=apa, maxnames=6, minnames=3]{biblatex}
+\DefineBibliographyStrings{english}{
+    andothers = {\em et\addabbrvspace{} al\adddot{}\/}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+\renewcommand{\comment}[1]{{\small $\ll$#1$\gg$}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdfborder={0 0 1}
+}
+
+% chktex-file 24
+
+\begin{document}
+
+\begin{titlepage}
+      \centering
+      \includegraphics[width=0.3\textwidth]{../../../images/logo_utb.png}\par\vspace{0.8cm}
+      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+      \vspace{1cm}
+
+      {\scshape\Large Inteligencia Artificial \par}
+      \vspace{1cm}
+
+      {\Large \bfseries Agente Inteligente\\}
+      {\large Agente de Defensa Cibernetica}
+      \vspace{2cm}
+
+      {\itshape{} Mauro Alonso Gonzalez Figueroa, T00067622\/ \\}
+      {\itshape{} Juan Jose Jimenez Guardo, T00068278\/ \\}
+      \vfill
+      Revisado Por\\
+      Edwin Alexander Puertas Del Castillo\\
+      {\large \today\par}
+\end{titlepage}
+\nocite{*}
+
+\tableofcontents{}
+\newpage
+
+\section{Resumen Ejecutivo}
+
+\begin{quote}
+      \textbf{Caso de Estudio}: La defensa cibernética es un conjunto de estrategias, tecnologías y procesos
+      diseñados para proteger los sistemas informáticos, redes y datos contra
+      amenazas cibernéticas, como ataques de malware, piratería informática, robo de
+      datos y otros riesgos de seguridad. Estas medidas de defensa buscan prevenir,
+      detectar, responder y recuperarse de ataques cibernéticos con el fin de
+      garantizar la confidencialidad, integridad y disponibilidad de la información y
+      los recursos digitales.
+\end{quote}
+
+El agente inteligente de defensa cibernética está diseñado para proteger
+infraestructuras digitales mediante la detección, prevención y respuesta
+automatizada ante amenazas cibernéticas. Su arquitectura integra sensores
+avanzados, actuadores de respuesta y métricas de desempeño que garantizan la
+resiliencia y seguridad de los sistemas corporativos. El diseño incorpora
+recomendaciones técnicas para mejorar la capacidad de reacción, la cobertura
+ante nuevas amenazas y la alineación con estándares modernos de ciberseguridad.
+
+\section{Introducción}
+
+El objetivo de este informe es presentar el diseño y ajuste de un agente
+inteligente enfocado en defensa cibernética, detallando su estructura bajo el
+enfoque PEAS.~La importancia de diseñar agentes inteligentes radica en su
+capacidad para automatizar la protección de sistemas críticos, reducir riesgos
+y mejorar la eficiencia en la gestión de incidentes de seguridad. El alcance de
+la actividad incluye la definición técnica del agente, sus componentes y la
+justificación de los ajustes realizados según las recomendaciones
+proporcionadas.
+
+\section{Descripción del Agente Asignado}
+
+\subsection{Tipo de agente}
+El agente propuesto es de tipo basado en modelo, capaz de razonar sobre el
+estado actual y anticipar acciones futuras para maximizar la seguridad.
+
+\subsection{Dominio o entorno}
+Opera en infraestructuras de red corporativa, servidores críticos y servicios
+en la nube, considerando también el entorno humano y dispositivos IoT.
+
+\subsection{Tareas principales}
+Las tareas incluyen la detección de amenazas, bloqueo automático de tráfico
+malicioso, aislamiento de dispositivos comprometidos, auditorías de seguridad,
+aplicación de actualizaciones y generación de alertas.
+
+\section{Ajustes del Diseño Basados en Recomendaciones Previas}
+
+\subsection{Recomendaciones consideradas}
+Las siguientes recomendaciones técnicas fueron incorporadas al diseño del
+agente inteligente de defensa cibernética:
+
+\begin{itemize}
+      \item Incorporar métricas avanzadas de desempeño, como tiempo medio de respuesta \\
+            (MTTR), tiempo medio entre fallos (MTBF), efectividad de contención y
+            estimación del impacto económico evitado.
+      \item Ampliar el entorno operativo considerando factores humanos y organizacionales,
+            políticas internas, niveles de autorización, dispositivos BYOD y sistemas IoT,
+            así como el comportamiento del usuario.
+      \item Integrar sistemas de respuesta orquestada (SOAR) para automatizar el bloqueo,
+            documentación, escalamiento y notificación de incidentes, junto con módulos de
+            gestión de registros forenses y dashboards ejecutivos en tiempo real.
+      \item Incorporar sensores basados en inteligencia de amenazas externa, diferenciando
+            entre detección por firmas y por anomalías comportamentales, e incluyendo
+            sensores de comportamiento del usuario (UEBA) para identificar amenazas
+            internas.
+\end{itemize}
+
+\subsection{Cambios aplicados al diseño original}
+
+El diseño del agente fue ajustado para incorporar todas las recomendaciones
+técnicas recibidas, logrando una solución más robusta y alineada con las
+mejores prácticas actuales en ciberseguridad. Los principales cambios
+realizados son:
+
+\begin{itemize}
+      \item \textbf{Performance Measuring:} Se añadieron métricas avanzadas como el tiempo medio de respuesta (MTTR), tiempo medio
+            entre fallos (MTBF), efectividad de contención y estimación del impacto económico evitado, además de los indicadores
+            originales (porcentaje de ataques prevenidos, cantidad de ataques maliciosos detectados y falsos positivos).
+      \item \textbf{Environment:} El entorno del agente se amplió para incluir factores humanos y organizacionales, políticas
+            internas de seguridad, niveles de autorización, dispositivos BYOD y sistemas IoT, así como el comportamiento del usuario, además
+            de la infraestructura de red, servidores críticos y servicios en la nube.
+      \item \textbf{Actuators:} Se integró un sistema de respuesta orquestada (SOAR) para automatizar el bloqueo, documentación,
+            escalamiento y notificación de incidentes. Se añadió un módulo de gestión de registros forenses y dashboards ejecutivos en
+            tiempo real, complementando los sistemas de bloqueo, escaneo y monitoreo automáticos ya presentes.
+      \item \textbf{Sensors:} Se incorporaron sensores basados en inteligencia de amenazas externa, diferenciando entre
+            detección por firmas y por anomalías comportamentales, e incluyendo sensores de comportamiento del usuario (UEBA), además
+            de los antivirus, monitores de integridad y sensores de red originales.
+\end{itemize}
+
+\subsection{Justificación técnica de los ajustes}
+
+La aplicación de estos cambios responde a la necesidad de fortalecer la
+capacidad operativa y adaptativa del agente frente a amenazas cada vez más
+sofisticadas. Las nuevas métricas permiten una evaluación más precisa de la
+eficiencia y resiliencia del sistema, facilitando la toma de decisiones y la
+mejora continua. La ampliación del entorno operativo y la integración de
+factores humanos e IoT aseguran una cobertura más completa y realista,
+considerando los riesgos actuales en infraestructuras corporativas.
+
+La incorporación de sistemas SOAR y gestión forense automatiza procesos
+críticos, reduce el tiempo de respuesta y mejora la trazabilidad de incidentes,
+lo que es esencial para auditorías y cumplimiento normativo. Finalmente, el uso
+de sensores avanzados y diferenciados permite detectar tanto amenazas externas
+como internas, aumentando la capacidad de prevención y respuesta ante ataques
+complejos y comportamientos anómalos.
+
+Estos ajustes posicionan al agente como una solución integral y moderna, capaz
+de adaptarse a los desafíos dinámicos del entorno digital y alineada con los
+estándares internacionales de ciberseguridad.
+
+\section{Definición del Espacio de Estados}
+
+\subsection{Descripción de las variables que definen cada estado}
+El espacio de estados del agente inteligente de defensa cibernética se define
+por las siguientes variables principales:
+
+\begin{itemize}
+      \item \textbf{Estado de operación}: Indica si el sistema está en monitoreo normal, detección de anomalía, respuesta automática, análisis/escalamiento, recuperación o mejora continua.
+      \item \textbf{Nivel de amenaza}: Valor que representa la severidad de la actividad detectada (normal, sospechosa, maliciosa).
+      \item \textbf{Estado de dispositivos}: Identifica si los dispositivos están operativos, comprometidos, aislados o en proceso de recuperación.
+      \item \textbf{Alertas y reportes}: Registro de alertas generadas, reportes forenses y acciones ejecutadas.
+      \item \textbf{Métricas de desempeño}: Incluye tiempo medio de respuesta (MTTR), tiempo medio entre fallos (MTBF), efectividad de contención y falsos positivos.
+      \item \textbf{Actualización de conocimiento}: Estado de las firmas, IOCs y reglas heurísticas del sistema.
+\end{itemize}
+
+\subsection{Representación de los estados}
+A continuación se presenta una tabla que resume los estados principales y sus
+variables asociadas:
+
+\begin{table}[H]
+      \small
+      \centering
+      \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X
+                  >{\raggedright\arraybackslash}X
+                  >{\raggedright\arraybackslash}X
+                  >{\raggedright\arraybackslash}X
+                  >{\raggedright\arraybackslash}X}
+            \toprule{}
+            Estado                  & Nivel de amenaza & Dispositivo              & Acción                & Métricas          \\
+            \midrule{}
+            Monitoreo Normal        & Baja             & Operativo                & Supervisión           & MTBF              \\
+            Detección de Anomalía   & Media            & Operativo / Comprometido & Análisis              & Falsos positivos  \\
+            Respuesta Automática    & Alta             & Comprometido / Aislado   & Bloqueo, Aislamiento  & MTTR, Contención  \\
+            Análisis y Escalamiento & Alta             & Comprometido             & Reporte, Escalamiento & Evidencia forense \\
+            Recuperación            & Variable         & Restaurando              & Parches, Backups      & MTTR              \\
+            Mejora Continua         & Baja             & Operativo                & Actualización         & Aprendizaje       \\
+            \bottomrule{}
+      \end{tabularx}
+      \caption{Estados principales y variables asociadas del agente}
+\end{table}
+
+\subsection{Transiciones entre estados}
+
+Las transiciones entre estados se producen en función de los eventos detectados
+y las acciones del agente. El siguiente diagrama textual describe el flujo
+principal:
+
+\begin{verbatim}
+Monitoreo Normal
+    → [Anomalía detectada] → Detección de Anomalía
+
+Detección de Anomalía
+    → [Falso positivo] → Monitoreo Normal
+    → [Confirmado ataque] → Respuesta Automática
+
+Respuesta Automática
+    → [Ataque controlado] → Recuperación
+    → [Ataque complejo/no contenido] → Análisis y Escalamiento
+
+Análisis y Escalamiento
+    → [Caso resuelto] → Recuperación
+
+Recuperación
+    → [Servicios restaurados] → Mejora Continua
+
+Mejora Continua
+    → [Actualización completada] → Monitoreo Normal
+\end{verbatim}
+
+\section{Objetos del Agente}
+
+\begin{itemize}
+      \item \textbf{Sensor de red}: Analiza tráfico y detecta anomalías.
+      \item \textbf{Actuador de bloqueo}: Ejecuta acciones de aislamiento y bloqueo.
+      \item \textbf{Monitor de integridad}: Supervisa cambios no autorizados.
+      \item \textbf{Módulo SOAR}: Orquesta respuestas y genera informes.
+      \item \textbf{Gestor de registros forenses}: Prepara evidencia para auditorías.
+\end{itemize}
+
+\section{Predicados del Agente}
+
+\begin{itemize}
+      \item \texttt{Amenaza (x) $\rightarrow$ Bloquear (x)}
+      \item \texttt{Comprometido (y) $\rightarrow$ Aislar (y)}
+      \item \texttt{Alerta (z) $\rightarrow$ Notificar (z)}
+      \item \texttt{UsuarioInusual (u) $\rightarrow$ Analizar (u)}
+\end{itemize}
+
+Si \texttt{Amenaza (TráficoMalicioso)} entonces \texttt{Bloquear
+      (TráficoMalicioso)}.
+
+\section{Conclusiones}
+El proceso de diseño permitió fortalecer la capacidad operativa del agente,
+integrando recomendaciones expertas y ampliando su cobertura ante amenazas.
+Futuras mejoras pueden incluir el uso de aprendizaje automático para detección
+proactiva y mayor integración con sistemas externos. El enfoque de agentes
+inteligentes en IA resulta esencial para la protección dinámica y automatizada
+de infraestructuras críticas.
+
+\printbibliography{}
+
+\end{document}
