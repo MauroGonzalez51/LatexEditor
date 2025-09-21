@@ -1,0 +1,204 @@
+\section{Construcción de la Ontología}
+
+\subsection{Metodología de Desarrollo}
+
+Para la construcción de la ontología de ciberseguridad, se adoptó un enfoque híbrido que combina la formalización lógica tradicional con herramientas modernas de razonamiento automatizado. En lugar de utilizar los lenguajes estándar como OWL (Web Ontology Language) o RDF (Resource Description Framework), se optó por implementar la ontología utilizando Z3 SMT Solver (Satisfiability Module Theories), lo que permite realizar razonamiento lógico de primer orden con verificación formal de consistencia.
+
+Esta decisión metodológica se fundamenta en las siguientes ventajas:
+
+\begin{itemize}
+    \item Expresividad lógica: \textit{Z3} permite definir reglas complejas usando cuantificadores universales y existenciales
+    
+    \item Verificación automática: Capacidad de verificar satisfacibilidad y consistencia del modelo en tiempo real
+    
+    \item Integración nativa: Implementación directa en Python sin necesidad de parsers externos 
+    
+    \item Rendimiento: Optimizaciones específicas para problemas de satisfacibilidad booleana 
+\end{itemize}
+
+\subsection{Arquitectura de la Ontología}
+
+La ontología se estructura siguiendo el modelo PEAS (Performance, Environment, Actuators, Sensors) para agentes inteligentes, proporcionando un framework completo para la respuesta automatizada a incidentes de ciberseguridad.
+
+\subsubsection{Definición de Tipos Básicos \textit{(Sorts)}}
+
+La ontología define cinco tipos fundamentales utilizando la función \verb|DeclareSort| de \textit{Z3}:
+
+\begin{lstlisting}[language=python, caption={Definición de Tipos Básicos en Z3}, label={lst:sorts}]
+ThreatSort = DeclareSort("Threat")      # Amenazas de seguridad
+AssetSort = DeclareSort("Asset")        # Activos organizacionales
+AttackSort = DeclareSort("Attack")      # Tipos de ataques especificos
+UserSort = DeclareSort("User")          # Usuarios del sistema
+IncidentSort = DeclareSort("Incident")  # Incidentes de seguridad
+\end{lstlisting}
+
+Estos sorts actúan como los tipos fundamentales sobre los cuales se construyen todas las relaciones y predicados de la ontología.
+
+\subsubsection{Predicados y Funciones Ontológicas}
+
+La ontología define un conjunto de predicados y funciones que capturan las relaciones semánticas del dominio de ciberseguridad:
+
+\noindent Predicados de Relación:
+
+\begin{itemize}
+    \item \verb|affects(Attack, Asset, Bool)|: Define qué ataques afectan a qué activos
+    \item \verb|has_vulnerability(Asset, Bool)|: Indica si un activo tiene vulnerabilidades conocidas
+    \item \verb|is_compromised(Asset, Bool)|: Especifica el estado de compromiso de un activo
+    \item \verb|user_has_access(User, Asset, Bool)|: Define permisos de acceso legítimos
+\end{itemize}
+
+\noindent Funciones de Valoración:
+
+\begin{itemize}
+    \item \verb|threat_level(Attack, Int)|: Asigna un nivel numérico de amenaza (1--4)
+    \item \verb|asset_criticality(Asset, Int)|: Define la criticidad del activo (1--5)
+    \item \verb|requires_immediate_response(Incident, Bool)|: Determina urgencia de respuesta
+\end{itemize}
+
+\subsubsection{Métricas PEAS}
+
+Para operacionalizar el modelo PEAS, se definen métricas específicas que permiten evaluar el rendimiento del agente:
+
+\begin{lstlisting}[language=python, caption={Definición de Métricas PEAS en Z3}, label={lst:peas_metrics}]
+response_time = Function("response_time", IncidentSort, IntSort())
+containment_effectiveness = Function("containment_effectiveness", IncidentSort, IntSort())
+false_positive = Function("false_positive", IncidentSort, BoolSort())
+\end{lstlisting}
+
+\subsection{Reglas de Inferencia}
+
+El núcleo de la ontología consiste en un conjunto de reglas lógicas que definen el comportamiento del sistema de respuesta automática. Estas reglas utilizan cuantificadores universales \verb|(ForAll)| e implicaciones lógicas \verb|(Implies)| para capturar el conocimiento experto del dominio.
+
+\subsubsection{Regla de Respuesta Crítica}
+
+\begin{lstlisting}[language=python, caption={Regla de Respuesta Crítica en Z3}, label={lst:critical_response}]
+ForAll([threat, asset, incident],
+    Implies(
+        And(has_vulnerability(asset),
+            affects(threat, asset),
+            threat_level(threat) >= 3),
+        requires_immediate_response(incident)
+    )
+)
+\end{lstlisting}
+
+Esta regla establece que cualquier amenaza de nivel alto ($\geq$3) que afecte a un activo vulnerable requiere respuesta inmediata.
+
+\subsubsection{Regla de Protección de Activos Críticos}
+
+\begin{lstlisting}[language=python, caption={Regla de Protección de Activos Críticos en Z3}, label={lst:protect_critical_assets}]
+ForAll([asset, incident],
+    Implies(
+        And(is_compromised(asset), 
+            asset_criticality(asset) >= 4),
+        requires_immediate_response(incident)
+    )
+)
+\end{lstlisting}
+
+Especifica que el compromiso de activos de alta criticidad ($\geq$4) siempre requiere respuesta inmediata, independientemente del tipo de amenaza.
+
+\subsubsection{Regla de Tiempo de Respuesta}
+
+\begin{lstlisting}[language=python, caption={Regla de Tiempo de Respuesta en Z3}, label={lst:response_time}]
+ForAll([incident],
+    Implies(
+        requires_immediate_response(incident),
+        response_time(incident) <= 15
+    )
+)
+\end{lstlisting}
+
+Establece el constraint temporal de que los incidentes críticos deben ser atendidos en un máximo de 15 minutos.
+
+\subsection{Implementación del Modelo PEAS}
+
+\subsubsection{Sensores \textit{(Sensors)}}
+
+Se implementaron tres tipos de sensores especializados que alimentan datos a la ontología:
+
+\noindent Sensor de Anomalías de Red \verb|(CybersecuritySensors.network_anomaly_sensor)|:
+
+\begin{itemize}
+    \item Detecta patrones de tráfico inusuales
+    \item Genera automáticamente entidades de amenaza en Z3
+    \item Asigna niveles de amenaza basados en la severidad detectada
+\end{itemize}
+
+\noindent Sensor de Integridad de Archivos \verb|(CybersecuritySensors.file_integrity_sensor)|:
+
+\begin{itemize}
+    \item Monitorea cambios no autorizados en archivos críticos
+    \item Marca activos como comprometidos en la base de conocimiento
+    \item Vincula cambios de archivos con activos específicos
+\end{itemize}
+
+\noindent Sensor de Comportamiento de Usuario \verb|(CybersecuritySensors.user_behavior_sensor)|:
+
+\begin{itemize}
+    \item Implementa análisis UEBA (User and Entity Behavior Analytics)
+    \item Detecta accesos anómalos mediante análisis de patrones
+    \item Actualiza predicados de acceso en tiempo real
+\end{itemize}
+
+\subsubsection{Actuadores \textit{(Actuators)}}
+
+Los actuadores implementan las respuestas automáticas del sistema:
+
+\noindent Bloqueo de Tráfico Malicioso \verb|(CyberSecurityActuators.block_malicious_traffic)|:
+
+\begin{itemize}
+    \item Implementa medidas de contención de red
+    \item Registra acciones tomadas para auditoría
+    \item Actualiza el estado del sistema en la ontología
+\end{itemize}
+
+\noindent Aislamiento de Dispositivos \verb|(CyberSecurityActuators.isolate_compromised_device)|:
+
+\begin{itemize}
+    \item Ejecuta protocolos de cuarentena automatizada
+    \item Modifica predicados de compromiso en Z3
+    \item Mantiene trazabilidad de dispositivos aislados 
+\end{itemize}
+
+\noindent Generación de Reportes \verb|(CyberSecurityActuators.generate_incident_report)|:
+
+\begin{itemize}
+    \item Produce documentación estructurada de incidentes
+    \item Integra análisis de Z3 con métricas operacionales
+    \item Facilita el cumplimiento regulatorio y auditorías 
+\end{itemize}
+
+\subsubsection{Motor de Razonamiento \textit{(Reasoning Engine)}}
+
+El componente central \verb|(CyberSecurityReasoningEngine)| integra todos los elementos de la ontología:
+
+\noindent Análisis de Amenazas:
+
+\begin{itemize}
+    \item Crea instancias locales del solver Z3 para cada incidente
+    \item Aplica hechos específicos basados en datos de sensores
+    \item Evalúa reglas de inferencia para determinar respuestas 
+\end{itemize}
+
+
+\noindent Evaluación de Severidad:
+
+\begin{itemize}
+    \item Utiliza el modelo Z3 para calcular niveles de amenaza
+    \item Implementa lógica de fallback para casos edge
+    \item Mapea valores numéricos a categorías semánticas 
+\end{itemize}
+
+\subsubsection{Ventajas del Enfoque Adoptado}
+
+La construcción de la ontología mediante Z3 SMT Solver proporciona ventajas significativas sobre enfoques tradicionales:
+
+\begin{itemize}
+    \item Verificación Formal: Garantías matemáticas de consistencia
+    \item Razonamiento Eficiente: Optimizaciones específicas para satisfacibilidad
+    \item Integración Directa: Sin overhead de translation entre lenguajes
+    \item Expresividad: Capacidad de manejar lógica de primer orden compleja
+    \item Extensibilidad: Fácil adición de nuevas reglas y predicados
+\end{itemize}
+

@@ -1,0 +1,72 @@
+\section{Ontología}
+
+\subsection{Definicion}
+
+En IA y Web Semántica, una ontología es un modelo que define, con precisión y de forma formal, qué conceptos existen en un dominio, cómo se relacionan y qué reglas los gobiernan.  
+
+\begin{quote}
+    “An ontology is an explicit specification of a conceptualization”.\\
+    \textit{“Una ontología es una especificación explícita de una conceptualización” }\\
+    \hfill\cite{Gruber2009Ontology}
+\end{quote}
+
+\subsection{¿De qué está hecha una ontología?}
+
+En la práctica, una ontología proporciona un vocabulario controlado junto con axiomas que otorgan significado computable a dicho vocabulario. Sus componentes típicos son:
+
+\begin{itemize}
+    \item \textbf{Clases o conceptos:} Representan categorías o conjuntos de objetos dentro del dominio.
+    \item \textbf{Propiedades o relaciones:} Describen cómo se vinculan los conceptos entre sí.
+    \item \textbf{Individuos o instancias:} Son los elementos concretos que pertenecen a las clases.
+    \item \textbf{Restricciones (axiomas):} Reglas que limitan o definen el comportamiento y las relaciones entre los elementos anteriores.
+\end{itemize}
+
+\subsection{Lenguajes y estándares que la hacen operativa}
+
+Las ontologías se formalizan principalmente con OWL (Web Ontology Language) sobre el modelo de grafo de RDF.~OWL aporta semántica formal para que los sistemas puedan inferir y verificar conocimiento, no solo almacenarlo; RDF define el modelo de tripletas (sujeto--predicado--objeto) que hace interoperable el intercambio de datos~\parencite{W3C2012OWL2Overview}.
+
+Para validar calidad de datos frente a una ontología o esquema RDF, la recomendación \textit{W3C SHACL} permite expresar “shapes” (condiciones) y chequear conformidad de grafos; existen borradores recientes que amplían su alcance~\parencite{W3C2017SHACL}.
+
+\subsection{Usos clave}
+
+\begin{enumerate}
+    \item Hablar el mismo lenguaje (interoperatividad semántica).
+    Sirven para alinear significados entre equipos y sistemas distintos. Cuando varias aplicaciones comparten la misma ontología, se reduce la ambigüedad y se facilita el intercambio de información con sentido. Esta es, de hecho, una de las motivaciones fundacionales para “desarrollar una ontología”. 
+
+    \item Integrar datos heterogéneos.
+    RDF/OWL permiten fusionar fuentes dispares (bases relacionales, logs, APIs, documentos) aun si los esquemas difieren, porque los recursos y relaciones se identifican con URIs y se normalizan como grafos de tripletas~\parencite{W3C2014RDF}.
+
+    \item Razonar e inferir conocimiento implícito.
+    Al tener semántica formal, se pueden derivar hechos que no estaban explícitos (clasificación automática, detección de inconsistencias, implicaciones lógicas). OWL 2 fue diseñado justamente para habilitar interpretabilidad y razonamiento sobre contenido~\parencite{BaaderDLHB02}.
+
+    \item Búsqueda y recuperación semántica.
+    Con una ontología, las consultas van más allá de palabras clave: explotan jerarquías y relaciones (por ejemplo, recuperar todos los incidentes que afectan activos críticos con vulnerabilidades). Este uso está expuesto en guías prácticas de desarrollo ontológico. 
+
+    \item Validación y control de calidad de los datos.
+    Mediante SHACL, las organizaciones definen reglas de calidad (cardinalidades, rangos, dependencias) y pueden auditar automáticamente si sus grafos cumplen políticas y estándares. Esto impacta directamente en la gobernanza de datos~\parencite{Knublauch2017SHACL}.
+
+    \item Reuso y extensibilidad del conocimiento.
+    Las ontologías promueven reutilizar modelos consolidados (tiempo, unidades, ubicaciones) y extenderlos para nuevos proyectos, acelerando desarrollos y mejorando la consistencia entre equipos. 
+\end{enumerate}
+
+\subsection{Ontología en la Inteligencia Artificial}
+
+En el contexto de la Inteligencia Artificial (IA), las ontologías se definen
+como modelos formales que representan de manera estructurada el conocimiento de
+un dominio específico. Estas permiten a los sistemas inteligentes interpretar,
+razonar y actuar sobre datos de forma más precisa y
+contextualizada.
+
+Las ontologías facilitan la organización semántica de la información,
+permitiendo que los algoritmos de IA realicen inferencias lógicas, identifiquen
+patrones relevantes y generen respuestas adaptadas a las necesidades del
+usuario. Al establecer conceptos, relaciones y reglas dentro de un marco
+compartido, las ontologías mejoran la interoperabilidad entre sistemas,
+optimizan la recuperación de información y permiten simular procesos cognitivos
+humanos.
+
+En aplicaciones prácticas, como buscadores semánticos, asistentes virtuales o
+sistemas expertos, las ontologías permiten que la IA comprenda el significado
+detrás de los datos, lo que se traduce en una interacción más eficiente,
+personalizada y autónoma con el entorno
+digital~\parencite{Martin2020OntologiasIA}.

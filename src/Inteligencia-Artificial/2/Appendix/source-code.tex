@@ -1,0 +1,510 @@
+\appendix
+
+\section{Código Fuente}\label{source_code}
+\begin{lstlisting}[language=python, inputencoding=utf8]
+# -*- coding: utf-8 -*-
+# %%
+# type: ignore
+
+import enum
+from typing import Any, Dict, List, Optional, Tuple
+
+from z3.z3 import (
+    And,
+    BoolSort,
+    BoolVal,
+    CheckSatResult,
+    Const,
+    DeclareSort,
+    ExprRef,
+    ForAll,
+    Function,
+    Implies,
+    IntSort,
+    ModelRef,
+    Not,
+    Solver,
+    sat,
+)
+
+# %%
+
+
+class ThreatLevel(enum.Enum):
+    LOW = 1
+    MEDIUM = 2
+    HIGH = 3
+    CRITICAL = 4
+
+
+class AssetType(enum.Enum):
+    SERVER = 1
+    NETWORK_DEVICE = 2
+    IOT_DEVICE = 3
+    WORKSTATION = 4
+    CLOUD_SERVICE = 5
+
+
+class AttackType(enum.Enum):
+    MALWARE = 1
+    PHISHING = 2
+    DDoS = 3
+    DATA_BREACH = 4
+    RANSOMWARE = 5
+    INSIDER_THREAT = 6
+
+
+# %%
+
+ThreatSort = DeclareSort("Threat")
+AssetSort = DeclareSort("Asset")
+AttackSort = DeclareSort("Attack")
+UserSort = DeclareSort("User")
+IncidentSort = DeclareSort("Incident")
+
+# %%
+# functions and predicates for the ontology
+
+affects = Function("affects", AttackSort, AssetSort, BoolSort())
+has_vulnerability = Function("has_vulnerability", AssetSort, BoolSort())
+threat_level = Function("threat_level", AttackSort, IntSort())
+asset_criticality = Function("asset_criticality", AssetSort, IntSort())
+requires_immediate_response = Function(
+    "requires_immediate_response", IncidentSort, BoolSort()
+)
+user_has_access = Function("user_has_access", UserSort, AssetSort, BoolSort())
+is_compromised = Function("is_compromised", AssetSort, BoolSort())
+
+# %%
+# PEAS metrics
+
+response_time = Function("response_time", IncidentSort, IntSort())
+containment_effectiveness = Function(
+    "containment_effectiveness", IncidentSort, IntSort()
+)
+false_positive = Function("false_positive", IncidentSort, BoolSort())
+
+# %%
+solver = Solver()
+
+# %%
+threat = Const("threat", AttackSort)
+asset = Const("asset", AssetSort)
+user = Const("user", UserSort)
+incident = Const("incident", IncidentSort)
+
+# %%
+# type: ignore
+
+solver.add(
+    ForAll(
+        [threat, asset, incident],
+        Implies(
+            And(
+                has_vulnerability(asset),
+                affects(threat, asset),
+                threat_level(threat) >= 3,
+            ),
+            requires_immediate_response(incident),
+        ),
+    )
+)
+
+solver.add(
+    ForAll(
+        [asset, incident],
+        Implies(
+            And(is_compromised(asset), asset_criticality(asset) >= 4),
+            requires_immediate_response(incident),
+        ),
+    )
+)
+
+solver.add(
+    ForAll(
+        [user, asset],
+        Implies(
+            And(Not(user_has_access(user, asset)), is_compromised(asset)),
+            BoolVal(True),
+        ),
+    )
+)
+
+solver.add(
+    ForAll(
+        [incident],
+        Implies(
+            requires_immediate_response(incident), response_time(incident) <= 15
+        ),
+    )
+)
+
+# %%
+# type: ignore
+
+
+class CybersecuritySensors:
+    def __init__(self, solver: Solver) -> None:
+        self.solver: Solver = solver
+
+    def network_anomaly_sensor(
+        self, traffic_data: Dict[str, Any]
+    ) -> Optional[ExprRef]:
+        anomaly_detected: bool = traffic_data.get("unusual_patterns", False)
+
+        if anomaly_detected:
+            new_threat: ExprRef = Const(
+                f"network_threat_{id(traffic_data)}", AttackSort
+            )
+            self.solver.add(threat_level(new_threat) >= 2)
+            return new_threat
+
+        return None
+
+    def file_integrity_sensor(
+        self, file_changes: Dict[str, Any]
+    ) -> Optional[ExprRef]:
+        """Monitor de integridad de archivos"""
+        if file_changes.get("unauthorized_changes", False):
+            affected_asset: ExprRef = Const(
+                f"asset_{file_changes['asset_id']}", AssetSort
+            )
+            self.solver.add(is_compromised(affected_asset))
+            return affected_asset
+
+        return None
+
+    def user_behavior_sensor(
+        self, user_activity: Dict[str, Any]
+    ) -> Optional[Tuple[ExprRef, ExprRef]]:
+        """Sensor UEBA (User and Entity Behavior Analytics)"""
+        if user_activity.get("anomalous_behavior", False):
+            suspicious_user: ExprRef = Const(
+                f"user_{user_activity['user_id']}", UserSort
+            )
+            target_asset: ExprRef = Const(
+                f"asset_{user_activity['target_asset']}", AssetSort
+            )
+            self.solver.add(Not(user_has_access(suspicious_user, target_asset)))
+            return (suspicious_user, target_asset)
+
+        return None
+
+
+# %%
+# type: ignore
+
+
+class CyberSecurityActuators:
+    def __init__(self, solver: Solver) -> None:
+        self.solver: Solver = solver
+
+    def block_malicious_traffic(self, threat_source: str) -> bool:
+        return True
+
+    def isolate_compromised_device(self, asset_id: str) -> bool:
+        """Aislamiento de dispositivos comprometidos"""
+        print(f"Aislando dispositivo comprometido: {asset_id}")
+        isolated_asset: ExprRef = Const(f"asset_{asset_id}", AssetSort)
+        self.solver.add(Not(is_compromised(isolated_asset)))
+        return True
+
+    def generate_incident_report(
+        self, incident_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Generar reporte detallado del incidente"""
+        analysis: Dict[str, Any] = incident_data.get("analysis", {})
+
+        report: Dict[str, Any] = {
+            "timestamp": incident_data.get("timestamp"),
+            "severity": incident_data.get("severity"),
+            "affected_assets": incident_data.get("assets", []),
+            "recommended_actions": analysis.get("recommendations", []),
+            "immediate_response_triggered": analysis.get(
+                "immediate_response", False
+            ),
+            "actions_taken": incident_data.get("actions_taken", []),
+            "z3_reasoning_used": analysis.get("z3_model_used", False),
+        }
+
+        return report
+
+    def _get_recommendations(self, incident_data: Dict[str, Any]) -> List[str]:
+        return ["Aplicar parches", "Monitorear actividad", "Revisar logs"]
+
+
+# %%
+# type: ignore
+
+
+class CyberSecurityReasoningEngine:
+    def __init__(
+        self,
+        solver: Solver,
+        sensors: CybersecuritySensors,
+        actuators: CyberSecurityActuators,
+    ) -> None:
+        self.solver: Solver = solver
+        self.sensors: CybersecuritySensors = sensors
+        self.actuators: CyberSecurityActuators = actuators
+
+    def analyze_threat(self, threat_data: Dict[str, Any]) -> Dict[str, Any]:
+        local_solver: Solver = Solver()
+
+        for assertion in self.solver.assertions():
+            local_solver.add(assertion)
+
+        current_threat: ExprRef = Const(f"threat_{id(threat_data)}", AttackSort)
+        current_asset: ExprRef = Const(f"asset_{id(threat_data)}", AssetSort)
+        current_incident: ExprRef = Const(
+            f"incident_{id(threat_data)}", IncidentSort
+        )
+
+        # Agregar hechos basados en los datos del incidente
+        self._add_threat_facts(
+            local_solver,
+            current_threat,
+            current_asset,
+            current_incident,
+            threat_data,
+        )
+
+        # Verificar si el modelo es satisfacible        check_result: CheckSatResult = local_solver.check()
+        if check_result == sat:
+            model: ModelRef = local_solver.model()
+
+            # Evaluar usando el modelo Z3
+            threat_severity: ThreatLevel = self._evaluate_threat_severity_z3(
+                current_threat, model, threat_data
+            )
+            response_needed: bool = self._requires_immediate_response_z3(
+                current_incident, model, threat_data
+            )
+            recommendations: List[str] = self._generate_recommendations_z3(
+                model, threat_data, current_threat, current_asset
+            )
+
+            return {
+                "severity": threat_severity,
+                "immediate_response": response_needed,
+                "recommendations": recommendations,
+                "z3_model_used": True,
+            }
+        else:
+            return {"error": "Inconsistencia en la ontologia detectada"}
+
+    def _add_threat_facts(
+        self,
+        local_solver: Solver,
+        threat: ExprRef,
+        asset: ExprRef,
+        incident: ExprRef,
+        threat_data: Dict[str, Any],
+    ) -> None:
+        if threat_data.get("affects_critical_assets", False):
+            local_solver.add(threat_level(threat) == 4)  # CRITICAL
+        elif threat_data.get("widespread_impact", False):
+            local_solver.add(threat_level(threat) == 3)  # HIGH
+        elif threat_data.get("network_anomaly", False):
+            local_solver.add(threat_level(threat) == 2)  # MEDIUM
+        else:
+            local_solver.add(threat_level(threat) == 1)  # LOW
+
+        if threat_data.get("affects_critical_assets", False):
+            local_solver.add(asset_criticality(asset) == 5)  # Maxima criticidad
+        else:
+            local_solver.add(asset_criticality(asset) == 2)  # Criticidad normal
+
+        # Establecer relaciones
+        local_solver.add(affects(threat, asset))
+
+        if threat_data.get("compromised_assets", []):
+            local_solver.add(is_compromised(asset))
+
+        if threat_data.get("vulnerability_detected", False):
+            local_solver.add(has_vulnerability(asset))
+
+    def _evaluate_threat_severity_z3(
+        self, threat: ExprRef, model: ModelRef, threat_data: Dict[str, Any]
+    ) -> ThreatLevel:
+        """Evaluar severidad usando el modelo Z3"""
+        try:
+            # Intentar evaluar el nivel de amenaza desde el modelo
+            threat_level_val: Optional[ExprRef] = model.evaluate(
+                threat_level(threat), model_completion=True
+            )
+
+            if threat_level_val is not None:
+                level: int = threat_level_val.as_long()
+                if level >= 4:
+                    return ThreatLevel.CRITICAL
+                elif level >= 3:
+                    return ThreatLevel.HIGH
+                elif level >= 2:
+                    return ThreatLevel.MEDIUM
+                else:
+                    return ThreatLevel.LOW
+        except Exception as e:
+            print(f"Error evaluando nivel de amenaza: {e}")
+
+        if threat_data.get("affects_critical_assets", False):
+            return ThreatLevel.CRITICAL
+        elif threat_data.get("widespread_impact", False):
+            return ThreatLevel.HIGH
+        else:
+            return ThreatLevel.MEDIUM
+
+    def _requires_immediate_response_z3(
+        self, incident: ExprRef, model: ModelRef, threat_data: Dict[str, Any]
+    ) -> bool:
+        """Determinar respuesta inmediata usando Z3"""
+        try:
+            immediate_response: Optional[ExprRef] = model.evaluate(
+                requires_immediate_response(incident), model_completion=True
+            )
+
+            if immediate_response is not None:
+                return bool(immediate_response)
+        except Exception as e:
+            print(f"Error evaluando respuesta inmediata: {e}")
+
+        # Fallback
+        return threat_data.get(
+            "affects_critical_assets", False
+        ) or threat_data.get("active_exploitation", False)
+
+    def _generate_recommendations_z3(
+        self,
+        model: ModelRef,
+        threat_data: Dict[str, Any],
+        threat: ExprRef,
+        asset: ExprRef,
+    ) -> List[str]:
+        recommendations: List[str] = []
+
+        try:
+            # Evaluar diferentes aspectos del modelo
+            is_asset_compromised: Optional[ExprRef] = model.evaluate(
+                is_compromised(asset), model_completion=True
+            )
+            threat_level_val: Optional[ExprRef] = model.evaluate(
+                threat_level(threat), model_completion=True
+            )
+            asset_critical: Optional[ExprRef] = model.evaluate(
+                asset_criticality(asset), model_completion=True
+            )
+
+            # Recomendaciones basadas en el estado del activo
+            if is_asset_compromised and bool(is_asset_compromised):
+                recommendations.append(
+                    "CRITICO: Aislar activo comprometido inmediatamente"
+                )
+                recommendations.append(
+                    "Realizar analisis forense del activo afectado"
+                )
+
+            # Recomendaciones basadas en nivel de amenaza
+            if threat_level_val and threat_level_val.as_long() >= 3:
+                recommendations.append(
+                    "Activar protocolo de respuesta de emergencia"
+                )
+                recommendations.append("Notificar al equipo directivo")
+
+            # Recomendaciones basadas en criticidad del activo
+            if asset_critical and asset_critical.as_long() >= 4:
+                recommendations.append("Implementar monitoreo continuo 24/7")
+                recommendations.append(
+                    "Realizar backup inmediato de datos criticos"
+                )
+
+        except Exception as e:
+            print(f"Error evaluando modelo Z3: {e}")
+
+        # Recomendaciones adicionales basadas en tipo de amenaza
+        if threat_data.get("network_anomaly", False):
+            recommendations.append("Analizar trafico de red en tiempo real")
+            recommendations.append(
+                "Implementar reglas de firewall restrictivas"
+            )
+
+        if threat_data.get("user_anomaly", False):
+            recommendations.append(
+                "Revisar credenciales y permisos de usuario"
+            )
+            recommendations.append("Forzar cambio de contrase\u00f1as")
+
+        if threat_data.get("malware_detected", False):
+            recommendations.append(
+                "Ejecutar escaneo completo de antimalware"
+            )
+            recommendations.append(
+                "Limpiar y desinfectar sistemas afectados"
+            )
+
+        if not recommendations:
+            recommendations = [
+                "Documentar incidente en el sistema SIEM",
+                "Incrementar nivel de monitoreo",
+                "Revisar logs de seguridad",
+            ]
+
+        return recommendations
+
+    def respond_to_incident(
+        self, incident_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        print(
+            f"Analizando incidente: {incident_data.get('timestamp', 'N/A')}"
+        )
+
+        analysis: Dict[str, Any] = self.analyze_threat(incident_data)
+
+        if "error" in analysis:
+            return analysis
+
+        severity: ThreatLevel = analysis["severity"]
+        print(f"[SEVERIDAD] Severidad detectada: {severity.name}")
+        print(
+            f"[ALERTA] Respuesta inmediata requerida: {analysis['immediate_response']}"
+        )
+
+        # Ejecutar actuadores si es necesario
+        actions_taken: List[str] = []
+        if analysis.get("immediate_response", False):
+            if incident_data.get("network_threat"):
+                source: str = incident_data.get("source", "unknown")
+                if self.actuators.block_malicious_traffic(source):
+                    actions_taken.append(f"Bloqueado trafico desde {source}")
+
+            compromised_assets: List[str] = incident_data.get(
+                "compromised_assets", []
+            )
+            if compromised_assets:
+                for asset in compromised_assets:
+                    if self.actuators.isolate_compromised_device(asset):
+                        actions_taken.append(f"Aislado dispositivo {asset}")
+
+        # Generar reporte detallado
+        report: Dict[str, Any] = self.actuators.generate_incident_report(
+            {
+                "timestamp": incident_data.get("timestamp"),
+                "severity": analysis.get("severity"),
+                "assets": incident_data.get("compromised_assets", []),
+                "analysis": analysis,
+                "actions_taken": actions_taken,
+            }
+        )
+
+        report["actions_taken"] = actions_taken
+        report["z3_reasoning"] = analysis.get("z3_model_used", False)
+
+        return report
+
+
+# %%
+sensors = CybersecuritySensors(solver=solver)
+actuators = CyberSecurityActuators(solver=solver)
+reasoning_engine = CyberSecurityReasoningEngine(
+    solver=solver, sensors=sensors, actuators=actuators
+)
+\end{lstlisting}

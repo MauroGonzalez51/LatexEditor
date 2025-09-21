@@ -1,0 +1,133 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{tocloft}
+
+\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+
+\usepackage[style=apa, maxnames=2, minnames=1, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{
+      andothers = {\em et\addabbrvspace{} al\adddot{}\/}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+\usepackage{array}
+
+\setlength{\parskip}{0pt}
+
+\raggedbottom{}
+
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    urlcolor=cyan!70!black,
+    citecolor=magenta!70!black
+}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle, frame=single, framerule=0.5pt, rulecolor=\color{gray!60}}
+
+% chktex-file 44
+% chktex-file 24
+% chktex-file 8
+
+\begin{document}
+
+\begin{titlepage}
+      \centering
+      \includegraphics[width=0.3\textwidth]{../../../images/logo_utb.png}
+      \par\vspace{.5cm}
+
+      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+      \vspace{1cm}
+
+      {\scshape\Large Inteligencia Artificial \par}
+      \vspace{1.5cm}
+
+      \slshape {\Large \bfseries{}Agente Inteligente de Ciberseguridad\\}
+      \vspace{2.5cm}
+
+      \slshape {\itshape{} Mauro Alonso González Figueroa, T00067622 \\}
+      \slshape {\itshape{} Juan Jose Jiménez Guardo, T00068278 \\}
+
+      \vfill
+      Revisado Por \\
+      Edwin Alexander Puertas Del Castillo\\
+      {\large \today\par}
+\end{titlepage}
+
+\tableofcontents{}
+\newpage
+
+% --------------------------------------------------------------------------------------
+\input{Sections/introduction}
+\input{Sections/peas}
+\input{Sections/ontology}
+\input{Sections/implementation}
+
+\newpage
+\section*{Referencias}
+\addcontentsline{toc}{section}{Referencias}
+\renewcommand{\refname}{}
+\renewcommand{\bibname}{}
+\vspace{-1.5cm}
+\printbibliography{}
+
+\newpage
+\input{Appendix/source-code}
+
+\end{document}
