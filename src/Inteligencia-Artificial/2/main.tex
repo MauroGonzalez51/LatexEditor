@@ -1,53 +1,35 @@
 \documentclass[letterpaper, 12pt]{article}
 
+% ===== Idioma y codificación =====
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+
+% ===== Diseño y formato general =====
 \usepackage{fullpage}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{enumitem}
-\usepackage{chngcntr}
 \usepackage{setspace}
-\usepackage{url}
-\usepackage{csquotes}
-\usepackage{float}
-\usepackage{verbatim}
-\usepackage{tabularx}
-\usepackage{amsmath}
-\usepackage{caption}
-\usepackage{bm}
-\usepackage{colortbl}
-\usepackage{xcolor}
-\usepackage{multicol}
-\usepackage{wrapfig}
-\usepackage{multirow}
-\usepackage{hyperref}
-\usepackage{listings}
 \usepackage{lmodern}
 \usepackage{microtype}
-\usepackage{tocloft}
-
-\counterwithin{figure}{section}
-\renewcommand{\thesection}{\arabic{section}}
-\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\renewcommand{\baselinestretch}{1.5}
-\renewcommand{\cftsecfont}{\bfseries}
-\renewcommand{\cftsecpagefont}{\bfseries}
-
-\usepackage[style=apa, maxnames=2, minnames=1, backend=biber, parentracker=true, sorting=none]{biblatex}
-\DefineBibliographyStrings{english}{
-      andothers = {\em et\addabbrvspace{} al\adddot{}\/}
-}
-\addbibresource{./Bibliography/bibliography.bib}
-
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{tabularx}
 \usepackage{array}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{chngcntr}
+\usepackage{tocloft}
+\usepackage{bm}
+\usepackage{enumitem}
 
-\setlength{\parskip}{0pt}
+% ===== Matemáticas =====
+\usepackage{amsmath}
 
-\raggedbottom{}
-
-\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
-
+% ===== Hipervínculos =====
+\usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue!70!black,
@@ -55,11 +37,12 @@
     citecolor=magenta!70!black
 }
 
+% ===== Código fuente =====
+\usepackage{listings}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
@@ -78,9 +61,30 @@
     showtabs=false,                  
     tabsize=2
 }
-
 \lstset{style=mystyle, frame=single, framerule=0.5pt, rulecolor=\color{gray!60}}
 
+% ===== Citas y bibliografía =====
+\usepackage{csquotes}
+\usepackage[style=apa, maxnames=2, minnames=1, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{
+      andothers = {\em et\addabbrvspace{} al\adddot{}\/}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+% ===== Personalización de secciones y TOC =====
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+
+% ===== Otros ajustes =====
+\setlength{\parskip}{0pt}
+\raggedbottom{}
+\counterwithin{figure}{section}
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+% ===== chktex =====
 % chktex-file 44
 % chktex-file 24
 % chktex-file 8
@@ -88,26 +92,26 @@
 \begin{document}
 
 \begin{titlepage}
-      \centering
-      \includegraphics[width=0.3\textwidth]{../../../images/logo_utb.png}
-      \par\vspace{.5cm}
+    \centering
+    \includegraphics[width=0.3\textwidth]{../../../images/logo_utb.png}
+    \par\vspace{.5cm}
 
-      {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
-      \vspace{1cm}
+    {\scshape\LARGE Universidad Tecnológica de Bolívar \par}
+    \vspace{1cm}
 
-      {\scshape\Large Inteligencia Artificial \par}
-      \vspace{1.5cm}
+    {\scshape\Large Inteligencia Artificial \par}
+    \vspace{1.5cm}
 
-      \slshape {\Large \bfseries{}Agente Inteligente de Ciberseguridad\\}
-      \vspace{2.5cm}
+    \slshape {\Large \bfseries{}Agente Inteligente de Ciberseguridad\\}
+    \vspace{2.5cm}
 
-      \slshape {\itshape{} Mauro Alonso González Figueroa, T00067622 \\}
-      \slshape {\itshape{} Juan Jose Jiménez Guardo, T00068278 \\}
+    \slshape {\itshape{} Mauro Alonso González Figueroa, T00067622 \\}
+    \slshape {\itshape{} Juan Jose Jiménez Guardo, T00068278 \\}
 
-      \vfill
-      Revisado Por \\
-      Edwin Alexander Puertas Del Castillo\\
-      {\large \today\par}
+    \vfill
+    Revisado Por \\
+    Edwin Alexander Puertas Del Castillo\\
+    {\large \today\par}
 \end{titlepage}
 
 \tableofcontents{}
@@ -118,6 +122,31 @@
 \input{Sections/peas}
 \input{Sections/ontology}
 \input{Sections/implementation}
+% --------------------------------------------------------------------------------------
+
+\section*{Conclusiones}
+\addcontentsline{toc}{section}{Conclusiones}
+El desarrollo e implementación de un agente inteligente de ciberseguridad permitió comprender la importancia de modelar formalmente el conocimiento mediante ontologías, así como la utilidad de herramientas de razonamiento lógico como Z3 para la verificación y análisis automático de relaciones y restricciones en el dominio.
+A lo largo del trabajo, se evidenció que la representación estructurada y formal de conceptos facilita la detección de amenazas, la toma de decisiones automatizada y la adaptabilidad del sistema ante nuevos escenarios.
+
+Si bien la ontología no se encuentra en un formato estándar como OWL o TTL, la aproximación lógica utilizada demostró ser efectiva para el razonamiento y la validación de reglas complejas. Este enfoque resalta la flexibilidad de la inteligencia artificial para abordar problemas de seguridad desde distintas perspectivas técnicas.
+
+Como posibles mejoras futuras, se sugiere la integración de la ontología en plataformas interoperables, la incorporación de aprendizaje automático para enriquecer la detección de amenazas y la expansión del modelo a otros dominios de la ciberseguridad. En conclusión, el uso de agentes inteligentes y ontologías formales representa una estrategia robusta y escalable para enfrentar los desafíos actuales en la protección de sistemas digitales.
+
+\section*{Recomendaciones}
+\addcontentsline{toc}{section}{Recomendaciones}
+A partir del desarrollo realizado, se proponen las siguientes recomendaciones y líneas de trabajo futuro:
+
+\begin{itemize}
+    \item \textbf{Interoperabilidad semántica:} Traducir la ontología desarrollada en Z3 a formatos estándar como OWL o TTL, permitiendo su integración con plataformas de la Web Semántica y herramientas como Protégé.
+    \item \textbf{Integración de aprendizaje automático:} Incorporar técnicas de machine learning para enriquecer la detección de amenazas y permitir que el agente evolucione y se adapte a nuevos patrones de ataque de manera autónoma.
+    \item \textbf{Validación en entornos reales:} Probar el agente en escenarios de ciberseguridad reales o simulados, evaluando su desempeño, robustez y capacidad de respuesta ante amenazas complejas.
+    \item \textbf{Expansión del dominio:} Ampliar la ontología y el agente para cubrir otros ámbitos de la ciberseguridad, como la protección de infraestructuras críticas, IoT o sistemas industriales.
+    \item \textbf{Interfaz de usuario y visualización:} Desarrollar interfaces gráficas que permitan a los usuarios interactuar con el agente, visualizar el estado del sistema y comprender las decisiones tomadas por el modelo.
+    \item \textbf{Colaboración multiagente:} Explorar la posibilidad de implementar sistemas multiagente, donde varios agentes colaboren o compitan para mejorar la defensa cibernética de manera distribuida.
+    \item \textbf{Consideraciones éticas y legales:} Analizar los aspectos éticos y regulatorios asociados al uso de agentes inteligentes en ciberseguridad, especialmente en lo referente a privacidad y toma de decisiones automatizada.
+\end{itemize}
+
 
 \newpage
 \section*{Referencias}
@@ -126,6 +155,14 @@
 \renewcommand{\bibname}{}
 \vspace{-1.5cm}
 \printbibliography{}
+
+\newpage
+\section*{Nota sobre la representacion de la ontologia}
+\addcontentsline{toc}{section}{Nota sobre la representacion de la ontologia}
+
+\textbf{Disclaimer:}
+La ontología presentada en este trabajo fue implementada utilizando el solucionador lógico Z3, lo que permite realizar razonamiento formal y verificación automática sobre los conceptos y relaciones definidos. Sin embargo, no se generó un archivo en formato OWL (.owl) o Turtle (.ttl), ya que el enfoque adoptado priorizó la expresividad lógica y la capacidad de inferencia computacional sobre la interoperabilidad con herramientas de la Web Semántica.
+En caso de requerirse una representación en OWL o TTL, sería necesario traducir manualmente los conceptos, relaciones y restricciones aquí modelados a dichos formatos utilizando un editor de ontologías.
 
 \newpage
 \input{Appendix/source-code}
