@@ -1,0 +1,141 @@
+\documentclass[letterpaper, 12pt]{article}
+
+% ===== Idioma y codificación =====
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% ===== Diseño y formato general =====
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{chngcntr}
+\usepackage{tocloft}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{authblk}
+
+% ===== Matemáticas =====
+\usepackage{amsmath}
+
+% ===== Hipervínculos =====
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    urlcolor=cyan!70!black,
+    citecolor=magenta!70!black
+}
+
+% ===== Código fuente =====
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle, frame=single, framerule=0.5pt, rulecolor=\color{gray!60}}
+
+% ===== Citas y bibliografía =====
+\usepackage{csquotes}
+\usepackage[style=apa, maxnames=2, minnames=1, backend=biber, parentracker=true, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{
+      andothers = {\em et\addabbrvspace{} al\adddot{}\/}
+}
+\addbibresource{./Bibliography/bibliography.bib}
+
+% ===== Personalización de secciones y TOC =====
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+
+% ===== Otros ajustes =====
+\setlength{\parskip}{0pt}
+\raggedbottom{}
+\counterwithin{figure}{section}
+\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
+
+% ===== chktex =====
+% chktex-file 44
+% chktex-file 24
+% chktex-file 8
+
+\title{
+    \textbf{Cambio climático, riesgos financieros, finanzas sostenibles, blended finance, desarrollo turístico sostenible, Cartagena de Indias.} \\
+    {\large Climate change, financial risks, sustainable finance, blended finance, sustainable tourism development, Cartagena de Indias.}
+}
+
+\author[a, *, s, e1]{Gabriel Alejandro Buelvas Gulfo}
+\author[a, **, s, e2]{Laura Alexandra Sepúlveda Diaz}
+\author[a, ***, s, e3]{María Isabel Grau Solipa}
+
+\affil[a]{Universidad Tecnológica de Bolívar. Parque Industrial y Tecnológico Carlos Vélez Pombo Km 1 Vía Turbaco. Cartagena de Indias, 130010, Colombia}
+\affil[s]{Semillero SIGESCO}
+\affil[*]{Orcid: 0009-0001-0563-5051}
+\affil[**]{Orcid: 0009-0003-4881-0678}
+\affil[***]{Orcid: 0009-0006-0422-0045}
+\affil[e1]{\texttt{buelvasg@utb.edu.co}}
+\affil[e2]{\texttt{lasepulveda@utb.edu.co}}
+\affil[e3]{\texttt{graum@utb.edu.co}}
+
+
+\date{\today}
+
+\begin{document}
+\maketitle{}
+\newpage
+
+\tableofcontents{}
+\newpage
+
+\input{Sections/resume.tex}
+\input{Sections/introduction.tex}
+\input{Sections/objectives.tex}
+\input{Sections/theory.tex}
+\input{Sections/metodology.tex}
+\input{Sections/preliminary_results.tex}
+\input{Sections/discussion.tex}
+\input{Sections/conclusions.tex}
+
+\newpage
+\section*{Referencias}
+\addcontentsline{toc}{section}{Referencias}
+\renewcommand{\refname}{}
+\renewcommand{\bibname}{}
+\vspace{-1.5cm}
+\printbibliography{}
+
+\newpage
+\input{Appendix/appendix.tex}
+
+\end{document}
