@@ -39,56 +39,47 @@
 % \definecolor{graytext}{HTML}{5D5D5D}
 % \definecolor{lighttext}{HTML}{999999}
 
-% Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
 
-% If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-
-%-------------------------------------------------------------------------------
-% PACKAGES
-%-------------------------------------------------------------------------------
 
 % chktex-file 1
 
 \usepackage{hyperref}
 \usepackage{hyperxmp}
-\usepackage[english]{babel}
-\usepackage{iflang}
+\usepackage[spanish,provide*=*]{babel}
+
+\newcommand{\es}[1]{\iflanguage{spanish}{#1}{}}
+\newcommand{\en}[1]{\iflanguage{english}{#1}{}}
 
 \hypersetup{
-    pdftitle={Mauro Gonzalez $-$ CV},
+    pdftitle={Mauro Gonzalez's CV},
     pdfauthor={Mauro Gonzalez},
     pdfsubject={Curriculum Vitae},
     pdfkeywords={CV, resume, data science, LaTeX},
     pdfcontactemail={mauroalonso.g.f2004@gmail.com}
 }
 
-\begin{filecontents*}{resume.json}
-{
-    "basics": {
-        "name": "Mauro Gonzalez",
-        "email": "mauroalonso.g.f2004@gmail.com",
-        "phone": "+57 311 4060465"
-    }
-}
-\end{filecontents*}
-
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
 \photo[circle,edge,left]{./images/profile.jpg}
 \name{Mauro}{Gonzalez}
-\position{System's Engineer{\enskip\cdotp\enskip}Fullstack Developer}
 \address{Cartagena, Colombia}
 
 \mobile{(+57) 3114060365}
 \email{mauroalonso.g.f2004@gmail.com}
-% \homepage{www.posquit0.com}
 \github{MauroGonzalez51}
 \linkedin{mauro-gonzalez-figueroa}
+
+\en{
+    \position{Systems and Computer Engineer{\enskip\cdotp\enskip}Fullstack Developer}
+}
+
+\es{
+    \position{Ingeniero de Sistemas y Computación{\enskip\cdotp\enskip}Desarrollador Fullstack}
+}
+
+\extrainfo{ORCID:~\href{https://orcid.org/0009-0005-9072-2860}{0009-0005-9072-2860}}
+
+% \homepage{www.posquit0.com}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -98,7 +89,6 @@
 % \googlescholar{googlescholar-id}{name-to-display}
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
-\extrainfo{ORCID:~\href{https://orcid.org/0009-0005-9072-2860}{0009-0005-9072-2860}}
 
 % \quote{``Be the change that you want to see in the world."}
 
@@ -106,31 +96,29 @@
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader{}
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Mauro Gonzalez~~~·~~~Curriculum Vitae}
-  {\thepage}
+
+\en{
+    \makecvfooter
+        {\today}
+        {Mauro Gonzalez~~~·~~~Curriculum Vitae}
+        {\thepage}
+}
+
+\es{
+    \makecvfooter
+        {\today}
+        {Mauro Gonzalez~~~·~~~Hoja de Vida}
+        {\thepage}
+}
 
 
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
+
 \input{cv/education.tex}
 \input{cv/skills.tex}
 \input{cv/experience.tex}
-% \input{cv/extracurricular.tex}
 \input{cv/honors.tex}
-% \input{cv/presentation.tex}
 \input{cv/writing.tex}
-% \input{cv/committees.tex}
 
-
-%-------------------------------------------------------------------------------
 \end{document}
