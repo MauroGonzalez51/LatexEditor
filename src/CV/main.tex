@@ -52,6 +52,8 @@
 \newcommand{\es}[1]{\iflanguage{spanish}{#1}{}}
 \newcommand{\en}[1]{\iflanguage{english}{#1}{}}
 
+\AtBeginDocument{\selectlanguage{spanish}}
+
 \hypersetup{
     pdftitle={Mauro Gonzalez's CV},
     pdfauthor={Mauro Gonzalez},
@@ -60,7 +62,7 @@
     pdfcontactemail={mauroalonso.g.f2004@gmail.com}
 }
 
-\photo[circle,edge,left]{./images/profile.jpg}
+\photo[rectangle,edge,left]{./images/profile.jpeg}
 \name{Mauro}{Gonzalez}
 \address{Cartagena, Colombia}
 
@@ -69,13 +71,7 @@
 \github{MauroGonzalez51}
 \linkedin{mauro-gonzalez-figueroa}
 
-\en{
-    \position{Systems and Computer Engineer{\enskip\cdotp\enskip}Fullstack Developer}
-}
-
-\es{
-    \position{Ingeniero de Sistemas y Computación{\enskip\cdotp\enskip}Desarrollador Fullstack}
-}
+\position{Ingeniero de Sistemas y Computación{\enskip\cdotp\enskip}Desarrollador Fullstack}
 
 \extrainfo{ORCID:~\href{https://orcid.org/0009-0005-9072-2860}{0009-0005-9072-2860}}
 
@@ -96,28 +92,20 @@
 %-------------------------------------------------------------------------------
 \begin{document}
 
-\makecvheader{}
+\makecvheader
 
-
-\en{
-    \makecvfooter
-        {\today}
-        {Mauro Gonzalez~~~·~~~Curriculum Vitae}
-        {\thepage}
-}
-
-\es{
-    \makecvfooter
-        {\today}
-        {Mauro Gonzalez~~~·~~~Hoja de Vida}
-        {\thepage}
-}
+\makecvfooter
+    {\today}
+    {Mauro Gonzalez~~~·~~~Hoja de Vida}
+    {\thepage}
 
 
 
 \input{cv/education.tex}
 \input{cv/skills.tex}
 \input{cv/experience.tex}
+\input{cv/projects.tex}
+\input{cv/thesis.tex}
 \input{cv/honors.tex}
 \input{cv/writing.tex}
 
